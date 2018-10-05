@@ -1,0 +1,6 @@
+.idea/
+lib/vendor/
+web/lib/
+asset/media/
+asset/log/
+asset/cache/
