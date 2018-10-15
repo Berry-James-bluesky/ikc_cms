@@ -1,0 +1,63 @@
+<script>
+    currentPage = 1;
+    sortField = '';
+    sortDirection = '';
+    $(function () {
+        $("#status, #lote_access").off('change').change(onInputChange);
+    });
+
+    function onInputChange() {
+        currentPage = 1;
+        var values = getSearchValues();
+        searchFiles(values);
+    }
+
+    function getSearchValues() {
+        var values = {};
+        values['lote_access'] = $("#lote_access_list").val();
+        values['page'] = currentPage;
+        values['sort_field'] = sortField;
+        values['sort_direction'] = sortDirection;
+        return values;
+
+    }
+
+    function showLoading(element, isLoading){
+        if(isLoading) {
+            $(element).append('<div class="lote_filter"></div><div class="lote_loading"></div>');
+        }
+        else {
+            $(element).removeClass('lote_loading');
+        }
+    }
+
+    function searchFiles(values) {
+        showLoading($("#article_container"), true);
+        $.ajax({
+            ajaxType: 'single',
+            url: '{{ _systemUrl }}news/list/search.shtml',
+            method: 'GET',
+            data: values,
+            success: function (html) {
+                var articleContainer = $("#article_container");
+                showLoading(articleContainer, false);
+                articleContainer.html(html);
+                onContentLoaded();
+            },
+            error: function (request, status, error) {
+                if (request.status) {
+                    alert('Error: ' + request.status + '\n' + request.statusText);
+                }
+                showLoading($("#article_container"), false);
+            }
+        });
+    }
+
+    function openPage(pageNumber) {
+        currentPage = pageNumber;
+        var values = getSearchValues();
+        searchFiles(values);
+    }
+
+</script>
+

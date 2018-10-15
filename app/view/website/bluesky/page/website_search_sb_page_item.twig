@@ -1,0 +1,9 @@
+<section class="newswrp srcwrp">
+    <section class="newslcon">
+        <h1>{{ item.name }}</h1>
+        <p>{{ item.summary|raw|striptags|replace({'&nbsp;':' '})|truncate(300,true,' ..') }}</p>
+        <p><em>Page</em></p>
+        <p><a href="{{ item.url }}" title="" class="btn">Click to view or read more</a></p>
+    </section><!-- /newslcon -->
+</section><!-- /.newswrp -->
+<div class="emspace h20 floatc"></div>

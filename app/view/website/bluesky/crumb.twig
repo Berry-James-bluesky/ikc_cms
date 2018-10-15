@@ -1,0 +1,55 @@
+
+{% if custom_crumb_file %}
+{% include custom_crumb_file~'.twig' %}
+
+{% else %}
+<a href="{{ _url.base }}">Home</a>
+
+{% if _route._handler._app == "blog" and (_route._method == "view" or _route._method == "getPostByTag") %}
+<span class="pipe">//</span>
+<a href="{{ _url.base }}insight">Insight</a>
+{% if _route._method == "getPostByTag" %}
+<span class="pipe">//</span>
+<span><b>{{ _route.tag }}</b></span>
+{% endif %}
+{% endif %}
+
+{% set handler = _route._handler %}
+{% set systemData = getAppData(handler.app) %}
+
+	{% if _route._method == 'listByPrefix' %}
+		{% if _route.settingPrefix == 'edm' %}
+			{% set breadcrumb = ['Communication Settings'] %}
+		{% elseif _route.settingPrefix == 'system' %}
+			{% set breadcrumb = ['Site Settings'] %}
+		{% endif %}
+	{% endif %}
+
+	{% if breadcrumb %}
+
+		{% if extra_href_args %}
+			{% set href_args_str = '?' %}
+			{% for key,value in extra_href_args %}
+				{% set href_args_str = href_args_str~'&'~key~'='~value %}
+			{% endfor %}
+		{% endif %}
+
+		<span class="pipe">//</span>
+
+		{% for key,value in breadcrumb %}
+			{% if loop.last %}
+				<b>{{ value }}</b>
+			{% else %}
+				{% if key == "javascript:;" %}
+				<span>{{ value }}</span>
+				{% else %}
+				<a href="{{ _url.base }}{{ key }}{{ href_args_str }}">{{ value }}</a>
+				{% endif %}
+				<span class="pipe">//</span>
+			{% endif %}
+		{% endfor %}
+
+	{% endif %}
+
+{% endif %}
+

@@ -1,0 +1,61 @@
+
+<div class="conwrp">
+	<article class="blogview">
+
+		<header>
+			<h1 class="fontweight900">{{ item.title }}</h1>
+			<span class="newstim"><time pubdate datetime="{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}">{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}</time></span>
+		</header>
+		<div class="emspace h20"></div>
+
+{{ renderContent(item.content)|raw }}
+
+<div class="emspace h40 floatc"></div>
+
+{% if item.tags|length > 0 %}
+<p>Tags:
+{% for tag in item.tags %}
+<a class="fontweight500" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>{% if not loop.last %}, {% endif %}
+{% endfor %}
+</p>
+{% endif %}
+
+		<div class="emspace floatc"></div>
+
+	</article><!-- /.blogview -->
+	<aside class="blogside">
+
+		<h3>Recent Posts</h3>
+{% set postList = getLatestBlogItem(4) %}
+{% for post in postList %}
+		<p class="blocklinks nopadbot">
+			<a href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+				<span><b>{{ post.title }}</b></span>
+				<span class="fontsize12"><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></span>
+			</a>
+		</p>
+{% endfor %}
+
+<div class="emspace h20 floatc"></div>
+
+<h3>Stay Informed</h3>
+<section class="hcontact">
+<script src="//blueskymarketing.epicuest.com/form-embed/2.embed?jquery=0&amp;prefix=stayinformed"></script>
+</section>
+
+<div class="emspace h20 floatc"></div>
+
+<h3>Tags</h3>
+{% set tags = getAllPostTags() %}
+{% if tags|length > 0 %}
+<p>
+{% for tag in tags %}
+<a class="fontweight400" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>{% if not loop.last %}, {% endif %}
+{% endfor %}
+</p>
+{% endif %}
+
+	</aside><!-- /.blogside -->
+	<div class="emspace h1 floatc"></div>
+</div><!-- /.conwrp -->
+

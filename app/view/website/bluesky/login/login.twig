@@ -1,0 +1,94 @@
+<script>
+	$(function(){
+		$("form#login_form").submit(function(e){
+			$("#ov").fadeIn();
+			e.preventDefault();
+			$.ajax({
+				url:'{{ _url.base }}spaceframe/login/validate.json',
+				method: 'POST',
+				data:{"username" : $("#username").val(), "password" : $("#password").val()},
+				success:function (json) {
+					if(json.success) {
+						if (json.redirect_url) {
+							window.location.replace("{{ _systemUrl }}" + json.redirect_url);
+						} else {
+							$("#ov").hide();
+							var redirectUrl = $("#redirect").val();
+							if (redirectUrl) {
+								window.location.replace(redirectUrl);
+							}
+							else {
+								window.location.replace("{{ _url.base }}spaceframe");
+							}
+						}
+					}
+					else {
+						$("#ov").hide();
+						if(json.error_code==1) {
+							json.error = 'That combination of username and password was not correct';
+						}
+						$('#login_error').html(json.error).show().parents('.fwrp').addClass("fer");
+					}
+				},
+				error:function (request, status, error) {
+					$("#ov").hide();
+					if(request.status){
+						alert('Error: '+request.status +'\n'+ request.statusText );
+					}
+				}
+			});
+			return false;
+		});
+	})
+</script>
+
+
+
+{% set _skinDir = '/lib/Admin/default/' %}
+
+<div class="emspace variable"></div>
+<section class="loginwrp bcc-all">
+
+	<img src="{{ _url.base }}app/website/spaceframe/img/spaceframe_sys.jpg" class="resp" alt="Spaceframe" />
+	<div class="emspace h20"></div>
+
+{% if not cookieEnabled %}
+	<div class="fwrp fer nopad">
+		<div class="fermsg">Cookies are currently disabled in your browser. Please enable cookies to login and use the system.</div>
+	</div>
+{% endif %}
+
+	<div class="emspace h20"></div>
+
+	<input type="hidden" id="redirect" value="{{ base64_decode(_route.redirect) }}" />
+
+	<form id="login_form" class="fom">
+
+		<div id="pov">Signing in ..</div>
+		<div class="pov">
+
+			<div class="fwrp">
+				<input id="username" name="username" type="text" value="" placeholder="email address" />
+			</div>
+
+			<div class="emspace"></div>
+
+			<div class="fwrp">
+				<input id="password" name="password" type="password" value="" placeholder="password" />
+			</div>
+
+			<div class="fwrp">
+				<div id="login_error" class="fermsg"></div>
+			</div>
+
+			<div class="emspace"></div>
+			<button type="submit" name="sub" id="sub" class="btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+
+		</div><!-- /.pov -->
+	</form>
+
+	<div class="emspace h30 floatc"></div>
+	<p><a href="{{ _url.base }}spaceframe/forgot-password">Forgot username or password?</a></p>
+
+</section>
+

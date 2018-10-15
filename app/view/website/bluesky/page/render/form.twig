@@ -1,0 +1,4 @@
+
+<h1 class="pagetit">{{ item.name }}</h1>
+{% include 'form/view.twig' with {"form": s, "fields" : getFormFields(s.id), "success": s.success} %}
+

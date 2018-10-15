@@ -1,0 +1,53 @@
+
+<div class="lote_form_msg"></div>
+<div class="lote_form_page_fields">
+	<input type="hidden" class="group_id" value="{{ fields[0].group_id }}"/>
+	{% for f in fields %}
+		{% set content = include('_common/cf/field/edit/'~f.field_type~'.twig', {"field" : f, "object_id" : record_id }, ignore_missing = true) %}
+		{% if content %}
+			{{ content|raw }}
+		{% endif %}
+	{% endfor %}
+</div>
+
+<div class="emspace h20"></div>
+
+<div class="fwrp">
+
+	{% if new_record_id %}
+		{% set formPaging = getFormNavigation(form.id, new_record_id) %}
+		{% set record_id = new_record_id %}
+	{% elseif not formPaging %}
+		{% set formPaging = getFormNavigation(form.id) %}
+	{% endif %}
+
+	<div class="form_buttons">
+		{% if form.allow_incomplete %}
+			<a href="javascript:;" id="save_progress" class="btn">Save Progress</a>
+		{% endif %}
+		{% if formPaging.prev %}
+			<input type="button" value="Prev" class="btn form_prev_button_{{ form.id }}" />
+		{% endif %}
+		{% if formPaging.next %}
+			<input type="submit" value="Next" class="btn" />
+		{% else %}
+			<input type="submit" value="Submit" class="btn" />
+		{% endif %}
+		<input type="hidden" name="id" value="{{ form.id }}" id="form_id" />
+		<input type="hidden" name="record_id" value="{{ record_id }}" id="record_id" />
+		<input type="hidden" name="instance" value="{{ form.instance }}" id="instance" />
+	</div>
+	<div class="form_processing">
+		<button><div class="form_loader">Loading...</div></button>
+	</div>
+
+</div><!-- /.fwrp -->
+<div class="emspace h1 floatc"></div>
+
+
+<script>
+$(function(){
+	setupFormButtons('{{ form.id }}', '{{ record_id }}', '{{ formPaging.next }}', '{{ formPaging.prev }}', '{{ form.instance }}');
+});
+</script>
+

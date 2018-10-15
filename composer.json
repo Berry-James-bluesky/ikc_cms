@@ -1,0 +1,48 @@
+{
+  "name": "Blue Sky Digital Labs",
+  "description": "Copyright Sidra Blue Pty Ltd",
+  "license": "proprietary",
+  "version": "0.1",
+  "config": {
+    "vendor-dir": "lib/vendor",
+    "process-timeout": 4000
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.sidrablue.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "*",
+    "aura/installer-default": "1.0.0",
+    "facebook/graph-sdk": "*",
+    "google/apiclient": "^2.0",
+    "html2text/html2text": "*",
+    "intervention/image": "2.3.4",
+    "jwage/easy-csv": "0.0.2",
+    "mikehaertl/phpwkhtmltopdf": "2.0.1",
+    "mtdowling/cron-expression": ">=1.1.0",
+    "mrclay/minify": "~3.0.0",
+    "sabre/vobject": ">=3.0.0",
+    "sidrablue/lote/framework": "dev-release/1.0.0",
+    "symfony/config": "3.0.0",
+    "symfony/translation": "3.0.0",
+    "symfony/validator": "3.0.0",
+    "symfony/var-dumper": "^3.3.0",
+    "wikimedia/composer-merge-plugin": ">=1.4.1"
+  },
+  "extra": {
+    "merge-plugin": {
+      "include": [
+        "lib/app/*/composer.json"
+      ]
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "BlueSky\\": "app/src/"
+    }
+  }
+}

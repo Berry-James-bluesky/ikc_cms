@@ -1,0 +1,17 @@
+{% set fileReference = {'sb_directory_folder':'directory','sb_directory_item':'directory',
+                        'sb_cms_news_article':'news','sb_page_item':'page',
+                        'sb_mullins_services_item':'services','sb_mullins_services_category':'services',
+                        'sb_cms_staff_item':'staff'
+                        }
+%}
+
+{% if not list.rows %}
+    <p>No results found {% if search_phrase %}for phrase '{{ search_phrase }}'{% endif %}</p>
+{% else %}
+    <p>Results for {{ search_phrase }} are listed below. Click to view details.</p>
+    <div class="emspace h20"></div>
+    {% for item in list.rows %}
+        {% include [fileReference[item.result_type]~"/website_search_"~item.result_type~".twig", 'search/default.twig'] %}
+    {% endfor %}
+    {% include 'paging.twig' with {'paging' : list.paging, 'js' : '0', 'pagingUrl' : _systemUrl~'search' } %}
+{% endif %}

@@ -1,0 +1,19 @@
+<table class="sb-con" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <th class="name">Name</th>
+        <th class="title">Title</th>
+
+    </tr>
+    {% for news in newsList.rows %}
+        <tr>
+            <td class="name">{{ news.name }}</td>
+            <td class="title">{{ news.title }}</td>
+        </tr>
+    {% else %}
+        <tr>
+            <td colspan="4">No results found</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{% include 'paging.twig' with {'paging' : newsList.paging, 'js' : '1', 'pagingUrl' : _systemUrl~'news/' } %}

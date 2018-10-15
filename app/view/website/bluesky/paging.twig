@@ -1,0 +1,32 @@
+<div class="paging">
+	<section>viewing {{ paging.start }} - {{ paging.end }} of {{ paging.total }}</section>
+	<section>
+	{% if paging.total_pages > 1 %}
+		{% if paging.page > 1 %}
+		<a rel="ajax" href="{{ pagingUrl }}{% if search_phrase %}?phrase={{ search_phrase }}{% endif %}">first</a>
+		<a rel="ajax" href="{{ pagingUrl }}/page/{{ paging.page - 1 }}{% if search_phrase %}?phrase={{ search_phrase }}{% endif %}">prev</a>
+		{% else %}
+		<span>first</span>
+		<span>prev</span>
+		{% endif %}
+
+		{% set startPaging = max(1, paging.page -5) %}
+		{% set endPaging = min(max(10, paging.page +5), paging.total_pages) %}
+		{% for i in startPaging..endPaging %}
+			{% if i==paging.page %}
+				<span class="pgnum">{{ i }}</span>
+			{% else %}
+				<a rel="ajax" href="{{ pagingUrl }}/page/{{ i }}{% if search_phrase %}?phrase={{ search_phrase }}{% endif %}">{{ i }}</a>
+			{% endif %}
+		{% endfor %}
+
+		{% if paging.total_pages > 1 and paging.total_pages > paging.page %}
+			<a rel="ajax" href="{{ pagingUrl }}/page/{{ paging.page + 1 }}{% if search_phrase %}?phrase={{ search_phrase }}{% endif %}">next</a>
+			<a rel="ajax" href="{{ pagingUrl }}/page/{{ paging.total_pages }}{% if search_phrase %}?phrase={{ search_phrase }}{% endif %}" class="lst">last</a>
+		{% else %}
+			<span>next</span>
+			<span class="lst">last</span>
+		{% endif %}
+	{% endif %}
+	</section>
+</div><!-- /.paging -->

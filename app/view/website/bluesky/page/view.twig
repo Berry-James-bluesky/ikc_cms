@@ -1,0 +1,20 @@
+
+{% for s in item.content_links %}
+{% if s.type == 'snippet' %}
+{% if s.html_id or s.html_class %}<div{% if s.html_id %} id="{{ s.html_id }}"{% endif %}{% if s.html_class %} class="{{ s.html_class }}"{% endif %}>
+{% endif %}
+{% if s.content_type=="raw" %}
+{{ s.content|raw }}
+{% else %}
+{{ renderContent(s.content)|raw }}
+{% endif %}
+{% if s.html_id or s.html_class %}</div><!-- /user({% if s.html_id %}#{{ s.html_id }}{% endif %}{% if s.html_class %}.{{ s.html_class }}{% endif %}) -->
+{% endif %}
+{% if s.description %}
+{{ renderContent(s.description)|raw }}
+{% endif %}
+{% elseif s.type == 'form' %}
+{% include "page/render/form.twig" with {"content" : s, "hideTitle":true} %}
+{% endif %}
+{% endfor %}
+

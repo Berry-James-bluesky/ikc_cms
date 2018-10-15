@@ -1,0 +1,11 @@
+{
+  "type": "app",
+  "name": "Blue Sky Digital Labs",
+  "reference": "blueskydl",
+  "description": "The Calendar Directory",
+  "license": "proprietary",
+  "version": "0.1",
+  "dependencies": [
+    "admin"
+  ]
+}

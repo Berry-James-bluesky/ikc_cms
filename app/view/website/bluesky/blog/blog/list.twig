@@ -1,0 +1,19 @@
+<h1 class="icon news">Blog Items</h1>
+<table class="sb-con" width="100%" cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Blog Name</th>
+    </tr>
+    {% if blogList.total > 0 %}
+        {% for blog in blogList.rows %}
+            <tr>
+                <td><a href="{{ _url.base }}blog/{{ blog.id }}">{{ blog.name }}</a></td>
+            </tr>
+        {% endfor %}
+    {% else %}
+        <tr>
+            <td colspan="4">No Records. </td>
+        </tr>
+    {% endif %}
+</table>
+
+{% include 'paging.twig' with {'paging' : blogList.paging, 'pagingUrl' : _url.base~'blog/' } %}

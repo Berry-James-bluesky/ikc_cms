@@ -1,0 +1,36 @@
+
+{#{% if form_id %}{% set form = getForm(form_id) %}{% endif %}#}
+{% set formVars = {} %}
+{% if callback %}{% set formVars = {"callback" : callback} %}{% endif %}
+
+{% if success==false %}{{ error }}
+{% else %}
+
+{#{% include "_common/cf/form/js.twig" with formVars %}#}
+<form id="lote_form_{{ form.id }}" autocomplete="off" class="fom{% if form.style_class %} {{ form.style_class }}{% endif %}" enctype="multipart/form-data" data-form-instance="{{ form.instance }}">
+
+{% if form.description %}
+{{ form.description|raw }}
+<div class="emspace h20"></div>
+{% endif %}
+
+	<div class="lote_form_main">
+{% if new_record_id %}
+{#{% include 'form/view_page.twig' with {"form": form, "fields" : getFormFields(form.id, new_record_id), "new_record_id" : new_record_id} %}#}
+{% else %}
+{#{% include 'form/view_page.twig' with {"form": form, "fields" : getFormFields(form.id, false)} %}#}
+{% endif %}
+	</div>
+
+	<div class="lote_form_completed" style="display:none;">
+{% if form.thank_you_text %}
+<p>{{ form.thank_you_text }}</p>
+{% else %}
+<p>Thank you for your submission. It has been received successfully.</p>
+{% endif %}
+	</div>
+
+</form>
+
+{% endif %}
+

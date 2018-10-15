@@ -1,0 +1,16 @@
+{% set reference = {'sb_directory_folder':'Industry','sb_directory_item':'Resource',
+'sb_cms_news_article':'News','sb_page_item':'Page',
+'sb_mullins_services_item':'Service','sb_mullins_services_category':'Service Category',
+'sb_cms_staff_item':'Expert'
+}
+%}
+
+<section class="newswrp srcwrp">
+    <section class="newslcon">
+        <h1>{{ item.name }}</h1>
+        <p>{{ item.summary|raw|striptags|replace({'&nbsp;':' '})|truncate(300,true,' ..') }}</p>
+        <p><em>{{ reference[item.result_type] }}</em></p>
+        <p><a href="{{ item.url }}" title="" class="btn">Click to view or read more</a></p>
+    </section><!-- /newslcon -->
+</section><!-- /.newswrp -->
+<div class="emspace h20 floatc"></div>

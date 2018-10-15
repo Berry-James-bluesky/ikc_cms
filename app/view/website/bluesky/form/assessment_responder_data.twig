@@ -1,0 +1,20 @@
+<table width="100%" cellspacing="0" cellpadding="0">
+    <tbody>
+    {% for cfGroup in formData %}
+        {% for f in cfGroup.getChildFields %}
+            {% set fieldData = f.getData() %}
+            {% set answer = answers[fieldData.id] %}
+            {% set content = include('_common/cf/field/view/'~fieldData.field_type~'.twig', {"field" : f, 'tr_style' : tr_style, 'th_style' : th_style, 'td_style' : td_style, "answer" : answer}, ignore_missing = true ) %}
+            {% if content %}
+    {{ content|raw }}
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+    <tr>
+        <th><b>Test Summary</b></th>
+        <td>{% if answers.percentage >= answers.pass_percentage %}Pass{% elseif answers.percentage >= answers.review_percentage%}Fail with review{% else %}Fail{% endif %}</b></td>
+        <td>{{ answers.percentage|number_format(2) }}%</td>
+        <td>{{ answers.mark }}/{{ answers.total }}</td>
+    </tr>
+    </tbody>
+</table>

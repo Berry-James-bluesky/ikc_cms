@@ -1,0 +1,58 @@
+
+	<header id="hed">
+		<div class="wrp">
+
+			<div id="logo">
+				<a href="/" title="">
+					<img src="{{ img }}bluesky-marketing.png" alt="bluesky digital labs" />
+				</a>
+			</div><!-- /#logo -->
+
+			<nav id="mnav">
+				<div class="menu-toggle"><button type="button" id="menu-btn"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
+				<ul id="respmenu" class="ace-responsive-menu" data-menu-style="horizontal">
+
+{% set nav = buildNav(1) %}
+{% for i in nav %}
+{% if i.is_navigation %}
+{% if i._children %}
+<li><a href="{{ i._url }}" title="{{ i.title }}"{% if item.lote_path_superparent == i.id %} class="active"{% endif %}>{{ i.title }}<i class="fas fa-angle-down"></i></a>
+<ul>
+{% for c in i._children %}
+{% if c.is_navigation %}
+<li><a href="{{ c._url }}" title="{{ c.title }}">{{ c.title }}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+</li>
+{% else %}
+<li{% if loop.last %} class="last"{% endif %}><a href="{{ i._url }}" title="{{ i.title }}"{% if item.lote_path_superparent == i.id or (i.id == 6 and _route._handler._app == "blog") %} class="active"{% endif %}>{{ i.title }}</a></li>
+{% endif %}
+{% endif %}
+{% endfor %}
+
+				</ul>
+			</nav><!-- /#mnav -->
+			<div class="emspace h1 floatc"></div>
+		</div><!-- /.wrp -->
+	</header><!-- /.#hed -->
+	<section id="hero"{% if not (_route._handler._app == "blog" and _route._method == "view") %}{% if item.featured_image %} style="background-image:url('{{ imgTsUrl(item.featured_image.reference) }}');"{% endif %}{% endif %}>
+		<div class="bgcover">
+			<div class="wrp">
+				<section class="vmiddle">
+
+<h1>{% if _route._handler._app == "blog" %}Insight{% else %}{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% elseif item.title %}{{ item.title }}{% else %}404{% endif %}{% endif %}</h1>
+{% if not item.is_home_page %}
+<section class="crumb center toupper fontweight300 fontsize12">
+{% include 'crumb.twig' %}
+</section>
+{% endif %}
+
+				</section>
+			</div><!-- /.wrp -->
+		</div><!-- /.bgcover -->
+	</section><!-- /.hero -->
+
+
+	<div class="emspace h20 floatc"></div>
+

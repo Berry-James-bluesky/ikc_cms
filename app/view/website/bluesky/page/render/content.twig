@@ -1,0 +1,10 @@
+
+{% if s.html_id or s.html_class %}<div{% if s.html_id %} id="{{ s.html_id }}"{% endif %}{% if s.html_class %} class="{{ s.html_class }}"{% endif %}>
+{% if s.content_type=="raw" %}
+{{ s.content|raw }}
+{% else %}
+{{ renderContent(s.content)|raw }}
+{% endif %}
+{% if s.html_id or s.html_class %}</div><!-- /user(id||class) -->
+{% endif %}
+

@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    var intervalId;
+
+    setPing();
+
+    function setPing() {
+        if(intervalId) {
+            clearInterval(intervalId);
+        }
+        intervalId = setInterval('pingServer()', '200000');
+    }
+
+    function clearPing(){
+        clearInterval(intervalId);
+    }
+
+    function pingServer(){
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "{{ _url.base }}_util/keep-alive.json",
+            success: function(json){
+                if(json.success) {
+                    setPing();
+                }
+            }
+        });
+    }
+</script>

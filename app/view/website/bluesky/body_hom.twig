@@ -1,0 +1,71 @@
+
+<div id="homeup">
+	<section class="welcome greybox center">
+
+{{ renderContent(item.description)|raw }}
+
+	</section><!-- /.greybox -->
+
+	<div class="emspace h80 floatc"></div>
+	<h2 class="center toupper fontsize48">Services</h2>
+	<div class="emspace h40"></div>
+
+	<section id="hservices">
+{% set nav = buildNav(1,4) %}
+{% for i in nav %}
+{% if i.is_navigation %}
+		<div class="{{ cycle(['ll','rr'], loop.index0) }}">
+			<div class="tile center"{% if i.featured_image %} style="background-image:url('{{ imgTsUrl(i.featured_image.reference, 540) }}');"{% endif %}>
+				<a href="{{ i._url }}" title="{{ i.title }}"{% if i.lote_link_type=="cms_link_external" %} target="_blank"{% endif %}{% if i.id == 5 and _route._handler._app == "directory" %} class="active"{% endif %}>
+					<h3>{{ i.title }}</h3>
+					<p>{{ i.summary }}</p>
+					<p class="btn">Read More</p>
+				</a>
+			</div><!-- /.tile -->
+		</div>
+{% if loop.index is divisible by(2) or loop.last %}
+	<div class="emspace h20 floatc"></div>
+{% endif %}
+{% endif %}
+{% endfor %}
+	</section><!-- /#hservices -->
+
+	<div class="emspace h80 floatc"></div>
+	<h2 class="center toupper fontsize48">Insight</h2>
+	<div class="emspace h40"></div>
+
+	<div id="hinsight" class="colwrp inline center">
+{% set postList = getLatestBlogItem(3) %}
+{% for post in postList %}
+		<div class="coltre">
+			<div class="wrp">
+				<a href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+					<section class="hinimg"{% if post.featured_image %} style="background-image:url('{{ imgTsUrl(post.featured_image.reference, 360) }}');"{% endif %}></section>
+					<section class="hincon">
+						<p>
+							<span class="fontsize18"><b>{{ post.title }}</b></span>
+							<span class="fontsize12"><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></span>
+						</p>
+					</section>
+				</a>
+			</div><!-- /.wrp -->
+		</div>
+{% endfor %}
+	</div><!-- /#hinsight -->
+
+	<div class="emspace h80 floatc"></div>
+	<h2 class="center toupper fontsize48 hideinprint">We'd Love To Hear From You</h2>
+	<div class="emspace h40 hideinprint"></div>
+
+	<section class="hcontact w640 hideinprint">
+<script src="//blueskymarketing.epicuest.com/form-embed/1.embed?jquery=0&amp;prefix=contacthome"></script>
+	</section><!-- /.hcontact -->
+
+	<div class="homfotspc emspace h70 floatc"></div>
+</div><!-- /#homeup -->
+
+
+
+{{ _content_|raw }}
+
+

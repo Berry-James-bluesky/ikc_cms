@@ -1,0 +1,72 @@
+
+<table align="center" cellpadding="0" cellspacing="0" style="background:#ffffff;padding:0;border-width:1px;border-style:solid;border-color:#e7e7e7;"><tr><td>
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#ffffff;width:560px;border-collapse:collapse;">
+<tbody>
+<tr>
+<td style="padding:30px;font-family:arial,tahoma;font-size:32px;line-height:32px;color:#000000;">[[company]]</td>
+</tr>
+</tbody>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#000000;width:560px;border-collapse:collapse;">
+<tbody>
+<tr>
+<td style="padding:0pt;font-family:arial,tahoma;font-size:12px;line-height:18px;">
+
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#000000;width:500px;border-collapse:collapse;">
+<tr valign="top">
+<td style="padding:0pt;width:500px;font-family:arial,tahoma;font-size:14px;line-height:18px;color:#ffffff;">
+<p>&nbsp;</p>
+<h1 style="margin:0px;padding:0px;font-family:'arial narrow',arial;font-size:21px;color:#ffffff;">Website Contact Form Submission</h1>
+<p style="line-height:21px;padding-top:5px;padding-bottom:5px;">A website form has been completed through your website.<br />Details are listed below.</p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#ffffff;width:500px;border-collapse:collapse;">
+<tbody>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+<td style="padding:0pt;width:500px;font-family:arial;font-size:14px;line-height:21px;color:#666666;">
+
+
+
+<p>
+{{ form.auto_response_content|raw }}
+</p>
+
+
+<h3>{{ form.name }}</h3>
+<a href="{{ url }}/_admin/cms/form/records/view/{{ data._id }}" target="_blank" rel="noopener noreferrer">View</a>
+
+<h3>Form Data</h3>
+<p>
+{% for f in fields %}
+<b>{{ f.label }}:</b> {{ data[f.id] }}<br />
+{% endfor %}
+</p>
+<p>
+<b>Submitted from:</b> {{ data['formURI'] }}<br />
+<b>Submitted By:</b> {{ user.first_name }} {{ user.last_name }} ({{ user.email }})
+</p>
+
+
+
+</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+</tbody>
+</table>
+
+</td></tr></table>
+
