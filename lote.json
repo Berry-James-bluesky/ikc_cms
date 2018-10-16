@@ -70,6 +70,12 @@
       "source-url": "https://bitbucket.org/sidrablue/gallery.git",
       "source-branch": "master"
     },
+    "Blog": {
+      "dev": true,
+      "version": ">=0.1",
+      "source-url": "https://bitbucket.org/sidrablue/blog.git",
+      "source-branch": "master"
+    },
     "OpenApi": {
       "dev": true,
       "version": ">=0.1",
