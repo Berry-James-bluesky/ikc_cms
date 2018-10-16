@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <!--base href="{{ _url.base }}"-->
 {% set site = 'Blue Sky Digital Labs' %}
-<title>{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %} [ {{ site }} ] Perth based marketing, digital and creative consultancy with a Digital First approach{% endif %}</title>
+<title>{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %} [ {{ site }} ] Perth based custom web development{% endif %}</title>
 <meta name="description" content="{% if item.seo_description %}{{ item.seo_description }}{% else %}{% if item.summary %}{{ item.summary }}{% elseif item.description %}{{ item.description|raw|striptags|length > 256 ? item.description|raw|striptags|slice(0,254) ~ '..' : item.discription|raw|striptags }}{% else %}{{ site }}. {{ item.title }}{% endif %}{% endif %}">
 <!--{#{% if page.seo_keywords %}<meta name="keywords" content="{{ page.seo_keywords }}">{% endif %}#}-->
 
@@ -36,7 +36,7 @@
 <link rel="icon" type="image/png" sizes="96x96" href="{{ img }}_ico/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ img }}_ico/favicon-16x16.png">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+<!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"-->
 <link rel="stylesheet" href="/app/website/bluesky/css/style.css">
 
 <!--[if lt ie 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
