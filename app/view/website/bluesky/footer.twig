@@ -2,29 +2,14 @@
 	<footer id="fot">
 		<div class="emspace h30"></div>
 		<div class="wrp">
-			<div class="coltre">
 
-				<a class="hideinprint" href="/" title="">
-					<img src="{{ img }}bluesky-marketing_w.png" alt="bluesky digital labs" />
-				</a>
 
-			</div><!-- /.coltre -->
-			<div class="coltre dbl floatr tright">
 
-				<section id="soc" class="hideinprint">
-{% set soc = buildNav(3) %}
-{% for c in soc %}
-{% if c.is_navigation %}
-<a href="{{ c._url }}" title="{{ c.title }}"{% if c.lote_link_type=="cms_link_external" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ c.browser_display|raw }}</a>
-{% endif %}
-{% endfor %}
-				</section><!-- /#soc -->
 
-				<div class="emspace h20 floatc"></div>
 
-				<section id="copy">
+			<section id="copy">
 
-<span>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} Blue Sky Digital Labs. All rights reserved</span>
+<span>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs.</span>
 <span class="pipe">|</span>
 {% set copy = buildNav(2) %}
 {% for c in copy %}
@@ -35,11 +20,12 @@
 {% endif %}
 {% endif %}
 {% endfor %}
-<!--a href="http://sidrablue.com.au/" title="Sidra Blue. Custom Web Development, Shopping Carts, E-Marketing, Content Management System (CMS) Perth Australia" target="_blank">Site by Sidrablue</a-->
+<!--{#
+<a href="http://sidrablue.com.au/" title="Sidra Blue. Custom Web Development, Shopping Carts, E-Marketing, Content Management System (CMS) Perth Australia" target="_blank" rel="noopener noreferrer">Site by Sidrablue</a>
+#}-->
 
-				</section><!-- /#copy -->
+			</section><!-- /#copy -->
 
-			</div><!-- /.coltre.dbl.floatr.tright -->
 		</div><!-- /.wrp -->
 		<div class="emspace h30 floatc"></div>
 	</footer><!-- /#fot -->

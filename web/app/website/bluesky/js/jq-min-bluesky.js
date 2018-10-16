@@ -6,11 +6,6 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 
 
 
-/* ace-responsive */
-eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('(7(e){e.Q.R=7(t){7 f(){B t=e(C).H();8(t<=i){u.k("5.0-3").2("0-3");u.k("l.4").2("4").m("9");u.6("g q-0");u.v("w-0-9","");e(".0-I").S()}J{u.v("w-0-9",a);u.2("g q-0").m("9");e(".0-I").q();8(u.v("w-0-9")=="K"){u.6("g");c}u.k("5.0-3").2("0-3");u.k("l.4").2("4").m("9")}}B n={L:"T",M:"U",N:p};B t=e.V(n,t),r=t,i=r.L,s=r.M,o=r.N,u=e(1),a=e(1).v("w-0-9");u.k("l").6("d-0");u.k("l").x("a").W(\'<O X="Y "></O>\');8(a=="K"){e(1).6("g")}8(e(C).H()<=i){f()}e(C).Z(7(){f()});e("#0-10").y(7(){u.11().12("q-0")});c 1.13(7(){u.D("P","> 5 a",7(){8(u.z("g")===h){c p}e(1).E("y","> 5 a");e(1).b("5").x().j(".d-0").F(h,h).A(s).2("4").m("9").F();e(1).b().6("0-3").j(".d-0").G(s).6("4");c});u.D("14","5",7(){8(u.z("g")===h){c p}e(1).E("y","> 5 a");e(1).2("0-3");e(1).j("l.d-0").F(h,h).A(s).2("4").m("9");c});u.D("y","> 5 a",7(){8(u.z("g")===p){c p}e(1).E("P","> 5 a");8(e(1).b().z("0-3")){e(1).b().j(".d-0").A().2("4");e(1).b().2("0-3")}J{8(o==h){e(1).b().6("0-3").j(".d-0").G(s).6("4");c}e(1).b().x().2("0-3");e(1).b("5").x().j(".d-0").A().2("4");e(1).b().6("0-3").j(".d-0").G(s).6("4")}})})}})(15)',62,68,'menu|this|removeClass|active|slide|li|addClass|function|if|style||parent|return|sub|||collapse|true||children|find|ul|removeAttr|||false|hide|||||attr|data|siblings|click|hasClass|slideUp|var|window|on|off|stop|slideDown|innerWidth|toggle|else|accordion|resizeWidth|animationSpeed|accoridonExpAll|span|mouseover|fn|aceResponsiveMenu|show|768|fast|extend|append|class|arrow|resize|btn|slideToggle|toggleClass|each|mouseleave|jQuery'.split('|'),0,{}))
-
-
-
 /*! featherlight v1.7.9 http://noelboss.github.io/featherlight/ by Noel Raoul Bossart */
 eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('!4(a){"2B 2C";4 b(a,c){9(!(3 H b)){6 d=o b(a,c);5 d.1k(),d}3.1l=b.1l++,3.1H(a,c),3.1I(b.1J)}4 c(a,b){6 c={};I(6 d p a)d p b&&(c[d]=a[d],2D a[d]);5 c}4 d(a,b){6 c={},d=o 1K("^"+b+"([A-Z])(.*)");I(6 e p a){6 f=e.Y(d);9(f){6 g=(f[1]+f[2].2E(/([A-Z])/g,"-$1")).2F();c[g]=a[e]}}5 c}9("2G"==1m a)5 J("10"p K&&K.10.2H("2I 2J 2K, 1L 2L 1M."));6 e=[],f=4(b){5 e=a.1N(e,4(a){5 a!==b&&a.$8.1O("1P").L>0})},g={2M:1,2N:1,M:1,2O:1,2P:1,2Q:1,1Q:1,2R:1,2S:1,2T:1,11:1,2U:1,N:1},h={2V:"1n",1o:"12"},i=4(c){a.O(b.13().2W(),4(){5 c.1p()||!1!==3[h[c.1q]](c)?J 0:(c.1r(),c.2X(),!1)})},j=4(c){9(c!==b.1R){b.1R=c;6 d=a.1S(h,4(a,c){5 c+"."+b.q.7}).1T(" ");a(K)[c?"P":"2Y"](d,i)}};b.q={1s:b,7:"m",1U:"Q-m",1V:x,1W:!1,14:x,1X:"1t",1Y:"1t",1u:x,1Z:"1P",20:21,22:21,1v:"14",23:!0,24:"&#2Z;",15:"",R:!1,1w:x,16:a.r,1x:a.r,1y:a.r,1z:a.r,17:a.r,18:a.r,1n:a.r,12:a.r,1q:x,19:["25","1A","26","28","t","1B"],1H:4(b,c){"29"!=1m b||b H a!=!1||c||(c=b,b=J 0);6 d=a.y(3,c,{T:b}),e=d.1W?d.7+"-30":d.7,f=a(d.14||[\'<n U="\'+e+"-15 "+e+\'">\',\'<n U="\'+e+\'-l">\',\'<1a U="\'+e+"-u-31 "+d.7+\'-u" 32-33="34">\',d.24,"</1a>",\'<n U="\'+d.7+\'-1C">\'+d.15+"</n>","</n>","</n>"].1T("")),g="."+d.7+"-u"+(d.1w?","+d.1w:"");5 d.$8=f.2a().1b(d.1V),d.$8.P(d.1Y+"."+d.7,4(b){6 c=a(b.T);("14"===d.1v&&c.2b("."+d.7)||"35"===d.1v||c.1O(g).L)&&(d.u(b),b.1r())}),3},2c:4(){9(3.R!==!1&&3.$l)5 3.$l;6 b=3,c=3.1s.19,d=4(a){5 b.$v&&b.$v.E(a)},e=d(b.1U),f=b.T||e||"",g=c[b.1q];9(!g&&f p c&&(g=c[f],f=b.T&&e),f=f||d("36")||"",!g)I(6 h p c)b[h]&&(g=c[h],f=b[h]);9(!g){6 i=f;9(f=x,a.O(b.19,4(){5 g=c[3],g.1D&&(f=g.1D(i)),!f&&g.F&&i.Y&&i.Y(g.F)&&(f=i),!f}),!f)5"10"p K&&K.10.2d("1L: 2e l 1u 37 "+(i?\' I "\'+i+\'"\':" (2e T 38)")),!1}5 g.z.39(b,f)},2f:4(b){6 c=3;5 b.2b("t")&&c.$8.1b(c.7+"-t"),c.$8.2g(c.7+"-15"),c.$8.1c("."+c.7+"-1C").V(b).3a(1).3b().3c().3d(a.3e(c.$8[0],b[0])?"":b),c.$l=b.1b(c.7+"-1C"),c},1k:4(b){6 c=3;9(c.$8.2h().2i(c.1Z),!(b&&b.1p()||c.16(b)===!1)){b&&b.1r();6 d=c.2c();9(d)5 e.3f(c),j(!0),c.$8.3g(c.20),c.1x(b),a.3h(d).3i(4(a){c.2f(a),c.17(b)}).3j(c.$8.G()).3k(4(){c.1z(b)})}5 c.$8.2j(),a.W().1E().G()},u:4(b){6 c=3,d=a.W();5 c.1y(b)===!1?d.1E():(0===f(c).L&&j(!1),c.$8.3l(c.22,4(){c.$8.2j(),c.18(b),d.1d()})),d.G()},1o:4(a,b){9(a&&b){3.$l.X("N","").X("M","");6 c=2k.3m(a/(3.$l.2l().N()-1),b/(3.$l.2l().M()-1));c>1&&(c=b/2k.3n(b/c),3.$l.X("N",""+a/c+"2m").X("M",""+b/c+"2m"))}},1I:4(b){I(6 c p b)3[c]=a.2n(b[c],3,a.2n(3[c],3))}},a.y(b,{1l:0,1e:"[Q-m]",1f:b.q,19:{25:{F:/^[#.]\\w/,1D:4(b){5 b H a&&b},z:4(b){5 3.R!==!1?a(b):a(b).2a(!0)}},1A:{F:/\\.(3o|3p|3q|3r|3s|3t|3u)(\\?\\S*)?$/i,z:4(b){6 c=3,d=a.W(),e=o 3v,f=a(\'<3w 11="\'+b+\'" 3x="" U="\'+c.7+\'-1A" />\');5 e.3y=4(){f.2o=e.N,f.2p=e.M,d.1d(f)},e.3z=4(){d.1E(f)},e.11=b,d.G()}},26:{F:/^\\s*<[\\w!][^<]*>/,z:4(b){5 a(b)}},28:{F:/./,z:4(b){6 c=a.W(),d=a("<n></n>").2q(b,4(a,b){"2d"!==b&&c.1d(d.3A()),c.3B()});5 c.G()}},t:{z:4(b){6 e=o a.W,f=a("<t/>"),h=d(3,"t"),i=c(h,g);5 f.2h().E("11",b).E(i).X(h).P("2q",4(){e.1d(f.3C())}).2i(3.$8.1c("."+3.7+"-l")),e.G()}},1B:{z:4(b){5 a("<n>",{1B:b})}}},2r:["16","1z","1x","17","1y","18"],1g:4(b,c){6 d=3,e=o 1K("^Q-"+c+"-(.*)"),f={};5 b&&b.2s&&a.O(b.2s,4(){6 b=3.1Q.Y(e);9(b){6 c=3.3D,g=a.3E(b[1]);9(a.3F(g,d.2r)>=0)c=o 3G(c);3H 3I{c=3J.3K(c)}3L(h){}f[g]=c}}),f},y:4(b,c){6 d=4(){3.1s=b};5 d.q=3.q,b.q=o d,b.3M=3.q,a.y(b,3,c),b.1f=b.q,b},1h:4(b,c,d){6 e=3;"29"!=1m c||c H a!=!1||d||(d=c,c=J 0),d=a.y({},d);6 f,g=d.7||e.1f.7,h=a.y({},e.1f,e.1g(b[0],g),d),i=4(g){6 i=a(g.v),j=a.y({$3N:b,$v:i},e.1g(b[0],h.7),e.1g(g.v,h.7),d),k=f||i.Q("m-2t")||o e(c,j);"3O"===k.R?f=k:k.R!==!1&&i.Q("m-2t",k),j.$v.1i&&j.$v.1i(),k.1k(g)};5 b.P(h.1X+"."+h.7,h.1u,i),i},2u:4(){6 a=3.13();5 a[a.L-1]||x},13:4(){6 b=3;5 f(),a.1N(e,4(a){5 a H b})},u:4(a){6 b=3.2u();5 b?b.u(a):J 0},2v:4(){6 b=3;b.1e&&(a(b.1e).O(4(){b.1h(a(3))}),a(B).P("1t",b.1e,4(c){9(!c.1p()){6 d=b.1h(a(c.v));d(c)}}))},1J:{1n:4(b,c){5 27===c.3P?(3.23&&a.m.u(c),!1):b(c)},16:4(b,c){5 a(B.2w).1b("2x-m"),3.2y=B.1F,3.C$1G=a("a, 3Q, 3R, 3S, t, 1a, t, [3T=3U]").V("[D]").V(3.$8.1c("1a")),3.C$1j=a("[D]").V(\'[D="-1"]\'),3.2z=3.C$1j.1S(4(b,c){5 a(c).E("D")}),3.C$1j.3V(3.C$1G).E("D",-1),B.1F.1i&&B.1F.1i(),b(c)},18:4(c,d){6 e=c(d),f=3;5 3.C$1G.3W("D"),3.C$1j.O(4(b,c){a(c).E("D",f.2z[b])}),3.2y.2A(),0===b.13().L&&a(B.2w).2g("2x-m"),e},12:4(a,b){5 3.1o(3.$l.2o,3.$l.2p),a(b)},17:4(a,b){6 c=a(b);5 3.$8.1c("[3X]:V([3Y])").2A(),3.12(b),c}}}),a.m=b,a.3Z.m=4(a,c){5 b.1h(3,a,c),3},a(B).40(4(){b.2v()})}(1M);',62,249,'|||this|function|return|var|namespace|instance|if||||||||||||content|featherlight|div|new|in|prototype|noop||iframe|close|currentTarget||null|extend|process||document|_|tabindex|attr|regex|promise|instanceof|for|void|window|length|height|width|each|on|data|persist||target|class|not|Deferred|css|match||console|src|onResize|opened|background|loading|beforeOpen|afterContent|afterClose|contentFilters|button|addClass|find|resolve|autoBind|defaults|readElementConfig|attach|blur|previouslyWithTabIndex|open|id|typeof|onKeyUp|resize|isDefaultPrevented|type|preventDefault|constructor|click|filter|closeOnClick|otherClose|beforeContent|beforeClose|afterOpen|image|text|inner|test|reject|activeElement|previouslyTabbable|setup|chainCallbacks|_callbackChain|RegExp|Featherlight|jQuery|grep|closest|body|name|_globalHandlerInstalled|map|join|targetAttr|variant|resetCss|openTrigger|closeTrigger|root|openSpeed|250|closeSpeed|closeOnEsc|closeIcon|jquery|html||ajax|object|clone|is|getContent|error|no|setContent|removeClass|hide|appendTo|detach|Math|parent|px|proxy|naturalWidth|naturalHeight|load|functionAttributes|attributes|persisted|current|_onReady|documentElement|with|_previouslyActive|_previousWithTabIndices|focus|use|strict|delete|replace|toLowerCase|undefined|info|Too|much|lightness|needs|allowfullscreen|frameborder|longdesc|marginheight|marginwidth|referrerpolicy|scrolling|sandbox|srcdoc|keyup|reverse|stopPropagation|off|10005|reset|icon|aria|label|Close|anywhere|href|found|specified|call|slice|remove|end|replaceWith|contains|push|fadeIn|when|always|then|done|fadeOut|max|floor|png|jpg|jpeg|gif|tiff|bmp|svg|Image|img|alt|onload|onerror|contents|fail|show|value|camelCase|inArray|Function|else|try|JSON|parse|catch|__super__|source|shared|keyCode|input|select|textarea|contentEditable|true|add|removeAttr|autofocus|disabled|fn|ready'.split('|'),0,{}))
 
@@ -40,19 +35,11 @@ eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a
 $(function(){
 
 	/*$(".dohover").tooltip({position:{my:"center bottom",at:"bottom+70"}});*/
-
-	$("#respmenu").aceResponsiveMenu({ resizeWidth: '767' });
-	/* !? */ if( $(window).width()>767 ){ $('#respmenu a').on('click',function(){ window.location = $(this).attr("href"); }); }
-	$(window).resize(function(){
-		if( $(window).width()>767 ){
-			$('#respmenu a').on('click',function(){ window.location = $(this).attr("href"); });
-		}
-	}); /* !? */
-
+	/*
 	$('#mnav ul li a, #fot a').each(function(){
 		if(this.href==window.location.href.split("#")[0]){$(this).addClass("active");}
 	});
-
+	*/
 	$(window).on('scroll', function(e){
 
 		var $offset = window.pageYOffset || $(window).scrollTop()
@@ -70,31 +57,6 @@ $(function(){
 
 
 
-	$('.tbltab a').click(function(){
-		if( $(this).hasClass("on")){return false;}
-		else{
-			var cur=$(this).prevAll().length+1;
-			$(this).parent().children('.on').removeClass('on');
-			$(this).addClass('on');
-			$(this).parent().nextAll('.tblwrp').children('.on').fadeOut(200,function(){
-				$(this).removeClass('on');
-				$(this).parent().children('.tblcon:nth-child('+cur+')').fadeIn(200,function(){
-					$(this).addClass("on");
-				});
-			});
-		}
-	});
 
 });
-
-
-
-function getCheckboxBoolean(checkboxFieldId) {
-	var result = '0';
-	var field = $('#'+checkboxFieldId);
-	if(field && $(field).is(":checked")) {
-		result = '1';
-	}
-	return result;
-}
 

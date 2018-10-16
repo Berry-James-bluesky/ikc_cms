@@ -8,10 +8,47 @@
 				</a>
 			</div><!-- /#logo -->
 
-			<nav id="mnav">
-				<div class="menu-toggle"><button type="button" id="menu-btn"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
-				<ul id="respmenu" class="ace-responsive-menu" data-menu-style="horizontal">
 
+
+<nav id="mnav" class="ui stackable container menu">
+	<div class="item"><img src="assets/images/logo.png"></div>
+	<a class="item" href="javascript:;" title="">Home</a>
+	<div class="ui pointing dropdown items">
+		<a class="item" href="javascript:;">What we do</a>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" href="javascript:;" title="">Startup Development</a>
+			<a class="item" href="javascript:;" title="">System Development</a>
+			<a class="item" href="javascript:;" title="">App Developments</a>
+			<a class="item" href="javascript:;" title="">Data Science</a>
+			<a class="item" href="javascript:;" title="">Custom Web Development</a>
+			<a class="item" href="javascript:;" title="">Exploring Ideas</a>
+			<a class="item" href="javascript:;" title="">Digital Marketing</a>
+		</div><!-- /.menu -->
+	</div>
+	<div class="ui pointing dropdown link item">
+		<a class="item" href="javascript:;">What we've done</a>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" href="javascript:;" title="">sublink</a>
+			<a class="item" href="javascript:;" title="">sublink</a>
+			<a class="item" href="javascript:;" title="">sublink</a>
+		</div><!-- /.menu -->
+	</div>
+	<div class="ui pointing dropdown link item">
+		<a class="item" href="javascript:;">Who we are</a>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" href="javascript:;" title="">sublink</a>
+			<a class="item" href="javascript:;" title="">sublink</a>
+		</div><!-- /.menu -->
+	</div>
+	<a class="item" href="javascript:;" title="">Blog</a>
+	<a class="item" href="javascript:;" title="">Contact</a>
+</nav><!-- /#mnav -->
+
+
+<!--{#
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.is_navigation %}
@@ -30,29 +67,9 @@
 {% endif %}
 {% endif %}
 {% endfor %}
+#}-->
 
-				</ul>
-			</nav><!-- /#mnav -->
-			<div class="emspace h1 floatc"></div>
+
 		</div><!-- /.wrp -->
 	</header><!-- /.#hed -->
-	<section id="hero"{% if not (_route._handler._app == "blog" and _route._method == "view") %}{% if item.featured_image %} style="background-image:url('{{ imgTsUrl(item.featured_image.reference) }}');"{% endif %}{% endif %}>
-		<div class="bgcover">
-			<div class="wrp">
-				<section class="vmiddle">
-
-<h1>{% if _route._handler._app == "blog" %}Insight{% else %}{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% elseif item.title %}{{ item.title }}{% else %}404{% endif %}{% endif %}</h1>
-{% if not item.is_home_page %}
-<section class="crumb center toupper fontweight300 fontsize12">
-{% include 'crumb.twig' %}
-</section>
-{% endif %}
-
-				</section>
-			</div><!-- /.wrp -->
-		</div><!-- /.bgcover -->
-	</section><!-- /.hero -->
-
-
-	<div class="emspace h20 floatc"></div>
 

@@ -1,39 +1,6 @@
 
-			<div class="emspace h40"></div>
-			<section class="usrcon">
-
-{% if _route._handler._app == "page" and item.id == 6 %}
-{% set posts = getBlogPost() %}
-{% include 'blog/post/list.twig' with {'posts':posts} %}
-
-{% else %}
-
 {% if _route._handler._app == "page" and item.description %}
-<section class="w740">
 {{ renderContent(item.description)|raw }}
-</section><!-- /.w740 -->
 {% endif %}
-
-{% if _route._handler._app == "page" and item.parent_id == 4 %}
-<section class="w740">
-{% endif %}
-
 {{ _content_|raw }}
-
-{% if _route._handler._app == "page" and item.id == 7 %}
-<div class="emspace h20"></div>
-<section class="hcontact w640">
-<script src="//blueskymarketing.epicuest.com/form-embed/1.embed?jquery=0&amp;prefix=contactpage"></script>
-</section><!-- /.hcontact -->
-<div class="emspace h20 floatc"></div>
-{% endif %}
-
-{% if _route._handler._app == "page" and item.parent_id == 4 %}
-</section><!-- /.w740 -->
-{% endif %}
-
-{% endif %}
-
-			</section><!-- /.usrcon -->
-			<div class="emspace h70 floatc"></div>
 
