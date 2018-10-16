@@ -8,30 +8,47 @@
 				</a>
 			</div><!-- /#logo -->
 
-			<nav id="mnav">
-				<!--div class="menu-toggle"><button type="button" id="menu-btn"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div-->
-				<ul class="sm sm-clean">
-
-<li><a href="javascript:;" title="">Home</a></li>
-<li><a href="javascript:;" title="">What we do</a>
-<ul>
-<li><a href="javascript:;" title="">Startup Development</a></li>
-<li><a href="javascript:;" title="">System Development</a></li>
-<li><a href="javascript:;" title="">App Developments</a></li>
-<li><a href="javascript:;" title="">Data Science</a></li>
-<li><a href="javascript:;" title="">Custom Web Development</a></li>
-<li><a href="javascript:;" title="">Exploring Ideas</a></li>
-<li><a href="javascript:;" title="">Digital Marketing</a></li>
-</ul>
-</li>
-<li><a href="javascript:;" title="">What we've done</a></li>
-<li><a href="javascript:;" title="">Who we are</a></li>
-<li><a href="javascript:;" title="">Blog</a></li>
-<li><a href="javascript:;" title="">Contact</a></li>
 
 
+<nav id="mnav" class="ui stackable container menu">
+	<div class="item"><img src="assets/images/logo.png"></div>
+	<a class="item" href="javascript:;" title="">Home</a>
+	<div class="ui pointing dropdown items">
+		<a class="item" href="javascript:;">What we do</a>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" href="javascript:;" title="">Startup Development</a>
+			<a class="item" href="javascript:;" title="">System Development</a>
+			<a class="item" href="javascript:;" title="">App Developments</a>
+			<a class="item" href="javascript:;" title="">Data Science</a>
+			<a class="item" href="javascript:;" title="">Custom Web Development</a>
+			<a class="item" href="javascript:;" title="">Exploring Ideas</a>
+			<a class="item" href="javascript:;" title="">Digital Marketing</a>
+		</div><!-- /.menu -->
+	</div>
+	<div class="ui pointing dropdown link item">
+		<a class="item" href="javascript:;">What we've done</a>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" href="javascript:;" title="">sublink</a>
+			<a class="item" href="javascript:;" title="">sublink</a>
+			<a class="item" href="javascript:;" title="">sublink</a>
+		</div><!-- /.menu -->
+	</div>
+	<div class="ui pointing dropdown link item">
+		<a class="item" href="javascript:;">Who we are</a>
+		<i class="dropdown icon"></i>
+		<div class="menu">
+			<a class="item" href="javascript:;" title="">sublink</a>
+			<a class="item" href="javascript:;" title="">sublink</a>
+		</div><!-- /.menu -->
+	</div>
+	<a class="item" href="javascript:;" title="">Blog</a>
+	<a class="item" href="javascript:;" title="">Contact</a>
+</nav><!-- /#mnav -->
 
 
+<!--{#
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.is_navigation %}
@@ -50,10 +67,9 @@
 {% endif %}
 {% endif %}
 {% endfor %}
+#}-->
 
-				</ul>
-			</nav><!-- /#mnav -->
-			<div class="emspace h1 floatc"></div>
+
 		</div><!-- /.wrp -->
 	</header><!-- /.#hed -->
 

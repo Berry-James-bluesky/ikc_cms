@@ -7,7 +7,24 @@
 
 
 
+			<section id="copy">
 
+<span>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs.</span>
+<span class="pipe">|</span>
+{% set copy = buildNav(2) %}
+{% for c in copy %}
+{% if c.is_navigation %}
+<a href="{{ c._url }}" title="{{ c.title }}"{% if c.lote_link_type=="cms_link_external" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ c.title }}</a>
+{% if not loop.last %}
+<span class="pipe">|</span>
+{% endif %}
+{% endif %}
+{% endfor %}
+<!--{#
+<a href="http://sidrablue.com.au/" title="Sidra Blue. Custom Web Development, Shopping Carts, E-Marketing, Content Management System (CMS) Perth Australia" target="_blank" rel="noopener noreferrer">Site by Sidrablue</a>
+#}-->
+
+			</section><!-- /#copy -->
 
 		</div><!-- /.wrp -->
 		<div class="emspace h30 floatc"></div>
