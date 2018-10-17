@@ -388,7 +388,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efeff0', end
 
 
 
-#hed { height: 114px; }
+#hed { height: 114px; background:yellow;}
 #con { min-height: 540px; height: auto !important; height: 540px; }
 #fot {	}
 
