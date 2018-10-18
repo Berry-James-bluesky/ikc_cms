@@ -210,7 +210,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 /* overwrites */
 .ui.secondary.inverted.pointing.menu { border: 0; }
-.ui.inverted.masthead.segment { background: #012f84 url(../img/bluesky.jpg) center top no-repeat fixed; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
+.ui.inverted.masthead.segment { background: #012f84 url(../img/bluesky-beacons.jpg) center top no-repeat fixed; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; -webkit-box-shadow: 0 15px 10px -15px rgba(204,204,204,1); -moz-box-shadow: 0 15px 10px -15px rgba(204,204,204,1); box-shadow: 0 15px 10px -15px rgba(204,204,204,1); }
 
 
 
