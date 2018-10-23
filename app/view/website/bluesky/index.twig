@@ -2,26 +2,20 @@
 <html amp lang="en">
 <head>
 <meta charset="utf-8">
-{% set site = 'BlueSky Digital Labs' %}
-<title>{{ site }}. We are a Perth based custom web development team.</title>
-<meta name="description" content="{% if item.seo_description %}{{ item.seo_description }}{% else %}{% if item.summary %}{{ item.summary }}{% elseif item.description %}{{ item.description|raw|striptags|length > 256 ? item.description|raw|striptags|slice(0,254) ~ '..' : item.discription|raw|striptags }}{% else %}{{ site }}. {{ item.title }}{% endif %}{% endif %}">
-<!--{#
-<base href="{{ _url.base }}">
-<title>{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %} [ {{ site }} ] Perth based custom web development{% endif %}</title>
-{% if page.seo_keywords %}<meta name="keywords" content="{{ page.seo_keywords }}">{% endif %}
-#}-->
-<meta property="og:type" content="{% if item.is_home_page %}website{% else %}article{% endif %}" />
-<meta property="og:title" content="{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}{% endif %}" />
-<meta property="og:description" content="{% if item.seo_description %}{{ item.seo_description }}{% else %}{% if item.summary %}{{ item.summary }}{% elseif item.description %}{{ item.description|raw|striptags|length > 256 ? item.description|raw|striptags|slice(0,254) ~ '..' : item.discription|raw|striptags }}{% else %}{{ site }}. {{ item.title }}{% endif %}{% endif %}" />
-<meta property="og:url" content="{{ _route.url|trim('/') }}" />
-<meta property="og:site_name" content="{{ site }}" />
+<title>BlueSky Digital Labs. Innovating Customised Online Solutions.</title>
+<meta name="description" content="BlueSky Digital Labs is a Perth based custom web development team.">
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="BlueSky Digital Labs. Innovating Customised Online Solutions." />
+<meta property="og:description" content="BlueSky Digital Labs is a Perth based custom web development team." />
+<meta property="og:url" content="https://www.blueskylabs.com.au/" />
+<meta property="og:site_name" content="BlueSky Digital Labs" />
 {% if item.featured_image %}
 <meta property="og:image" content="{{ _url.base|trim('/') }}{{ item.featured_image.reference }}" />
 {% endif %}
 
-<!-- site by Sidra Blue | http://sidrablue.com.au/ -->
-<link rel="canonical" href="{{ _route.url|trim('/') }}">
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<link rel="canonical" href="https://www.blueskylabs.com.au/">
 
 {% set img = '/app/website/bluesky/img/' %}
 <link rel="apple-touch-icon" sizes="57x57" href="{{ img }}_ico/apple-icon-57x57.png">
@@ -38,13 +32,14 @@
 <link rel="icon" type="image/png" sizes="96x96" href="{{ img }}_ico/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ img }}_ico/favicon-16x16.png">
 
-<!--link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"-->
 <link rel="stylesheet" href="/app/website/bluesky/_semantic/semantic.min.css">
 <link rel="stylesheet" href="/app/website/bluesky/css/style.css">
 
-<!--[if lt ie 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+<!--[if lt ie 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+<!--{#
 <script>FontAwesomeConfig={searchPseudoElements:true};</script>
-<script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+<script defer src="//use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
+#}-->
 <script src="/app/website/bluesky/js/jquery-3.2.1.min.js"></script>
 <script src="/app/website/bluesky/js/jquery.form.min.js"></script>
 <script src="/app/website/bluesky/_semantic/semantic.min.js"></script>
@@ -52,7 +47,7 @@
 
 <!-- amp -->
 <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async src="//cdn.ampproject.org/v0.js"></script>
 
 <!-- Global site tag (gtag.js) || Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
