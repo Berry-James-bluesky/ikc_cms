@@ -1,13 +1,7 @@
 
-	<div id="con">
-		<div class="ui page grid">
-
 {% if item.is_home_page or _url.path == "/" %}
 {% include 'body_hom.twig' %}
 {% else %}
 {% include 'body_sub.twig' %}
 {% endif %}
-
-		</div><!--/.ui.page.grid -->
-	</div><!-- /#con -->
 

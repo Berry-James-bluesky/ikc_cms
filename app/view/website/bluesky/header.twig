@@ -1,23 +1,59 @@
 
-	<header id="hed">
-		<div class="ui page grid">
+	<div id="xnav" class="ui large top fixed hidden menu">
+		<div class="ui container">
+			<a class="item" href="/">Home</a>
+			<a class="item" href="/what-we-do" title="">What we do</a>
+			<a class="item" href="/what-weve-done" title="">What we've done</a>
+			<a class="item" href="/who-we-are" title="">Who we are</a>
+			<a class="item" href="/blog" title="">Blog</a>
+			<div class="right menu">
+				<div class="item"><a class="ui icon button" href="/_admin">Log in</a></div>
+				<div class="item"><a class="ui icon button primary" href="/contact">Contact</a></div>
+			</div>
+		</div>
+	</div><!-- /stickymenu -->
 
-			<!--div id="logo">
-				<a href="/" title="">
-					<img src="{{ img }}bluesky-marketing.png" alt="bluesky digital labs" />
-				</a>
-			</div--><!-- /#logo -->
+	<div id="snav" class="ui vertical inverted sidebar menu">
+		<a class="item" href="/">Home</a>
+		<a class="item" href="/what-we-do" title="">What we do</a>
+		<a class="item" href="/what-weve-done" title="">What we've done</a>
+		<a class="item" href="/who-we-are" title="">Who we are</a>
+		<a class="item" href="/blog" title="">Blog</a>
+		<a class="item" href="/_admin">Log in</a>
+		<a class="item" href="/contact">Contact</a>
+	</div><!-- /sidebarmenu -->
 
-			<nav id="mnav" class="computer tablet only row">
-				<div class="ui pointing stackable menu">
-					<a class="item" href="/">Home</a>
-					<a class="item" href="/what-we-do" title="">What we do</a>
-					<a class="item" href="/what-weve-done" title="">What we've done</a>
-					<a class="item" href="/who-we-are" title="">Who we are</a>
-					<a class="item" href="/blog" title="">Blog</a>
-					<a class="item" href="/contact" title="">Contact</a>
-				</div>
-			</nav>
+
+
+	<div id="bluesky" class="pusher">
+
+
+
+		<section id="hed">
+			<div class="ui vertical masthead center aligned segment">
+
+				<div class="ui container">
+					<div id="mnav" class="ui large secondary pointing menu">
+						<a class="toc item"><i class="sidebar icon"></i></a>
+						<a class="item" href="/">Home</a>
+						<a class="item" href="/what-we-do" title="">What we do</a>
+						<a class="item" href="/what-weve-done" title="">What we've done</a>
+						<a class="item" href="/who-we-are" title="">Who we are</a>
+						<a class="item" href="/blog" title="">Blog</a>
+						<div class="right item">
+							<a class="ui button" href="/_admin">Log in</a>
+							<a class="ui button positive" href="/contact">Contact</a>
+						</div>
+					</div><!-- /.menu -->
+				</div><!-- /.ui.container -->
+				<div class="ui text container">
+					<h1 class="ui header">BlueSky Digital Labs</h1>
+					<h3>innovating customised online solutions</h3>
+				</div><!-- /.ui.text.container -->
+
+			</div><!-- /.masthead.segment -->
+		</section><!-- /#hed -->
+
 
 
 
@@ -42,51 +78,4 @@
 {% endif %}
 {% endfor %}
 #}-->
-
-
-<!--{#
-			<nav id="mnav" class="computer tablet only row">
-				<div class="ui pointing stackable menu">
-					<a class="item" href="/">Home</a>
-					<div class="ui dropdown item">
-						What we do
-						<i class="dropdown icon"></i>
-						<div class="menu ui transition hidden">
-							<a class="item" href="/startup" title="">Startup Development</a>
-							<a class="item" href="/system" title="">System Development</a>
-							<a class="item" href="/app" title="">App Developments</a>
-							<a class="item" href="/data-science" title="">Data Science</a>
-							<a class="item" href="/custom" title="">Custom Web Development</a>
-							<a class="item" href="/ideas" title="">Exploring Ideas</a>
-							<a class="item" href="/marketing" title="">Digital Marketing</a>
-						</div>
-					</div>
-
-					<div class="ui dropdown item">
-						What we've done
-						<i class="dropdown icon"></i>
-						<div class="menu ui transition hidden">
-							<a class="item" href="javascript:;" title="">sublink</a>
-							<a class="item" href="javascript:;" title="">sublink</a>
-						</div>
-					</div>
-
-					<div class="ui dropdown item">
-						Who we are
-						<i class="dropdown icon"></i>
-						<div class="menu ui transition hidden">
-							<a class="item" href="javascript:;" title="">sublink</a>
-							<a class="item" href="javascript:;" title="">sublink</a>
-						</div>
-					</div>
-
-					<a class="item" href="/blog" title="">Blog</a>
-					<a class="item" href="/contact" title="">Contact</a>
-
-				</div>
-			</nav>
-#}-->
-
-		</div><!--/.ui.page.grid -->
-	</header><!-- /.#hed -->
 
