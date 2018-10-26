@@ -1,6 +1,19 @@
 
+		<section id="con">
+			<div class="emspace h80"></div>
+			<div class="ui page grid">
+				<div class="ui container">
+
+
 {% if _route._handler._app == "page" and item.description %}
 {{ renderContent(item.description)|raw }}
 {% endif %}
 {{ _content_|raw }}
+
+
+
+			</div><!-- /.ui.container -->
+		</div><!--/.ui.page.grid -->
+		<div class="emspace h80 floatc"></div>
+	</section><!-- /#con -->
 

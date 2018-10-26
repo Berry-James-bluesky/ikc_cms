@@ -1,18 +1,17 @@
 
 $(function(){
 
-	/* semantic */
-	//$('.ui.dropdown').dropdown();
+	$('.masthead').visibility({
+		once: false,
+		onBottomPassed: function(){ $('.fixed.menu').transition('fade in'); },
+		onBottomPassedReverse: function(){ $('.fixed.menu').transition('fade out'); }
+	});
 
+	$('.ui.sidebar').sidebar('attach events', '.toc.item');
 
-
-	/* nav */
-	//$('#mnav a, #fot a').each(function(){
-	//	if(this.href==window.location.href.split("#")[0]){$(this).addClass("active");}
-	//});
-	//$('#mnav .ui.dropdown a.active').parents(".ui.dropdown").addClass("active");
-
-
+	$('#mnav a, #xnav a, #snav a, #fot a').each(function(){
+		if(this.href==window.location.href.split("#")[0]){$(this).addClass("active");}
+	});
 
 	$(window).on('scroll', function(e){
 
@@ -28,19 +27,7 @@ $(function(){
 
 
 
-	/* landing */
-	$('.masthead').visibility({
-		once: false,
-		onBottomPassed: function(){
-			$('.fixed.menu').transition('fade in');
-		},
-		onBottomPassedReverse: function(){
-			$('.fixed.menu').transition('fade out');
-		}
-	});
 
-	// create sidebar and attach to menu open
-	$('.ui.sidebar').sidebar('attach events', '.toc.item');
 
 
 });
