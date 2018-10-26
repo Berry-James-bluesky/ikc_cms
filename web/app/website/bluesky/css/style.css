@@ -187,7 +187,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 }
 
 /* overwrites */
-html, body, .pusher, #landing { height: 100% !important; }/* uncomment out for landing page */
+/*html, body, .pusher, #landing { height: 100% !important; }*//* uncomment out for landing page */
 #landing.masthead.segment { min-height: 100%; padding: 0; }
 #landing.masthead h1.ui.header { margin-top: 0; }
 .ui.secondary.inverted.pointing.menu { border: 0; }
