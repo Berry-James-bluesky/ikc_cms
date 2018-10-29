@@ -1,0 +1,25 @@
+
+<div class="ui form">
+	<div class="ui field">
+		<label>Filter case studies by:</label>
+
+<select name="casestudies" multiple="" class="casestudies ui fluid dropdown selection multiple">
+<option value="">All</option>
+{% set list = getAllDirectoryCategories() %}
+{% for fol in list.directory_data.rows %}
+{% if fol.type=='folder' %}
+<option value="{{ fol.name }}" id="cscat-{{ fol.id }}">{{ fol.name }}</option>
+{% endif %}
+{% endfor %}
+</select>
+
+	</div>
+</div>
+<div class="emspace floatc"></div>
+
+
+{% set list = getAllDirectoryCategories() %}
+{% for item in child_item %}
+<a href="{{ _url.base }}{% if item._url %}{{ item._url|trim('/') }}{% else %}directory/view/{{ item.id }}{% endif %}" title="">{{ item.name }}</a>
+{% endfor %}
+

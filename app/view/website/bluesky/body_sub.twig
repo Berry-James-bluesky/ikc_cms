@@ -12,6 +12,11 @@
 
 
 
+{% if _route._handler._app == "page" and item.id == 3 %}{# case studies #}
+{% include 'body_sub-casestudies.twig' %}
+
+{% else %}
+
 {% if item.parent_id != "0" %}
 {% set subnav = buildNav(item.layout_id, item.parent_id) %}
 {% else %}
@@ -29,7 +34,11 @@
 </div>
 {% endif %}
 
+{% endif %}
 
+
+
+<div class="emspace h80 floatc"></div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id lorem dignissim, hendrerit nisl vitae, scelerisque nisl. Curabitur sollicitudin nibh leo, id auctor est sodales non. Donec quis nisi varius, aliquet massa vel, vulputate diam. Integer volutpat est nisl, in feugiat mauris scelerisque et. Etiam ut auctor turpis. Vestibulum orci nulla, tristique vulputate fringilla eu, venenatis in leo. Etiam tincidunt egestas sem. Nulla posuere ligula nec urna viverra, ut aliquam erat posuere. Ut sodales rutrum turpis ac commodo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer commodo urna ipsum, non ultrices arcu vulputate sit amet. Ut ac viverra orci. Etiam interdum ultricies tincidunt. Donec vitae odio tellus.</p>
 <p>Pellentesque nec faucibus odio. In hac habitasse platea dictumst. In efficitur elementum laoreet. Maecenas a scelerisque metus. Vestibulum facilisis vestibulum mi, sed tincidunt tellus. Sed ultricies ante sed sem gravida, eu iaculis elit placerat. Vestibulum quis vestibulum dui, eget semper nisl. Fusce fringilla enim sed lectus aliquet vulputate. Morbi eu turpis augue. Mauris tempor ligula quis mauris euismod condimentum. Nunc at faucibus ipsum. Vestibulum felis ex, luctus quis ipsum accumsan, semper commodo odio. Mauris vitae urna tincidunt, tincidunt ex lacinia, hendrerit mauris. In tortor sapien, egestas quis augue eu, tempor facilisis sem. Nulla facilisi. In non feugiat lectus.</p>
