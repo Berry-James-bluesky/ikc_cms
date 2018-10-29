@@ -1,0 +1,45 @@
+
+<script>
+	jQuery(function() {
+		jQuery("#phrase").off('input').on('input', function () {
+			if (jQuery(this).val().trim() != jQuery(this).attr('data-value')) {
+				jQuery(this).attr('data-value', jQuery(this).val().trim());
+				//typewatch(filterFolderData, 500);
+				filterFolderData();
+			}
+		});
+	});
+
+	function filterFolderData()
+	{
+		var values = {};
+		values['phrase'] = jQuery('#phrase').val();
+		values['parent_id'] = '{{ item.id }}';
+
+		jQuery.ajax({
+			url: '{{ _url.base }}directory/search.shtml',
+			type: 'POST',
+			data: values,
+			success:function (html) {
+				jQuery('#folder_container').html(html);
+			},
+			error:function (request, status, error) {
+				if(request.status){
+					alert('Error: '+request.status +'\n'+ request.statusText );
+				}
+			}
+		});
+	}
+
+</script>
+
+
+
+<div class="fom">
+
+		<div class="fwrp">
+			<input type="text" id="phrase" placeholder="type to start predictive search" />
+		</div><!-- /.fwrp -->
+
+</div><!-- /.fom -->
+

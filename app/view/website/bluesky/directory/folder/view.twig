@@ -1,0 +1,53 @@
+<section class="toolbox">
+	{% if item.parent_id %}
+	<a class="btn" href="{{ _url.base }}directory/folder/view/{{ item.parent_id }}" title="Back to parent"><i class="fas fa-level-up-alt"></i></a>
+	{% else %}
+	<a href="{{ _url.base }}directory" class="btn" title="Back to directory listing"><i class="fas fa-arrow-left"></i></a>
+	{% endif %}
+</section><!-- /.toolbox -->
+<div class="emspace h20 floatc"></div>
+
+<h3 class="heading">Directory details</h3>
+<div class="colwrp profile">
+
+	<div class="coltre center">
+		<div class="emspace"></div>
+
+{% if item.featured_image.reference %}
+<p><a href="javascript:;" data-featherlight="_image/{{ item.featured_image.reference }}" title="view full image"><img src="{{ imgTsUrl(item.featured_image_file.reference, 400) }}" class="resp" alt="" /></a></p>
+<p>
+	<span>{{ item.featured_image.filename }}</span>
+	<span><a href="javascript:;" data-featherlight="_image/{{ item.featured_image.reference }}" title="view full image"><i class="fas fa-search-plus"></i></a></span>
+</p>
+{% else %}
+<p>
+	<span class="noimg"><i class="far fa-image"></i></span>
+	<span><em>no featured image</em></span>
+</p>
+{% endif %}
+
+	</div><!-- /.coltre -->
+
+	<div class="coltre dbl">
+
+		<h4 class="heading">{{ item.name }}<span>{% if item.parent_name %}{{ item.parent_name }}{% else %}No parent folder{% endif %}</span></h4>
+
+		<p>
+			<span>Title: {{ item.title }}</span>
+			<span>Name: {{ item.name }}</span>
+		</p>
+
+		<h4 class="heading">Description:</h4>
+		<div class="cont-view-markup">
+			{% if item.summary %}{{ renderContent(item.summary)|raw }}{% else %}<p><em>no description available</em></p>{% endif %}
+		</div><!-- /.cont-view-markup -->
+
+	</div><!-- /.coltre.dbl -->
+
+</div><!-- /.colwrp.profile -->
+
+
+<div class="emspace h20 floatc"></div>
+
+{% include 'directory/folder/list.twig' with {'item':item} %}
+
