@@ -2,14 +2,13 @@
 <html amp lang="en">
 <head>
 <meta charset="utf-8">
-<title>BlueSky Digital Labs. Innovating Customised Online Solutions.</title>
-<meta name="description" content="BlueSky Digital Labs is a Perth based custom web development team.">
+{% set site = 'BlueSky Digital Labs' %}
+<title>{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %} [ {{ site }} ] Innovating Customised Online Solutions{% endif %}</title>
 
-<meta property="og:type" content="website" />
-<meta property="og:title" content="BlueSky Digital Labs. Innovating Customised Online Solutions." />
-<meta property="og:description" content="BlueSky Digital Labs is a Perth based custom web development team." />
-<meta property="og:url" content="https://www.blueskylabs.com.au/" />
-<meta property="og:site_name" content="BlueSky Digital Labs" />
+<meta property="og:title" content="{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}{% endif %}" />
+<meta property="og:description" content="{% if item.seo_description %}{{ item.seo_description }}{% else %}{% if item.summary %}{{ item.summary }}{% elseif item.description %}{{ item.description|raw|striptags|length > 256 ? item.description|raw|striptags|slice(0,254) ~ '..' : item.discription|raw|striptags }}{% else %}BlueSky Digital Labs is a Perth based custom web development team{% endif %}{% endif %}" />
+<meta property="og:url" content="{{ _route.url|trim('/') }}" />
+<meta property="og:site_name" content="{{ site }}" />
 {% if item.featured_image %}
 <meta property="og:image" content="{{ _url.base|trim('/') }}{{ item.featured_image.reference }}" />
 {% endif %}
@@ -61,13 +60,13 @@
 <!--{#
 {% include 'body_landing.twig' %}
 #}-->
+{% include 'header_sxnav.twig' %}
+	<div id="bluesky" class="pusher">
 {% include 'header.twig' %}
 {% include 'body.twig' %}
 {% include 'footer.twig' %}
-
-
-	<div id="backtotop"><i class="fas fa-angle-up"></i></div>
-
+		<div id="backtotop"><i class="fas fa-angle-up"></i></div>
+	</div><!-- /.pusher -->
 </body>
 </html>
 
