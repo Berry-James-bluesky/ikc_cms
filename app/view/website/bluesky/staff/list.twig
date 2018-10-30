@@ -1,0 +1,24 @@
+
+{% set staffsList = getAllStaff() %}
+
+<div class="colwrp">
+{% for staff in staffsList %}
+
+	<div class="coltre">
+		<div class="wrp">
+{% if staff.is_active %}
+			<p>
+				<a href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="">
+					{% if staff.featured_image %}<img src="{{ imgTsUrl(staff.featured_image.reference, 300) }}" class="resp" alt="{{ staff.name }}" />
+					{% else %}<i class="fas fa-user-alt fa-3x"></i>
+					{% endif %}
+				</a>
+			</p>
+			<p>{{ staff.name }}<br /><b>{{ staff.title }}</b><br /><a class="ptl" href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="">View profile</a></p>
+{% endif %}
+		</div><!-- /.wrp -->
+	</div><!-- /.coltre -->
+
+{% endfor %}
+</div><!-- /.colwrp -->
+

@@ -1,0 +1,10 @@
+
+<h2 class="heading">{{ item.name }}</h2>
+<span class="toupper">{{ item.title }}</span>
+
+<div class="emspace h20"></div>
+
+<p><img src="{{ imgTsUrl(item.featured_image_secondary.reference, 564) }}" class="resp" alt="{{ item.name }}" /></p>
+
+{{ renderContent(item.description)|raw }}
+
