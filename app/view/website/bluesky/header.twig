@@ -2,31 +2,31 @@
 		<section id="hed">
 			<div class="ui vertical masthead center aligned segment">
 				<div class="ui container">
-					<div id="mnav" class="ui large secondary pointing menu">
-						<div class="header item">blueskylabs.image.logo</div>
+					<nav id="mnav" class="ui large secondary pointing inverted menu">
+						<div class="header item logo">blueskylabs.image.logo</div>
 						<div class="right menu">
 
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.is_navigation %}
-<a class="item" href="{{ i._url }}" title="{{ i.title }}"{% if i.lote_link_type=="cms_link_external" %} target="_blank"{% endif %}>{{ i.title }}</a>
+<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="fas fa-home"></i>{% else %}{{ i.title }}{% endif %}</a>
 {% endif %}
 {% endfor %}
 <a class="toc item"><i class="sidebar icon"></i></a>
 
 						</div><!-- /.right.menu -->
-					</div><!-- /.menu -->
+					</nav><!-- /#mnav -->
 				</div><!-- /.ui.container -->
-				<div class="ui text container">
+				<div class="ui container">
 
 {% if item.is_home_page %}
-<h1 class="ui header">BlueSky Digital Labs</h1>
-<h3>innovating customised online solutions</h3>
+<h1 class="ui header inverted">BlueSky Digital Labs</h1>
+<h3 class="ui header inverted">innovating customised online solutions</h3>
 {% else %}
-<h1 class="ui header">{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% elseif item.title %}{{ item.title }}{% else %}404{% endif %}</h1>
+<h1 class="ui header inverted">{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}</h1>
 {% endif %}
 
-				</div><!-- /.ui.text.container -->
+				</div><!-- /.ui.container -->
 			</div><!-- /.masthead.segment -->
 		</section><!-- /#hed -->
 

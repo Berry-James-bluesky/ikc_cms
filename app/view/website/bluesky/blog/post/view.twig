@@ -1,6 +1,6 @@
 
-<div class="conwrp">
-	<article class="blogview">
+<div class="ui stackable equal height stackable grid">
+	<div class="twelve wide column">
 
 		<header>
 			<h1 class="fontweight900">{{ item.title }}</h1>
@@ -22,8 +22,8 @@
 
 		<div class="emspace floatc"></div>
 
-	</article><!-- /.blogview -->
-	<aside class="blogside">
+	</div><!-- /.twelve.wide.column -->
+	<aside class="four wide column">
 
 		<h3>Recent Posts</h3>
 {% set postList = getLatestBlogItem(4) %}
@@ -38,13 +38,6 @@
 
 <div class="emspace h20 floatc"></div>
 
-<h3>Stay Informed</h3>
-<section class="hcontact">
-<script src="//blueskymarketing.epicuest.com/form-embed/2.embed?jquery=0&amp;prefix=stayinformed"></script>
-</section>
-
-<div class="emspace h20 floatc"></div>
-
 <h3>Tags</h3>
 {% set tags = getAllPostTags() %}
 {% if tags|length > 0 %}
@@ -55,7 +48,7 @@
 </p>
 {% endif %}
 
-	</aside><!-- /.blogside -->
-	<div class="emspace h1 floatc"></div>
-</div><!-- /.conwrp -->
+	</aside><!-- /.four.wide.column -->
+
+</div><!-- /.ui.stackable.equal.height.stackable.grid -->
 

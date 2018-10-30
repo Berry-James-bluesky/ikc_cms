@@ -15,7 +15,7 @@ $(function(){
 
 	$('.ui.sidebar').sidebar('attach events', '.toc.item');
 
-	$('#mnav a, #xnav a, #snav a, #fot a').each(function(){
+	$('#mnav a, #xnav a, #snav a, #pnav a, #fot a').each(function(){
 		if(this.href==window.location.href.split("#")[0]){$(this).addClass("active");}
 	});
 

@@ -1,42 +1,25 @@
 
-<!--{#
-{# for i in posts.rows|sort|reverse #}
-{% set blogList = reorderBlogListByMonth(posts.rows) %}
-{% for key,value in blogList %}
-
-<section class="nlll">{% if key == 'no_date' %}No Date{% else %}{{ date(key ~ '-01')|date("M Y") }}{% endif %}</section>
-<section class="nlrr">
-#}-->
-
 <div class="ui stackable equal height stackable grid">
 	<div class="three column row">
 
-{% for i in posts.rows|sort|reverse %}
+{% set postList = getLatestBlogItem(3) %}
+{% if postList %}
+{% for i in postList %}
 
 		<div class="column">
 			<a href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">
-				<p><img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}/app/website/bluesky/img/bluesky.jpg{% endif %}" class="resp fullshadow" alt="" /></p>
+				<p><img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}{{ img }}bluesky.jpg{% endif %}" class="resp fullshadow" alt="" /></p>
 				<div class="ui medium header">
 					{{ i.title }}
 					<small class="small60"><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></small>
 				</div>
 				<p>{% if i.summary %}{{ i.summary|truncate(80,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(80,true,' ..')|replace({'&nbsp;':' '}) }}{% endif %}</p>
 			</a>
-		</div>
+		</div><!-- /.column -->
 
 {% endfor %}
+{% endif %}
 
-	</div>
+	</div><!-- /.three.column.row -->
 </div><!-- /.ui.stackable.equal.height.stackable.grid -->
-
-<!--{#
-</section>
-<div class="emspace h0 floatc"></div>
-#}-->
-
-{% endfor %}
-
-<div class="emspace h40 floatc"></div>
-
-{% include 'paging.twig' with {'paging' : posts.paging, 'pagingUrl' : _url.base~'blog/'~blog_id } %}
 
