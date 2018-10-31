@@ -1,10 +1,66 @@
 
-<h2 class="heading">{{ item.name }}</h2>
-<span class="toupper">{{ item.title }}</span>
+<div class="ui stackable grid">
+	<div class="five wide column">
 
-<div class="emspace h20"></div>
+		<div class="ui special centered card">
+			<div class="blurring dimmable image">
+				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop" href="" title="">View image</span></div></div></div>
+				<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/{% if item.id == 1 %}joe.jpg{% elseif item.id == 2 %}eve.png{% elseif item.id == 3 %}chris.jpg{% elseif item.id == 4 %}matthew.png{% elseif item.id == 5 %}steve.jpg{% elseif item.id == 6 %}christian{% else %}image.png{% endif %}{% endif %}">
+			</div><!-- /.blurring.dimmable.image -->
+			<div class="content">
+				<div class="header">{{ item.name }}</div>
+				<div class="meta">{{ item.title }}</div>
+			</div><!-- /.content -->
+			<div class="extra content">
+				<a href="{{ item.social }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> View LinkedIn profile</a>
+			</div><!-- /.extra.content -->
+		</div><!-- /.card -->
+		<div class="ui basic modal">
+			<i class="close icon"></i>
+			<div class="content">
+				<div class="center">
+					<div class="ui image">
+						<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/{% if item.id == 1 %}joe.jpg{% elseif item.id == 2 %}eve.png{% elseif item.id == 3 %}chris.jpg{% elseif item.id == 4 %}matthew.png{% elseif item.id == 5 %}steve.jpg{% elseif item.id == 6 %}christian{% else %}image.png{% endif %}{% endif %}" class="resp" alt="Rizal Farok" />
+					</div><!-- /.ui.image -->
+				</div><!-- /.center -->
+			</div><!-- /.content -->
+		</div><!-- /.ui.basic.modal -->
 
-<p><img src="{{ imgTsUrl(item.featured_image_secondary.reference, 564) }}" class="resp" alt="{{ item.name }}" /></p>
+	</div><!-- /.column -->
+	<div class="eleven wide column">
 
+<h2 class="ui header">{{ item.name }}</h2>
 {{ renderContent(item.description)|raw }}
+
+	</div><!-- /.column -->
+</div><!-- /.ui.grid -->
+
+<div class="emspace h80 floatc"></div>
+<h4 class="ui horizontal divider header"><i class="fas fa-users"></i></h4>
+
+<div class="ui six doubling centered cards">
+
+{% set staffsList = getAllStaff() %}
+{% for staff in staffsList %}
+{% if staff.is_active and staff.id != item.id %}
+
+	<a class="card tiny" href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="View {{ staff.name }}'s profile">
+		<div class="image">
+			<img src="{% if staff.featured_image %}{{ imgTsUrl(staff.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/{% if staff.id == 1 %}joe.jpg{% elseif staff.id == 2 %}eve.png{% elseif staff.id == 3 %}chris.jpg{% elseif staff.id == 4 %}matthew.png{% elseif staff.id == 5 %}steve.jpg{% elseif staff.id == 6 %}christian{% else %}image.png{% endif %}{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ staff.name }}</div>
+			<div class="meta">{% if staff.id == 1 or staff.id == 2 %}Director{% else %}{{ staff.title }}{% endif %}</div>
+		</div>
+	</a><!-- /.card -->
+
+{% endif %}
+{% endfor %}
+
+</div>
+
+<!--{#
+<p><img src="{{ imgTsUrl(item.featured_image_secondary.reference, 564) }}" class="resp" alt="{{ item.name }}" /></p>
+#}-->
+
 

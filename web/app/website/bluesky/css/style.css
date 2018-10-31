@@ -99,7 +99,11 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 /* semantic UI overwrites  */
 html, body { font-size: 18px; }
-.ui.button, .ui.cards { font-size: 14px; }
+.ui.button, .ui.card, .ui.cards { font-size: 14px; }
+.ui.card .meta, .ui.cards > .card .meta { font-size: .9em; }
+
+.ui.card .description, .ui.cards .description { line-height: 140%; }
+.ui.card .card.tiny, .ui.cards .card.tiny { font-size: 12px; }
 
 
 

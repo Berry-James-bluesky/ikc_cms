@@ -38,12 +38,12 @@
 
 <div class="emspace h20 floatc"></div>
 
-<h3>Tags</h3>
 {% set tags = getAllPostTags() %}
 {% if tags|length > 0 %}
-<p>
+<h3>Tags</h3>
+<p class="blocklinks">
 {% for tag in tags %}
-<a class="fontweight400" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>{% if not loop.last %}, {% endif %}
+<a class="fontweight400" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}"><i class="fas fa-tag"></i> {% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>{% if not loop.last %}, {% endif %}
 {% endfor %}
 </p>
 {% endif %}

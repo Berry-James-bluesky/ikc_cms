@@ -25,7 +25,13 @@
 <h1 class="ui header inverted">BlueSky Digital Labs</h1>
 <h3 class="ui header inverted">innovating customised online solutions</h3>
 {% else %}
-<h1 class="ui header inverted">{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}</h1>
+<h1 class="ui header inverted">
+{% if _route._handler.module == "staff" %}Our Team
+{% elseif _route._handler.module == "blog" %}Thoughts
+{% else %}
+{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
+{% endif %}
+</h1>
 {% endif %}
 
 				</div><!-- /.ui.container -->

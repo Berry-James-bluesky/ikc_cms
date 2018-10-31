@@ -3,8 +3,10 @@ $(function(){
 
 	/* semanticsUI general */
 	$('.ui.dropdown').dropdown();
-	$('.special.cards .image').dimmer({ on:'hover' });
-
+	$('.special.card .image, .special.cards .image').dimmer({ on:'hover' });
+	$('.dopop').click(function(){
+		$('.ui.basic.modal').modal('show');
+	});
 
 	/* main navigation */
 	$('.masthead').visibility({
