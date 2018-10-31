@@ -1,51 +1,70 @@
 
 {% set staffsList = getAllStaff() %}
-
-<div class="ui stackable equal height stackable center aligned grid">
-	<div class="three column row">
+<div class="ui special stackable centered cards">
 
 {% for boss in staffsList %}
 {% if boss.is_active and (boss.id == 1 or boss.id == 2) %}
 
-		<div class="column">
-			<a href="{% if boss._url %}{{ boss._url }}{% else %}/staff/view/{{ boss.id }}{% endif %}" title="">
-				<p>{% if boss.featured_image %}<img src="{{ imgTsUrl(boss.featured_image.reference, 300) }}" class="resp" alt="{{ boss.name }}" />{% else %}<i class="fas fa-user-alt fa-3x"></i>{% endif %}</p>
-				<div class="ui medium header">
-					{{ boss.name }}
-					<small class="small60">{{ boss.title }}</small>
+	<div class="card">
+		<div class="blurring dimmable image">
+			<div class="ui dimmer">
+				<div class="content">
+					<div class="center">
+						<a class="ui inverted button" href="{% if boss._url %}{{ boss._url }}{% else %}/staff/view/{{ boss.id }}{% endif %}" title="">View Profile</a>
+					</div>
 				</div>
+			</div>
+			<img src="{% if boss.featured_image %}{{ imgTsUrl(boss.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/{% if boss.id == 1 %}joe.jpg{% else %}matthew.png{% endif %}{% endif %}">
+		</div>
+		<div class="content">
+			<a class="header" href="{% if boss._url %}{{ boss._url }}{% else %}/staff/view/{{ boss.id }}{% endif %}" title="">{{ boss.name }}</a>
+			<div class="meta">{{ boss.title }}</div>
+		</div>
+		<div class="extra content">
+			<a href="https://www.linkedin.com/company/blueskylabs" target="_blank" rel="noopener noreferrer">
+				<i class="fab fa-linkedin"></i>
+				LinkedIn
 			</a>
-			<div class="emspace"></div>
-			<p><a href="{% if boss._url %}{{ boss._url }}{% else %}/staff/view/{{ boss.id }}{% endif %}" class="ui right labeled icon button primary">View profile <i class="right arrow icon"></i></a></p>
-		</div><!-- /.column -->
+		</div>
+	</div><!-- /.card -->
 
 {% endif %}
 {% endfor %}
 
-	</div><!-- /.three.column.row -->
-</div><!-- /.ui.stackable.inverted.divided.equal.height.stackable.center.aligned.grid -->
+</div><!-- /ui.special.centered.cards -->
 
-<div class="emspace h60 floatc"></div>
+<div class="emspace h30 floatc"></div>
 
-<div class="ui stackable equal height stackable center aligned grid">
+<div class="ui special four stackable cards">
 
 {% for staff in staffsList %}
 {% if staff.is_active and staff.id > 2 %}
 
-		<div class="four wide column">
-			<a href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="">
-				<p>{% if staff.featured_image %}<img src="{{ imgTsUrl(staff.featured_image.reference, 300) }}" class="resp" alt="{{ staff.name }}" />{% else %}<i class="fas fa-user-alt fa-3x"></i>{% endif %}</p>
-				<div class="ui small header">
-					{{ staff.name }}
-					<small class="small60">{{ staff.title }}</small>
+	<div class="card">
+		<div class="blurring dimmable image">
+			<div class="ui dimmer">
+				<div class="content">
+					<div class="center">
+						<a class="ui inverted button" href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="">View Profile</a>
+					</div>
 				</div>
+			</div>
+			<img src="{% if staff.featured_image %}{{ imgTsUrl(staff.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<a class="header" href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="">{{ staff.name }}</a>
+			<div class="meta">{{ staff.title }}</div>
+		</div>
+		<div class="extra content">
+			<a href="https://www.linkedin.com/company/blueskylabs" target="_blank" rel="noopener noreferrer">
+				<i class="fab fa-linkedin"></i>
+				LinkedIn
 			</a>
-			<div class="emspace"></div>
-			<p><a href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" class="ui right labeled icon button">View profile <i class="right arrow icon"></i></a></p>
-		</div><!-- /.column -->
+		</div>
+	</div><!-- /.card -->
 
 {% endif %}
 {% endfor %}
 
-</div><!-- /.ui.stackable.equal.height.stackable.center.aligned.grid -->
+</div><!-- /ui.special.centered.cards -->
 

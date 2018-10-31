@@ -8,7 +8,7 @@
 
 		<div class="column">
 			<a href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">
-				<p><img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}{{ img }}bluesky.jpg{% endif %}" class="resp fullshadow" alt="" /></p>
+				<p><img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}{{ img }}_sui/image.png{% endif %}" class="resp fullshadow" alt="" /></p>
 				<div class="ui medium header">
 					{{ i.title }}
 					<small class="small60"><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></small>

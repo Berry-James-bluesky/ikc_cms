@@ -3,7 +3,7 @@ $(function(){
 
 	/* semanticsUI general */
 	$('.ui.dropdown').dropdown();
-
+	$('.special.cards .image').dimmer({ on:'hover' });
 
 
 	/* main navigation */

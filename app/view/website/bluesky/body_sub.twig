@@ -3,12 +3,15 @@
 				<div class="ui container">
 
 {% if _route._handler._app == "page" and item.description %}
-<div class="ui piled segment massive center">
+<div class="{% if item.parent_id == 2 %}ui piled segment large center{% else %}content{% endif %}">
 {{ renderContent(item.description)|raw }}
 </div>
 {% endif %}
 {{ _content_|raw }}
-
+<!--{#
+<p>Nulla blandit blandit neque. Quisque turpis tortor, condimentum ac ornare quis, venenatis in metus. Sed facilisis eros in commodo auctor. Fusce est sapien, cursus sit amet ligula eu, vulputate cursus mi. Quisque id sapien a nisl sagittis convallis. Ut gravida luctus nisl non gravida. Morbi viverra, tellus id ultrices porta, elit augue tempor arcu, sit amet laoreet metus est vitae leo. Morbi fermentum placerat convallis. Suspendisse pellentesque massa vitae nibh ullamcorper ullamcorper. Aliquam pretium nulla ac imperdiet convallis. Morbi in arcu lacus. Nulla rutrum a urna viverra tempus. Aliquam ut ullamcorper urna.</p>
+<p>Aenean facilisis libero ut blandit imperdiet. Integer at mi id sapien euismod ultricies quis ut erat. Cras a aliquet lacus, ut dapibus ipsum. Cras convallis tellus ut nunc sollicitudin interdum. Morbi suscipit, nulla et tristique pretium, felis velit porttitor neque, vel convallis nisl augue eget justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque porta nisi et eros scelerisque, eget posuere erat tristique. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent pulvinar tristique leo, eget tincidunt nunc imperdiet pellentesque.</p>
+#}-->
 {% if _route._handler._app == "page" %}
 
 {% if item.id == 3 %}
@@ -28,11 +31,11 @@
 {% if subnav %}
 <div class="emspace h40 floatc"></div>
 <div class="ui center aligned">
-<nav id="pnav" class="ui stackable compact menu">
+<nav id="pnav" class="ui tiny stackable compact menu">
 {% endif %}
 {% for i in subnav %}
 {% if i.is_navigation %}
-<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.title|replace({'Development':'Dev'}) }}</a>
+<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
 {% endif %}
 {% endfor %}
 {% if subnav %}
