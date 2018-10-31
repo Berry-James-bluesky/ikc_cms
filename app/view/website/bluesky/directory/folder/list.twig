@@ -1,32 +1,23 @@
 
-
-		<section id="projfil" class="tblwrp">
+<div class="ui stackable equal height stackable grid">
+	<div class="four column row">
 
 {% for child_item in item_children %}
-<section class="tblcon">
-	<div class="colwrp w1280 fprojwrp">
 {% for item in child_item %}
 
-<div class="projfil {% if loop.index == 1 or loop.index == 4 or loop.index == 5 or loop.index == 8 %}collong{% else %}colshort{% endif %}{% if loop.index is even %} floatr{% endif %}">
-	<div class="wrp">
-		<section class="indswrp" data-name="{{ item.id }}" id="container-{{ item.id }}" style="background-image:url({{ imgTsUrl(item.featured_image.reference, 640) }});">
-			<a href="{{ _url.base }}{% if item._url %}{{ item._url|trim('/') }}{% else %}directory/view/{{ item.id }}{% endif %}" title="view project details">
-				<section class="indslink">
-					<h4 class="heading">{{ item.name }}</h4>
-					<span>{{ item.summary|raw|striptags }}</span>
-				</section>
+		<div class="column">
+			<a href="{{ _url.base }}{% if item._url %}{{ item._url|trim('/') }}{% else %}directory/view/{{ item.id }}{% endif %}" title="">
+				<p><img src="{% if i.featured_image %}{{ imgTsUrl(item.featured_image.reference, 640) }}{% else %}{{ img }}_sui/image.png{% endif %}" class="resp fullshadow" alt="" /></p>
+				<div class="ui medium header">{{ item.title }}</div>
+				<p>{% if item.summary %}{{ item.summary|truncate(80,true,' ..') }}{% else %}{{ item.description|raw|striptags|truncate(80,true,' ..')|replace({'&nbsp;':' '}) }}{% endif %}</p>
 			</a>
-		</section>
-	</div><!-- /.wrp -->
-</div><!-- /.collong -->
+		</div><!-- /.column -->
 
 {% endfor %}
-		<div class="emspace floatc"></div>
-	</div><!-- /.colwrp -->
-</section><!-- /.tblcon -->
 {% endfor %}
 
-		</section><!-- /#projfil -->
+	</div><!-- /.three.column.row -->
+</div><!-- /.ui.stackable.equal.height.stackable.grid -->
 
 
 <!--{#

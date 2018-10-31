@@ -149,7 +149,10 @@ html, body { font-size: 18px; }
 
 .sub .masthead h1.ui.header { font-size: 3em }
 .sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; }
-
+/*
+#hed .ui.container { position: relative; }
+#logo { position: absolute; top: 0; left: 0; }
+*/
 
 
 #fnav .pipe { padding: 0 7px; }

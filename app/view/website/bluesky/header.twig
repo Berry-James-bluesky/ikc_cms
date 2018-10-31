@@ -3,13 +3,15 @@
 			<div class="ui vertical masthead center aligned segment">
 				<div class="ui container">
 					<nav id="mnav" class="ui small secondary pointing inverted menu">
-						<div class="header item logo">blueskylabs.image.logo</div>
+						<a class="header item logo" href="/" title="BlueSky Digital Labs home"><i class="fas fa-home"></i></a>
 						<div class="right menu">
 
 {% set nav = buildNav(1) %}
 {% for i in nav %}
+{% if i.id != 1 %}
 {% if i.is_navigation %}
 <a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="fas fa-home"></i>{% else %}{{ i.title }}{% endif %}</a>
+{% endif %}
 {% endif %}
 {% endfor %}
 <a class="toc item"><i class="sidebar icon"></i></a>

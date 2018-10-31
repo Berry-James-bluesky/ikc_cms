@@ -1,45 +1,10 @@
 
-
-
-{% if item.project_stats or item.type %}
-			<div class="ll">
-{% endif %}
-				<section class="wow slideInDown" data-wow-delay="0.2s">
-					<h2 class="heading diritmtit">{{ item.title }}</h2>
-					<span class="toupper"><b class="red">{{ item.company }}</b></span>
-				</section>
-				<div class="emspace h20"></div>
-				<section class="wow slideInLeft" data-wow-delay="0.2s">
+<h2>{{ item.title }}</h2>
+<p>{{ item.company }}</p>
 
 {{ renderContent(item.description)|raw }}
 
-				</section>
-{% if item.project_stats or item.type %}
-			</div><!-- /.ll -->
-			<div class="rr">
-{% endif %}
-				<div class="emspace"></div>
-{% if item.project_stats %}
-				<section class="wow slideInRight" data-wow-delay="0.2s">
-					<p class="heading black toupper"><b>Project Statistics</b></p>
-					<section class="projstats">
-
 {{ renderContent(item.project_stats)|raw }}
 
-					</section>
-				</section>
-{% endif %}
-{% if item.type %}
-				<div class="emspace h40"></div>
-				<div class="speechbubble vmiddle">
-					<p class="font-politica">{{ item.type }}</p>
-				</div><!-- /.speechbubble -->
-{% endif %}
-{% if item.project_stats or item.type %}
-			</div><!-- /.rr -->
-{% endif %}
-
-		<div class="emspace spacer floatc"></div>
-
-
+<p>{{ item.type }}</p>
 
