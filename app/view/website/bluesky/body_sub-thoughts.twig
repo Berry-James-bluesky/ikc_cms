@@ -1,25 +1,35 @@
 
-<div class="ui stackable equal height stackable grid">
-	<div class="three column row">
+<div class="ui divided items">
 
 {% set postList = getLatestBlogItem(3) %}
 {% if postList %}
 {% for i in postList %}
 
-		<div class="column">
-			<a href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">
-				<p><img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}{{ img }}_sui/image.png{% endif %}" class="resp fullshadow" alt="" /></p>
-				<div class="ui medium header">
-					{{ i.title }}
-					<small class="small60"><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></small>
-				</div>
-				<p>{% if i.summary %}{{ i.summary|truncate(80,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(80,true,' ..')|replace({'&nbsp;':' '}) }}{% endif %}</p>
-			</a>
-		</div><!-- /.column -->
+	<div class="item">
+		<div class="ui small image">
+			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}{{ img }}_sui/image.png{% endif %}" alt="" />
+		</div>
+		<div class="content">
+			<div class="header">{{ i.title }}</div>
+			<div class="meta"><span><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
+			<div class="description">
+				{% if i.summary %}
+				<p>{{ i.summary|truncate(280,true,' ..') }}</p>
+				{% else %}
+				{{ i.description|raw|striptags|truncate(280,true,' ..')|replace({'&nbsp;':' '}) }}
+				{% endif %}
+			</div><!-- /.description -->
+			<div class="extra">
+				{% for tag in i._tags %}
+				<div class="ui label"><a href="{{ _url.base }}blog/category/{{ tag |replace({' ':'-'})}}"><i class="tag icon"></i>{{ tag }}</a></div>
+				{% endfor %}
+				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
+			</div><!-- /.extra -->
+		</div><!-- /.content -->
+	</div><!-- /.item -->
 
 {% endfor %}
 {% endif %}
 
-	</div><!-- /.three.column.row -->
-</div><!-- /.ui.stackable.equal.height.stackable.grid -->
+</div><!-- /.ui.divided.items -->
 
