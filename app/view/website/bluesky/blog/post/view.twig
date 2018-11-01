@@ -59,7 +59,7 @@
 		<h4 class="ui horizontal divider header">Posts by tags</h4>
 		<div class="ui link items">
 {% for tag in tags %}
-			<a class="item nomargin" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">
+			<a class="item nomargin" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">
 				<div class="content">
 					<div class="ui tiny header hwsicon"><i class="tag icon"></i> {% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</div>
 				</div><!-- /.content -->
