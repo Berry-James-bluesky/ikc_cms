@@ -1,38 +1,43 @@
-
 {% for item in directory_data.rows %}
-	{% if item.type=='folder' %}
-		<div class="tile gall" data-name="{{ item.id }}" id="container-{{ item.id }}" {% if item.featured_image_id %} style="background-image:url({{ imgTsUrl(item.featured_image_id, 180) }});"{% endif %}>
-			<a style="cursor: pointer;" href="{{ _url.base }}directory/folder/view/{{ item.id }}" title="view {{ item.title }}">
-				<section class="con">
-					{% if not item.featured_image_id %}
-					<i class="fas fa-folder"></i>
-					{% endif %}
-				</section>
-			</a>
-			<section class="des">
-				<span class="file_name">{{ item.title|length > 25 ? item.title|slice(0,23) ~ '..' : item.title }}</span>
-			</section>
-		</div><!-- /.tile.gall -->
-	{% endif %}
+    <div class="tile gall" data-name="{{ item.id }}"
+         id="container-{{ item.id }}" {% if item.featured_image_id %} style="background-image:url({{ imgTsUrl(item.featured_image_id, 180) }});"{% endif %}>
+        <a style="cursor: pointer;" href="{{ _url.base }}directory/folder/view/{{ item.id }}"
+           title="view {{ item.name }}">
+            <section class="con">
+                {% if not item.featured_image_id %}
+                    <i class="fas fa-folder"></i>
+                {% endif %}
+            </section>
+        </a>
+        <section class="des">
+            <span class="file_name">
+                <a style="cursor: pointer;" href="{{ _url.base }}directory/folder/view/{{ item.id }}"
+                   title="view {{ item.name }}">{{ item.name }}</a>
+            </span>
+        </section>
+    </div><!-- /.tile.gall -->
 {% endfor %}
 
 {% for item in item_list.rows %}
-	{% if item.type=='item' %}
-		<div class="tile gall" data-name="{{ item.id }}" id="container-{{ item.id }}" style="background-image:url({{ imgTsUrl(item.featured_image, 180) }});">
-			<a style="cursor: pointer;" href="{{ _url.base }}directory/item/view/{{ item.id }}" title="view {{ item.title }}">
-				{% if not item.featured_image %}
-					<section class="con">
-						<i class="far fa-file"></i>
-					</section>
-				{% endif %}
-			</a>
-			<section class="des">
-				<span class="file_name">{{ item.title|length > 25 ? item.title|slice(0,23) ~ '..' : item.title }}</span>
-			</section>
-		</div><!-- /.tile.gall -->
-	{% endif %}
+    <div class="tile gall" data-name="{{ item.id }}" id="container-item-{{ item.id }}"
+         style="background-image:url({{ imgTsUrl(item.featured_image, 180) }});">
+        <a style="cursor: pointer;" href="{{ _url.base }}directory/item/view/{{ item.id }}"
+           title="view {{ item.name }}">
+            {% if not item.featured_image %}
+                <section class="con">
+                    <i class="far fa-file"></i>
+                </section>
+            {% endif %}
+        </a>
+        <section class="des">
+            <span class="file_name">
+                <a style="cursor: pointer;" href="{{ _url.base }}directory/item/view/{{ item.id }}"
+                   title="view {{ item.name }}">{{ item.name }}</a>
+            </span>
+        </section>
+    </div><!-- /.tile.gall -->
 {% endfor %}
 {% if not item_list.rows and not directory_data.rows %}
-	<div class="noresults">No records available</div>
+    <div class="noresults">No records available</div>
 {% endif %}
 
