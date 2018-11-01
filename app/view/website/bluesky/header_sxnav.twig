@@ -7,7 +7,7 @@
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.is_navigation %}
-<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="home icon nomr"></i>{% else %}{{ i.title }}{% endif %}</a>
+<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="home icon nomarginright"></i>{% else %}{{ i.title }}{% endif %}</a>
 {% endif %}
 {% endfor %}
 <a class="toc item"><i class="sidebar icon"></i></a>

@@ -22,12 +22,13 @@
 {% include 'staff/list.twig' %}
 {% endif %}
 
-{% if item.parent_id != "0" %}
+{% if item.parent_id != 0 %}
 {% set subnav = buildNav(item.layout_id, item.parent_id) %}
 {% else %}
 {% set subnav = buildNav(item.layout_id, item.id) %}
 {% endif %}
 
+{% if item.id != 2 %}
 {% if subnav %}
 <div class="emspace h40 floatc"></div>
 <div class="ui center aligned">
@@ -42,6 +43,7 @@
 </nav><!-- /#pnav -->
 </div>
 <div class="emspace h40 floatc"></div>
+{% endif %}
 {% endif %}
 
 {% endif %}

@@ -25,27 +25,38 @@
 	</div><!-- /.twelve.wide.column -->
 	<aside class="four wide column">
 
-		<h3>Recent Posts</h3>
+		<h4 class="ui horizontal divider header">Recent posts</h4>
+		<div class="ui link items">
+
 {% set postList = getLatestBlogItem(4) %}
 {% for post in postList %}
-		<p class="blocklinks nopadbot">
-			<a href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
-				<span><b>{{ post.title }}</b></span>
-				<span class="fontsize12"><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></span>
-			</a>
-		</p>
+
+			<a class="item" href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+				<div class="content">
+					<div class="ui tiny header">{{ post.title }}</div>
+					<div class="meta"><small><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></small></div>
+				</div><!-- /.content -->
+			</a><!-- /.item -->
+
 {% endfor %}
 
-<div class="emspace h20 floatc"></div>
+		</div><!-- /.ui.divided.items -->
 
 {% set tags = getAllPostTags() %}
 {% if tags|length > 0 %}
-<h3>Tags</h3>
-<p class="blocklinks">
+
+		<div class="emspace floatc"></div>
+		<h4 class="ui horizontal divider header">Posts by tags</h4>
+		<div class="ui link items">
 {% for tag in tags %}
-<a class="fontweight400" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}"><i class="fas fa-tag"></i> {% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>{% if not loop.last %}, {% endif %}
+			<a class="item nomargin" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">
+				<div class="content">
+					<div class="ui tiny header hwsicon"><i class="tag icon"></i> {% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</div>
+				</div><!-- /.content -->
+			</a>
 {% endfor %}
-</p>
+		</div><!-- /.ui.divided.items -->
+
 {% endif %}
 
 	</aside><!-- /.four.wide.column -->
