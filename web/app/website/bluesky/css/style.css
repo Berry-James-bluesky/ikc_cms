@@ -105,6 +105,8 @@ html, body { font-size: 18px; }
 .ui.card .description, .ui.cards .description { line-height: 140%; }
 .ui.card .card.tiny, .ui.cards .card.tiny { font-size: 12px; }
 
+.ui.menu .item > i.icon.nomr { margin-right: 0; }
+
 
 
 
@@ -117,12 +119,14 @@ html, body { font-size: 18px; }
 
 
 /* site */
-#backtotop { /*display: none;*/ position: fixed; bottom: -130px; right: -130px; width: 102px; height: 116px; padding: 14px 0 0 21px; font-size: 40px; line-height: 100%; color: #fff; cursor: pointer; border-radius: 50%; border-radius: 50% !important;
+#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 7px; width: 34px; height: 33px; padding: 3px; font-size: 28px; line-height: 26px; color: #fff; cursor: pointer; border-radius: 50%; border-radius: 50% !important;
 
 	color: #fff;
 	background-color: #031c43;
+	text-align: center;
 }
-#backtotop.tada { bottom: -58px; right: -48px; }
+#backtotop.tada { bottom: 7px; }
+#backtotop i.icon { margin: 0; padding: 0; width: auto; }
 
 .nlll { float: left; width: 7.5%; padding: 0; font-size: 24px; line-height: 100%; text-align: right; text-transform: uppercase; }
 .nlrr { float: right; width: 90%; padding-left: 2%; border-left: 1px solid #000; }
@@ -160,7 +164,6 @@ html, body { font-size: 18px; }
 
 
 #fnav .pipe { padding: 0 7px; }
-#socnav .item { padding: .92857143em; }
 
 
 

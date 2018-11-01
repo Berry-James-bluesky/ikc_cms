@@ -1,13 +1,13 @@
 
 	<nav id="xnav" class="ui tiny top fixed hidden pointing menu borderless">
 		<div class="ui container">
-			<div class="header item logo"><img src="{{ img }}sidra-blue-sb.jpg" alt="BlueSky Digital Labs" /></div>
+			<div class="header item logo"><!--img src="{{ img }}sidra-blue-sb.jpg" alt="BlueSky Digital Labs" /-->BlueSky Digital Labs</div>
 			<div class="right menu">
 
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.is_navigation %}
-<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="fas fa-home"></i>{% else %}{{ i.title }}{% endif %}</a>
+<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="home icon nomr"></i>{% else %}{{ i.title }}{% endif %}</a>
 {% endif %}
 {% endfor %}
 <a class="toc item"><i class="sidebar icon"></i></a>

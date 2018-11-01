@@ -3,14 +3,14 @@
 			<div class="ui vertical masthead center aligned segment">
 				<div class="ui container">
 					<nav id="mnav" class="ui small secondary pointing inverted menu">
-						<a class="header item logo" href="/" title="BlueSky Digital Labs home"><i class="fas fa-home"></i></a>
+						<a class="header icon item logo" href="/" title="BlueSky Digital Labs home"><i class="home icon nomr"></i></a>
 						<div class="right menu">
 
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.id != 1 %}
 {% if i.is_navigation %}
-<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="fas fa-home"></i>{% else %}{{ i.title }}{% endif %}</a>
+<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
 {% endif %}
 {% endif %}
 {% endfor %}
