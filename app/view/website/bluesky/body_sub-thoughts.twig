@@ -11,7 +11,7 @@
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
-			<div class="meta"><span><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
+			<div class="meta"><span><i class="calendar alternate outline icon"></i><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
 			<div class="description">
 				{% if i.summary %}
 				<p>{{ i.summary|truncate(280,true,' ..') }}</p>
@@ -21,7 +21,7 @@
 			</div><!-- /.description -->
 			<div class="extra">
 				{% for tag in i._tags %}
-				<div class="ui label mini"><a href="{{ _url.base }}blog/category/{{ tag |replace({' ':'-'})}}"><i class="tag icon"></i>{{ tag }}</a></div>
+				<div class="ui label mini"><a href="{{ _url.base }}blog/category/{{ tag|replace({' ':'-','/':'-'}) }}"><i class="tag icon"></i>{{ tag }}</a></div>
 				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
 				{% endfor %}
 				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>

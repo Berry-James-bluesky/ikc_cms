@@ -3,22 +3,32 @@
 	<div class="twelve wide column">
 
 		<header>
-			<h1 class="fontweight900">{{ item.title }}</h1>
-			<span class="newstim"><time pubdate datetime="{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}">{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}</time></span>
+			<h2 class="ui header">{{ item.title }}</h2>
+			<span><time pubdate datetime="{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}"><i class="calendar alternate outline icon"></i>{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}</time></span>
 		</header>
-		<div class="emspace h20"></div>
+
+{% if item.tags|length > 0 %}
+<div class="ui divider"></div>
+{% for tag in item.tags %}
+<div class="ui label mini"><a href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}"><i class="tag icon"></i>{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a></div>
+{% endfor %}
+<div class="emspace h20 floatc"></div>
+{% endif %}
+
 
 {{ renderContent(item.content)|raw }}
 
-<div class="emspace h40 floatc"></div>
 
-{% if item.tags|length > 0 %}
-<p>Tags:
-{% for tag in item.tags %}
-<a class="fontweight500" href="{{ _url.base }}blog/category/{{ tag.value }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>{% if not loop.last %}, {% endif %}
-{% endfor %}
-</p>
-{% endif %}
+
+<div class="ui divider"></div>
+	<a class="ui labeled icon button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
+	<a class="ui labeled icon button" href="https://twitter.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
+	<a class="ui labeled icon button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
+	<a class="ui labeled icon button" href="https://plus.google.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
+
+
+
+
 
 		<div class="emspace floatc"></div>
 
@@ -34,7 +44,7 @@
 			<a class="item" href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 				<div class="content">
 					<div class="ui tiny header">{{ post.title }}</div>
-					<div class="meta"><small><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></small></div>
+					<div class="meta"><small><i class="calendar alternate outline icon"></i><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></small></div>
 				</div><!-- /.content -->
 			</a><!-- /.item -->
 

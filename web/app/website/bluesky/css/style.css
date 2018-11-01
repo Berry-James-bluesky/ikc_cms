@@ -108,7 +108,7 @@ html, body { font-size: 17px; }
 .ui.menu .item > i.icon.nomarginright { margin-right: 0; }
 .ui.items > .item.nomargin { margin: 0; }
 .ui.header.hwsicon > .icon { font-size: 1em; }
-.ui.header.hwsicon .icon:only-child { margin-right: 4px; }
+.ui.header.hwsicon .icon:only-child { margin-top: -4px; margin-right: 4px; }
 
 
 

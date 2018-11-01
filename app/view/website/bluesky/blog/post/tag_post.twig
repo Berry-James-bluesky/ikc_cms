@@ -1,34 +1,37 @@
 
-<h3 class="center nopadtop">Articles tagged with: <b>{{ _route.tag }}</b></h3>
-<div class="emspace h30"></div>
+<h2>Articles tagged with: {{ _route.tag }}</h2>
+<div class="ui divided items">
 
-<div id="hinsight" class="colwrp inline">
-{# for i in posts.rows|sort|reverse #}
-{% set blogList = reorderBlogListByMonth(posts.rows) %}
-{% for key,value in blogList %}
-	<section class="nlll">{% if key == 'no_date' %}No Date{% else %}{{ date(key ~ '-01')|date("M Y") }}{% endif %}</section>
-	<section class="nlrr">
-{% for i in value %}
-		<div class="coltre center">
-			<div class="wrp">
-				<a href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="{{ i.title }}">
-					<section class="hinimg"{% if i.featured_image %} style="background-image:url('{{ imgTsUrl(i.featured_image.reference, 360) }}');"{% endif %}></section>
-					<section class="hincon">
-						<p>
-							<span class="fontsize18"><b>{{ i.title }}</b></span>
-							<span class="fontsize12"><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span>
-						</p>
-					</section>
-				</a>
-			</div><!-- /.wrp -->
+{% for i in posts.rows %}
+
+	<div class="item">
+		<div class="ui small image">
+			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}" alt="" />
 		</div>
-{% endfor %}
-	</section>
-	<div class="emspace h0 floatc"></div>
+		<div class="content">
+			<div class="header">{{ i.title }}</div>
+			<div class="meta"><span><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
+			<div class="description">
+				{% if i.summary %}
+				<p>{{ i.summary|truncate(280,true,' ..') }}</p>
+				{% else %}
+				{{ i.description|raw|striptags|truncate(280,true,' ..')|replace({'&nbsp;':' '}) }}
+				{% endif %}
+			</div><!-- /.description -->
+			<div class="extra">
+				{% for tag in i.tags %}
+				<div class="ui label mini"><a href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}"><i class="tag icon"></i>{{ tag.value }}</a></div>
+				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
+				{% endfor %}
+				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
+			</div><!-- /.extra -->
+		</div><!-- /.content -->
+	</div><!-- /.item -->
+
 {% endfor %}
 
-	<div class="emspace floatc"></div>
-</div><!-- /#hinsight -->
+</div><!-- /.ui.divided.items -->
+<div class="emspace h40 floatc"></div>
 
 {#{% include 'paging.twig' with {'paging' : posts.paging, 'pagingUrl' : _url.base~'blog/'~blog_id } %}#}
 
