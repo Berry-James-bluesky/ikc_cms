@@ -101,6 +101,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 html, body { font-size: 17px; }
 .ui.button, .ui.card, .ui.cards { font-size: 14px; }
 .ui.card .meta, .ui.cards > .card .meta { font-size: .9em; line-height: 120%; padding: 5px 0; }
+a.ui.button { margin-bottom: 0.75em; }
 
 .ui.card .description, .ui.cards .description { line-height: 140%; }
 .ui.card .card.tiny, .ui.cards .card.tiny { font-size: 12px; }
