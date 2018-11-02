@@ -10,7 +10,7 @@
 {% for i in nav %}
 {% if i.id != 1 %}
 {% if i.is_navigation %}
-<a class="item{% if _route._handler._app == "page" and (item.parent_id == i.id) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
+<a class="item{% if (_route._handler._app == "page" and (item.parent_id == i.id)) or (_route._handler._app == "directory" and i.id == 3) or (_route._handler._app == "staff" and i.id == 4) or (_route._handler._app == "blog" and i.id == 5) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
 {% endif %}
 {% endif %}
 {% endfor %}
