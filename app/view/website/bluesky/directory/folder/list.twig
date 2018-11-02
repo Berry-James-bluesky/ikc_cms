@@ -1,26 +1,5 @@
 
-{#<div class="ui stackable equal height stackable grid">
-	<div class="four column row">
-
-{% for child_item in item_children %}
-{% for item in child_item %}
-
-		<div class="column">
-			<a href="{{ _url.base }}{% if item._url %}{{ item._url|trim('/') }}{% else %}directory/view/{{ item.id }}{% endif %}" title="">
-				<p><img src="{% if i.featured_image %}{{ imgTsUrl(item.featured_image.reference, 640) }}{% else %}{{ img }}_sui/image.png{% endif %}" class="resp fullshadow" alt="" /></p>
-				<div class="ui medium header">{{ item.title }}</div>
-				<p>{% if item.summary %}{{ item.summary|truncate(80,true,' ..') }}{% else %}{{ item.description|raw|striptags|truncate(80,true,' ..')|replace({'&nbsp;':' '}) }}{% endif %}</p>
-			</a>
-		</div><!-- /.column -->
-
-{% endfor %}
-{% endfor %}
-
-	</div><!-- /.three.column.row -->
-</div><!-- /.ui.stackable.equal.height.stackable.grid -->#}
-
-
-<h3 class="heading">Directories availaible</h3>
+<!--h3 class="heading">Directories availaible</h3-->
 {% include 'directory/folder/search_filter.twig' %}
 
 <div id="folder_container">

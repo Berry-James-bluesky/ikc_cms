@@ -1,7 +1,7 @@
 
-<div class="ui divided items">
+<div class="ui relaxed divided items">
 
-{% set postList = getLatestBlogItem(3) %}
+{% set postList = getLatestBlogItem(9) %}
 {% if postList %}
 {% for i in postList %}
 
@@ -12,7 +12,7 @@
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
 			<div class="meta"><span><i class="calendar alternate outline icon"></i><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
-			<div class="description postsummary">
+			<div class="description">
 				{% if i.summary %}
 				<p>{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}</p>
 				{% else %}

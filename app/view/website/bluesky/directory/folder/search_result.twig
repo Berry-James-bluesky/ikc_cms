@@ -1,43 +1,51 @@
-{% for item in directory_data.rows %}
-    <div class="tile gall" data-name="{{ item.id }}"
-         id="container-{{ item.id }}" {% if item.featured_image_id %} style="background-image:url({{ imgTsUrl(item.featured_image_id, 180) }});"{% endif %}>
-        <a style="cursor: pointer;" href="{{ _url.base }}directory/folder/view/{{ item.id }}"
-           title="view {{ item.name }}">
-            <section class="con">
-                {% if not item.featured_image_id %}
-                    <i class="fas fa-folder"></i>
-                {% endif %}
-            </section>
-        </a>
-        <section class="des">
-            <span class="file_name">
-                <a style="cursor: pointer;" href="{{ _url.base }}directory/folder/view/{{ item.id }}"
-                   title="view {{ item.name }}">{{ item.name }}</a>
-            </span>
-        </section>
-    </div><!-- /.tile.gall -->
+
+{% if item_list.rows or directory_data.rows %}
+
+<div class="ui four doubling link cards">
+
+{% for dcat in directory_data.rows %}
+
+	<a class="card blue" href="{{ _url.base }}directory/folder/view/{{ dcat.id }}" title="view">
+		<div class="image">
+			<img src="{% if dcat.featured_image_id %}{{ imgTsUrl(dcat.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ dcat.name }}</div>
+			<div class="meta">{{ dcat.title }}</div>
+		</div>
+		<div class="extra content">
+			<i class="folder icon"></i>
+			type
+		</div>
+	</a><!-- /.card -->
+
+{% endfor %}
+{% for ditm in item_list.rows %}
+
+	<a class="card green" href="{{ _url.base }}directory/item/view/{{ ditm.id }}" title="view">
+		<div class="image">
+			<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ ditm.name }}</div>
+			<div class="meta">{{ ditm.title }}</div>
+		</div>
+		<div class="extra content">
+			<i class="file alternate outline icon"></i>
+			type
+		</div>
+	</a><!-- /.card -->
+
 {% endfor %}
 
-{% for item in item_list.rows %}
-    <div class="tile gall" data-name="{{ item.id }}" id="container-item-{{ item.id }}"
-         style="background-image:url({{ imgTsUrl(item.featured_image, 180) }});">
-        <a style="cursor: pointer;" href="{{ _url.base }}directory/item/view/{{ item.id }}"
-           title="view {{ item.name }}">
-            {% if not item.featured_image %}
-                <section class="con">
-                    <i class="far fa-file"></i>
-                </section>
-            {% endif %}
-        </a>
-        <section class="des">
-            <span class="file_name">
-                <a style="cursor: pointer;" href="{{ _url.base }}directory/item/view/{{ item.id }}"
-                   title="view {{ item.name }}">{{ item.name }}</a>
-            </span>
-        </section>
-    </div><!-- /.tile.gall -->
-{% endfor %}
-{% if not item_list.rows and not directory_data.rows %}
-    <div class="noresults">No records available</div>
+</div><!-- /ui.four.doubling.link.cards -->
+
+{% else %}
+
+<div class="ui negative message">
+	<div class="header">Oops</div>
+	<p>No records were found.</p>
+</div>
+
 {% endif %}
 

@@ -18,13 +18,11 @@
 {{ renderContent(item.content)|raw }}
 
 <div class="ui divider"></div>
-<div class="center stackable">
-	<a class="ui linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i> LinkedIn</a>
-	<a class="ui twitter button" href="https://twitter.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
-	<a class="ui facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
-	<a class="ui pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
-	<a class="ui google plus button" href="https://plus.google.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
-</div>
+<a class="ui linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i> LinkedIn</a>
+<a class="ui twitter button" href="https://twitter.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
+<a class="ui facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
+<a class="ui pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
+<a class="ui google plus button" href="https://plus.google.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
 
 		<div class="emspace floatc"></div>
 
@@ -32,10 +30,11 @@
 	<aside class="four wide column">
 
 		<h4 class="ui horizontal divider header">Recent posts</h4>
-		<div class="ui link items">
+		<div class="ui relaxed link items">
 
 {% set postList = getLatestBlogItem(4) %}
 {% for post in postList %}
+{% if post.id != item.id %}
 
 			<a class="item" href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 				<div class="content">
@@ -44,6 +43,7 @@
 				</div><!-- /.content -->
 			</a><!-- /.item -->
 
+{% endif %}
 {% endfor %}
 
 		</div><!-- /.ui.divided.items -->
@@ -51,9 +51,8 @@
 {% set tags = getAllPostTags() %}
 {% if tags|length > 0 %}
 
-		<div class="emspace floatc"></div>
 		<h4 class="ui horizontal divider header">Posts by tags</h4>
-		<div class="ui link items">
+		<div class="ui relaxed link items">
 {% for tag in tags %}
 			<a class="item nomargin" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">
 				<div class="content">

@@ -15,16 +15,19 @@
 				<a href="{{ item.social }}" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> View LinkedIn profile</a>
 			</div><!-- /.extra.content -->
 		</div><!-- /.card -->
-		<div class="ui basic modal">
+
+{# if item.featured_image #}
+		<div class="ui basic modal dapop">
 			<i class="close icon"></i>
 			<div class="content">
 				<div class="center">
 					<div class="ui image">
-						<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/{% if item.id == 1 %}joe.jpg{% elseif item.id == 2 %}eve.png{% elseif item.id == 3 %}chris.jpg{% elseif item.id == 4 %}matthew.png{% elseif item.id == 5 %}christian.jpg{% elseif item.id == 6 %}steve.jpg{% else %}image.png{% endif %}{% endif %}" class="resp" alt="Rizal Farok" />
+						<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference) }}{% else %}/app/website/bluesky/img/_sui/{% if item.id == 1 %}joe.jpg{% elseif item.id == 2 %}eve.png{% elseif item.id == 3 %}chris.jpg{% elseif item.id == 4 %}matthew.png{% elseif item.id == 5 %}christian.jpg{% elseif item.id == 6 %}steve.jpg{% else %}image.png{% endif %}{% endif %}" class="resp" alt="Rizal Farok" />
 					</div><!-- /.ui.image -->
 				</div><!-- /.center -->
 			</div><!-- /.content -->
 		</div><!-- /.ui.basic.modal -->
+{# endif #}
 
 	</div><!-- /.column -->
 	<div class="eleven wide column">

@@ -1,6 +1,6 @@
 
 {% set staffsList = getAllStaff() %}
-<div class="ui stackable centered cards">
+<div class="ui stackable centered link cards">
 
 {% for boss in staffsList %}
 {% if boss.is_active and (boss.id == 1 or boss.id == 2) %}
@@ -25,11 +25,11 @@
 {% endif %}
 {% endfor %}
 
-</div><!-- /ui.special.centered.cards -->
+</div><!-- /ui.stackable.centered.link.cards -->
 
 <div class="emspace h30 floatc"></div>
 
-<div class="ui four stackable cards">
+<div class="ui four doubling link cards">
 
 {% for staff in staffsList %}
 {% if staff.is_active and staff.id > 2 %}
@@ -53,5 +53,5 @@
 {% endif %}
 {% endfor %}
 
-</div><!-- /ui.special.centered.cards -->
+</div><!-- /ui.four.stackable.link.cards -->
 

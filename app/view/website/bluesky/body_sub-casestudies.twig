@@ -5,21 +5,35 @@
 
 <select name="casestudies" multiple="" class="casestudies ui dropdown selection multiple">
 <option value="">All</option>
-{% set list = getAllDirectoryCategories() %}
-{% for fol in list.directory_data.rows %}
-{% if fol.type=='folder' %}
-<option value="{{ fol.name }}" id="cscat-{{ fol.id }}">{{ fol.name }}</option>
-{% endif %}
+{% set tag = getDirectoryCategoryData() %}
+{% for opt in tag.items %}
+<option value="{{ opt._tag }}" id="cscat-{{ opt.id }}">{{ opt._tag }}</option>
 {% endfor %}
 </select>
 
 	</div>
 </div>
-<div class="emspace floatc"></div>
+<div class="emspace h20 floatc"></div>
 
 
-{% set list = getAllDirectoryCategories() %}
-{% for item in child_item %}
-<a href="{{ _url.base }}{% if item._url %}{{ item._url|trim('/') }}{% else %}directory/view/{{ item.id }}{% endif %}" title="">{{ item.name }}</a>
+
+<div class="ui four stackable link cards">
+
+{% set list = getDirectoryCategoryData() %}
+{% for ditm in list.items %}
+
+	<a class="card" href="{{ _url.base }}{% if ditm._url %}{{ ditm._url|trim('/') }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
+		<div class="image">
+			<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ ditm.name }}</div>
+			<div class="meta">{{ ditm._tag }}</div>
+			<div class="description">{{ ditm.title }}</div>
+		</div>
+	</a><!-- /.card -->
+
 {% endfor %}
+
+</div><!-- /ui.four.stackable.link.cards -->
 

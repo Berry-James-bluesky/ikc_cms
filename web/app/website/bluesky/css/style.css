@@ -310,8 +310,7 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 767px) {
 
-.dsk { display: none; }
-.mob { display: block; }
+#viw.ui.container { width: 100% !important; }
 
 html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ui.massive.segment, .ui.massive.segments .segment { font-size: 1.3em; }

@@ -4,9 +4,9 @@ $(function(){
 	/* semanticsUI general */
 	$('.ui.dropdown').dropdown();
 	$('.special.card .image, .special.cards .image').dimmer({ on:'hover' });
-	$('.dopop').click(function(){
-		$('.ui.basic.modal').modal('show');
-	});
+	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });
+
+
 
 	/* main navigation */
 	$('.masthead').visibility({
