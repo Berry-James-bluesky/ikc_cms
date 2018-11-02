@@ -370,7 +370,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 414px) {
 
 .ui.four.doubling.cards, .ui.five.doubling.cards { max-width: 100%; margin-left: auto; margin-right: auto; }
-.ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 290px; }
+.ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 100%; }
 
 .fwrp input:not(.btn), .fwrp textarea { width: 90%; }
 input.btn, a.btn { width: auto; padding: 0 20px; display: inline-block; }
