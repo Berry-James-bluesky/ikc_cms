@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html amp lang="en">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 {% set site = 'BlueSky Digital Labs' %}
@@ -35,33 +35,18 @@
 <link rel="stylesheet" href="/app/website/bluesky/css/style.css">
 
 <!--[if lt ie 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
-<!--{#
-<script>FontAwesomeConfig={searchPseudoElements:true};</script>
-<script defer src="//use.fontawesome.com/releases/v5.1.0/js/all.js" integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9" crossorigin="anonymous"></script>
-#}-->
 <script src="/app/website/bluesky/js/jquery-3.2.1.min.js"></script>
 <script src="/app/website/bluesky/_semantic/semantic.min.js"></script>
 <script src="/app/website/bluesky/js/jq-min-bluesky.js"></script>
 
-<!--{# amp #}-->
-<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-<script async src="//cdn.ampproject.org/v0.js"></script>
-
-<!--{# Global site tag (gtag.js) || Google Analytics #}-->
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-127973425-1');</script>
-
-<!--{# Google Tag Manager #}-->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF3ZBPS');</script>
 
 </head>
 <body class="bod {% if item.is_home_page %}hom{% else %}sub{% endif %}">
-
-<!--{# Google Tag Manager (noscript) #}-->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NF3ZBPS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!--{#
-{% include 'body_landing.twig' %}
-#}-->
+
 {% include 'header_sxnav.twig' %}
 	<div id="bluesky" class="pusher">
 {% include 'header.twig' %}
@@ -69,6 +54,7 @@
 {% include 'footer.twig' %}
 		<div id="backtotop"><i class="arrow alternate circle up icon"></i></div>
 	</div><!-- /.pusher -->
+
 </body>
 </html>
 

@@ -12,9 +12,9 @@
 			<div class="meta"><span><i class="calendar alternate outline icon"></i><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
 			<div class="description">
 				{% if i.summary %}
-				<p>{{ i.summary|truncate(280,true,' ..') }}</p>
+				<p>{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}</p>
 				{% else %}
-				{{ i.description|raw|striptags|truncate(280,true,' ..')|replace({'&nbsp;':' '}) }}
+				{{ i.description|raw|striptags|truncate(540,true,' ..') }}
 				{% endif %}
 			</div><!-- /.description -->
 			<div class="extra">
