@@ -1,6 +1,8 @@
 
 		<section id="con">
 			<div class="emspace h80"></div>
+			<div class="ui page grid">
+				<div id="viw" class="ui container">
 
 {% if item.is_home_page or _url.path == "/" %}
 {% include 'body_hom.twig' %}
@@ -8,7 +10,8 @@
 {% include 'body_sub.twig' %}
 {% endif %}
 
-
+				</div><!-- /.ui.container -->
+			</div><!--/.ui.page.grid -->
 			<div class="emspace h80 floatc"></div>
 		</section><!-- /#con -->
 

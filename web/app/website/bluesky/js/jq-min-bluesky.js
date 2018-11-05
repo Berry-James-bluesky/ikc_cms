@@ -3,6 +3,8 @@ $(function(){
 
 	/* semanticsUI general */
 	$('.ui.dropdown').dropdown();
+	$('.ui.checkbox').checkbox();
+
 	$('.special.card .image, .special.cards .image').dimmer({ on:'hover' });
 	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });
 
