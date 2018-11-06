@@ -5,22 +5,24 @@
 	<p>{{ item.summary }}</p>
 </div>
 
-<div class="ui card casestudies">
-	<div class="image">
-		<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+<div class="ui medium right floated image">
+	<div class="ui card">
+		<div class="image">
+			<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">Epicuest</div>
+			<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
+			<div class="description">{{ item.company }}</div>
+		</div>
+		<div class="extra content">
+			<span>
+				<i class="calendar alternate outline icon"></i>
+				{% if item.published_date != 0000-00-00 %}{{ item.date|date("Y") }}{% else %}2018{% endif %}
+			</span>
+		</div>
 	</div>
-	<div class="content">
-		<div class="header">Epicuest</div>
-		<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
-		<div class="description">{{ item.company }}</div>
-	</div>
-	<div class="extra content">
-		<span>
-			<i class="calendar alternate outline icon"></i>
-			{% if item.published_date != 0000-00-00 %}{{ item.date|date("Y") }}{% else %}2018{% endif %}
-		</span>
-	</div>
-</div>
+</div><!-- /.ui.medium.right.floated.image -->
 
 {{ renderContent(item.description)|raw }}
 
