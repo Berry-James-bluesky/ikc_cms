@@ -1,8 +1,8 @@
 
 {% if _route._handler._app == "page" and item.description %}
-<div class="{% if item.parent_id == 2 %}ui piled segment large center{% else %}content{% endif %}">
+{% if item.parent_id == 2 %}<div class="ui piled segment large center">{% endif %}
 {{ renderContent(item.description)|raw }}
-</div>
+{% if item.parent_id == 2 %}</div>{% endif %}
 {% endif %}
 {{ _content_|raw }}
 

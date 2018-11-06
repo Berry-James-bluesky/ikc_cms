@@ -110,6 +110,12 @@ a.ui.button { margin-bottom: 0.75em; }
 .ui.items > .item.nomargin { margin: 0; }
 .ui.header.hwsicon > .icon { font-size: 1em; }
 .ui.header.hwsicon .icon:only-child { margin-top: -4px; margin-right: 4px; }
+.ui.horizontal.divider.header .icon { margin-right: 0; }
+
+
+
+
+
 
 
 
@@ -131,14 +137,6 @@ a.ui.button { margin-bottom: 0.75em; }
 }
 #backtotop.tada { bottom: 7px; }
 #backtotop i.icon { margin: 0; padding: 0; width: auto; }
-
-.nlll { float: left; width: 7.5%; padding: 0; font-size: 24px; line-height: 100%; text-align: right; text-transform: uppercase; }
-.nlrr { float: right; width: 90%; padding-left: 2%; border-left: 1px solid #000; }
-@media only screen and (max-width: 1024px) { .nlll { width: 8.5%; } .nlrr { width: 88%; } }
-@media only screen and (max-width: 840px) { .nlll { font-size: 28px; } }
-@media only screen and (max-width: 767px) { .nlll { font-size: 24px; width: 10%; padding-right: 1.5%; } .nlrr { width: 86%; } }
-@media only screen and (max-width: 480px) { .nlll { font-size: 16px; } }
-@media only screen and (max-width: 414px) { .nlll, .nlrr { float: none; display: block; width: 100%; padding: 0; border: 0; text-align: center; } .nlll { border-bottom: 1px solid #000; padding: 7px 0; } }
 
 
 
@@ -173,6 +171,15 @@ a.ui.button { margin-bottom: 0.75em; }
 
 small.small60 { font-size: 60%; }
 .ui.header span, .ui.header small { display: block; }
+
+#postreadcount.ui.mini.labeled.active.button:hover * { cursor: default; }
+#postreadcount.ui.mini.labeled.active.button:hover .ui.icon.button { color: rgba(0,0,0,.6); background-color: #e0e1e2; opacity: 1; }
+
+.postside .items { font-size: 14px; }
+
+.ui.card.casestudies { float: right; margin: 0 0 20px 40px; }
+
+
 
 
 
