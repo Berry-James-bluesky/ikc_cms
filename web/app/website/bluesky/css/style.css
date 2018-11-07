@@ -111,7 +111,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .ui.items > .item.nomargin { margin: 0; }
 .ui.header.hwsicon > .icon { font-size: 1em; }
 .ui.header.hwsicon .icon:only-child { margin-top: -4px; margin-right: 4px; }
-.ui.horizontal.divider.header .icon { margin-right: 0; }
+.ui.horizontal.divider.header.nomargin .icon { margin-right: 0; }
 
 
 
@@ -182,13 +182,7 @@ small.small60 { font-size: 60%; }
 
 
 
-#testimonials .shape {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	flex-wrap: wrap;
-}
+#testimonials .shape { display: flex; justify-content: center; align-items: center; align-content: center; flex-wrap: wrap; }
 #testimonials .ui.card { width: 540px; margin: 0 auto; padding: 14px 0 0 0; }
 #testimonials .ui.card .content .description { padding: 0 30px 14px 30px; }
 

@@ -7,7 +7,7 @@
 {% if item.tags|length > 0 %}
 <div class="ui divider"></div>
 {% for tag in item.tags %}
-<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}"><i class="tag icon"></i>{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
+<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
 {% endfor %}
 <div class="emspace h20 floatc"></div>
 {% endif %}
@@ -17,7 +17,7 @@
 	<div class="column">
 		<div class="ui segment">
 
-			<span class="ui orange right ribbon label">Recent posts</span>
+			<span class="ui orange right ribbon label">Recent articles</span>
 			<div class="ui relaxed link items">
 
 {% set postList = getLatestBlogItem(4) %}
@@ -26,7 +26,7 @@
 
 				<a class="item" href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 					<div class="content">
-						<div class="ui small header">{{ post.title }}</div>
+						<div class="ui tiny header">{{ post.title }}</div>
 						<div class="meta"><small><i class="calendar alternate outline icon"></i><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></small></div>
 					</div><!-- /.content -->
 				</a><!-- /.item -->
@@ -39,7 +39,7 @@
 {% set tags = getAllPostTags() %}
 {% if tags|length > 0 %}
 
-			<span class="ui teal right ribbon label">Posts by tags</span>
+			<span class="ui teal right ribbon label">Search by tags</span>
 			<div class="emspace h20"></div>
 			<p>
 {% for tag in tags %}

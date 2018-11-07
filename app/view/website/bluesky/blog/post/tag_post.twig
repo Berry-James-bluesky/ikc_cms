@@ -1,6 +1,11 @@
 
-<h2>Articles tagged with: {{ _route.tag }}</h2>
-<div class="ui divided items">
+<h4 class="ui horizontal divider header">
+	<i class="tags icon"></i>
+	Articles tagged with: {{ _route.tag }}
+</h4>
+<div class="emspace floatc"></div>
+
+<div class="ui relaxed divided items">
 
 {% for i in posts.rows %}
 
@@ -10,17 +15,19 @@
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
-			<div class="meta"><span><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
+			<div class="meta"><span><i class="calendar alternate outline icon"></i><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
 			<div class="description">
+				<p>
 				{% if i.summary %}
-				<p>{{ i.summary|truncate(280,true,' ..') }}</p>
+				{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}
 				{% else %}
-				{{ i.description|raw|striptags|truncate(280,true,' ..')|replace({'&nbsp;':' '}) }}
+				{{ i.content|raw|striptags|truncate(540,true,' ..') }}
 				{% endif %}
+				</p>
 			</div><!-- /.description -->
 			<div class="extra">
 				{% for tag in i.tags %}
-				<div class="ui label mini"><a href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}"><i class="tag icon"></i>{{ tag.value }}</a></div>
+				<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{{ tag.value }}</a>
 				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
 				{% endfor %}
 				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
@@ -30,7 +37,7 @@
 
 {% endfor %}
 
-</div><!-- /.ui.divided.items -->
+</div><!-- /.ui.relaxed.divided.items -->
 <div class="emspace h40 floatc"></div>
 
 {#{% include 'paging.twig' with {'paging' : posts.paging, 'pagingUrl' : _url.base~'blog/'~blog_id } %}#}

@@ -13,15 +13,17 @@
 			<div class="header">{{ i.title }}</div>
 			<div class="meta"><span><i class="calendar alternate outline icon"></i><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
 			<div class="description">
+				<p>
 				{% if i.summary %}
-				<p>{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}</p>
+				{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}
 				{% else %}
 				{{ i.content|raw|striptags|truncate(540,true,' ..') }}
 				{% endif %}
+				</p>
 			</div><!-- /.description -->
 			<div class="extra">
 				{% for tag in i._tags %}
-				<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag|replace({' ':'-','/':'-'}) }}"><i class="tag icon"></i>{{ tag }}</a>
+				<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag|replace({' ':'-','/':'-'}) }}">{{ tag }}</a>
 				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
 				{% endfor %}
 				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
@@ -32,5 +34,5 @@
 {% endfor %}
 {% endif %}
 
-</div><!-- /.ui.divided.items -->
+</div><!-- /.ui.relaxed.divided.items -->
 
