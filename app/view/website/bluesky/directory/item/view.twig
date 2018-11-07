@@ -14,13 +14,20 @@
 			<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
 			<div class="description">{{ item.company }}</div>
 		</div>
-{% if item.published_date != 0000-00-00 %}
-		<div class="extra content">
-			<span>
-				<i class="calendar alternate outline icon"></i>
-				Established in {% if item.name == "Epicuest" or item.name == "SchoolZine" %}2007{% else %}{{ item.published_date|date("Y") }}{% endif %}
-			</span>
-		</div><!-- /.extra.content -->
+{% if item.id != 4 and item.id != 7 and item.id != 10 %}
+<div class="extra content">
+<span>
+<i class="calendar alternate outline icon"></i>
+Established
+{% if item.id == 1 or item.id == 2 %}in 2007
+{% elseif item.id == 3 %}in 2010
+{% elseif item.id == 5 %}in 2016
+{% elseif item.id == 6 %}for 65+ years
+{% elseif item.id == 8 %}for 50 years
+{% elseif item.id == 9 %}in 1952
+{% endif %}
+</span>
+</div><!-- /.extra.content -->
 {% endif %}
 	</div>
 </div><!-- /.ui.medium.right.floated.image -->
