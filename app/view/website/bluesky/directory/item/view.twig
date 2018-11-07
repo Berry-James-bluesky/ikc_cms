@@ -14,12 +14,14 @@
 			<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
 			<div class="description">{{ item.company }}</div>
 		</div>
+{% if item.published_date != 0000-00-00 %}
 		<div class="extra content">
 			<span>
 				<i class="calendar alternate outline icon"></i>
-				Established in {% if item.name == "Epicuest" or item.name == "SchoolZine" %}2007{% else %}{% if item.published_date != 0000-00-00 %}{{ item.published_date|date("Y") }}{% else %}2018{% endif %}{% endif %}
+				{% if item.name == "Epicuest" or item.name == "SchoolZine" %}2007{% else %}{{ item.published_date|date("Y") }}{% endif %}
 			</span>
-		</div>
+		</div><!-- /.extra.content -->
+{% endif %}
 	</div>
 </div><!-- /.ui.medium.right.floated.image -->
 
