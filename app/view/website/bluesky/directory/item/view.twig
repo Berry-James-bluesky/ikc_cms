@@ -18,7 +18,7 @@
 		<div class="extra content">
 			<span>
 				<i class="calendar alternate outline icon"></i>
-				{% if item.name == "Epicuest" or item.name == "SchoolZine" %}2007{% else %}{{ item.published_date|date("Y") }}{% endif %}
+				Established in {% if item.name == "Epicuest" or item.name == "SchoolZine" %}2007{% else %}{{ item.published_date|date("Y") }}{% endif %}
 			</span>
 		</div><!-- /.extra.content -->
 {% endif %}
