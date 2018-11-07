@@ -182,6 +182,18 @@ small.small60 { font-size: 60%; }
 
 
 
+#testimonials .shape {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+#testimonials .ui.card { width: 540px; margin: 0 auto; padding: 14px 0 0 0; }
+#testimonials .ui.card .content .description { padding: 0 30px 14px 30px; }
+
+
+
 
 
 

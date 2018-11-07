@@ -11,7 +11,7 @@
 			<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
 		</div>
 		<div class="content">
-			<div class="header">Epicuest</div>
+			<div class="header">{{ item.name }}</div>
 			<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
 			<div class="description">{{ item.company }}</div>
 		</div>
