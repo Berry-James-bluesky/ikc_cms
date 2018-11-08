@@ -34,5 +34,27 @@ Established
 
 {{ renderContent(item.description)|raw }}
 
-<div class="emspace floatc"></div>
+<div class="emspace h80 floatc"></div>
+<h4 class="ui horizontal divider header nomargin"><i class="briefcase icon"></i></h4>
+
+<div class="ui five doubling centered cards">
+
+{% set list = getDirectoryCategoryData() %}
+{% for ditm in list.items %}
+{% if ditm.id != item.id %}
+
+	<a class="card tiny" href="{% if ditm._url %}{{ ditm._url|trim('/') }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
+		<div class="image">
+			<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ ditm.name }}</div>
+			<div class="meta">{{ ditm._tag }}</div>
+		</div>
+	</a><!-- /.card -->
+
+{% endif %}
+{% endfor %}
+
+</div><!-- /.ui.five.doubling.centered.cards -->
 

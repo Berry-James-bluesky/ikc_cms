@@ -11,11 +11,13 @@
 			<div class="header">{{ i.title }}</div>
 			<div class="meta"><span><i class="calendar alternate outline icon"></i><time pubdate datetime="{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}">{% if i.date and i.date != 0000-00-00 %}{{ i.date|date("jS F Y") }}{% endif %}</time></span></div>
 			<div class="description">
+				<p>
 				{% if i.summary %}
-				<p>{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}</p>
+				{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}
 				{% else %}
 				{{ i.description|raw|striptags|truncate(540,true,' ..') }}
 				{% endif %}
+				</p>
 			</div><!-- /.description -->
 			<div class="extra">
 				{% for tag in i.tags %}

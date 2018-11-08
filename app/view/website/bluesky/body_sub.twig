@@ -1,8 +1,16 @@
 
-{% if _route._handler._app == "page" and item.description %}
+{% if _route._handler._app == "page" %}
+
+{% if item.summary %}
 {% if item.parent_id == 2 %}<div class="ui piled segment large center">{% endif %}
-{{ renderContent(item.description)|raw }}
+<p>{{ item.summary|raw }}</p>
 {% if item.parent_id == 2 %}</div>{% endif %}
+{% endif %}
+
+{% if item.description %}
+{{ renderContent(item.description)|raw }}
+{% endif %}
+
 {% endif %}
 {{ _content_|raw }}
 
@@ -28,19 +36,25 @@
 
 {% if item.id != 2 %}
 {% if subnav %}
-<div class="emspace h40 floatc"></div>
-<div class="ui center aligned">
-<nav id="pnav" class="ui tiny stackable compact menu">
+<div class="emspace h80 floatc"></div>
+<h4 class="ui horizontal divider header nomargin"><i class="file alternate icon"></i></h4>
+<div class="ui four doubling centered cards">
 {% endif %}
 {% for i in subnav %}
 {% if i.is_navigation %}
-<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
+{% if i.id != item.id %}
+	<a class="card tiny" href="{{ i._url }}" title="{{ i.title }}">
+		<div class="content">
+			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 60) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<div class="header spnav">{{ i.title }}</div>
+			<div class="description">{% if i.summary %}{{ i.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
+		</div>
+	</a><!-- /.card -->
+{% endif %}
 {% endif %}
 {% endfor %}
 {% if subnav %}
-</nav><!-- /#pnav -->
-</div>
-<div class="emspace h40 floatc"></div>
+</div><!-- /.ui.five.doubling.centered.cards -->
 {% endif %}
 {% endif %}
 

@@ -37,13 +37,7 @@ a.url, .url { -ms-word-break: break-all; word-break: break-all; word-break: brea
 .display_table * { vertical-align: middle; }
 .underline { text-decoration: underline; }
 .nopadding, .nopad { margin: 0; padding: 0; }
-.nopadtop, .nopad-top { padding-top: 0; }
-.nopadbot, .nopad-bottom { padding-bottom: 0; }
-.padright { padding-right: 7px; }
-.padleft { padding-left: 7px; }
 .blocklinks a, .blocklinks span { display: block; }
-.image_left { float: left; margin: 0 20px 20px 0; }
-.image_right { float: right; margin: 0 20px 20px; text-align: right; }
 
 a[href="javascript:;"].activate { cursor: pointer; }
 .chidden { display: none; }
@@ -51,13 +45,6 @@ a[href="javascript:;"].activate { cursor: pointer; }
 .vidplaywrp { position: relative; }
 .vidplayimg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent url(../img/_ui/_vidplay.png) center no-repeat; cursor: pointer; }
 .vidplayimg a { width: 100%; height: 100%; display: block; }
-
-.soc {  }
-.soc .btn.socfb { background-color: #3e5c98; }
-.soc .btn.soctw { background-color: #20a1f2; }
-.soc .btn.socpt { background-color: #bd081c; }
-.soc .btn.socgg { background-color: #e53935 }
-.soc .btn.soclk { background-color: #0077b5; }
 
 .bgcover { -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
 
@@ -98,7 +85,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 
 /* semantic UI overwrites  */
-html, body { font-size: 17px; }
+html, body, .ui.shape .ui.card { font-size: 17px; }
 .ui.button, .ui.card, .ui.cards { font-size: 14px; }
 .ui.card .meta, .ui.cards > .card .meta { font-size: .9em; line-height: 120%; padding: 5px 0; }
 a.ui.button { margin-bottom: 0.75em; }
@@ -179,12 +166,18 @@ small.small60 { font-size: 60%; }
 .postside .items { font-size: 14px; }
 
 .ui.card.casestudies { float: right; margin: 0 0 20px 40px; }
+.card .content .header.spnav { padding-top: 7px; }
 
 
 
 #testimonials .shape { display: flex; justify-content: center; align-items: center; align-content: center; flex-wrap: wrap; }
 #testimonials .ui.card { width: 540px; margin: 0 auto; padding: 14px 0 0 0; }
 #testimonials .ui.card .content .description { padding: 0 30px 14px 30px; }
+
+
+
+.blockquote i.icon { font-size: 1.7em; }
+.blockquote p { font-weight: bold; font-size: 1.7em; line-height: 120%; text-align: center; margin: 0; padding: 14px; }
 
 
 
