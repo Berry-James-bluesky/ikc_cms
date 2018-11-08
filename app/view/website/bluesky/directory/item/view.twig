@@ -43,7 +43,7 @@ Established
 {% for ditm in list.items %}
 {% if ditm.id != item.id %}
 
-	<a class="card tiny" href="{% if ditm._url %}{{ ditm._url|trim('/') }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
+	<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 		<div class="image">
 			<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
 		</div>
