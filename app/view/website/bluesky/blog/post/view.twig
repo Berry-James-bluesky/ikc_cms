@@ -1,4 +1,6 @@
 
+<section id="psview">
+
 <h2 class="ui header">
 	{{ item.title }}
 	<time class="sub header" pubdate datetime="{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}"><i class="calendar alternate outline icon"></i>{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}</time>
@@ -24,7 +26,7 @@
 {% for post in postList %}
 {% if post.id != item.id %}
 
-				<a class="item" href="{{ _url.base|trim('/') }}{% if post._url %}{{ post._url }}{% else %}blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+				<a class="item" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 					<div class="content">
 						<div class="ui tiny header">{{ post.title }}</div>
 						<div class="meta"><small><i class="calendar alternate outline icon"></i><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></small></div>
@@ -67,4 +69,33 @@
 <a class="ui mini facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
 <a class="ui mini pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
 <a class="ui mini google plus button" href="https://plus.google.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
+
+
+
+<div class="nodisp">
+<div class="emspace h80 floatc"></div>
+<h4 class="ui horizontal divider header nomargin"><i class="newspaper outline icon"></i></h4>
+<div class="ui four doubling centered cards">
+
+{% for post in postList %}
+{% if post.id != item.id %}
+
+	<a class="card tiny" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+		<div class="content">
+			<img class="left floated mini ui image" src="{% if post.featured_image %}{{ imgTsUrl(post.featured_image.reference, 60) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<div class="header spnav">{{ post.title }}</div>
+			<div class="description">{% if post.summary %}{{ post.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ post.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
+		</div>
+	</a><!-- /.card -->
+
+{% endif %}
+{% endfor %}
+
+</div><!-- /.ui.five.doubling.centered.cards -->
+</div><!-- /.nodisp -->
+
+
+
+
+</section><!-- /#psview -->
 

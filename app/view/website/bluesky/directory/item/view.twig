@@ -1,19 +1,22 @@
 
-<div class="ui piled segment center huge">
-	<h2 class="ui header">{{ item.title }}</h2>
-	<p>{{ item.summary }}</p>
-</div>
+<section id="csview">
 
-<div class="ui medium right floated image">
-	<div class="ui card">
-		<div class="image">
-			<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
-		</div>
-		<div class="content">
-			<div class="header">{{ item.name }}</div>
-			<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
-			<div class="description">{{ item.company }}</div>
-		</div>
+	<div class="ui piled segment center huge">
+		<h2 class="ui header">{{ item.title }}</h2>
+		<p>{{ item.summary }}</p>
+	</div>
+
+	<div class="ui medium right floated image">
+		<div class="ui card">
+			<div class="image">
+				<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			</div>
+			<div class="content">
+				<div class="header">{{ item.name }}</div>
+				<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
+				<div class="description">{{ item.company }}</div>
+			</div><!-- /.content -->
+
 {% if item.id != 4 and item.id != 7 and item.id != 10 %}
 <div class="extra content">
 <span>
@@ -29,32 +32,35 @@ Established
 </span>
 </div><!-- /.extra.content -->
 {% endif %}
-	</div>
-</div><!-- /.ui.medium.right.floated.image -->
+
+		</div><!-- /.ui.card -->
+	</div><!-- /.ui.medium.right.floated.image -->
 
 {{ renderContent(item.description)|raw }}
 
-<div class="emspace h80 floatc"></div>
-<h4 class="ui horizontal divider header nomargin"><i class="briefcase icon"></i></h4>
+	<div class="emspace h80 floatc"></div>
+	<h4 class="ui horizontal divider header nomargin"><i class="briefcase icon"></i></h4>
 
-<div class="ui five doubling centered cards">
+	<div class="ui five doubling centered cards">
 
 {% set list = getDirectoryCategoryData() %}
 {% for ditm in list.items %}
 {% if ditm.id != item.id %}
 
-	<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
-		<div class="image">
-			<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
-		</div>
-		<div class="content">
-			<div class="header">{{ ditm.name }}</div>
-			<div class="meta">{{ ditm._tag }}</div>
-		</div>
-	</a><!-- /.card -->
+		<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
+			<div class="image">
+				<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			</div>
+			<div class="content">
+				<div class="header">{{ ditm.name }}</div>
+				<div class="meta">{{ ditm._tag }}</div>
+			</div>
+		</a><!-- /.card -->
 
 {% endif %}
 {% endfor %}
 
-</div><!-- /.ui.five.doubling.centered.cards -->
+	</div><!-- /.ui.five.doubling.centered.cards -->
+
+</section><!-- /#csview -->
 

@@ -1,10 +1,12 @@
 
+<section id="stview">
+
 <div class="ui stackable grid">
 	<div class="five wide column">
 
 		<div class="ui special centered card">
 			<div class="blurring dimmable image">
-				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop" href="" title="">View image</span></div></div></div>
+				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop">View image</span></div></div></div>
 				<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/{% if item.id == 1 %}joe.jpg{% elseif item.id == 2 %}eve.png{% elseif item.id == 3 %}chris.jpg{% elseif item.id == 4 %}matthew.png{% elseif item.id == 5 %}christian.jpg{% elseif item.id == 6 %}steve.jpg{% else %}image.png{% endif %}{% endif %}">
 			</div><!-- /.blurring.dimmable.image -->
 			<div class="content">
@@ -32,7 +34,15 @@
 	</div><!-- /.column -->
 	<div class="eleven wide column">
 
-<h2 class="ui header">{{ item.name }}</h2>
+<h2 class="ui header">
+	<img class="ui big circular image dopop" src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 60) }}{% else %}/app/website/bluesky/img/_sui/{% if item.id == 1 %}joe.jpg{% elseif item.id == 2 %}eve.png{% elseif item.id == 3 %}chris.jpg{% elseif item.id == 4 %}matthew.png{% elseif item.id == 5 %}christian.jpg{% elseif item.id == 6 %}steve.jpg{% else %}image.png{% endif %}{% endif %}">
+	<div class="content">
+		{{ item.name }}
+		<div class="sub header">{{ item.title }}</div>
+	</div><!-- /.content -->
+</h2>
+<div class="ui divider afterheader floatc"></div>
+
 {{ renderContent(item.description)|raw }}
 
 	</div><!-- /.column -->
@@ -69,6 +79,7 @@
 
 <div class="emspace h80 floatc"></div>
 <h4 class="ui horizontal divider header nomargin"><i class="file alternate icon"></i></h4>
+<section id="subnav">
 <div class="ui four doubling centered cards">
 {% set subnav = buildNav(1, 4) %}
 {% for i in subnav %}
@@ -83,4 +94,7 @@
 {% endif %}
 {% endfor %}
 </div><!-- /.ui.five.doubling.centered.cards -->
+</section><!-- /#subnav -->
+
+</section><!-- /#stview -->
 

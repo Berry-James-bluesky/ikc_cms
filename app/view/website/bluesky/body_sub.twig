@@ -38,6 +38,7 @@
 {% if subnav %}
 <div class="emspace h80 floatc"></div>
 <h4 class="ui horizontal divider header nomargin"><i class="file alternate icon"></i></h4>
+<section id="subnav">
 <div class="ui four doubling centered cards">
 {% endif %}
 {% for i in subnav %}
@@ -54,7 +55,8 @@
 {% endif %}
 {% endfor %}
 {% if subnav %}
-</div><!-- /.ui.five.doubling.centered.cards -->
+</div><!-- /.ui.four.doubling.centered.cards -->
+</section><!-- /#subnav -->
 {% endif %}
 {% endif %}
 
