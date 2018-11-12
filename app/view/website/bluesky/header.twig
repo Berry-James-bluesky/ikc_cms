@@ -22,21 +22,20 @@
 				<div class="ui container vmiddle">
 
 {% if _url.path != "/?bluesky1" and _url.path != "/?bluesky2" %}
-{% if item.is_home_page %}
-<img class="ui image big" src="{{ img }}BlueSky.png" alt="BlueSky" />
-<!--{#
-<h1 class="ui header inverted">BlueSky Digital Labs</h1>
-#}-->
-<h3 class="ui header inverted">innovating customised online solutions</h3>
-{% else %}
 <h1 class="ui header inverted">
+	<img class="ui image {% if item.is_home_page %}big{% else %}small{% endif %}" src="{{ img }}BlueSky.png" alt="BlueSky" />
+	<div class="sub header">
+{% if item.is_home_page %}
+innovating customised online solutions
+{% else %}
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
 {% else %}
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
-</h1>
 {% endif %}
+	</div>
+</h1>
 {% endif %}
 
 				</div><!-- /.ui.container -->

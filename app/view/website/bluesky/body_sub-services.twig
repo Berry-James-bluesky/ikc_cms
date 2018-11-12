@@ -1,0 +1,30 @@
+
+<div class="emspace h20 floatc"></div>
+
+<div class="ui four doubling centered cards">
+
+{% set subnav = buildNav(1, 2) %}
+{% for i in subnav %}
+{% if i.is_navigation %}
+{% if i.id != item.id %}
+
+	<a class="card" href="{{ i._url }}" title="{{ i.title }}">
+		<div class="image">
+			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ i.title }}</div>
+		</div>
+	</a><!-- /.card -->
+
+{% endif %}
+{% endif %}
+{% endfor %}
+
+</div><!-- /.ui.four.doubling.centered.cards -->
+
+<div class="emspace h20 floatc"></div>
+
+<h3 class="ui header">BlueSky Thinking</h3>
+<p>Our services help you to see the what we can do, but the sky's the limit when it comes to solving problems. If you've got an idea for a new app, product or service, talk to us!</p>
+

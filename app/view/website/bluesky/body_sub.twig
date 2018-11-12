@@ -1,12 +1,12 @@
 
 {% if _route._handler._app == "page" %}
-
-{% if item.summary %}
-{% if item.parent_id == 2 %}<div class="ui piled segment large center">{% endif %}
+<!--{#
+{% if item.parent_id == 2 and item.summary %}
+<div class="ui piled segment large center">
 <p>{{ item.summary|raw }}</p>
-{% if item.parent_id == 2 %}</div>{% endif %}
+</div>
 {% endif %}
-
+#}-->
 {% if item.description %}
 {{ renderContent(item.description)|raw }}
 {% endif %}
@@ -16,14 +16,14 @@
 
 {% if _route._handler._app == "page" %}
 
-{% if item.id == 3 %}
+{% if item.id == 2 %}
+{% include 'body_sub-services.twig' %}
+{% elseif item.id == 3 %}
 {% include 'body_sub-casestudies.twig' %}
 {% elseif item.id == 5 %}
 {% include 'body_sub-thoughts.twig' %}
-
 {% elseif item.id == 6 %}
 {% include 'body_sub-contact.twig' %}
-
 {% elseif item.id == 16 %}
 {% include 'staff/list.twig' %}
 {% endif %}
