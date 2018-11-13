@@ -141,26 +141,25 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .hidden.menu { display: none; }
 #mnav { border: 0; }
 #mnav .toc.item, #xnav .toc.item { display: none; }
-#mnav .item { color: rgba(255,255,255,.8) !important; }
+#mnav .item { color: rgba(255,255,255,.9) !important; font-weight: bold; }
 #mnav .item:hover, #mnav .item.active { color: rgba(255,255,255,1) !important; }
 
-	#mnav .item, .ui.masthead .ui.header { text-shadow: 1px 1px 1px rgba(0,0,0, 1); font-weight: bold; }
-	#mnav .item .icon { filter: drop-shadow(1px 1px 1px #000); }
+#xnav .item, #mnav .item { font-weight: bold; }
+#mnav .item, .ui.masthead .ui.header { text-shadow: 1px 1px 1px rgba(0,0,0, 1); font-weight: bold; }
+#mnav .item .icon { filter: drop-shadow(1px 1px 1px #000); }
+#xnav.ui.menu .item > img:not(.ui) { width: 6em; }
 
 .masthead h1.ui.header { font-size: 4em; font-weight: normal; }
 .masthead h1.ui.header .sub.header { font-size: 2rem; font-weight: bold; color: rgba(255,255,255,1); }
 .masthead h1.ui.header .ui.image { margin: 0 auto; }
 .masthead h1.ui.header .ui.image.big { width: 600px; }
 .masthead h1.ui.header .ui.image.medium { width: 300px; }
-.masthead h1.ui.header .ui.image.small { width: 140px; }
-.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; background: url(../img/south-perth-foreshore.png) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; border: 0; }
+.masthead h1.ui.header .ui.image.small { width: 160px; }
+.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; background: url(../img/tmp/south-perth-foreshore-rizalfarok.jpg) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; border: 0; }
 
-	.hom .ui.masthead.segment .ui.container.vmiddle { top: 40%; transform: translateY(-40%); }
-	.ui.masthead.segment.bluesky1 { background: #121038 url(../img/bluesky1.jpg) center no-repeat; }
-	.ui.masthead.segment.bluesky2 { background: #000000 url(../img/bluesky2.jpg) center no-repeat; }
-
-.sub .masthead h1.ui.header .sub.header { font-size: 3.4rem; line-height: 100%; }
-.sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; background: #000; }
+.ui.masthead.segment .ui.container.vmiddle { top: 40%; transform: translateY(-40%); }
+.sub .masthead h1.ui.header .sub.header { font-size: 3.4rem; line-height: 60%; }
+.sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; }
 
 
 
@@ -277,7 +276,7 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1097px) {
 
-
+#xnav .ui.container.nav .menu .item { font-size: 16px; }
 
 }
 @media only screen and (max-width: 1024px) { /*google+material*/
@@ -297,6 +296,8 @@ small.small60 { font-size: 60%; }
 #viw.ui.container, .ui.container.nav { width: 92%; }
 .ui.five.doubling.cards > .card { width: calc(25% - 2em); }
 
+#xnav .ui.container.nav .menu .item { font-size: 15px; }
+
 #csview .ui.medium.right.floated.image { width: 30%; }
 #subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 
@@ -312,9 +313,9 @@ small.small60 { font-size: 60%; }
 .w840 { width: 100%; }
 #xnav .ui.container.nav .menu .item { padding: .92857143em 11px; font-size: 14px; }
 
-.ui.masthead.segment { min-height: 420px; height: auto !important; height: 420px;}
-.sub .ui.masthead.segment { min-height: 220px; height: auto !important; height: 220px;}
+.ui.masthead.segment { min-height: 420px; height: auto !important; height: 420px; }
 .sub .masthead h1.ui.header { font-size: 2em; }
+.sub .masthead h1.ui.header .sub.header { line-height: 100%; }
 
 }
 @media only screen and (max-width: 840px) { /*google+material*/
@@ -342,11 +343,6 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 768px) {
 
-#csview .ui.card .description, #csview .ui.card .extra.content { font-size: 12px; }
-
-}
-@media only screen and (max-width: 767px) {
-
 html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ui.massive.segment, .ui.massive.segments .segment { font-size: 1.3em; }
 .ui.large.segment, .ui.large.segments .segment { font-size: 1.1em; }
@@ -362,18 +358,29 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 #mnav .item, #xnav .item { display: none; }
 #mnav .toc.item, #xnav .toc.item,  #mnav .item.logo,  #xnav .item.logo { display: block; }
+#xnav.ui.menu .item > i.icon { font-size: 1.4em; margin-top: 3px; }
+#mnav.ui.menu .toc.item > i.icon { font-size: 16px; color: rgba(255,255,255,1) !important; filter: none; }
 .ui.visible.uncover.sidebar { z-index: 999; }
+#snav.ui.menu .item { padding: 1.14285714em; }
+
+
 .masthead h1.ui.header { font-size: 2em; }
 .masthead h2 { font-size: 1.5em; }
+
+#csview .ui.card .description, #csview .ui.card .extra.content { font-size: 12px; }
+
+}
+@media only screen and (max-width: 767px) {
+
+#viw.ui.container { width: 100% !important; }
+.ui.container.nav { width: 90% !important; margin: 0 auto !important; }
+#xnav .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
+.sub .masthead h1.ui.header .sub.header { font-size: 2.4rem; }
 
 #pnav { width: 80%; }
 #pnav.ui.stackable.menu { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 #pnav.ui.stackable.menu .item { width: 100% !important; }
 #pnav.ui.stackable.menu .item:before { position: absolute; content: ''; top: auto; bottom: 0px; left: 0px; width: 100%; height: 1px; background: rgba(34, 36, 38, 0.1); }
-
-#viw.ui.container { width: 100% !important; }
-.ui.container.nav { width: 90% !important; margin: 0 auto !important; }
-#xnav .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
 
 #subnav .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
 
