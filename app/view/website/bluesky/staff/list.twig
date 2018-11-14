@@ -1,8 +1,12 @@
 
 <section id="stlist">
 
+<h2 class="ui header">BlueSky Directors</h2>
+<p>Directors Amel Holic and Rizal Farok foster a strong team ethos at BlueSky. They are committed to nurturing the future generation of developers in a challenging and creative environment.</p>
+<div class="ui hidden divider"></div>
+
 {% set staffsList = getAllStaff() %}
-<div class="ui three doubling centered link cards">
+<div class="ui two doubling centered link cards">
 
 {% for boss in staffsList %}
 {% if boss.is_active and (boss.id == 1 or boss.id == 2) %}
@@ -28,8 +32,10 @@
 {% endfor %}
 
 </div><!-- /ui.stackable.centered.link.cards -->
+<div class="ui hidden divider"></div>
 
-<div class="emspace h30 floatc"></div>
+<h3 class="ui header">The Leadership Team</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id lorem dignissim, hendrerit nisl vitae, scelerisque nisl. Curabitur sollicitudin nibh leo, id auctor est sodales non. Donec quis nisi varius, aliquet massa vel, vulputate diam.</p>
 
 <div class="ui four doubling centered link cards">
 
@@ -56,6 +62,19 @@
 {% endfor %}
 
 </div><!-- /ui.four.stackable.link.cards -->
+<div class="ui hidden divider"></div>
 
 </section><!-- /#stlist -->
+
+<div class="emspace h30 floatc"></div>
+
+<div class="ui icon message">
+	<i class="users icon"></i>
+	<div class="content">
+
+<div class="header">Careers</div>
+<p>If our team philosophy excites you and you want to work in a challenging yet nurturing environment where you'll feel stretched, then our door is always open for a conversation. Although, we are not actively hiring at the moment, we're always interested to hear from talented and driven developers.</p>
+
+	</div><!-- /.content -->
+</div><!-- /.ui.icon.message -->
 

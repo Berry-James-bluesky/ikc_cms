@@ -1,8 +1,8 @@
 
-		<footer id="fot" class="ui tiny inverted vertical footer segment">
+		<footer id="fot" class="ui inverted vertical footer segment">
+<!--{#
 			<div class="ui container">
 				<div class="emspace h40"></div>
-
 				<div class="ui stackable inverted divided equal height stackable grid">
 
 					<div class="four wide column">
@@ -30,16 +30,19 @@
 						<p>Extra space for a call to action inside the footer that could help re-engage users.</p>
 					</div>
 
-				</div><!-- /.ui.stackable.inverted.divided.equal.height.stackable.grid -->
-
+				</div>
 				<div class="emspace h20 floatc"></div>
 			</div><!-- /.ui.container -->
+#}-->
 			<div class="ui container center">
 				<div class="emspace h40"></div>
+
+<p><img class="ui centered medium image" src="{{ img }}BlueSky_.png"></p>
 
 				<nav id="fnav">
 
 <span>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</span>
+<!--{#
 {% set copy = buildNav(2) %}
 {% for c in copy %}
 {% if c.is_navigation %}
@@ -47,7 +50,7 @@
 <a href="{{ c._url }}" title="{{ c.title }}"{% if c.lote_link_type=="cms_link_external" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ c.title }}</a>
 {% endif %}
 {% endfor %}
-
+#}-->
 				</nav><!-- /#fnav -->
 
 				<div class="emspace h20 floatc"></div>
@@ -61,7 +64,7 @@
 
 				</nav><!-- /#socnav -->
 
-				<div class="emspace h20 floatc"></div>
+				<div class="emspace h40 floatc"></div>
 			</div><!-- /.ui.container -->
 
 		</footer><!-- /#fot -->

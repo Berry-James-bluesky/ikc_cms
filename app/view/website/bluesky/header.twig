@@ -2,7 +2,7 @@
 		<section id="hed">
 			<div class="ui vertical masthead center aligned segment">
 				<div class="ui container nav">
-					<nav id="mnav" class="ui medium secondary pointing inverted menu">
+					<nav id="mnav" class="ui medium secondary pointing menu">
 						<a class="header icon item logo" href="/" title="BlueSky Digital Labs home"><i class="home icon nomarginright"></i></a>
 						<div class="right menu">
 
@@ -22,7 +22,7 @@
 				<div class="ui container vmiddle">
 
 {% if _url.path != "/?bluesky1" and _url.path != "/?bluesky2" %}
-<h1 class="ui header inverted">
+<h1 class="ui header">
 	<img class="ui image {% if item.is_home_page %}big{% else %}small{% endif %}" src="{{ img }}BlueSky.png" alt="BlueSky" />
 	<div class="sub header">
 {% if item.is_home_page %}

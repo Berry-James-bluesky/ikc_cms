@@ -1,17 +1,15 @@
 
-<!--{#
-{% set cb = getContent(10) %}
-{{ renderContent(cb.content)|raw }}
-{% if cb.description %}
-{{ renderContent(cb.description)|raw }}
+<div class="ui icon warning message">
+	<i class="exclamation triangle icon"></i>
+	<div class="content">
+
+{% set err = getContent(1) %}
+<div class="header">{{ err.title }}</div>
+{{ renderContent(err.content)|raw }}
+{% if err.description %}
+{{ renderContent(err.description)|raw }}
 {% endif %}
-#}-->
 
-
-
-<h1>Error 404. Page not found.</h1>
-<p>Sorry but the page you requested for cannot be found on our server. The page may have been moved, or URL may have been mistyped.</p>
-<p>You can return back to the <a href="/">homepage</a> or <a href="/contact">contact us</a> if the issue persists.</p>
-
-
+	</div><!-- /.content -->
+</div><!-- /.ui.icon.warning.message -->
 
