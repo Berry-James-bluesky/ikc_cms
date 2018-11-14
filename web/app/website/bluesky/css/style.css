@@ -85,7 +85,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 
 /* colout schemes */
-#socnav a.item:hover { color: #fff; }
+#fot a.addrlnk, #socnav a.item:hover { color: #fff; }
 #con, #snav .header.item.logo { background-color: #fff; }
 
 a { color: #4662cd; }
