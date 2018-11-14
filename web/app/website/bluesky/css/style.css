@@ -199,7 +199,10 @@ small.small60 { font-size: 60%; }
 
 
 #testimonials .shape { display: flex; justify-content: center; align-items: center; align-content: center; flex-wrap: wrap; }
-#testimonials .ui.card { width: 540px; margin: 0 auto; padding: 14px 0 0 0; }
+#testimonials .ui.card { width: 540px; margin: 0 auto; padding: 14px 0 0 0;
+
+	height: 440px;
+}
 #testimonials .ui.card .content .description { padding: 0 30px 14px 30px; }
 
 
@@ -442,6 +445,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #testimonials .ui.card { width: 100%; }
 #csview .ui.card .description, #csview .ui.card .extra.content { display: none; }
 
+#testimonials .ui.card { height: auto; }
+
 }
 @media only screen and (max-width: 480px) { /*google+material*/
 
@@ -453,7 +458,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #stview .ui.header .ui.image { margin: 0 auto; }
 #stview .ui.header > .image + .content, .ui.header > img + .content { padding-left: 0; }
 
-
+#testimonials .ui.card { height: 560px; }
 
 }
 @media only screen and (max-width: 414px) {
@@ -466,6 +471,8 @@ input.btn, a.btn { width: auto; padding: 0 20px; display: inline-block; }
 .fom .radiof input { width: 16px; }
 .fom .radiof label { width: 90%; }
 
+#testimonials .ui.card { font-size: 15px; height: 540px; }
+
 }
 @media only screen and (max-width: 375px) {
 
@@ -474,6 +481,9 @@ input.btn, a.btn { width: auto; padding: 0 20px; display: inline-block; }
 
 #csview .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
+
+#testimonials .ui.card { font-size: 14px; height: 474px; }
+#testimonials .ui.card .content .description { padding: 0 14px 14px 14px; }
 
 }
 @media only screen and (max-width: 374px) {
@@ -486,10 +496,12 @@ input.btn, a.btn { width: auto; padding: 0 20px; display: inline-block; }
 #viw.ui.container { width: 90% !important; }
 #csview .ui.medium.right.floated.image { display: none; }
 
+#testimonials .ui.card { height: 510px; }
+
 }
 @media only screen and (max-width: 320px) {
 
-
+#testimonials .ui.card { height: 550px; }
 
 }
 
