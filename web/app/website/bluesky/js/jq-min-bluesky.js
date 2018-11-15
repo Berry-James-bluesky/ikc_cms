@@ -9,7 +9,6 @@ $(function(){
 	$('.special.card .image, .special.cards .image').dimmer({ on:'hover' });
 	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });
 	$('.shapefr').on('click',function(){ $('.shape').shape('flip right'); });
-	//$('.shapefl').on('click',function(){ $('.shape').shape('flip left'); });
 
 	/* main navigation */
 	$('.masthead').visibility({

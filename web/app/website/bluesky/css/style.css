@@ -89,11 +89,11 @@ a[href="javascript:;"].activate { cursor: pointer; }
 #con, #snav .header.item.logo { background-color: #fff; }
 
 a { color: #4662cd; }
-#mnav .item:hover, #mnav .item.active { color: #4662cd !important; }
+/*#mnav .item:hover, #mnav .item.active*/ { color: #4662cd !important; }
 #mnav.ui.secondary.pointing.menu .active.item { /*border-color: #4662cd;*/ }
 
-#hed .ui.header .sub.header { color: #3f3f41; }
-#bluesky, #fot.ui.inverted.segment { background: #3f3f41; }
+/*#hed .ui.header .sub.header { color: #3f3f41; }*/
+#bluesky, #fot.ui.inverted.segment, .ui.masthead.segment { background: #3f3f41; }
 
 
 
@@ -167,16 +167,16 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #xnav.ui.menu .item > img:not(.ui) { width: 6em; }
 
 .masthead h1.ui.header { font-size: 4em; font-weight: normal; }
-.masthead h1.ui.header .sub.header { font-size: 2rem; font-weight: bold; /*color: rgba(255,255,255,1);*/ }
+.masthead h1.ui.header .sub.header { font-size: 2rem; font-weight: bold; color: rgba(255,255,255,1); }
 .masthead h1.ui.header .ui.image { margin: 0 auto; }
 .masthead h1.ui.header .ui.image.big { width: 600px; }
 .masthead h1.ui.header .ui.image.medium { width: 300px; }
 .masthead h1.ui.header .ui.image.small { width: 160px; }
-.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; background: url(../img/tmp/south-perth-foreshore-rizalfarok.jpg) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; border: 0; }
+.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; /*background: url(../img/tmp/south-perth-foreshore-rizalfarok.jpg) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;*/ border: 0; }
 
-.hom .ui.masthead.segment .ui.container.vmiddle { top: 30%; transform: translateY(-30%); }
+.hom .ui.masthead.segment .ui.container.vmiddle { /*top: 30%; transform: translateY(-30%);*/ }
 .sub .masthead h1.ui.header .sub.header { font-size: 3.4rem; line-height: 100%; }
-.sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; background-image: url(../img/tmp/clouds-rizalfarok.jpg); }
+.sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; /*background-image: url(../img/tmp/clouds-rizalfarok.jpg);*/ }
 
 
 
