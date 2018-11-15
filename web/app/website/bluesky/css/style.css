@@ -30,13 +30,7 @@ a.url, .url { -ms-word-break: break-all; word-break: break-all; word-break: brea
 
 .vmiddle { position: absolute; top: 50%; left: 0; right: 0; transform: translateY(-50%); }
 .img-circle { border-radius: 50%; border-radius: 50% !important; }
-/*
-#con li { padding: 0 0 3px 0; }
-#con ul ul, #con ol ol { padding-top: 7px; padding-bottom: 4px; }
-#con .center ul, #con .center ol { width: 70%; margin: 14px auto; text-align: left; }
-#con .center ul.half, #con .center ol.half { width: 50%; }
-#con .center ul ul, #con .center ol ol { margin: 0 0 14px 0; }
-*/
+
 .inline { display: inline-block; }
 .italic { font-style: italic; }
 .display_table { display: table; margin: 0 auto; }
@@ -86,14 +80,11 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 /* colout schemes */
 #fot a.addrlnk, #socnav a.item:hover { color: #fff; }
-#con, #snav .header.item.logo { background-color: #fff; }
+#snav .header.item.logo { background-color: #fff; }
 
 a { color: #4662cd; }
-/*#mnav .item:hover, #mnav .item.active*/ { color: #4662cd !important; }
-#mnav.ui.secondary.pointing.menu .active.item { /*border-color: #4662cd;*/ }
 
-/*#hed .ui.header .sub.header { color: #3f3f41; }*/
-#bluesky, #fot.ui.inverted.segment, .ui.masthead.segment { background: #3f3f41; }
+#fot.ui.inverted.segment, .ui.masthead.segment { background: #3f3f41; }
 
 
 
@@ -157,13 +148,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .hidden.menu { display: none; }
 #mnav { border: 0; }
 #mnav .toc.item, #xnav .toc.item { display: none; }
-/*
-#mnav .item { color: rgba(255,255,255,.9) !important; }
-#mnav .item:hover, #mnav .item.active { color: rgba(255,255,255,1) !important; }
-*/
 #xnav .item, #mnav .item { font-weight: bold; }
-#mnav .item, .ui.masthead .ui.header { /*text-shadow: 1px 1px 1px rgba(0,0,0, 1);*/ font-weight: bold; }
-#mnav .item .icon { /*filter: drop-shadow(1px 1px 1px #000);*/ }
+#mnav .item, .ui.masthead .ui.header { font-weight: bold; }
 #xnav.ui.menu .item > img:not(.ui) { width: 6em; }
 
 .masthead h1.ui.header { font-size: 4em; font-weight: normal; }
@@ -172,11 +158,10 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .masthead h1.ui.header .ui.image.big { width: 600px; }
 .masthead h1.ui.header .ui.image.medium { width: 300px; }
 .masthead h1.ui.header .ui.image.small { width: 160px; }
-.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; /*background: url(../img/tmp/south-perth-foreshore-rizalfarok.jpg) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;*/ border: 0; }
+.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; border: 0; }
 
-.hom .ui.masthead.segment .ui.container.vmiddle { /*top: 30%; transform: translateY(-30%);*/ }
 .sub .masthead h1.ui.header .sub.header { font-size: 3.4rem; line-height: 100%; }
-.sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; /*background-image: url(../img/tmp/clouds-rizalfarok.jpg);*/ }
+.sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; }
 
 
 
