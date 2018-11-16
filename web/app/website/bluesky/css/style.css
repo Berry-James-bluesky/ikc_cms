@@ -217,6 +217,27 @@ small.small60 { font-size: 60%; }
 
 
 
+/* presentation */
+.presentation { background: #333; }
+.presentation #con {
+	min-height: 640px;
+	height: auto !important;
+	height: 640px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

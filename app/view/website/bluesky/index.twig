@@ -42,14 +42,15 @@
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-127973425-1');</script>
-<!--{#
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF3ZBPS');</script>
-#}-->
+
 </head>
-<body class="bod {% if item.is_home_page %}hom{% else %}sub{% endif %}">
-<!--{#
+<body class="bod {% if _url.path == "/?presentation" %}presentation{% else %}{% if item.is_home_page %}hom{% else %}sub{% endif %}{% endif %}">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF3ZBPS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-#}-->
+
+{% if _url.path == "/?presentation" %}
+{% include '_presentation.twig' %}
+{% else %}
 
 {% include 'header_sxnav.twig' %}
 	<div id="bluesky" class="pusher">
@@ -58,6 +59,8 @@
 {% include 'footer.twig' %}
 		<div id="backtotop" class="circular ui icon button" title="back to top"><i class="angle double up icon"></i></div>
 	</div><!-- /#bluesky.pusher -->
+
+{% endif %}
 
 </body>
 </html>
