@@ -21,11 +21,29 @@
 				</div><!-- /.ui.container -->
 
 {% if item.is_home_page %}
+
 <h1 class="ui header">
 	<img class="ui image big" src="{{ img }}BlueSky.png" alt="BlueSky" />
 	<div class="sub header">customised online solutions</div>
 </h1>
 <img class="ui image homhero" src="{{ img }}tmp/hero.jpg" alt="" />
+
+{% elseif (_route._handler._app == "page" and (item.id == 5 or item.id == 6 or item.id == 16)) or  _route._handler.module == "staff" or _route._handler.module == "blog" %}
+
+<section class="vmiddle">
+<h1 class="ui header">
+	<img class="ui image small" src="{{ img }}BlueSky.png" alt="BlueSky" />
+	<div class="sub header">
+
+{% if _route._handler.module == "staff" %}Our Team
+{% elseif _route._handler.module == "blog" %}Thoughts
+{% else %}
+{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
+{% endif %}
+
+	</div>
+</h1>
+</section>
 
 {% else %}
 
@@ -46,7 +64,9 @@
 {% endif %}
 </div><!-- /.content -->
 </h1>
+{% if _route._handler._app == "page" %}
 <p>{{ item.summary|raw }}</p>
+{% endif %}
 </section><!-- /.vmiddle -->
 
 						</div><!-- /.column -->
