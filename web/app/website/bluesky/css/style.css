@@ -85,8 +85,8 @@ a[href="javascript:;"].activate { cursor: pointer; }
 a, #socnav .ui.icon.button { color: #4662cd; }
 #socnav .ui.icon.button:hover { background-color: #4662cd; }
 
-/*{ color: #3f3f41; }*/
-#fot.ui.inverted.segment, .ui.masthead.segment { background: #333; }
+body, .masthead h1.ui.header .sub.header, .ui.header { color: #3f3f41; }
+#fot.ui.inverted.segment/*, .ui.masthead.segment*/ { background: #333; }
 
 
 
@@ -152,15 +152,20 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #xnav.ui.menu .item > img:not(.ui) { width: 6em; }
 
 .masthead h1.ui.header { font-size: 4em; font-weight: normal; }
-.masthead h1.ui.header .sub.header { font-size: 2rem; font-weight: bold; color: rgba(255,255,255,1); }
+.masthead h1.ui.header .sub.header { font-size: 2rem; font-weight: bold; /*color: rgba(255,255,255,1);*/ }
 .masthead h1.ui.header .ui.image { margin: 0 auto; }
-.masthead h1.ui.header .ui.image.big { width: 600px; }
+.masthead h1.ui.header .ui.image.big { width: 520px; }
 .masthead h1.ui.header .ui.image.medium { width: 300px; }
 .masthead h1.ui.header .ui.image.small { width: 160px; }
-.ui.masthead.segment { min-height: 640px; height: auto !important; height: 640px; border: 0; }
+.ui.masthead.segment { min-height: 1080px; height: auto !important; height: 1080px; /*640*/ border: 0; }
+
+.ui.masthead.segment .homhero { max-height: 760px; margin: 0 auto; }
 
 .sub .masthead h1.ui.header .sub.header { font-size: 3.4rem; line-height: 100%; }
 .sub .ui.masthead.segment { min-height: 340px; height: auto !important; height: 340px; }
+.sub .masthead .ui.grid { text-align: left; }
+.sub .masthead .ui.grid .subhero .ui.image { /*float: right;*/ margin: 0 auto; }
+.sub .masthead h1.ui.header { font-size: 2em; }
 
 
 
@@ -328,6 +333,11 @@ small.small60 { font-size: 60%; }
 #csview .ui.medium.right.floated.image { width: 30%; }
 #subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 
+.sub .masthead .ui.container > .ui.stackable.grid > .column { padding-left: 10px !important; padding-right: 10px !important; }
+.sub .masthead .ui.grid > .column:not(.row) { position: relative; display: inline-block; width: 100% !important; margin: 0 0 !important; }
+.sub .masthead .ui.grid, .sub .masthead .ui.grid .tright { text-align: center; }
+.sub .masthead .ui.grid .vmiddle { position: relative; top: 0; transform: none; }
+.sub .masthead .ui.grid .subhero .ui.image { float: none; margin: 0 auto; }
 
 }
 @media only screen and (max-width: 960px) { /*google+material*/
@@ -390,7 +400,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ui.visible.uncover.sidebar { z-index: 999; }
 #snav.ui.menu .item { padding: 1.14285714em; }
 
-
 .masthead h1.ui.header { font-size: 2em; }
 .masthead h2 { font-size: 1.5em; }
 
@@ -402,7 +411,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #viw.ui.container { width: 100% !important; }
 .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
 #xnav .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
-.sub .masthead h1.ui.header .sub.header { font-size: 2.4rem; }
 
 #pnav { width: 80%; }
 #pnav.ui.stackable.menu { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
