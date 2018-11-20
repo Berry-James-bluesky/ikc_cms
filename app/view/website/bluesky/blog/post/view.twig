@@ -58,6 +58,34 @@
 
 {{ renderContent(item.content)|raw }}
 
+<div class="emspace h20"></div>
+<div class="ui feed">
+	<div class="event">
+		<div class="label">
+
+{% if item.id == 2 %}
+<img src="/app/website/bluesky/img/_sui/eve.png">
+
+{% else %}
+<img src="/app/website/bluesky/img/BlueSky_soc.png">
+{% endif %}
+
+		</div><!-- /.label -->
+		<div class="content">
+			<div class="summary">
+
+{% if item.id == 2 %}
+<a href="/about/team/rizal-farok" class="user">Rizal Farok</a>
+{% else %}
+<a href="/about/team" class="user">Team BlueSky</a>
+{% endif %}
+
+				<div class="date">{{ getHumanTiming(item.date|date('Y-m-d')) }}</div>
+			</div><!-- /.summary -->
+		</div><!-- /.content -->
+	</div><!-- /.event -->
+</div><!-- /..ui.feed -->
+
 <div class="emspace floatc"></div>
 <div class="ui divider"></div>
 <div id="postreadcount" class="ui mini labeled active button">
