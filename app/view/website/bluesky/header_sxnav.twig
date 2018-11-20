@@ -1,13 +1,15 @@
 
 	<nav id="xnav" class="ui medium top fixed hidden pointing menu borderless">
 		<div class="ui container nav">
-			<div class="header item logo"><img src="{{ img }}BlueSky.png" alt="BlueSky Digital Labs" /></div>
+			<a class="header item logo" href="/" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.png" alt="BlueSky Digital Labs" /></a>
 			<div class="right menu">
 
 {% set nav = buildNav(1) %}
 {% for i in nav %}
+{% if i.id != 1 %}
 {% if i.is_navigation %}
-<a class="item{% if (_route._handler._app == "page" and (item.parent_id == i.id)) or (_route._handler._app == "directory" and i.id == 3) or (_route._handler._app == "staff" and i.id == 4) or (_route._handler._app == "blog" and i.id == 5) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{% if i.id == 1 %}<i class="home icon nomarginright"></i>{% else %}{{ i.title }}{% endif %}</a>
+<a class="item{% if (_route._handler._app == "page" and (item.parent_id == i.id)) or (_route._handler._app == "directory" and i.id == 3) or (_route._handler._app == "staff" and i.id == 4) or (_route._handler._app == "blog" and i.id == 5) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
+{% endif %}
 {% endif %}
 {% endfor %}
 <a class="toc item"><i class="sidebar icon"></i></a>
@@ -18,11 +20,13 @@
 
 	<nav id="snav" class="ui small vertical right sidebar menu">
 
-<div class="header item logo"><img src="{{ img }}BlueSky.png" alt="BlueSky Digital Labs" /></div>
+<a class="header item logo" href="/" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.png" alt="BlueSky Digital Labs" /></div>
 {% set nav = buildNav(1) %}
 {% for i in nav %}
+{% if i.id != 1 %}
 {% if i.is_navigation %}
 <a class="item{% if (_route._handler._app == "page" and (item.parent_id == i.id)) or (_route._handler._app == "directory" and i.id == 3) or (_route._handler._app == "staff" and i.id == 4) or (_route._handler._app == "blog" and i.id == 5) %} active{% endif %}" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
+{% endif %}
 {% endif %}
 {% endfor %}
 
