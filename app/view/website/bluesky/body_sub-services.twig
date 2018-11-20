@@ -10,7 +10,7 @@
 
 	<a class="card" href="{{ i._url }}" title="{{ i.title }}">
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}tmp/{% if i.id == 7 %}hero-sub_startup{% elseif i.id == 8 %}hero-sub_system{% elseif i.id == 9 %}hero-sub_app{% elseif i.id == 10 %}hero-sub_data{% elseif i.id == 11 %}hero-sub_custom{% elseif i.id == 12 %}hero-sub_ideas{% elseif i.id == 13 %}hero-sub_digital{% else %}hero{% endif %}.jpg{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
