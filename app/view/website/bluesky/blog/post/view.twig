@@ -20,7 +20,7 @@
 		<div class="ui segment">
 
 			<span class="ui orange right ribbon label">Recent articles</span>
-			<div class="ui link items">
+			<div class="ui link items recentposts">
 
 {% set postList = getLatestBlogItem(4) %}
 {% for post in postList %}
@@ -35,6 +35,12 @@
 
 {% endif %}
 {% endfor %}
+
+				<a class="item" href="/thoughts" title="full listing">
+					<div class="content">
+						<div class="ui button mini"><i class="angle left icon"></i> Back to full article list</div>
+					</div><!-- /.content -->
+				</a><!-- /.item -->
 
 			</div><!-- /.ui.relaxed.link.items -->
 
