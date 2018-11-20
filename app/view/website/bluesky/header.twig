@@ -28,9 +28,9 @@
 				</h1>
 				<img class="ui image homhero" src="{{ img }}tmp/hero.jpg" alt="" />
 
-{% elseif (_route._handler._app == "page" and (item.id == 5 or item.id == 6)) or  _route._handler.module == "staff" or _route._handler.module == "blog" %}
+{% elseif (_route._handler._app == "page" and item.id == 6) or  _route._handler.module == "staff" or _route._handler.module == "blog" %}
 
-				<section class="vmiddle">
+				<section class="vmiddle nohero">
 					<h1 class="ui header">
 
 {% if _route._handler.module == "staff" %}Our Team
@@ -49,22 +49,24 @@
 					<div class="ui stackable grid">
 						<div class="seven wide column">
 
-<section class="vmiddle">
-<h1 class="ui header">
+							<section class="vmiddle">
+								<h1 class="ui header">
+
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
 {% elseif _route._handler._app == "directory" and _route._method == "itemView" %}{{ item.title }}
 {% else %}
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
-</h1>
+
+								</h1>
 {% if _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
-<p>{{ item.summary|raw }}</p>
+								<p>{{ item.summary|raw }}</p>
 {% endif %}
 {% if _route._handler._app == "directory" and _route._method == "itemView" %}
-<span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
+								<span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
 {% endif %}
-</section><!-- /.vmiddle -->
+							</section><!-- /.vmiddle -->
 
 						</div><!-- /.column -->
 						<div class="one wide column">&nbsp;</div>
