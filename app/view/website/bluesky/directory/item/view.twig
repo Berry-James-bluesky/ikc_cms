@@ -1,15 +1,15 @@
 
 <section id="csview">
-
+<!--{#
 	<div class="ui piled segment center huge">
 		<h2 class="ui header">{{ item.title }}</h2>
 		<p>{{ item.summary }}</p>
 	</div>
-
+#}-->
 	<div class="ui medium right floated image">
 		<div class="ui card">
 			<div class="image">
-				<img src="{% if item.featured_image %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+				<img src="{% if item.featured_image_id %}{{ imgTsUrl(item.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/logos/{% if item.id == 1 %}epicuest{% elseif item.id == 2 %}schoolzine{% elseif item.id == 3 %}dccm{% elseif item.id == 4 %}oshclub{% elseif item.id == 5 %}goldfields{% elseif item.id == 6 %}busbee{% elseif item.id == 10 %}timecontisheffield{% elseif item.id == 11 %}norupwilson{% else %}_blank{% endif %}.png{% endif %}">
 			</div>
 			<div class="content">
 				<div class="header">{{ item.name }}</div>
@@ -49,7 +49,7 @@ Established
 
 		<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 			<div class="image">
-				<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+				<img src="{% if ditm.featured_image_id %}{{ imgTsUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/logos/{% if ditm.id == 1 %}epicuest{% elseif ditm.id == 2 %}schoolzine{% elseif ditm.id == 3 %}dccm{% elseif ditm.id == 4 %}oshclub{% elseif ditm.id == 5 %}goldfields{% elseif ditm.id == 6 %}busbee{% elseif ditm.id == 10 %}timecontisheffield{% elseif ditm.id == 11 %}norupwilson{% else %}_blank{% endif %}.png{% endif %}">
 			</div>
 			<div class="content">
 				<div class="header">{{ ditm.name }}</div>

@@ -3,7 +3,7 @@
 			<div class="ui vertical masthead center aligned segment">
 				<div class="ui container nav">
 					<nav id="mnav" class="ui medium secondary pointing menu">
-						<a class="header icon item logo" href="/" title="BlueSky Digital Labs home"><i class="home icon nomarginright"></i></a>
+						<a class="header item{% if not item.is_home_page %} logo{% endif %}" href="/" title="BlueSky Digital Labs home">{% if item.is_home_page %}<i class="home icon nomarginright"></i>{% else %}<img src="{{ img }}BlueSky.png" alt="BlueSky Digital Labs" />{% endif %}</a>
 						<div class="right menu">
 
 {% set nav = buildNav(1) %}
@@ -22,18 +22,16 @@
 
 {% if item.is_home_page %}
 
-<h1 class="ui header">
-	<img class="ui image big" src="{{ img }}BlueSky.png" alt="BlueSky" />
-	<div class="sub header">customised online solutions</div>
-</h1>
-<img class="ui image homhero" src="{{ img }}tmp/hero.jpg" alt="" />
+				<h1 class="ui header">
+					<img class="ui image medium" src="{{ img }}BlueSky.png" alt="BlueSky" />
+					<div class="sub header">customised online solutions</div>
+				</h1>
+				<img class="ui image homhero" src="{{ img }}tmp/hero.jpg" alt="" />
 
-{% elseif (_route._handler._app == "page" and (item.id == 5 or item.id == 6 or item.id == 16)) or  _route._handler.module == "staff" or _route._handler.module == "blog" %}
+{% elseif (_route._handler._app == "page" and (item.id == 5 or item.id == 6)) or  _route._handler.module == "staff" or _route._handler.module == "blog" %}
 
-<section class="vmiddle">
-<h1 class="ui header">
-	<img class="ui image small" src="{{ img }}BlueSky.png" alt="BlueSky" />
-	<div class="sub header">
+				<section class="vmiddle">
+					<h1 class="ui header">
 
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
@@ -41,54 +39,53 @@
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
 
-	</div>
-</h1>
-</section>
+					</h1>
+				</section>
 
 {% else %}
 
 				<div class="ui container">
 					<div class="emspace h40"></div>
 					<div class="ui stackable grid">
-						<div class="one wide column">&nbsp;</div>
 						<div class="seven wide column">
 
 <section class="vmiddle">
 <h1 class="ui header">
-<img class="ui image mini" src="{{ img }}BlueSkyv.png" alt="BlueSky" />
-<div class="content">
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
+{% elseif _route._handler._app == "directory" and _route._method == "itemView" %}{{ item.title }}
 {% else %}
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
-</div><!-- /.content -->
 </h1>
-{% if _route._handler._app == "page" %}
+{% if _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
 <p>{{ item.summary|raw }}</p>
+{% endif %}
+{% if _route._handler._app == "directory" and _route._method == "itemView" %}
+<span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
 {% endif %}
 </section><!-- /.vmiddle -->
 
 						</div><!-- /.column -->
 						<div class="one wide column">&nbsp;</div>
-						<div class="seven wide column subhero">
+						<div class="eight wide column subhero">
 
 {% if item.featured_image %}
 {{ imgTsUrl(item.featured_image.reference, 640) }}
 {% else %}
-{% if item.id == 7 %}
+{% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_startup.jpg" alt="" />
-{% elseif item.id == 8 %}
+{% elseif (_route._handler._app == "page" and item.id == 8) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "system integration" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_system.jpg" alt="" />
-{% elseif item.id == 9 %}
+{% elseif (_route._handler._app == "page" and item.id == 9) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "app development" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_app.jpg" alt="" />
-{% elseif item.id == 10 %}
+{% elseif (_route._handler._app == "page" and item.id == 10) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "data science" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_data.jpg" alt="" />
-{% elseif item.id == 11 %}
+{% elseif (_route._handler._app == "page" and item.id == 11) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "custom web applications" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_custom.jpg" alt="" />
-{% elseif item.id == 12 %}
+{% elseif (_route._handler._app == "page" and item.id == 12) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "exploring ideas" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_ideas.jpg" alt="" />
-{% elseif item.id == 13 %}
+{% elseif (_route._handler._app == "page" and item.id == 13) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_digital.jpg" alt="" />
 {% else %}
 <img class="ui image" src="{{ img }}tmp/hero.jpg" alt="" />
