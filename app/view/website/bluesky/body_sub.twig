@@ -39,17 +39,29 @@
 <div class="emspace h80 floatc"></div>
 <h4 class="ui horizontal divider header nomargin"><i class="file alternate icon"></i></h4>
 <section id="subnav">
-<div class="ui four doubling centered cards">
+<div class="ui four doubling centered cards{% if item.parent_id == 2 %} noborder{% endif %}">
 {% endif %}
 {% for i in subnav %}
 {% if i.is_navigation %}
 {% if i.id != item.id %}
 	<a class="card tiny" href="{{ i._url }}" title="{{ i.title }}">
+
+{% if item.parent_id == 2 %}
+		<div class="image">
+			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}tmp/{% if i.id == 7 %}hero-sub_startup{% elseif i.id == 8 %}hero-sub_system{% elseif i.id == 9 %}hero-sub_app{% elseif i.id == 10 %}hero-sub_data{% elseif i.id == 11 %}hero-sub_custom{% elseif i.id == 12 %}hero-sub_ideas{% elseif i.id == 13 %}hero-sub_digital{% else %}hero{% endif %}.jpg{% endif %}">
+		</div>
+		<div class="content">
+			<div class="header">{{ i.title }}</div>
+			<div class="description">{{ i.summary|striptags|truncate(54,true,' ..') }}</div>
+		</div>
+{% else %}
 		<div class="content">
 			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 60) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
 			<div class="header spnav">{{ i.title }}</div>
 			<div class="description">{% if i.summary %}{{ i.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
 		</div>
+{% endif %}
+
 	</a><!-- /.card -->
 {% endif %}
 {% endif %}
