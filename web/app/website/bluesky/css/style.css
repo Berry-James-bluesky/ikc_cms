@@ -78,6 +78,12 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 
 
+
+
+
+
+
+
 /* colout schemes */
 #fot a.addrlnk, #socnav .ui.icon.button:hover { color: #fff; }
 #snav .header.item.logo, #socnav .ui.icon.button { background-color: #fff; }
@@ -86,11 +92,14 @@ a, #socnav .ui.icon.button { color: #4662cd; }
 #socnav .ui.icon.button:hover { background-color: #4662cd; }
 
 body, .masthead h1.ui.header .sub.header, .ui.header { color: #3f3f41; }
-#fot.ui.inverted.segment/*, .ui.masthead.segment*/ { background: #333; }
 
 
 
 #socnav a.item { color: #ccc; }
+
+
+
+
 
 
 
@@ -138,8 +147,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 #hed {  }
-#con { min-height: 480px; height: auto !important; height: 480px; }
-#fot {	}
+#con { min-height: 480px; height: auto !important; height: 480px; background: #fff url(../img/tmp/bg_con.jpg) center bottom no-repeat; }
+#fot.ui.inverted.segment { background: #333 url(../img/tmp/bg_fot.jpg) center top no-repeat; }
 
 
 
@@ -149,6 +158,9 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #mnav .toc.item, #xnav .toc.item { display: none; }
 #xnav .item, #mnav .item { font-weight: bold; }
 #mnav .item, .ui.masthead .ui.header { font-weight: bold; }
+
+#xnav.ui.menu {  -webkit-box-shadow: 0 15px 10px -15px rgba(204,204,204,1); -moz-box-shadow: 0 15px 10px -15px rgba(204,204,204,1); box-shadow: 0 15px 10px -15px rgba(204,204,204,1); }
+
 #xnav.ui.menu .item > img:not(.ui) { width: 6em; }
 #mnav.ui.menu .item > img:not(.ui) { width: 8em; }
 #mnav.ui.secondary.pointing.menu .item.logo { padding: 0; position: relative; top: -9px; }
