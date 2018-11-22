@@ -154,7 +154,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#bluesky #hed .ui.container.nav, .homhero, .subhero, #viw { position: relative; z-index: 1; }
+#bluesky #hed .ui.container.nav, #hed .ui.header, #viw { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
 #bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: -70px; left: -654px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 400px; right: -420px; }

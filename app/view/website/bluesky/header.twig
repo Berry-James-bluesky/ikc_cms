@@ -4,7 +4,9 @@
 				<div class="ui container nav">
 
 <div class="cloud one"></div>
+{% if not item.is_home_page %}
 <div class="cloud two"></div>
+{% endif %}
 <div class="cloud three"></div>
 <div class="cloud four"></div>
 
@@ -32,7 +34,7 @@
 					<img class="ui image medium" src="{{ img }}BlueSky.png" alt="BlueSky" />
 					<div class="sub header">customised online solutions</div>
 				</h1>
-				<img class="ui image homhero" src="{{ img }}tmp/hero.jpg" alt="" />
+				<img class="ui image homhero" src="{{ img }}iso/hero.svg" alt="" />
 
 {% elseif _route._handler.module == "staff" or _route._handler.module == "blog" %}
 
