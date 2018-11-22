@@ -28,7 +28,7 @@
 				</h1>
 				<img class="ui image homhero" src="{{ img }}tmp/hero.jpg" alt="" />
 
-{% elseif (_route._handler._app == "page" and item.id == 6) or  _route._handler.module == "staff" or _route._handler.module == "blog" %}
+{% elseif _route._handler.module == "staff" or _route._handler.module == "blog" %}
 
 				<section class="vmiddle nohero">
 					<h1 class="ui header">
@@ -89,6 +89,8 @@
 <img class="ui image" src="{{ img }}tmp/hero-sub_ideas.jpg" alt="" />
 {% elseif (_route._handler._app == "page" and item.id == 13) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development" ) %}
 <img class="ui image" src="{{ img }}tmp/hero-sub_digital.jpg" alt="" />
+{% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}
+<img class="ui image" src="{{ img }}tmp/hero-sub_beacons.jpg" alt="" />
 {% else %}
 <img class="ui image" src="{{ img }}tmp/hero.jpg" alt="" />
 {% endif %}

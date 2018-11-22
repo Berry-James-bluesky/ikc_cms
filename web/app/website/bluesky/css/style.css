@@ -143,6 +143,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 }
 #backtotop.tada { bottom: 14px; }
 
+.emspace.h240 { height: 240px; }
+
 
 
 
@@ -417,6 +419,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .fontsize48 { font-size: 38px; }
 
 #mnav .item, #xnav .item { display: none; }
+#mnav .header.item { display: block; }
 #mnav .toc.item, #xnav .toc.item, #mnav .item.logo, #xnav .item.logo { display: block; }
 #mnav.ui.secondary.pointing.menu .item.logo { top: -6px; }
 #xnav.ui.menu .item > i.icon { font-size: 1.4em; margin-top: 3px; }

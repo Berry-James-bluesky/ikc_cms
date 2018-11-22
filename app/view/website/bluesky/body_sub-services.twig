@@ -1,4 +1,9 @@
 
+{% if not item.is_home_page %}
+<h3 class="ui header">BlueSky Thinking</h3>
+<p>Our services help you to see the what we can do, but the sky's the limit when it comes to solving problems. If you've got an idea for a new app, product or service, talk to us!</p>
+{% endif %}
+
 <div class="emspace h20 floatc"></div>
 
 <div class="ui four doubling centered cards noborder">
@@ -10,7 +15,7 @@
 
 	<a class="card" href="{{ i._url }}" title="{{ i.title }}">
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}tmp/{% if i.id == 7 %}hero-sub_startup{% elseif i.id == 8 %}hero-sub_system{% elseif i.id == 9 %}hero-sub_app{% elseif i.id == 10 %}hero-sub_data{% elseif i.id == 11 %}hero-sub_custom{% elseif i.id == 12 %}hero-sub_ideas{% elseif i.id == 13 %}hero-sub_digital{% else %}hero{% endif %}.jpg{% endif %}">
+			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}tmp/{% if i.id == 7 %}hero-sub_startup{% elseif i.id == 8 %}hero-sub_system{% elseif i.id == 9 %}hero-sub_app{% elseif i.id == 10 %}hero-sub_data{% elseif i.id == 11 %}hero-sub_custom{% elseif i.id == 12 %}hero-sub_ideas{% elseif i.id == 13 %}hero-sub_digital{% elseif i.id == 21 %}hero-sub_beacons{% else %}hero{% endif %}.jpg{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
@@ -25,7 +30,4 @@
 </div><!-- /.ui.four.doubling.centered.cards -->
 
 <div class="emspace h20 floatc"></div>
-
-<h3 class="ui header">BlueSky Thinking</h3>
-<p>Our services help you to see the what we can do, but the sky's the limit when it comes to solving problems. If you've got an idea for a new app, product or service, talk to us!</p>
 
