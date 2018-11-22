@@ -137,13 +137,14 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 /* site */
-#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 14px; /*width: 30px; height: 29px;*/ margin: 0; padding: 7px; font-size: 21px; line-height: 100%; cursor: pointer;
+#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 14px; z-index: 99; margin: 0; padding: 7px; font-size: 21px; line-height: 100%; cursor: pointer;
 
 	overflow: hidden;
 }
 #backtotop.tada { bottom: 14px; }
 
 .emspace.h240 { height: 240px; }
+.ui.image.center { margin: 0 auto; }
 
 
 
@@ -154,7 +155,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#bluesky #hed .ui.container.nav, #hed .ui.header, .homhero, .subhero, #viw { position: relative; z-index: 1; }
+#bluesky #hed .ui.container, #hed .ui.header, .homhero, .subhero, #viw { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
 #bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: -70px; left: -654px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 400px; right: -460px; }
@@ -362,6 +363,7 @@ small.small60 { font-size: 60%; }
 #xnav .ui.container.nav .menu .item { font-size: 15px; }
 
 .sub .masthead .ui.container > .ui.stackable.grid > .column { padding-left: 10px !important; padding-right: 10px !important; }
+.sub .masthead .ui.container > .ui.stackable.grid > .one.column { display: none; }
 .sub .masthead .ui.grid > .column:not(.row) { position: relative; display: inline-block; width: 100% !important; margin: 0 0 !important; }
 .sub .masthead .ui.grid, .sub .masthead .ui.grid .tright { text-align: center; }
 .sub .masthead .ui.grid .vmiddle { position: relative; top: 0; transform: none; }
