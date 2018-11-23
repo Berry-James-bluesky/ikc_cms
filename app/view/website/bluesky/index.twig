@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 {% set site = 'BlueSky Digital Labs' %}
-<title>{% if _url.path == "/presentation" %}Team BlueSky{% else %}{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}{% if _route._handler._app == "directory" and _route._method == "itemView" %} | {{ item._tags[0].display_value }} Case Study{% endif %} | {{ site }} | Customised Online Solutions{% endif %}{% endif %}</title>
+<title>{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}{% if _route._handler._app == "directory" and _route._method == "itemView" %} | {{ item._tags[0].display_value }} Case Study{% endif %} | {{ site }} | Customised Online Solutions{% endif %}</title>
 
 <meta property="og:title" content="{% if item.browser_display and item.browser_display != item.name %}{{ item.browser_display }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}{% endif %}" />
 <meta property="og:description" content="{% if item.seo_description %}{{ item.seo_description }}{% else %}{% if item.summary %}{{ item.summary }}{% elseif item.description %}{{ item.description|raw|striptags|length > 256 ? item.description|raw|striptags|slice(0,254) ~ '..' : item.discription|raw|striptags }}{% else %}BlueSky Digital Labs is a Perth based custom web development team{% endif %}{% endif %}" />
@@ -45,12 +45,8 @@
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF3ZBPS');</script>
 
 </head>
-<body class="bod {% if _url.path == "/presentation" %}presentation{% else %}{% if item.is_home_page %}hom{% else %}sub{% endif %}{% endif %}">
+<body class="bod {% if item.is_home_page %}hom{% else %}sub{% endif %}">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF3ZBPS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-{% if _url.path == "/presentation" %}
-{% include '_presentation.twig' %}
-{% else %}
 
 {% include 'header_sxnav.twig' %}
 	<div id="bluesky" class="pusher">
@@ -59,8 +55,6 @@
 {% include 'footer.twig' %}
 		<div id="backtotop" class="circular ui icon button" title="back to top"><i class="angle double up icon"></i></div>
 	</div><!-- /#bluesky.pusher -->
-
-{% endif %}
 
 </body>
 </html>
