@@ -404,6 +404,9 @@ small.small60 { font-size: 60%; }
 
 .ui.five.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 
+#bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: 20px; }
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 420px; }
+
 #stview .ui.header .ui.image, #stview .ui.header .sub.header, #stview .ui.header .sub.header, #stview .ui.divider.afterheader { display: block; }
 #stview .ui.header .ui.image, #stview .ui.header .content { float: left; }
 #stview .ui.header .ui.image { cursor: pointer; }
@@ -422,6 +425,11 @@ small.small60 { font-size: 60%; }
 
 .w740 { width: 100%; }
 
+#con .emspace.h80.ctop { height: 60px; }
+
+#bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: 0; }
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 440px; }
+
 }
 @media only screen and (max-width: 768px) {
 
@@ -437,6 +445,12 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .fontsize28 { font-size: 24px; }
 .fontsize32 { font-size: 28px; }
 .fontsize48 { font-size: 38px; }
+
+#bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: -114px; left: -700px; }
+.sub #bluesky #hed .ui.container.nav .cloud.one { top: -120px; }
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; right: -480px; }
+
+.sub .masthead .ui.grid .subhero .ui.image { padding: 0 20px; }
 
 #mnav .item, #xnav .item { display: none; }
 #mnav .header.item { display: block; }
@@ -492,8 +506,13 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .w540 { width: 100%; }
 
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -520px; }
+
 }
 @media only screen and (max-width: 600px) { /*google+material*/
+
+.ui.masthead.segment .homhero { padding: 20px 40px 0 40px; }
+#con .emspace.h80.ctop { height: 40px; }
 
 .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 
@@ -530,6 +549,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.icon.message > .content { font-size: .9em; }
 
+.sub .masthead .ui.grid .subhero .ui.image { padding: 0; }
+
 #subnav .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
 #testimonials .ui.card { font-size: 15px; height: 540px; }
 
@@ -538,6 +559,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.four.doubling.cards, .ui.five.doubling.cards { max-width: 100%; margin-left: auto; margin-right: auto; }
 .ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 100%; }
+
+.ui.masthead.segment .homhero { padding: 20px 20px 0 20px; }
 
 #csview .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
