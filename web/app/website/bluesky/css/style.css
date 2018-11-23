@@ -519,17 +519,17 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 #testimonials .ui.card { height: 560px; }
 
+#fot .ui.grid > [class*="three column"].row > .column { width: 100% !important; margin-bottom: 40px; text-align: center; }
+#fot .ui.grid .ui.list > .item, #fot .ui.grid .ui.list > .nodisp { display: inline-block; }
+#fot .ui.grid .ui.list > .nodisp { margin: 0 3px; }
+#fot .hideinmob { display: none; }
+
 }
 @media only screen and (max-width: 414px) {
 
+.ui.icon.message > .content { font-size: .9em; }
+
 #subnav .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
-
-.fwrp input:not(.btn), .fwrp textarea { width: 90%; }
-input.btn, a.btn { width: auto; padding: 0 20px; display: inline-block; }
-.fom .radiof input, .fom .radiof label { float: left; }
-.fom .radiof input { width: 16px; }
-.fom .radiof label { width: 90%; }
-
 #testimonials .ui.card { font-size: 15px; height: 540px; }
 
 }

@@ -2,61 +2,94 @@
 		<footer id="fot" class="ui inverted tiny vertical footer segment">
 			<div class="emspace h90"></div>
 
-<!--{#
 			<div class="ui container">
 				<div class="emspace h40"></div>
-				<div class="ui stackable inverted divided equal height stackable grid">
+				<section class="w740">
+					<div class="ui inverted divided equal height grid">
+						<div class="three column row">
+							<div class="column">
 
-					<div class="four wide column">
-						<h4 class="ui inverted header">About</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Sitemap</a>
-							<a href="#" class="item">Contact Us</a>
-							<a href="#" class="item">Religious Ceremonies</a>
-							<a href="#" class="item">Gazebo Plans</a>
-						</div>
-					</div>
+<h4 class="ui inverted header">What we do</h4>
+<div class="ui inverted link list">
+{% set f1nav = buildNav(1,2) %}
+{% for i in f1nav %}
+{% if i.is_navigation %}
 
-					<div class="four wide column">
-						<h4 class="ui inverted header">Services</h4>
-						<div class="ui inverted link list">
-							<a href="#" class="item">Banana Pre-Order</a>
-							<a href="#" class="item">DNA FAQ</a>
-							<a href="#" class="item">How To Access</a>
-							<a href="#" class="item">Favorite X-Men</a>
-						</div>
-					</div>
+	<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.name }}</a>
+	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
 
-					<div class="eight wide column">
-						<h4 class="ui inverted header">Footer Header</h4>
-						<p>Extra space for a call to action inside the footer that could help re-engage users.</p>
-					</div>
+{% endif %}
+{% endfor %}
+</div><!-- /.ui.inverted.link.list -->
 
-				</div>
-				<div class="emspace h20 floatc"></div>
-			</div>
-#}-->
-			<div class="ui container center">
-				<div class="emspace h40"></div>
+							</div><!-- /.column -->
+							<div class="column">
 
-<p><img class="ui centered medium image" src="{{ img }}BlueSky_.png"></p>
-<p><a class="addrlnk" href="https://goo.gl/maps/boRQVaRFVb52" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps">Suite 4, 163 Wright Street, Kewdale 6105<br />Perth, Western Australia</a></p>
+<h4 class="ui inverted header">What we've built</h4>
+<div class="ui inverted link list">
+{% set f2nav = getDirectoryCategoryData() %}
+{% for i in f2nav.items %}
 
-<div class="ui hidden divider"></div>
+	<a class="item" href="{{ i._url }}" title="{{ i.name }}">{{ i.name }}</a>
+	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
 
-				<nav id="fnav">
+{% endfor %}
+</div><!-- /.ui.inverted.link.list -->
 
-<span>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</span>
-<!--{#
+							</div><!-- /.column -->
+							<div class="column lst">
+
+<h4 class="ui inverted header">About BlueSky</h4>
+<div class="ui inverted link list">
+{% set f3nav = buildNav(1,4) %}
+{% for i in f3nav %}
+{% if i.is_navigation %}
+
+	<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.name }}</a>
+	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
+
+{% endif %}
+{% endfor %}
+
+	<div class="emspace"></div>
+
+	<a class="item" href="/thoughts" title="BlueSky Thoughts">BlueSky Thoughts</a>
+	<span class="nodisp">&middot;</span>
+	<a class="item" href="/contact" title="Contact BlueSky">Contact BlueSky</a>
+
+	<div class="emspace"></div>
+
 {% set copy = buildNav(2) %}
 {% for c in copy %}
 {% if c.is_navigation %}
-<span class="pipe">|</span>
-<a href="{{ c._url }}" title="{{ c.title }}"{% if c.lote_link_type=="cms_link_external" %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ c.title }}</a>
+
+	<a class="item" href="{{ c._url }}" title="{{ c.title }}">{{ c.name }}</a>
+		{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
+
 {% endif %}
 {% endfor %}
-#}-->
-				</nav><!-- /#fnav -->
+
+</div><!-- /.ui.inverted.link.list -->
+
+							</div><!-- /.column -->
+						</div><!-- /.three.column.row -->
+
+					</div><!-- /.ui.stackable.inverted.divided.equal.height.grid -->
+				</section><!-- /.w540 -->
+				<div class="emspace h20 floatc"></div>
+			</div><!-- /.ui.container -->
+
+			<div class="ui hidden divider hideinmob"></div>
+
+			<div class="ui container center">
+				<div class="emspace h40 hideinmob"></div>
+
+				<p><img class="ui centered medium image" src="{{ img }}BlueSky_.png"></p>
+				<p><a class="addrlnk" href="https://goo.gl/maps/boRQVaRFVb52" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps">Suite 4, 163 Wright Street, Kewdale 6105<br />Perth, Western Australia</a></p>
+
+				<div class="emspace h20 floatc"></div>
+
+				<p>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</p>
 
 				<div class="emspace h20 floatc"></div>
 
