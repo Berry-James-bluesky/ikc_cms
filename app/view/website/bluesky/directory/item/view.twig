@@ -60,7 +60,7 @@ Established
 
 		<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 			<div class="image">
-				<img src="{% if ditm.featured_image_id %}{{ imgUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/logos/{% if ditm.id == 1 %}epicuest{% elseif ditm.id == 2 %}schoolzine{% elseif ditm.id == 3 %}dccm{% elseif ditm.id == 4 %}oshclub{% elseif ditm.id == 5 %}goldfields{% elseif ditm.id == 6 %}busbee{% elseif ditm.id == 10 %}timecontisheffield{% elseif ditm.id == 11 %}norupwilson{% else %}_blank{% endif %}.png{% endif %}">
+				<img src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference) }}{% else %}/_image/media/8/_logo.png{% endif %}">
 			</div>
 			<div class="content">
 				<div class="header">{{ ditm.name }}</div>
