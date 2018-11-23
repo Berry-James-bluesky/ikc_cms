@@ -93,6 +93,8 @@ a, #socnav .ui.icon.button { color: #4662cd; }
 
 body, .masthead h1.ui.header .sub.header, .ui.header { color: #3f3f41; }
 
+#fot .fotwrp { background-color: #333; }
+
 
 
 #socnav a.item { color: #ccc; }
@@ -155,7 +157,10 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 #hed {  }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.jpg) center bottom no-repeat; }
-#fot.ui.inverted.segment { background: #333 url(../img/_ui/bg_fot.jpg) center top no-repeat; }
+#fot.ui.inverted.segment { background: transparent url(../img/_ui/bg_fot.jpg) center top no-repeat;
+
+	padding: 0;
+}
 
 
 

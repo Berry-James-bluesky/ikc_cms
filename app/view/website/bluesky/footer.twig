@@ -1,13 +1,14 @@
 
 		<footer id="fot" class="ui inverted tiny vertical footer segment">
 			<div class="emspace h90"></div>
+			<section class="fotwrp">
 
-			<div class="ui container">
-				<div class="emspace h40"></div>
-				<section class="w740">
-					<div class="ui inverted divided equal height grid">
-						<div class="three column row">
-							<div class="column">
+				<div class="ui container">
+					<div class="emspace h40"></div>
+					<section class="w740">
+						<div class="ui inverted divided equal height grid">
+							<div class="three column row">
+								<div class="column">
 
 <h4 class="ui inverted header">What we do</h4>
 <div class="ui inverted link list">
@@ -22,8 +23,8 @@
 {% endfor %}
 </div><!-- /.ui.inverted.link.list -->
 
-							</div><!-- /.column -->
-							<div class="column">
+								</div><!-- /.column -->
+								<div class="column">
 
 <h4 class="ui inverted header">What we've built</h4>
 <div class="ui inverted link list">
@@ -36,8 +37,8 @@
 {% endfor %}
 </div><!-- /.ui.inverted.link.list -->
 
-							</div><!-- /.column -->
-							<div class="column lst">
+								</div><!-- /.column -->
+								<div class="column lst">
 
 <h4 class="ui inverted header">About BlueSky</h4>
 <div class="ui inverted link list">
@@ -51,13 +52,13 @@
 {% endif %}
 {% endfor %}
 
-	<div class="emspace"></div>
+		<div class="emspace"></div>
 
-	<a class="item" href="/thoughts" title="BlueSky Thoughts">BlueSky Thoughts</a>
-	<span class="nodisp">&middot;</span>
-	<a class="item" href="/contact" title="Contact BlueSky">Contact BlueSky</a>
+		<a class="item" href="/thoughts" title="BlueSky Thoughts">BlueSky Thoughts</a>
+		<span class="nodisp">&middot;</span>
+		<a class="item" href="/contact" title="Contact BlueSky">Contact BlueSky</a>
 
-	<div class="emspace"></div>
+		<div class="emspace"></div>
 
 {% set copy = buildNav(2) %}
 {% for c in copy %}
@@ -71,41 +72,42 @@
 
 </div><!-- /.ui.inverted.link.list -->
 
-							</div><!-- /.column -->
-						</div><!-- /.three.column.row -->
+								</div><!-- /.column -->
+							</div><!-- /.three.column.row -->
 
-					</div><!-- /.ui.stackable.inverted.divided.equal.height.grid -->
-				</section><!-- /.w540 -->
-				<div class="emspace h20 floatc"></div>
-			</div><!-- /.ui.container -->
+						</div><!-- /.ui.inverted.divided.equal.height.grid -->
+					</section><!-- /.w540 -->
+					<div class="emspace h20 floatc"></div>
+				</div><!-- /.ui.container -->
 
-			<div class="ui hidden divider hideinmob"></div>
+				<div class="ui hidden divider hideinmob"></div>
 
-			<div class="ui container center">
-				<div class="emspace h40 hideinmob"></div>
+				<div class="ui container center">
+					<div class="emspace h40 hideinmob"></div>
 
-				<p><img class="ui centered medium image" src="{{ img }}BlueSky_.png"></p>
-				<p><a class="addrlnk" href="https://goo.gl/maps/boRQVaRFVb52" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps">Suite 4, 163 Wright Street, Kewdale 6105<br />Perth, Western Australia</a></p>
+					<p><img class="ui centered medium image" src="{{ img }}BlueSky_.png"></p>
+					<p><a class="addrlnk" href="https://goo.gl/maps/boRQVaRFVb52" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps">Suite 4, 163 Wright Street, Kewdale 6105<br />Perth, Western Australia</a></p>
 
-				<div class="emspace h20 floatc"></div>
+					<div class="emspace h20 floatc"></div>
 
-				<p>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</p>
+					<p>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</p>
 
-				<div class="emspace h20 floatc"></div>
+					<div class="emspace h20 floatc"></div>
 
-				<nav id="socnav">
+					<nav id="socnav">
 
-<a class="circular ui icon button" href="https://www.linkedin.com/company/blueskylabs" target="_blank" rel="noopener noreferrer" title="BlueSky on LinkedIn"><i class="linkedin icon big" aria-label="LinkedIn"></i></a>
-<a class="circular ui icon button" href="https://www.instagram.com/blueskylabs" target="_blank" rel="noopener noreferrer" title="BlueSky on Instagram"><i class="instagram icon big" aria-label="Instagram"></i></a>
-<a class="circular ui icon button" href="https://www.facebook.com/blueskylabs" target="_blank" rel="noopener noreferrer" title="BlueSky on FaceBook"><i class="facebook icon big" aria-label="Facebook"></i></a>
-<a class="circular ui icon button" href="https://twitter.com/bluesky_labs" target="_blank" rel="noopener noreferrer" title="BlueSky on Twitter"><i class="twitter icon big" aria-label="Twitter"></i></a>
-<a class="circular ui icon button" href="https://goo.gl/maps/boRQVaRFVb52" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps"><i class="map marker alternate icon big"></i></a>
+	<a class="circular ui icon button" href="https://www.linkedin.com/company/blueskylabs" target="_blank" rel="noopener noreferrer" title="BlueSky on LinkedIn"><i class="linkedin icon big" aria-label="LinkedIn"></i></a>
+	<a class="circular ui icon button" href="https://www.instagram.com/blueskylabs" target="_blank" rel="noopener noreferrer" title="BlueSky on Instagram"><i class="instagram icon big" aria-label="Instagram"></i></a>
+	<a class="circular ui icon button" href="https://www.facebook.com/blueskylabs" target="_blank" rel="noopener noreferrer" title="BlueSky on FaceBook"><i class="facebook icon big" aria-label="Facebook"></i></a>
+	<a class="circular ui icon button" href="https://twitter.com/bluesky_labs" target="_blank" rel="noopener noreferrer" title="BlueSky on Twitter"><i class="twitter icon big" aria-label="Twitter"></i></a>
+	<a class="circular ui icon button" href="https://goo.gl/maps/boRQVaRFVb52" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps"><i class="map marker alternate icon big"></i></a>
 
-				</nav><!-- /#socnav -->
+					</nav><!-- /#socnav -->
 
-				<div class="emspace h40 floatc"></div>
-			</div><!-- /.ui.container -->
+					<div class="emspace h40 floatc"></div>
+				</div><!-- /.ui.container -->
 
+			</section><!-- /.fotwrp -->
 		</footer><!-- /#fot -->
 
 
