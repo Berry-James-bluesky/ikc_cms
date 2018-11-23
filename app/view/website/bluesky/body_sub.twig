@@ -1,12 +1,5 @@
 
 {% if _route._handler._app == "page" %}
-<!--{#
-{% if item.parent_id == 2 and item.summary %}
-<div class="ui piled segment large center">
-<p>{{ item.summary|raw }}</p>
-</div>
-{% endif %}
-#}-->
 {% if item.description %}
 {{ renderContent(item.description)|raw }}
 {% endif %}
@@ -48,7 +41,7 @@
 
 {% if item.parent_id == 2 %}
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}tmp/{% if i.id == 7 %}hero-sub_startup{% elseif i.id == 8 %}hero-sub_system{% elseif i.id == 9 %}hero-sub_app{% elseif i.id == 10 %}hero-sub_data{% elseif i.id == 11 %}hero-sub_custom{% elseif i.id == 12 %}hero-sub_ideas{% elseif i.id == 13 %}hero-sub_digital{% elseif i.id == 21 %}hero-sub_beacons{% else %}hero{% endif %}.jpg{% endif %}">
+			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}tmp/{% if i.id == 7 %}hero-sub_startup{% elseif i.id == 8 %}hero-sub_system{% elseif i.id == 9 %}hero-sub_app{% elseif i.id == 10 %}hero-sub_data{% elseif i.id == 11 %}hero-sub_custom{% elseif i.id == 12 %}hero-sub_ideas{% elseif i.id == 13 %}hero-sub_digital{% elseif i.id == 21 %}hero-sub_beacons{% else %}hero{% endif %}.jpg{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
@@ -56,7 +49,7 @@
 		</div>
 {% else %}
 		<div class="content">
-			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 60) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference, 60) }}{% else %}/_image/media/1/_image.png{% endif %}">
 			<div class="header spnav">{{ i.title }}</div>
 			<div class="description">{% if i.summary %}{{ i.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
 		</div>

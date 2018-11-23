@@ -3,7 +3,7 @@
 
 	<div class="item">
 		<div class="ui medium image">
-			<img src="{% if item.featured_image.reference %}{{ imgTsUrl(item.featured_image_file.reference, 350) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}" alt="" />
+			<img src="{% if item.featured_image.reference %}{{ imgUrl(item.featured_image_file.reference, 350) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}" alt="" />
 		</div>
 		<div class="content">
 			<div class="header">{{ item.name }}</div>

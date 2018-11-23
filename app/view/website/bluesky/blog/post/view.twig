@@ -70,7 +70,7 @@
 		<div class="label">
 
 {% if item.id == 2 %}
-<img src="/app/website/bluesky/img/_sui/eve.png">
+<img src="/_image/media/4/eve.png">
 
 {% else %}
 <img src="/app/website/bluesky/img/BlueSky_soc.png">
@@ -116,7 +116,7 @@
 
 	<a class="card tiny" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 		<div class="content">
-			<img class="left floated mini ui image" src="{% if post.featured_image %}{{ imgTsUrl(post.featured_image.reference, 60) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<img class="left floated mini ui image" src="{% if post.featured_image %}{{ imgUrl(post.featured_image.reference, 60) }}{% else %}/_image/media/1/_image.png{% endif %}">
 			<div class="header spnav">{{ post.title }}</div>
 			<div class="description">{% if post.summary %}{{ post.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ post.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
 		</div>

@@ -5,7 +5,7 @@
 
 	<div class="item">
 		<div class="ui small image">
-			<img src="{% if i.featured_image %}{{ imgTsUrl(i.featured_image.reference, 350) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}" alt="" />
+			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="" />
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>

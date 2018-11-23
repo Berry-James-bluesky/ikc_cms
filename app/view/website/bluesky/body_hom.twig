@@ -1,81 +1,34 @@
 
+<h2 class="fontsize32 center">
+Simplify, Scale and Grow Your Business
+<div class="sub header center">With customised online solutions</div>
+</h2>
 {{ renderContent(item.description)|raw }}
+<div class="ui divider hidden"></div>
+<p class="center"><a class="ui primary button large" href="/contact" title="">Discuss your next project <i class="right chevron icon"></i></a></p>
 
 <div class="emspace h80 floatc"></div>
 
-<h3 class="fontsize28 center">We Specialise In</h3>
-<p class="center">Our customised online solutions make life easier, improve processes and grow your business. Here is how we can help you ..</p>
+{% set cb = getContent(2) %}
+<h3 class="fontsize28 center">{{ cb.title }}</h3>
+{{ renderContent(cb.content)|raw }}
 {% include 'body_sub-services.twig' %}
-
 <div class="ui divider hidden"></div>
-<p class="center"><a class="ui positive button huge" href="/work" title="">See Our Work <i class="right chevron icon"></i></a></p>
-
+<p class="center"><a class="ui positive button large" href="/work" title="">See our work <i class="right chevron icon"></i></a></p>
 
 <div class="emspace h80 floatc"></div>
 
-<h3 class="fontsize28 center">Our Process</h3>
-<p class="w740 center">Understanding your needs is our top priority, which is why our process begins with an exploratory meeting to see if we are a good fit to help you</p>
-
-<div class="ui three steps">
-<div class="step"><i class="search icon"></i>
-<div class="content">
-<div class="title">Explore</div>
-<div class="description">We start by exploring the problem with your business</div>
-</div>
-</div>
-<div class="step"><i class="map outline icon"></i>
-<div class="content">
-<div class="title">Map</div>
-<div class="description">Then we map out possible solutions</div>
-</div>
-</div>
-<div class="step"><i class="lightbulb outline icon"></i>
-<div class="content">
-<div class="title">Solve</div>
-<div class="description">Finally we deliver the solution you want</div>
-</div>
-</div>
-</div>
-<div class="emspace h20 floatc"></div>
+{% set cb = getContent(3) %}
+<h3 class="fontsize28 center">{{ cb.title }}</h3>
+{{ renderContent(cb.content)|raw }}
+{{ renderContent(cb.description)|raw }}
 
 <div class="emspace h80 floatc"></div>
 
-<h3 class="fontsize28 center">Who Are BlueSky?</h3>
-<p class="w840 center"><b>BlueSky</b> bring together a team of full stack developers, front end designers, computer engineers and data analysts. It's no surprise that technology is in our blood - it's our passion, purpose and lifelong pursuit. We love working on the margins of possibility, pushing the boundaries and pioneering new ground.</p>
-
+{% set cb = getContent(4) %}
+<h3 class="fontsize28 center">{{ cb.title }}</h3>
+{{ renderContent(cb.content)|raw }}
+{{ renderContent(cb.description)|raw }}
 <div class="ui divider hidden"></div>
-<p><img class="ui image center" src="{{ img }}tmp/thegoodplace.jpg" alt="" /></p>
-
-<div class="ui divider hidden"></div>
-
-<h3 class="center">Integrity matters to us</h3>
-<p class="center">Which is why we promise:</p>
-<div class="w740">
-<div class="ui three centered stackable cards noborder">
-<div class="card">
-<div class="image"><img src="/app/website/bluesky/img/_sui/image.png"></div>
-<div class="content">
-<div class="header">Transparency</div>
-<div class="description">up front estimates, phase payments, full scoping and clear time frames</div>
-</div>
-</div>
-<div class="card">
-<div class="image"><img src="/app/website/bluesky/img/_sui/image.png"></div>
-<div class="content">
-<div class="header">Ownership</div>
-<div class="description">you'll own the code and won't be hit with license fees to use your custom system</div>
-</div>
-</div>
-<div class="card">
-<div class="image"><img src="/app/website/bluesky/img/_sui/image.png"></div>
-<div class="content">
-<div class="header">Support</div>
-<div class="description">we stay the course, build in support so you'll never feel alone</div>
-</div>
-</div>
-</div>
-</div><!-- /.w740 -->
-
-<div class="ui divider hidden"></div>
-<p class="center"><a class="ui primary button huge" href="/work" title="">Learn More About BlueSky <i class="right chevron icon"></i></a></p>
+<p class="center"><a class="ui orange button large" href="/work" title="">Learn more about BlueSky <i class="right chevron icon"></i></a></p>
 
