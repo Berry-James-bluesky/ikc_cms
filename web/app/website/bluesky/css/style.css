@@ -246,6 +246,7 @@ small.small60 { font-size: 60%; }
 
 
 .ui.cards.noborder { font-size: 16px; }
+.ui.cards.noborder * { background: none !important; }
 .ui.cards.noborder *, .ui.cards.noborder a.card:hover * { border: none !important; -webkit-box-shadow:none !important;-moz-box-shadow:none !important;box-shadow:none !important; }
 .ui.cards.noborder .image img { -webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px; }
 .ui.cards.noborder > .card > .content { padding: 1em 0; }
