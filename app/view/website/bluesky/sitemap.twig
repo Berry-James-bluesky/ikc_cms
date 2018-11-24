@@ -14,7 +14,7 @@
 {% if i.is_navigation %}
 
 				<div class="item">
-					<i class="large {% if i.id == 1 %}home{% else %}folder{% if i.id != 6 %} open{% endif %}{% endif %} icon"></i>
+					<i class="large {% if i.id == 1 %}home{% else %}{% if i.id == 6 %}file alternate{% else %}folder open{% endif %} outline{% endif %} icon"></i>
 					<div class="content">
 						<a class="header" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
 						<div class="description">{{ i.summary }}</div>
@@ -78,7 +78,7 @@
 {% if f.is_navigation %}
 
 				<div class="item">
-					<i class="large folder icon"></i>
+					<i class="large file alternate outline icon"></i>
 					<div class="content">
 						<a class="header" href="{{ f._url }}" title="{{ f.title }}">{{ f.title }}</a>
 						<div class="description">{{ f.summary }}</div>
