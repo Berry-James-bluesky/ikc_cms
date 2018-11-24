@@ -26,7 +26,7 @@
 				<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag|replace({' ':'-','/':'-'}) }}">{{ tag }}</a>
 				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
 				{% endfor %}
-				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
+				<a class="ui right floated primary button" href="{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
 			</div><!-- /.extra -->
 		</div><!-- /.content -->
 	</div><!-- /.item -->

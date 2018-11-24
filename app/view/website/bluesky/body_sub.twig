@@ -3,7 +3,6 @@
 {% if item.description %}
 {{ renderContent(item.description)|raw }}
 {% endif %}
-
 {% endif %}
 {{ _content_|raw }}
 
@@ -19,6 +18,8 @@
 {% include 'body_sub-contact.twig' %}
 {% elseif item.id == 16 %}
 {% include 'staff/list.twig' %}
+{% elseif item.id == 23 %}
+{% include 'sitemap.twig' %}
 {% endif %}
 
 {% if item.parent_id != 0 %}

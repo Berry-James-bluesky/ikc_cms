@@ -40,21 +40,30 @@
 <script src="/app/website/bluesky/_sui/semantic.min.js"></script>
 <script src="/app/website/bluesky/js/jq-min-bluesky.js"></script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-127973425-1');</script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF3ZBPS');</script>
+
 
 </head>
 <body class="bod {% if item.is_home_page %}hom{% else %}sub{% endif %}">
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF3ZBPS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 {% include 'header_sxnav.twig' %}
+
 	<div id="bluesky" class="pusher">
+
 {% include 'header.twig' %}
 {% include 'body.twig' %}
 {% include 'footer.twig' %}
+
 		<div id="backtotop" class="circular ui icon button" title="back to top"><i class="angle double up icon"></i></div>
 	</div><!-- /#bluesky.pusher -->
+
+
+
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-127973425-1');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NF3ZBPS');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF3ZBPS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
 
 </body>
 </html>

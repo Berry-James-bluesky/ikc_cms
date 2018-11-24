@@ -1,0 +1,102 @@
+
+<section id="sitemap">
+<div class="ui relaxed list">
+
+	<div class="item">
+		<i class="large sitemap icon"></i>
+		<div class="content">
+			<div class="header">BlueSky Digital Labs</div>
+			<div class="description">customised online solutions</div>
+			<div class="list">
+
+{% set nav = buildNav(1) %}
+{% for i in nav %}
+{% if i.is_navigation %}
+
+				<div class="item">
+					<i class="large {% if i.id == 1 %}home{% else %}folder{% if i.id != 6 %} open{% endif %}{% endif %} icon"></i>
+					<div class="content">
+						<a class="header" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
+						<div class="description">{{ i.summary }}</div>
+
+{% if i._children %}
+						<div class="list">
+{% for c in i._children %}
+{% if c.is_navigation %}
+							<div class="item">
+								<i class="large file alternate outline icon"></i>
+								<div class="content">
+									<a class="header" href="{{ c._url }}" title="{{ c.title }}">{{ c.title }}</a>
+									<div class="description">{{ c.summary }}</div>
+								</div><!-- /.content -->
+							</div><!-- /.item -->
+{% endif %}
+{% endfor %}
+						</div><!-- /.list -->
+
+{% elseif i.id == 3 %}
+{% set list = getDirectoryCategoryData() %}
+						<div class="list">
+{% for ditm in list.items %}
+							<div class="item">
+								<i class="large file code outline icon"></i>
+								<div class="content">
+									<a class="header" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="{{ ditm.name }}">{{ ditm.name }} <small>- {{ ditm._tag }}</small></a>
+									<div class="description">{{ ditm.summary }}</div>
+								</div><!-- /.content -->
+							</div><!-- /.item -->
+{% endfor %}
+						</div><!-- /.list -->
+
+{% elseif i.id == 5 %}
+{% set postList = getLatestBlogItem(14) %}
+{% if postList %}
+						<div class="list">
+{% for bitm in postList %}
+							<div class="item">
+								<i class="large newspaper outline icon"></i>
+								<div class="content">
+									<a class="header" href="{% if bitm._url %}{{ bitm._url }}{% else %}blog/post/{{ bitm.id }}{% endif %}" title="{{ bitm.title }}">{{ bitm.title }}</a>
+									<div class="description">{{ bitm.summary }}</div>
+								</div><!-- /.content -->
+							</div><!-- /.item -->
+{% endfor %}
+						</div><!-- /.list -->
+{% endif %}
+
+{% endif %}
+
+					</div><!-- /.content -->
+				</div><!-- /.item -->
+
+{% endif %}
+{% endfor %}
+
+
+{% set nav = buildNav(2) %}
+{% for f in nav %}
+{% if f.is_navigation %}
+
+				<div class="item">
+					<i class="large folder icon"></i>
+					<div class="content">
+						<a class="header" href="{{ f._url }}" title="{{ f.title }}">{{ f.title }}</a>
+						<div class="description">{{ f.summary }}</div>
+
+					</div><!-- /.content -->
+				</div><!-- /.item -->
+
+{% endif %}
+{% endfor %}
+
+		</div><!-- /.content -->
+	</div><!-- /.item -->
+
+</div><!-- /.ui.relaxedlist -->
+
+
+
+
+
+</section><!-- /#sitemap -->
+
