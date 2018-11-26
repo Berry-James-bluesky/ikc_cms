@@ -88,14 +88,15 @@ a[href="javascript:;"].activate { cursor: pointer; }
 #fot a.addrlnk, #socnav .ui.icon.button:hover { color: #fff; }
 #snav .header.item.logo, #socnav .ui.icon.button { background-color: #fff; }
 
-a, #socnav .ui.icon.button { color: #4662cd; }
-#socnav .ui.icon.button:hover { background-color: #4662cd; }
+a, #socnav .ui.icon.button { color: #4563cc; }
+#socnav .ui.icon.button:hover { background-color: #4563cc; }
 
 body, .masthead h1.ui.header .sub.header, .ui.header { color: #3f3f41; }
 
 #fot .fotwrp { background-color: #333; }
 
-
+a:hover { color: #ff9f41; }
+a:visited { color: #6e44ce; }
 
 #socnav a.item { color: #ccc; }
 
@@ -111,15 +112,21 @@ body, .masthead h1.ui.header .sub.header, .ui.header { color: #3f3f41; }
 
 
 /* semantic UI overwrites  */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,600,700);
+h1, h2, h3, h4, h5, .ui.header, .ui.message .header, .ui.items > .item > .content > .header, .ui.card > .content > .header:not(.ui), .ui.cards > .card > .content > .header:not(.ui), .ui.steps .step .title { font-family:'Montserrat',sans-serif;font-weight:600!important; }
+
+
 html, body, .ui.shape .ui.card { font-size: 17px; }
 .ui.button, .ui.card, .ui.cards { font-size: 14px; }
 .ui.card .meta, .ui.cards > .card .meta { font-size: .9em; line-height: 120%; padding: 5px 0; }
 a.ui.button { margin-bottom: 0.75em; }
 h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .ui.piled.segment, .ui.piled.segments { padding: 1.8em; }
+.ui.bulleted.list, ul.ui.list, .ui.ordered.list, .ui.ordered.list .list, ol.ui.list, ol.ui.list ol { margin-left: 2rem; }
 
 .ui.card .description, .ui.cards .description { line-height: 140%; }
 .ui.card .card.tiny, .ui.cards .card.tiny { font-size: 12px; }
+.ui.card .card.tiny .description, .ui.cards .card.tiny .description { font-size: 13px; }
 
 .ui.menu .item > i.icon.nomarginright { margin-right: 0; }
 .ui.items > .item.nomargin { margin: 0; }
@@ -161,6 +168,9 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 	padding: 0;
 }
+
+.hom #hed { min-height: 940px; height: auto !important; height: 940px; }
+.hom #hed { min-height: 400px; height: auto !important; height: 400px; }
 
 
 
@@ -340,7 +350,8 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1280px) { /*google+material*/
 
-
+.hom #hed { min-height: 840px; height: auto !important; height: 840px; }
+.hom #hed { min-height: 400px; height: auto !important; height: 400px; }
 
 }
 @media only screen and (max-width: 1200px) {
@@ -355,7 +366,8 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1024px) { /*google+material*/
 
-
+.hom #hed { min-height: 700px; height: auto !important; height: 700px; }
+.hom #hed { min-height: 300px; height: auto !important; height: 300px; }
 
 }
 @media only screen and (max-width: 1023px) {
@@ -369,21 +381,18 @@ small.small60 { font-size: 60%; }
 
 #viw.ui.container, .ui.container.nav { width: 92%; }
 .ui.five.doubling.cards > .card { width: calc(25% - 2em); }
-
 #xnav .ui.container.nav .menu .item { font-size: 15px; }
-
+.hom #hed, .sub #hed { min-height: 600px; height: auto !important; height: 600px; }
 .sub .masthead .ui.container > .ui.stackable.grid > .column { padding-left: 10px !important; padding-right: 10px !important; }
 .sub .masthead .ui.container > .ui.stackable.grid > .one.column { display: none; }
 .sub .masthead .ui.grid > .column:not(.row) { position: relative; display: inline-block; width: 100% !important; margin: 0 0 !important; }
 .sub .masthead .ui.grid, .sub .masthead .ui.grid .tright { text-align: center; }
 .sub .masthead .ui.grid .vmiddle { position: relative; top: 0; transform: none; }
 .sub .masthead .ui.grid .subhero .ui.image { float: none; margin: 0 auto; }
-
 #csview .ui.medium.right.floated.image { width: 30%; }
 #subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 #stlist .ui.two.doubling.cards > .card { width: calc(50% - 2em); margin-left: 1em; margin-right: 1em; }
 #stlist .w740 { width: 100%; }
-
 .emspace.h240 { height: 100px; }
 
 }
@@ -396,7 +405,6 @@ small.small60 { font-size: 60%; }
 
 .w840 { width: 100%; }
 #xnav .ui.container.nav .menu .item { padding: .92857143em 11px; font-size: 14px; }
-
 .ui.masthead.segment { min-height: 420px; height: auto !important; height: 420px; }
 .sub .masthead h1.ui.header { font-size: 2em; }
 .sub .masthead h1.ui.header .sub.header { line-height: 100%; }
@@ -405,20 +413,16 @@ small.small60 { font-size: 60%; }
 @media only screen and (max-width: 840px) { /*google+material*/
 
 .ui.five.doubling.cards > .card { width: calc(33.33333333% - 2em); }
-
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: 20px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 420px; }
-
 #stview .ui.header .ui.image, #stview .ui.header .sub.header, #stview .ui.header .sub.header, #stview .ui.divider.afterheader { display: block; }
 #stview .ui.header .ui.image, #stview .ui.header .content { float: left; }
 #stview .ui.header .ui.image { cursor: pointer; }
 #stview .ui.header > .image + .content, .ui.header > img + .content { padding-left: .75rem; }
 #stview h2.ui.header { width: 100%; overflow: hidden; }
 #stview h2.ui.header .sub.header { padding-top: 0; }
-
 #stview .ui.grid > [class*="five wide"].column { display: none; }
 #stview .ui.grid > [class*="eleven wide"].column { width: 100% !important; }
-
 #psview .ui.medium.image { display: none; }
 #psview .nodisp { display: block; }
 
@@ -426,9 +430,7 @@ small.small60 { font-size: 60%; }
 @media only screen and (max-width: 800px) {
 
 .w740 { width: 100%; }
-
 #con .emspace.h80.ctop { height: 60px; }
-
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: 0; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 440px; }
 
@@ -438,7 +440,6 @@ small.small60 { font-size: 60%; }
 html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ui.massive.segment, .ui.massive.segments .segment { font-size: 1.3em; }
 .ui.large.segment, .ui.large.segments .segment { font-size: 1.1em; }
-
 .fontsize14 { font-size: 12px; }
 .fontsize16 { font-size: 14px; }
 .fontsize18 { font-size: 16px; }
@@ -447,13 +448,10 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .fontsize28 { font-size: 24px; }
 .fontsize32 { font-size: 28px; }
 .fontsize48 { font-size: 38px; }
-
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: -114px; left: -700px; }
 .sub #bluesky #hed .ui.container.nav .cloud.one { top: -120px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; right: -480px; }
-
 .sub .masthead .ui.grid .subhero .ui.image { padding: 0 20px; }
-
 #mnav .item, #xnav .item { display: none; }
 #mnav .header.item { display: block; }
 #mnav .toc.item, #xnav .toc.item, #mnav .item.logo, #xnav .item.logo { display: block; }
@@ -462,10 +460,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #mnav.ui.menu .toc.item > i.icon { font-size: 16px; }
 .ui.visible.uncover.sidebar { z-index: 999; }
 #snav.ui.menu .item { padding: 1.14285714em; }
-
 .masthead h1.ui.header { font-size: 2em; }
 .masthead h2 { font-size: 1.5em; }
-
 #csview .ui.card .description, #csview .ui.card .extra.content { font-size: 12px; }
 
 }
@@ -474,15 +470,11 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #viw.ui.container { width: 100% !important; }
 .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
 #xnav .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
-
 #pnav { width: 80%; }
 #pnav.ui.stackable.menu { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 #pnav.ui.stackable.menu .item { width: 100% !important; }
 #pnav.ui.stackable.menu .item:before { position: absolute; content: ''; top: auto; bottom: 0px; left: 0px; width: 100%; height: 1px; background: rgba(34, 36, 38, 0.1); }
-
 #subnav .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
-
-
 
 }
 @media only screen and (max-width: 736px) {
@@ -492,13 +484,12 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 720px) { /*google+material*/
 
-
+.hom #hed, .sub #hed { min-height: 540px; height: auto !important; height: 540px; }
 
 }
 @media only screen and (max-width: 667px) {
 
 .w640 { width: 100%; }
-
 .ll, .rr, .coltwo, .coltre, .coltre.mid, .coltre.dbl, .colfor, .colfor.dbl, .colfiv, .colsix { width: 100%; float: none; display: block; }
 .rr, .coltwo.floatr, .coltre.floatr, .colfor.floatr, .colfiv.floatr, .colsix.floatr { float: none; }
 .coltwo, .coltre, .coltre.mid, .coltre.dbl, .colfor, .colfor.dbl, .colfiv, .colsix, .rr.tright, .coltre.tright, .colfor.tright, .colfiv.tright { text-align: center; }
@@ -507,7 +498,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 640px) { /*640x360androids*/
 
 .w540 { width: 100%; }
-
+.hom #hed, .sub #hed { min-height: 500px; height: auto !important; height: 500px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -520px; }
 
 }
@@ -515,32 +506,27 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.masthead.segment .homhero { padding: 20px 40px 0 40px; }
 #con .emspace.h80.ctop { height: 40px; }
-
 .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 
 }
 @media only screen and (max-width: 599px) {
 
 .w480 { width: 100%; }
-
 #testimonials .ui.card { width: 100%; }
 #csview .ui.card .description, #csview .ui.card .extra.content { display: none; }
-
 #testimonials .ui.card { height: auto; }
 
 }
 @media only screen and (max-width: 480px) { /*google+material*/
 
+.hom #hed, .sub #hed { min-height: 460px; height: auto !important; height: 460px; }
 #csview .ui.medium.right.floated.image { width: 40%; }
 #stlist .ui.three.doubling.cards > .card, #stlist .ui.two.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
-
 #stview .ui.header .ui.image, #stview .ui.header .content { float: none; display: block; text-align: center; }
 #stview .ui.header .ui.image { margin: 0 auto; }
 #stview .ui.header > .image + .content, .ui.header > img + .content { padding-left: 0; }
-
 #testimonials .ui.card { height: 560px; }
-
 #fot .ui.grid > [class*="three column"].row > .column { width: 100% !important; margin-bottom: 40px; text-align: center; }
 #fot .ui.grid .ui.list > .item, #fot .ui.grid .ui.list > .nodisp { display: inline-block; }
 #fot .ui.grid .ui.list > .nodisp { margin: 0 3px; }
@@ -550,9 +536,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 414px) {
 
 .ui.icon.message > .content { font-size: .9em; }
-
 .sub .masthead .ui.grid .subhero .ui.image { padding: 0; }
-
+.hom #hed, .sub #hed { min-height: 430px; height: auto !important; height: 430px; }
 #subnav .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
 #testimonials .ui.card { font-size: 15px; height: 540px; }
 
@@ -561,12 +546,10 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.four.doubling.cards, .ui.five.doubling.cards { max-width: 100%; margin-left: auto; margin-right: auto; }
 .ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 100%; }
-
 .ui.masthead.segment .homhero { padding: 20px 20px 0 20px; }
-
+.hom #hed, .sub #hed { min-height: 420px; height: auto !important; height: 420px; }
 #csview .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
-
 #testimonials .ui.card { font-size: 14px; height: 474px; }
 #testimonials .ui.card .content .description { padding: 0 14px 14px 14px; }
 
@@ -579,8 +562,9 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 360px) { /*google+material*/
 
 #viw.ui.container { width: 90% !important; }
+.hom #hed, .sub #hed { min-height: 400px; height: auto !important; height: 400px; }
+.masthead h1.ui.header .ui.image.medium { width: 80%; }
 #csview .ui.medium.right.floated.image { display: none; }
-
 #testimonials .ui.card { height: 510px; }
 
 }
