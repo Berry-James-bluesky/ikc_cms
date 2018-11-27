@@ -200,6 +200,10 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #mnav.ui.secondary.pointing.menu .item.logo { padding: 0; position: relative; top: -9px; }
 #mnav.ui.secondary.pointing.menu .item.logo.active { border: none; }
 
+#mnav .tel.item { font-weight: 400; color: #222; }
+#mnav .tel.item .icon, #xnav.ui.menu .item > i.icon { margin-right: 0; }
+#snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
+
 .masthead h1.ui.header { font-size: 4em; font-weight: normal; }
 .masthead h1.ui.header .ui.image { margin: 0 auto; }
 .masthead h1.ui.header .ui.image.big { width: 520px; }
