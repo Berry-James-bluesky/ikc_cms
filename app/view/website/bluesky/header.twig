@@ -27,9 +27,9 @@
 					</nav><!-- /#mnav -->
 				</div><!-- /.ui.container.nav -->
 
-				<div class="emspace h80"></div>
+				<div class="emspace h80 mtop"></div>
 
-				<div class="ui page grid">
+				<div id="hiw">
 					<div class="ll">
 						<h1 class="ui header">
 
@@ -38,32 +38,31 @@
 <img class="ui image medium" src="{{ img }}BlueSky.svg" alt="BlueSky" />
 <div class="sub header">customised online solutions</div>
 
-{% elseif _route._handler.module == "staff" or _route._handler.module == "blog" %}
+{% else %}
+
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
 {% else %}
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
 
-{% else %}
-{% if _route._handler.module == "staff" %}Our Team
-{% elseif _route._handler.module == "blog" %}Thoughts
-{% elseif _route._handler._app == "directory" and _route._method == "itemView" %}{{ item.title }}
-{% else %}
-{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
 
 							</h1>
 
 {% if _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
 <p>{{ item.summary|raw }}</p>
+{% elseif _route._handler._app == "staff" and _route._method == "itemView" %}
+<p>Meet the people who bring BlueSky to life</p>
 {% endif %}
+
 {% if _route._handler._app == "directory" and _route._method == "itemView" %}
 <span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
-{% endif %}
+
+{% elseif _route._handler._app == "staff" and _route._method == "itemView" %}
+<span class="ui tag label mini">{% if item.id == 1 or item.id == 2 %}Directors{% else %}Leadership team{% endif %}</span>
 
 {% endif %}
-
 
 					</div><!-- /.ll -->
 					<div class="rr">
@@ -73,7 +72,7 @@
 
 {% else %}
 
-{% if item.featured_image and _route._handler._app != "directory" %}
+{% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" ) %}
 {{ imgUrl(item.featured_image.reference) }}
 {% else %}
 {% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}
@@ -93,7 +92,7 @@
 {% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}
 <img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_beacons.png" alt="" />
 {% else %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero.svg" alt="" />
+<img class="ui image" src="/app/website/bluesky/img/iso/hero.svg" alt="" width="100%;" />
 {% endif %}
 {% endif %}
 
