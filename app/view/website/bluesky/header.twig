@@ -1,6 +1,6 @@
 
 		<section id="hed">
-			<div class="ui vertical masthead center aligned segment">
+			<div class="ui vertical masthead segment">
 				<div class="ui container nav">
 
 <div class="cloud one my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
@@ -27,38 +27,25 @@
 					</nav><!-- /#mnav -->
 				</div><!-- /.ui.container.nav -->
 
+				<div class="emspace h80"></div>
+
+				<div class="ui page grid">
+					<div class="ll">
+						<h1 class="ui header">
+
 {% if item.is_home_page %}
 
-				<h1 class="ui header">
-					<img class="ui image medium" src="{{ img }}BlueSky.svg" alt="BlueSky" />
-					<div class="sub header">customised online solutions</div>
-				</h1>
-				<img class="ui image homhero" src="{{ img }}iso/hero.svg" alt="BlueSky ecosystem" width="100%;" />
+<img class="ui image medium" src="{{ img }}BlueSky.svg" alt="BlueSky" />
+<div class="sub header">customised online solutions</div>
 
 {% elseif _route._handler.module == "staff" or _route._handler.module == "blog" %}
-
-				<section class="vmiddle nohero">
-					<h1 class="ui header">
-
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
 {% else %}
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
 
-					</h1>
-				</section>
-
 {% else %}
-
-				<div class="ui container">
-					<div class="emspace h40"></div>
-					<div class="ui stackable grid">
-						<div class="seven wide column">
-
-							<section class="vmiddle">
-								<h1 class="ui header">
-
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
 {% elseif _route._handler._app == "directory" and _route._method == "itemView" %}{{ item.title }}
@@ -66,18 +53,25 @@
 {% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
 
-								</h1>
+							</h1>
+
 {% if _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
-								<p>{{ item.summary|raw }}</p>
+<p>{{ item.summary|raw }}</p>
 {% endif %}
 {% if _route._handler._app == "directory" and _route._method == "itemView" %}
-								<span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
+<span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
 {% endif %}
-							</section><!-- /.vmiddle -->
 
-						</div><!-- /.column -->
-						<div class="one wide column">&nbsp;</div>
-						<div class="eight wide column subhero">
+{% endif %}
+
+
+					</div><!-- /.ll -->
+					<div class="rr">
+
+{% if item.is_home_page %}
+<img class="ui image homhero" src="{{ img }}iso/hero.svg" alt="BlueSky ecosystem" width="100%;" />
+
+{% else %}
 
 {% if item.featured_image and _route._handler._app != "directory" %}
 {{ imgUrl(item.featured_image.reference) }}
@@ -103,11 +97,11 @@
 {% endif %}
 {% endif %}
 
-						</div><!-- /.column.subhero -->
-					</div><!-- /.ui.stackable.grid -->
-				</div><!-- /.ui.container -->
-
 {% endif %}
+
+					</div><!-- /.rr -->
+					<div class="emspace h1 floatc"></div>
+				</div><!-- /.ui.page.grid -->
 
 			</div><!-- /.masthead.segment -->
 		</section><!-- /#hed -->

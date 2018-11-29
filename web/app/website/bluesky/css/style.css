@@ -174,7 +174,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#bluesky #hed .ui.container, #hed .ui.header, .homhero, .subhero, #viw { position: relative; z-index: 1; }
+#bluesky #hed .ui.container, #hed .ui.page.grid { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
 #bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 640px; right: -460px; }
@@ -204,22 +204,16 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #mnav .tel.item .icon, #xnav.ui.menu .item > i.icon { margin-right: 0; }
 #snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
 
+.masthead .ui.container .ll { position: relative; }
+
 .masthead h1.ui.header { font-size: 4em; font-weight: normal; }
-.masthead h1.ui.header .ui.image { margin: 0 auto; }
+.masthead h1.ui.header .ui.image { /*margin: 0 auto;*/ }
 .masthead h1.ui.header .ui.image.big { width: 520px; }
 .masthead h1.ui.header .ui.image.medium { width: 300px; }
 .masthead h1.ui.header .ui.image.small { width: 160px; }
-.ui.masthead.segment { /*min-height: 640px; height: auto !important; height: 640px;*/ border: 0; }
 
-.ui.masthead.segment .homhero { max-height: 760px; margin: 0 auto; padding: 0 40px; }
-
-/*.sub .masthead h1.ui.header .sub.header { font-size: 3.4rem; line-height: 100%; }*/
+.ui.masthead.segment { border: 0; min-height: 240px; height: auto !important; height: 240px; }
 .sub .masthead h1.ui.header { font-size: 2.2em; }
-.sub .ui.masthead.segment { min-height: 240px; height: auto !important; height: 240px; }
-.sub .masthead .ui.grid { text-align: right; }
-.sub .masthead .ui.grid .subhero .ui.image { /*float: right;*/ /*margin: 0 auto;*/ }
-
-.sub .vmiddle.nohero { top: 70%; transform: translateY(-70%); }
 
 
 
@@ -354,8 +348,7 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1280px) { /*google+material*/
 
-.hom #hed { min-height: 840px; height: auto !important; height: 840px; }
-.hom #hed { min-height: 400px; height: auto !important; height: 400px; }
+#hed { min-height: 400px; height: auto !important; height: 400px; }
 
 }
 @media only screen and (max-width: 1200px) {
@@ -370,8 +363,7 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1024px) { /*google+material*/
 
-.hom #hed { min-height: 700px; height: auto !important; height: 700px; }
-.hom #hed { min-height: 300px; height: auto !important; height: 300px; }
+#hed { min-height: 300px; height: auto !important; height: 300px; }
 
 }
 @media only screen and (max-width: 1023px) {
@@ -391,8 +383,6 @@ small.small60 { font-size: 60%; }
 .sub .masthead .ui.container > .ui.stackable.grid > .one.column { display: none; }
 .sub .masthead .ui.grid > .column:not(.row) { position: relative; display: inline-block; width: 100% !important; margin: 0 0 !important; }
 .sub .masthead .ui.grid, .sub .masthead .ui.grid .tright { text-align: center; }
-.sub .masthead .ui.grid .vmiddle { position: relative; top: 0; transform: none; }
-.sub .masthead .ui.grid .subhero .ui.image { float: none; margin: 0 auto; }
 #csview .ui.medium.right.floated.image { width: 30%; }
 #subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 #stlist .ui.two.doubling.cards > .card { width: calc(50% - 2em); margin-left: 1em; margin-right: 1em; }
@@ -455,7 +445,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: -114px; left: -700px; }
 .sub #bluesky #hed .ui.container.nav .cloud.one { top: -120px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; right: -480px; }
-.sub .masthead .ui.grid .subhero .ui.image { padding: 0 20px; }
 #mnav .item, #xnav .item { display: none; }
 #mnav .header.item { display: block; }
 #mnav .toc.item, #xnav .toc.item, #mnav .item.logo, #xnav .item.logo { display: block; }
@@ -488,7 +477,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 720px) { /*google+material*/
 
-.hom #hed, .sub #hed { min-height: 540px; height: auto !important; height: 540px; }
+#hed { min-height: 540px; height: auto !important; height: 540px; }
 
 }
 @media only screen and (max-width: 667px) {
@@ -502,7 +491,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 640px) { /*640x360androids*/
 
 .w540 { width: 100%; }
-.hom #hed, .sub #hed { min-height: 500px; height: auto !important; height: 500px; }
+#hed { min-height: 500px; height: auto !important; height: 500px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -520px; }
 
 }
@@ -523,7 +512,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 480px) { /*google+material*/
 
-.hom #hed, .sub #hed { min-height: 460px; height: auto !important; height: 460px; }
+#hed { min-height: 460px; height: auto !important; height: 460px; }
 #csview .ui.medium.right.floated.image { width: 40%; }
 #stlist .ui.three.doubling.cards > .card, #stlist .ui.two.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
@@ -540,8 +529,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 414px) {
 
 .ui.icon.message > .content { font-size: .9em; }
-.sub .masthead .ui.grid .subhero .ui.image { padding: 0; }
-.hom #hed, .sub #hed { min-height: 430px; height: auto !important; height: 430px; }
+#hed { min-height: 430px; height: auto !important; height: 430px; }
 #subnav .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
 #testimonials .ui.card { font-size: 15px; height: 540px; }
 
@@ -551,7 +539,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ui.four.doubling.cards, .ui.five.doubling.cards { max-width: 100%; margin-left: auto; margin-right: auto; }
 .ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 100%; }
 .ui.masthead.segment .homhero { padding: 20px 20px 0 20px; }
-.hom #hed, .sub #hed { min-height: 420px; height: auto !important; height: 420px; }
+#hed { min-height: 420px; height: auto !important; height: 420px; }
 #csview .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
 #testimonials .ui.card { font-size: 14px; height: 474px; }
@@ -566,7 +554,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 360px) { /*google+material*/
 
 #viw.ui.container { width: 90% !important; }
-.hom #hed, .sub #hed { min-height: 400px; height: auto !important; height: 400px; }
+#hed { min-height: 400px; height: auto !important; height: 400px; }
 .masthead h1.ui.header .ui.image.medium { width: 80%; }
 #csview .ui.medium.right.floated.image { display: none; }
 #testimonials .ui.card { height: 510px; }
