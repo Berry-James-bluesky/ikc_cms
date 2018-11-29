@@ -1,0 +1,28 @@
+
+{% set t1 = getContent(26) %}
+{% set t2 = getContent(27) %}
+{% set t3 = getContent(28) %}
+{% set t4 = getContent(29) %}
+{% set t5 = getContent(30) %}
+{% set t6 = getContent(31) %}
+
+<script src="/app/website/bluesky/js/timelineMe.js"></script>
+<script>$(function(){
+
+$('#history-timeline').timelineMe({ items:[
+
+{ type: 'smallItem', label: '<span>{{ t1.title }}</span>', shortContent: '<div class="tmwrp"><p>{{ t1.content|raw }}</p></div>' },
+{ type: 'smallItem', label: '<span>{{ t2.title }}</span>', shortContent: '<div class="tmwrp"><p>{{ t2.content|raw }}</p></div>' },
+{ type: 'smallItem', label: '<span>{{ t3.title }}</span>', shortContent: '<div class="tmwrp"><p>{{ t3.content|raw }}</p></div>' },
+{ type: 'smallItem', label: '<span>{{ t4.title }}</span>', shortContent: '<div class="tmwrp"><p>{{ t4.content|raw }}</p></div>' },
+{ type: 'smallItem', label: '<span>{{ t5.title }}</span>', shortContent: '<div class="tmwrp"><p>{{ t5.content|raw }}</p></div>' },
+{ type: 'smallItem', label: '<span>{{ t6.title }}</span>', shortContent: '<div class="tmwrp"><p>{{ t6.content|raw }}</p></div>' }
+
+]});
+
+});</script>
+
+<div class="emspace h40 floatc"></div>
+<div id="history-timeline"></div>
+<div class="emspace h40 floatc"></div>
+
