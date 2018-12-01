@@ -98,7 +98,8 @@ body, .masthead h1.ui.header .sub.header, .ui.header { color: #333; }
 #fot .fotwrp, #mnav .tel.item:hover { background-color: #333; }
 .timeline-me-shortcontent { background: #333 !important; }
 
-a:hover, #sitemap .ui.list .list > .item a.header:hover, #sitemap .ui.list > .item a.header:hover { color: #ff9f40 !important; }
+a:hover { color: #ff9f40; }
+#sitemap .ui.list .list > .item a.header:hover, #sitemap .ui.list > .item a.header:hover { color: #ff9f40 !important; }
 a:visited { color: #ab91e6; }
 
 #socnav a.item { color: #ccc; }

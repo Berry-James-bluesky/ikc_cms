@@ -13,9 +13,11 @@
 				<div class="header">{{ item.name }}</div>
 				<div class="meta">{{ item.title }}</div>
 			</div><!-- /.content -->
+{% if item.social %}
 			<div class="extra content">
 				<a href="{{ item.social }}" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> Connect with {{ item.name|split(' ')|slice(0,1)|join }} on LinkedIn</a>
 			</div><!-- /.extra.content -->
+{% endif %}
 		</div><!-- /.card -->
 
 {# if item.featured_image #}
