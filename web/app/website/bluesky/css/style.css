@@ -86,12 +86,12 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 
 /*** colour schemes ***/
-#fot a.addrlnk, #socnav .ui.icon.button:hover, #mnav .tel.item, .timeline-me-shortcontent { color: #fff !important; }
+#fot a.addrlnk, #socnav .ui.icon.button:hover, #mnav .tel.item:hover, .timeline-me-shortcontent { color: #fff !important; }
 #snav .header.item.logo, #socnav .ui.icon.button { background-color: #fff; }
 
-a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item.active { color: #4563cc; }
-#sitemap .ui.list .list > .item a.header, #sitemap .ui.list > .item a.header { color: #4563cc !important; }
-#socnav .ui.icon.button:hover, #mnav .tel.item { background-color: #4563cc; }
+a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.ui.secondary.pointing.menu .item.active { color: #4563cc; }
+.ui.secondary.pointing.menu .header.item.active, #sitemap .ui.list .list > .item a.header, #sitemap .ui.list > .item a.header { color: #4563cc !important; }
+#socnav .ui.icon.button:hover/*, #mnav .tel.item*/ { background-color: #4563cc; }
 .timeline-me-smallitem .timeline-me-label .timeline-me-picto { background: #4563cc !important; }
 
 body, .masthead h1.ui.header .sub.header, .ui.header { color: #333; }
