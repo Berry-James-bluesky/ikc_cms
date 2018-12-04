@@ -5,12 +5,15 @@
 	<div class="ui field">
 		<label>Filter case studies by:</label>
 
-<select name="casestudies" multiple="" class="casestudies ui dropdown selection multiple">
-<option value="">All</option>
-{% set tag = getDirectoryCategoryData() %}
-{% for opt in tag.items %}
-<option value="{{ opt._tag }}" id="cscat-{{ opt.id }}">{{ opt._tag }}</option>
-{% endfor %}
+<select id="casefil" name="casefil" class="casestudies ui dropdown selection">
+<option value="All">All</option>
+<option value="Start-up Development">Start-up Development</option>
+<option value="System Integration">System Integration</option>
+<option value="App Development">App Development</option>
+<option value="Data Science">Data Science</option>
+<option value="Custom Web Applications">Custom Web Applications</option>
+<option value="Exploring Ideas">Exploring Ideas</option>
+
 </select>
 
 	</div>
@@ -19,12 +22,12 @@
 
 
 
-<div class="ui four doubling link cards">
+<div id="casecon" class="ui four doubling link cards">
 
 {% set list = getDirectoryCategoryData() %}
 {% for ditm in list.items %}
 
-	<a class="card" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
+	<a class="card f_{{ ditm._tag|replace({' ':''})|lower }}" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 		<div class="image">
 			<img src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference) }}{% else %}/_image/media/8/_logo.png{% endif %}">
 		</div>

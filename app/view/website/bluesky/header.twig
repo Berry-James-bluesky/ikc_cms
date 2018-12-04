@@ -43,7 +43,7 @@
 {% if _route._handler.module == "staff" %}Our Team
 {% elseif _route._handler.module == "blog" %}Thoughts
 {% else %}
-{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
+{% if item.name %}{{ item.name|raw }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %}
 {% endif %}
 
 {% endif %}
@@ -101,7 +101,7 @@
 
 					</div><!-- /.rr -->
 					<div class="emspace h1 floatc"></div>
-				</div><!-- /.ui.page.grid -->
+				</div><!-- /#hiw -->
 
 			</div><!-- /.masthead.segment -->
 		</section><!-- /#hed -->

@@ -10,13 +10,29 @@
 $(function(){
 
 	/* semanticsUI general */
-	$('.ui.dropdown').dropdown();
 	$('.ui.checkbox').checkbox();
 	$('.shape').shape();
 
 	$('.special.card .image, .special.cards .image').dimmer({ on:'hover' });
 	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });
 	$('.shapefr').on('click',function(){ $('.shape').shape('flip right'); });
+
+	$('#casefil.ui.dropdown').dropdown({
+		onChange:function(val){
+
+			$("#casecon .card").hide();
+
+			if (val == "Start-up Development"){ $("#casecon .card.f_start-updevelopment").show(); }
+			else if (val == "System Integration"){ $("#casecon .card.f_systemintegration").show(); }
+			else if (val == "App Development"){ $("#casecon .card.f_appdevelopment").show(); }
+			else if (val == "Data Science"){ $("#casecon .card.f_datascience").show(); }
+			else if (val == "Custom Web Applications"){ $("#casecon .card.f_customwebapplications").show(); }
+			else if (val == "Exploring Ideas"){ $("#casecon .card.f_exploringideas").show(); }
+			else { $("#casecon .card").show(); }
+
+		}
+	});
+
 
 	/* main navigation */
 	$('.masthead').visibility({
