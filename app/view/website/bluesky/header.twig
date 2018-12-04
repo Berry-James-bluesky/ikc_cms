@@ -50,7 +50,10 @@
 
 							</h1>
 
-{% if _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
+{% if _route._handler.module == "blog" or (_route._handler._app == "page" and item.id == 5) %}
+{% set cb = getContent(32) %}
+{{ cb.content|raw }}
+{% elseif _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
 <p>{{ item.summary|raw }}</p>
 {% elseif _route._handler._app == "staff" and _route._method == "itemView" %}
 <p>Meet the people who bring BlueSky to life</p>
@@ -58,10 +61,8 @@
 
 {% if _route._handler._app == "directory" and _route._method == "itemView" %}
 <span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
-
 {% elseif _route._handler._app == "staff" and _route._method == "itemView" %}
 <span class="ui tag label mini">{% if item.id == 1 or item.id == 2 %}Directors{% else %}Leadership team{% endif %}</span>
-
 {% endif %}
 
 					</div><!-- /.ll -->
