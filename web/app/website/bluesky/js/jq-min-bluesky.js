@@ -13,7 +13,7 @@ $(function(){
 	$('.ui.checkbox').checkbox();
 	$('.shape').shape();
 
-	$('.special.card .image, .special.cards .image').dimmer({ on:'hover' });
+	$('.special .image, .special.card .image, .special.cards .image').dimmer({ on:'hover' });
 	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });
 	$('.shapefr').on('click',function(){ $('.shape').shape('flip right'); });
 

@@ -20,18 +20,16 @@
 {% endif %}
 		</div><!-- /.card -->
 
-{# if item.featured_image #}
 		<div class="ui basic modal dapop">
 			<i class="close icon"></i>
 			<div class="content">
 				<div class="center">
 					<div class="ui image">
-						<img src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference) }}{% else %}/_image/media/1/_image.png{% endif %}" class="resp" alt="Rizal Farok" />
+						<img src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference) }}{% else %}/_image/media/1/_image.png{% endif %}" class="resp" alt="{{ item.name }}" />
 					</div><!-- /.ui.image -->
 				</div><!-- /.center -->
 			</div><!-- /.content -->
 		</div><!-- /.ui.basic.modal -->
-{# endif #}
 
 	</div><!-- /.column -->
 	<div class="eleven wide column">

@@ -5,66 +5,53 @@
 	{{ item.title }}
 	<time class="sub header" pubdate datetime="{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}"><i class="calendar alternate outline icon"></i>{% if item.date and item.date != 0000-00-00 %}{{ item.date|date("jS F Y") }}{% endif %}</time>
 </h2>
-
-{% if item.tags|length > 0 %}
 <div class="ui divider"></div>
-{% for tag in item.tags %}
-<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
-{% endfor %}
-<div class="emspace h20 floatc"></div>
-{% endif %}
 
-<aside class="ui medium right floated image">
+<div id="postreadcount" class="ui mini labeled active button">
+	<div class="ui icon button"><i class="tasks icon"></i></div>
+	<div class="ui basic left pointing label">34</div>
+</div><!-- /#postreadcount -->
+<a class="ui mini linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i> LinkedIn</a>
+<a class="ui mini twitter button" href="https://twitter.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
+<a class="ui mini facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
+<a class="ui mini pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
+<a class="ui mini google plus button" href="https://plus.google.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
 
-	<div class="column">
-		<div class="ui segment">
-
-			<span class="ui orange right ribbon label">Recent articles</span>
-			<div class="ui link items recentposts">
-
-{% set postList = getLatestBlogItem(4) %}
-{% for post in postList %}
-{% if post.id != item.id %}
-
-				<a class="item" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
-					<div class="content">
-						<div class="ui tiny header">{{ post.title }}</div>
-						<div class="meta"><small><i class="calendar alternate outline icon"></i><time pubdate datetime="{{ post.date|date("jS F Y") }}">{{ post.date|date("jS F Y") }}</time></small></div>
-					</div><!-- /.content -->
-				</a><!-- /.item -->
-
-{% endif %}
-{% endfor %}
-
-				<a class="item" href="/thoughts" title="full listing">
-					<div class="content">
-						<div class="ui button mini"><i class="angle left icon"></i> Back to full article list</div>
-					</div><!-- /.content -->
-				</a><!-- /.item -->
-
-			</div><!-- /.ui.relaxed.link.items -->
-
-{% set tags = getAllPostTags() %}
-{% if tags|length > 0 %}
-
-			<span class="ui teal right ribbon label">Search by tags</span>
-			<div class="emspace h20"></div>
-			<p>
-{% for tag in tags %}
-<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}" title="{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
-{% endfor %}
-			</p>
-
-{% endif %}
-
-		</div><!-- /.ui.segment -->
-	</div><!-- /.column -->
-
-</aside><!-- /.ui.medium.right.floated.image -->
+<div class="ui hidden divider"></div>
 
 {{ renderContent(item.content)|raw }}
 
+{% if item.featured_image %}
+<div class="ui special medium right floated image">
+	<div class="blurring dimmable image">
+		<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop">View image</span></div></div></div>
+		<img src="/_image/{{ item.featured_image.reference }}" class="resp" alt="{{ item.title }}" />
+	</div><!-- /.blurring.dimmable.image -->
+</div>
+<div class="ui basic modal dapop">
+	<i class="close icon"></i>
+	<div class="content">
+		<div class="center">
+			<div class="ui image">
+				<img src="/_image/{{ item.featured_image.reference }}" class="resp" alt="{{ item.title }}" />
+			</div><!-- /.ui.image -->
+		</div><!-- /.center -->
+	</div><!-- /.content -->
+</div><!-- /.ui.basic.modal -->
+{% endif %}
+
+{{ renderContent(item.description)|raw }}
+
+<div class="ui hidden header"></div>
+
+{% if item.tags|length > 0 %}
+{% for tag in item.tags %}
+<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
+{% endfor %}
+{% endif %}
+
 <div class="emspace h20"></div>
+
 <div class="ui feed">
 	<div class="event">
 		<div class="label">
@@ -92,44 +79,32 @@
 	</div><!-- /.event -->
 </div><!-- /..ui.feed -->
 
-<div class="emspace floatc"></div>
-<div class="ui divider"></div>
-<div id="postreadcount" class="ui mini labeled active button">
-<div class="ui icon button"><i class="settings icon"></i></div>
-<div class="ui basic left pointing label">34</div>
-</div><!-- /#postreadcount -->
-<a class="ui mini linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i> LinkedIn</a>
-<a class="ui mini twitter button" href="https://twitter.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
-<a class="ui mini facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
-<a class="ui mini pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
-<a class="ui mini google plus button" href="https://plus.google.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
-
-
-
-<div class="nodisp">
 <div class="emspace h80 floatc"></div>
-<h4 class="ui horizontal divider header nomargin"><i class="newspaper outline icon"></i></h4>
+<h4 class="ui horizontal divider header"><i class="newspaper outline icon"></i> Recent thoughts</h4>
 <div class="ui four doubling centered cards">
 
+	<a class="card blue tiny" href="/thoughts" title="Back to listing">
+		<div class="content">
+			<div class="header spnav">Back to listing</div>
+			<div class="description">{% set cb = getContent(32) %}{{ cb.content|striptags|truncate(80,true,'') }}</div>
+		</div>
+	</a>
+
+{% set postList = getLatestBlogItem(7) %}
 {% for post in postList %}
 {% if post.id != item.id %}
 
-	<a class="card tiny" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+	<a class="card green tiny" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 		<div class="content">
-			<img class="left floated mini ui image" src="{% if post.featured_image %}{{ imgUrl(post.featured_image.reference, 60) }}{% else %}/_image/media/1/_image.png{% endif %}">
 			<div class="header spnav">{{ post.title }}</div>
 			<div class="description">{% if post.summary %}{{ post.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ post.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
 		</div>
-	</a><!-- /.card -->
+	</a>
 
 {% endif %}
 {% endfor %}
 
-</div><!-- /.ui.five.doubling.centered.cards -->
-</div><!-- /.nodisp -->
-
-
-
+</div>
 
 </section><!-- /#psview -->
 

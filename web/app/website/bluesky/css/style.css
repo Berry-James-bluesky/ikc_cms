@@ -122,15 +122,18 @@ a:hover { color: #ff9f40; }
 h1, h2, h3, h4, h5, .ui.header, .ui.message .header, .ui.items > .item > .content > .header, .ui.card > .content > .header:not(.ui), .ui.cards > .card > .content > .header:not(.ui), .ui.steps .step .title { font-family:'Montserrat',sans-serif;font-weight:600!important; }
 .ui.card > .content > .header:not(.ui), .ui.cards:not(.noborder) > .card > .content > .header:not(.ui), .ui.steps .step .title, .ui.link.items.recentposts .header { font-weight:400!important; }
 
+.sub.header { font-family:Lato,'Helvetica Neue',Arial,Helvetica,sans-serif; }
+
 
 html, body, .ui.shape .ui.card { font-size: 17px; }
 .ui.button, .ui.card, .ui.cards { font-size: 14px; }
 .ui.card .meta, .ui.cards > .card .meta { font-size: .9em; line-height: 120%; padding: 5px 0; }
 a.ui.button { margin-bottom: 0.75em; }
 h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
+.ui.modal { width: 80%; }
 .ui.piled.segment, .ui.piled.segments { padding: 1.8em; }
 .ui.bulleted.list, .ui.list, .ui.ordered.list, .ui.ordered.list .list, ol.ui.list, ol.ui.list ol { margin-left: 2rem; }
-#sitemap .ui.list { margin-left: 0; }
+.fotwrp .ui.list, #sitemap .ui.list { margin-left: 0; }
 
 .ui.card .description, .ui.cards .description { line-height: 140%; }
 .ui.card .card.tiny, .ui.cards .card.tiny { font-size: 12px; }
@@ -486,7 +489,7 @@ small.small60 { font-size: 60%; }
 #stview .ui.grid > [class*="five wide"].column { display: none; }
 #stview .ui.grid > [class*="eleven wide"].column { width: 100% !important; }
 #psview .ui.medium.image { display: none; }
-#psview .nodisp { display: block; }
+/*#psview .nodisp { display: block; }*/
 
 }
 @media only screen and (max-width: 800px) {

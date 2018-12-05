@@ -52,7 +52,11 @@
 
 {% if _route._handler.module == "blog" or (_route._handler._app == "page" and item.id == 5) %}
 {% set cb = getContent(32) %}
+{% if _route._handler._app == "page" or _route._method == "listing" %}
 {{ cb.content|raw }}
+{% else %}
+{{ cb.description|raw }}
+{% endif %}
 {% elseif _route._handler._app == "page" or (_route._handler._app == "directory" and _route._method == "itemView") %}
 <p>{{ item.summary|raw }}</p>
 {% elseif _route._handler._app == "staff" and _route._method == "itemView" %}
@@ -73,7 +77,7 @@
 
 {% else %}
 
-{% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" ) %}
+{% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" ) %}
 {{ imgUrl(item.featured_image.reference) }}
 {% else %}
 {% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}
