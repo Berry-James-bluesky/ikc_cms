@@ -17,7 +17,7 @@
 					<i class="large {% if i.id == 1 %}home{% else %}{% if i.id == 6 %}file alternate{% else %}folder open{% endif %} outline{% endif %} icon"></i>
 					<div class="content">
 						<a class="header" href="{{ i._url }}" title="{{ i.title }}">{{ i.title }}</a>
-						<div class="description">{{ i.summary }}</div>
+						<div class="description">{% if i.id == 5 %}{% set cb = getContent(32) %}{{ cb.content|raw }}{% else %}{{ i.summary }}{% endif %}</div>
 
 {% if i._children %}
 						<div class="list">
