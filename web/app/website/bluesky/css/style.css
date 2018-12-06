@@ -174,8 +174,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 #hed {  }
-#con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.jpg) center bottom no-repeat; }
-#fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.jpg) center top no-repeat; }
+#con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
+#fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
 
 .hom #hed { min-height: 940px; height: auto !important; height: 940px; }
 .hom #hed { min-height: 400px; height: auto !important; height: 400px; }
@@ -457,9 +457,9 @@ small.small60 { font-size: 60%; }
 #con .emspace.h80.ctop { height: 40px; }
 
 .emspace.conspc { height: 40px; }
-.emspace.fotspc { height: 40px; }
-#con { background-image: url(../img/_ui/bg_conm.jpg); }
-#fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fotm.jpg); }
+.emspace.fotspc { height: 80px; }
+#con { background-image: url(../img/_ui/bg_conm.png); }
+#fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fotm.png); }
 
 
 }
