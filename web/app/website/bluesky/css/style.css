@@ -263,6 +263,7 @@ small.small60 { font-size: 60%; }
 
 
 
+#psview .ui.header .icon:only-child { margin-right: 4px; }
 #psview .ui.items.recentposts > .item .meta { margin-top: 0; }
 
 
