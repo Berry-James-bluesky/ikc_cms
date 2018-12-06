@@ -234,6 +234,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 small.small60 { font-size: 60%; }
 .ui.header span, .ui.header small { display: block; }
 
+
+
 #postreadcount.ui.mini.labeled.active.button:hover * { cursor: default; }
 #postreadcount.ui.mini.labeled.active.button:hover .ui.icon.button { color: rgba(0,0,0,.6); background-color: #e0e1e2; opacity: 1; }
 
@@ -600,7 +602,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.icon.message > .content { font-size: .9em; }
 #hed { min-height: 430px; height: auto !important; height: 430px; }
-#subnav .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
+#subnav .ui.four.doubling.cards > .card, .hom .ui.three.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(90% - 2em); }
 
 }

@@ -27,24 +27,11 @@
 				<div class="meta"><span class="date">Sector: {{ item.type }}</span></div>
 				<div class="description">{{ item.company }}</div>
 			</div><!-- /.content -->
-
 {% if item.id != 4 and item.id != 8 and item.id != 11 and item.id != 12 %}
-<div class="extra content">
-<span>
-<i class="calendar alternate outline icon"></i>
-Established
-{% if item.id == 1 or item.id == 2 %}in 2007
-{% elseif item.id == 3 %}in 2010
-{% elseif item.id == 5 %}in 1995
-{% elseif item.id == 6 %}in 2016
-{% elseif item.id == 7 %}for 65+ years
-{% elseif item.id == 9 %}for 50 years
-{% elseif item.id == 10 %}in 1952
+			<div class="extra content">
+				<span><i class="calendar alternate outline icon"></i> Established {{ cb.title }}</span>
+			</div><!-- /.extra.content -->
 {% endif %}
-</span>
-</div><!-- /.extra.content -->
-{% endif %}
-
 		</div><!-- /.ui.card -->
 	</div><!-- /.ui.medium.right.floated.image -->
 
