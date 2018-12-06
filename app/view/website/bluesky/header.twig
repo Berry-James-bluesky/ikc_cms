@@ -31,12 +31,12 @@
 
 				<div id="hiw">
 					<div class="ll">
-						<h1 class="ui header">
+						<h1 class="ui header{% if item.is_home_page %} center{% endif %}">
 
 {% if item.is_home_page %}
 
-<img class="ui image medium" src="{{ img }}BlueSky.svg" alt="BlueSky" />
-<div class="sub header">customised online solutions</div>
+Simplify, scale and grow your business
+<div class="sub header">With customised online solutions</div>
 
 {% else %}
 
@@ -48,7 +48,9 @@
 
 {% endif %}
 
-							</h1>
+						</h1>
+
+{% if not item.is_home_page %}
 
 {% if _route._handler.module == "blog" or (_route._handler._app == "page" and item.id == 5) %}
 {% set cb = getContent(32) %}
@@ -69,6 +71,8 @@
 <span class="ui tag label mini">{% if item.id == 1 or item.id == 2 %}Directors{% else %}Leadership team{% endif %}</span>
 {% endif %}
 
+{% endif %}
+
 					</div><!-- /.ll -->
 					<div class="rr">
 
@@ -78,7 +82,7 @@
 {% else %}
 
 {% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" ) %}
-{{ imgUrl(item.featured_image.reference) }}
+{{ imgUrl(item.featured_image.reference,800) }}
 {% else %}
 {% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}
 <img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_startup.png" alt="" />

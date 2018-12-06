@@ -15,7 +15,7 @@
 {% if item.id == 2 %}
 {% include 'body_sub-services.twig' %}
 {% elseif item.id == 3 %}
-{% include 'body_sub-casestudies.twig' %}
+{% include 'body_sub-work.twig' %}
 {% elseif item.id == 5 %}
 {% include 'body_sub-thoughts.twig' %}
 {% elseif item.id == 6 %}
@@ -45,7 +45,7 @@
 
 	<a class="card" href="{{ i._url }}" title="{{ i.title }}">
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference) }}{% else %}/_image/media/1/_image.png{% endif %}">
+			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}/_image/media/1/_image.png{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
@@ -74,7 +74,7 @@
 
 {% if item.parent_id == 2 %}
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference, 300) }}{% else %}{{ img }}iso/{% if i.id == 7 %}hero-sub_startup.png{% elseif i.id == 8 %}hero-sub_system.png{% elseif i.id == 9 %}hero-sub_app.png{% elseif i.id == 10 %}hero-sub_data.png{% elseif i.id == 11 %}hero-sub_custom.png{% elseif i.id == 12 %}hero-sub_ideas.png{% elseif i.id == 13 %}hero-sub_digital.png{% elseif i.id == 21 %}hero-sub_beacons.png{% else %}hero.svg{% endif %}{% endif %}">
+			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}{{ img }}iso/{% if i.id == 7 %}hero-sub_startup.png{% elseif i.id == 8 %}hero-sub_system.png{% elseif i.id == 9 %}hero-sub_app.png{% elseif i.id == 10 %}hero-sub_data.png{% elseif i.id == 11 %}hero-sub_custom.png{% elseif i.id == 12 %}hero-sub_ideas.png{% elseif i.id == 13 %}hero-sub_digital.png{% elseif i.id == 21 %}hero-sub_beacons.png{% else %}hero.svg{% endif %}{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
@@ -82,7 +82,7 @@
 		</div>
 {% else %}
 		<div class="content">
-			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference, 60) }}{% else %}/_image/media/1/_image.png{% endif %}">
+			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,60) }}{% else %}/_image/media/1/_image.png{% endif %}">
 			<div class="header spnav">{{ i.title }}</div>
 			<div class="description">{% if i.summary %}{{ i.summary|striptags|truncate(60,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(60,true,' ..') }}{% endif %}</div>
 		</div>

@@ -20,7 +20,7 @@
 	<div class="ui medium right floated image">
 		<div class="ui card">
 			<div class="image">
-				<img src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference) }}{% else %}/_image/media/8/_logo.png{% endif %}">
+				<img src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference,300) }}{% else %}/_image/media/8/_logo.png{% endif %}">
 			</div>
 			<div class="content">
 				<div class="header">{{ item.name }}</div>
@@ -61,7 +61,7 @@ Established
 
 		<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 			<div class="image">
-				<img src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference) }}{% else %}/_image/media/8/_logo.png{% endif %}">
+				<img src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference,300) }}{% else %}/_image/media/8/_logo.png{% endif %}">
 			</div>
 			<div class="content">
 				<div class="header">{{ ditm.name }}</div>
