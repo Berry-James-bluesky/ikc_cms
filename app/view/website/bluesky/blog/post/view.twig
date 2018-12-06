@@ -83,9 +83,9 @@
 <h4 class="ui horizontal divider header"><i class="newspaper outline icon"></i> Recent thoughts</h4>
 <div class="ui four doubling centered cards">
 
-	<a class="card blue tiny" href="/thoughts" title="Back to listing">
+	<a class="card tiny btl" href="/thoughts" title="Back to listing">
 		<div class="content">
-			<div class="header spnav">Back to listing</div>
+			<div class="header spnav"><i class="newspaper outline icon"></i> Back to listing</div>
 			<div class="description">{% set cb = getContent(32) %}{{ cb.content|striptags|truncate(80,true,'') }}</div>
 		</div>
 	</a>
@@ -94,7 +94,7 @@
 {% for post in postList %}
 {% if post.id != item.id %}
 
-	<a class="card green tiny" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
+	<a class="card tiny" href="{% if post._url %}{{ post._url }}{% else %}/blog/post/{{ post.id }}{% endif %}" title="{{ post.title }}">
 		<div class="content">
 			<div class="header spnav">{{ post.title }}</div>
 			<div class="description">{% if post.summary %}{{ post.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ post.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>

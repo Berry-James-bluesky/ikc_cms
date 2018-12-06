@@ -95,7 +95,7 @@ a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.
 .timeline-me-smallitem .timeline-me-label .timeline-me-picto { background: #4563cc !important; }
 
 body, .masthead h1.ui.header .sub.header, .ui.header { color: #333; }
-#fot .fotwrp, #mnav .tel.item:hover { background-color: #333; }
+#fot.ui.inverted.segment, #mnav .tel.item:hover { background-color: #333; }
 .timeline-me-shortcontent { background: #333 !important; }
 
 a:hover { color: #ff9f40; }
@@ -167,18 +167,15 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 }
 #backtotop.tada { bottom: 14px; }
 
-.emspace.h240 { height: 240px; }
+.emspace.conspc { height: 140px; }
+.emspace.fotspc { height: 400px; }
 .ui.image.center { margin: 0 auto; }
-
 
 
 
 #hed {  }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.jpg) center bottom no-repeat; }
-#fot.ui.inverted.segment { background: transparent url(../img/_ui/bg_fot.jpg) center top no-repeat;
-
-	padding: 0;
-}
+#fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.jpg) center top no-repeat; }
 
 .hom #hed { min-height: 940px; height: auto !important; height: 940px; }
 .hom #hed { min-height: 400px; height: auto !important; height: 400px; }
@@ -265,6 +262,7 @@ small.small60 { font-size: 60%; }
 
 #psview .ui.header .icon:only-child { margin-right: 4px; }
 #psview .ui.items.recentposts > .item .meta { margin-top: 0; }
+#psview .card.btl { background-color: #f7f7f7; }
 
 
 
@@ -358,9 +356,14 @@ small.small60 { font-size: 60%; }
 
 
 /*** responsive ***/
+@media only screen and (min-width: 2561px) {
+
+#con, #fot.ui.inverted.segment { background-size: 100%; }
+
+}
 @media only screen and (max-width: 2560px) {
 
-
+#con, #fot.ui.inverted.segment { background-size: auto; }
 
 }
 @media only screen and (max-width: 1920px) {
@@ -452,6 +455,12 @@ small.small60 { font-size: 60%; }
 .sub .masthead h1.ui.header { font-size: 2em; }
 .sub .masthead h1.ui.header .sub.header { line-height: 100%; }
 #con .emspace.h80.ctop { height: 40px; }
+
+.emspace.conspc { height: 40px; }
+.emspace.fotspc { height: 40px; }
+#con { background-image: url(../img/_ui/bg_conm.jpg); }
+#fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fotm.jpg); }
+
 
 }
 @media only screen and (max-width: 840px) { /*google+material*/

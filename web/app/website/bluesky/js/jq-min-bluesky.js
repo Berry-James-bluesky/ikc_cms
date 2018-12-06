@@ -32,6 +32,8 @@ $(function(){
 
 		}
 	});
+	$('.casestudies.ui.button').on('click',function(){ $('.ui.dropdown').dropdown('restore defaults') });
+
 
 
 	/* main navigation */
@@ -61,11 +63,9 @@ $(function(){
 
 
 
-	/* casestudies */
-	$('.casestudies.ui.button').on('click',function(){ $('.ui.dropdown').dropdown('restore defaults') })
+	$('.cloud').paroller();
 
 
-$('.cloud').paroller();
 
 });
 
