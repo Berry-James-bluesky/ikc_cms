@@ -42,14 +42,6 @@
 
 {{ renderContent(item.description)|raw }}
 
-<div class="ui hidden header"></div>
-
-{% if item.tags|length > 0 %}
-{% for tag in item.tags %}
-<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
-{% endfor %}
-{% endif %}
-
 <div class="emspace h20"></div>
 
 <div class="ui feed">
@@ -74,6 +66,14 @@
 {% endif %}
 
 				<div class="date">{{ getHumanTiming(item.date|date('Y-m-d')) }}</div>
+				<div class="emspace h20 floatc"></div>
+
+{% if item.tags|length > 0 %}
+{% for tag in item.tags %}
+<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
+{% endfor %}
+{% endif %}
+
 			</div><!-- /.summary -->
 		</div><!-- /.content -->
 	</div><!-- /.event -->

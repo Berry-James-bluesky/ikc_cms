@@ -95,7 +95,7 @@ a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.
 .timeline-me-smallitem .timeline-me-label .timeline-me-picto { background: #4563cc !important; }
 
 body, .masthead h1.ui.header .sub.header, .ui.header { color: #333; }
-#fot.ui.inverted.segment, #mnav .tel.item:hover { background-color: #333; }
+#mnav .tel.item:hover { background-color: #333; }
 .timeline-me-shortcontent { background: #333 !important; }
 
 a:hover { color: #ff9f40; }
