@@ -86,7 +86,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 
 /*** colour schemes ***/
-#fot a.addrlnk, #socnav .ui.icon.button:hover, #mnav .tel.item:hover, .timeline-me-shortcontent { color: #fff !important; }
+#hed, .masthead h1.ui.header .sub.header, #fot a.addrlnk, #socnav .ui.icon.button:hover, #mnav .tel.item:hover, .timeline-me-shortcontent { color: #fff !important; }
 #snav .header.item.logo, #socnav .ui.icon.button { background-color: #fff; }
 
 a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.ui.secondary.pointing.menu .item.active { color: #4563cc; }
@@ -94,7 +94,7 @@ a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.
 #socnav .ui.icon.button:hover/*, #mnav .tel.item*/ { background-color: #4563cc; }
 .timeline-me-smallitem .timeline-me-label .timeline-me-picto { background: #4563cc !important; }
 
-body, .masthead h1.ui.header .sub.header, .ui.header { color: #333; }
+body/*, .masthead h1.ui.header .sub.header, .ui.header*/ { color: #333; }
 #mnav .tel.item:hover { background-color: #333; }
 .timeline-me-shortcontent { background: #333 !important; }
 
@@ -177,8 +177,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
 #fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
 
-.hom #hed { min-height: 940px; height: auto !important; height: 940px; }
-.hom #hed { min-height: 672px; height: auto !important; height: 672px; }
+.hom #hed, .sub #hed { min-height: 400px; height: auto !important; height: 400px; }
 
 
 
@@ -188,6 +187,9 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 640px; right: -460px; }
 #bluesky #hed .ui.container.nav .cloud.three { width: 320px; height: 129px; top: 940px; left: -320px; }
 #bluesky #hed .ui.container.nav .cloud.four { width: 320px; height: 129px; top: 1030px; left: -410px; }
+
+#hed .ui.secondary.inverted.menu a.item, #hed .ui.secondary.inverted.menu a.tel.item:hover { color: #fff !important; }
+#hed .ui.secondary.inverted.menu a.item:hover, #hed .ui.secondary.inverted.menu a.item.active { color: #f2711c !important; }
 
 .sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; }
 .sub #bluesky #hed .ui.container.nav .cloud.three { top: 700px; }
