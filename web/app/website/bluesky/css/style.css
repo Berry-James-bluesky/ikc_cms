@@ -167,8 +167,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 }
 #backtotop.tada { bottom: 14px; }
 
-.emspace.conspc { height: 140px; }
-.emspace.fotspc { height: 400px; }
+.emspace.conspc { height: 200px; }
+.emspace.fotspc { height: 180px; }
 .ui.image.center { margin: 0 auto; }
 
 
@@ -358,19 +358,19 @@ small.small60 { font-size: 60%; }
 
 
 /*** responsive ***/
-@media only screen and (min-width: 2561px) {
+@media only screen and (max-width: 2560px) {
+
+
+
+}
+@media only screen and (min-width: 1921px) {
 
 #con, #fot.ui.inverted.segment { background-size: 100%; }
 
 }
-@media only screen and (max-width: 2560px) {
-
-#con, #fot.ui.inverted.segment { background-size: auto; }
-
-}
 @media only screen and (max-width: 1920px) {
 
-
+#con, #fot.ui.inverted.segment { background-size: auto; }
 
 }
 @media only screen and (max-width: 1680px) {
@@ -445,7 +445,8 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 960px) { /*google+material*/
 
-
+.emspace.conspc { height: 60px; }
+.emspace.fotspc { height: 140px; }
 
 }
 @media only screen and (max-width: 900px) {
@@ -458,11 +459,11 @@ small.small60 { font-size: 60%; }
 .sub .masthead h1.ui.header .sub.header { line-height: 100%; }
 #con .emspace.h80.ctop { height: 40px; }
 
-.emspace.conspc { height: 40px; }
-.emspace.fotspc { height: 80px; }
+
+/*
 #con { background-image: url(../img/_ui/bg_conm.png); }
 #fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fotm.png); }
-
+*/
 
 }
 @media only screen and (max-width: 840px) { /*google+material*/
