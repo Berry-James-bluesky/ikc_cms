@@ -173,23 +173,24 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#hed { background: transparent url(../img/_ui/bg_hed.jpg) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
+#hed { background: transparent url(../img/_ui/bg_hed.png) center bottom no-repeat; }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
 #fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
 
-.hom #hed, .sub #hed { min-height: 400px; height: auto !important; height: 400px; }
+.hom #hed { min-height: 420px; height: auto !important; height: 420px; }
+.sub #hed { min-height: 500px; height: auto !important; height: 500px; }
 
 
 
 #bluesky #hed .ui.container, #hed #hiw, #con #viw { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
-#bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; }
+#bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; display: none; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 640px; right: -460px; }
 #bluesky #hed .ui.container.nav .cloud.three { width: 320px; height: 129px; top: 940px; left: -320px; }
 #bluesky #hed .ui.container.nav .cloud.four { width: 320px; height: 129px; top: 1030px; left: -410px; }
 
 #hed .ui.secondary.inverted.menu a.item, #hed .ui.secondary.inverted.menu a.tel.item:hover { color: #fff !important; }
-#hed .ui.secondary.inverted.menu a.item:hover, #hed .ui.secondary.inverted.menu a.item.active { color: #f2711c !important; }
+#hed .ui.secondary.inverted.menu a.item:hover, #hed .ui.secondary.inverted.menu a.item.active { color: #333 !important; }
 
 .sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; }
 .sub #bluesky #hed .ui.container.nav .cloud.three { top: 700px; }
@@ -367,12 +368,12 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (min-width: 1921px) {
 
-#con, #fot.ui.inverted.segment { background-size: 100%; }
+#hed, #con, #fot.ui.inverted.segment { background-size: 100%; }
 
 }
 @media only screen and (max-width: 1920px) {
 
-#con, #fot.ui.inverted.segment { background-size: auto; }
+#hed, #con, #fot.ui.inverted.segment { background-size: auto; }
 
 }
 @media only screen and (max-width: 1680px) {
