@@ -7,7 +7,7 @@
 
 	<div class="item">
 		<div class="ui small image">
-			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="" />
+			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth" />
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
@@ -26,7 +26,7 @@
 				<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag|replace({' ':'-','/':'-'}) }}">{{ tag }}</a>
 				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
 				{% endfor %}
-				<a class="ui right floated primary button" href="{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article<i class="right chevron icon"></i></a>
+				<a class="ui right floated primary button" href="{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article <i class="right chevron icon"></i></a>
 			</div><!-- /.extra -->
 		</div><!-- /.content -->
 	</div><!-- /.item -->
