@@ -605,7 +605,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.icon.message > .content { font-size: .9em; }
 #hed { min-height: 430px; height: auto !important; height: 430px; }
-#subnav .ui.four.doubling.cards > .card, .hom .ui.three.doubling.cards > .card { width: calc(100% - 2em); }
+#subnav .ui.four.doubling.cards > .card, .ui.three.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(90% - 2em); }
 
 }
