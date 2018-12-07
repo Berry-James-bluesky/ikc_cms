@@ -74,12 +74,10 @@ Simplify, scale and grow your business
 {% endif %}
 
 					</div><!-- /.ll -->
+
+{% if not item.is_home_page %}
+
 					<div class="rr">
-
-{% if item.is_home_page %}
-<img class="ui image homhero" src="{{ img }}iso/hero.svg" alt="BlueSky ecosystem" width="100%;" />
-
-{% else %}
 
 {% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" ) %}
 {{ imgUrl(item.featured_image.reference,800) }}
@@ -105,10 +103,11 @@ Simplify, scale and grow your business
 {% endif %}
 {% endif %}
 
-{% endif %}
-
 					</div><!-- /.rr -->
 					<div class="emspace h1 floatc"></div>
+
+{% endif %}
+
 				</div><!-- /#hiw -->
 
 			</div><!-- /.masthead.segment -->

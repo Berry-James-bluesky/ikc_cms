@@ -173,12 +173,12 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#hed {  }
+#hed { background: transparent url(../img/_ui/bg_hed.jpg) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
 #fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
 
 .hom #hed { min-height: 940px; height: auto !important; height: 940px; }
-.hom #hed { min-height: 400px; height: auto !important; height: 400px; }
+.hom #hed { min-height: 672px; height: auto !important; height: 672px; }
 
 
 
