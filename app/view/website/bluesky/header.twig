@@ -79,29 +79,30 @@ Simplify, scale and grow your business
 
 					<div class="rr">
 
-{% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" ) %}
-{{ imgUrl(item.featured_image.reference,800) }}
-{% else %}
 {% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_startup.png" alt="BlueSky Perth Start-up Development" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/startup.png" alt="BlueSky Perth Start-up Development" />
 {% elseif (_route._handler._app == "page" and item.id == 8) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "system integration" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_system.png" alt="BlueSky Perth System Integration" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/systems.png" alt="BlueSky Perth System Integration" />
 {% elseif (_route._handler._app == "page" and item.id == 9) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "app development" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_app.png" alt="BlueSky Perth App Development" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/apps.png" alt="BlueSky Perth App Development" />
 {% elseif (_route._handler._app == "page" and item.id == 10) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "data science" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_data.png" alt="BlueSky Perth Data Science" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/data.png" alt="BlueSky Perth Data Science" />
 {% elseif (_route._handler._app == "page" and item.id == 11) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "custom web development" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_custom.png" alt="BlueSky Perth Custom Web Development" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/custom.png" alt="BlueSky Perth Custom Web Development" />
 {% elseif (_route._handler._app == "page" and item.id == 12) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "exploring ideas" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_ideas.png" alt="BlueSky Perth Exploring Ideas" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/ideas.png" alt="BlueSky Perth Exploring Ideas" />
 {% elseif (_route._handler._app == "page" and item.id == 13) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "digital marketing" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_digital.png" alt="BlueSky Perth Digital Marketing" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/digital.png" alt="BlueSky Perth Digital Marketing" />
 {% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero-sub_beacons.png" alt="BlueSky Perth Beacons Beacon Technology" />
+<img class="ui image svg" src="/app/website/bluesky/img/iso/beacons.png" alt="BlueSky Perth Beacons Beacon Technology" />
+
+{% elseif item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" ) %}
+{{ imgUrl(item.featured_image.reference,800) }}
+
 {% else %}
-<img class="ui image" src="/app/website/bluesky/img/iso/hero.svg" alt="BlueSky Perth Customised Online Solutions" width="100%;" />
+<img class="ui image svg" width="100%;" src="/app/website/bluesky/img/iso/hero.svg" alt="BlueSky Perth Customised Online Solutions" />
 {% endif %}
-{% endif %}
+
 
 					</div><!-- /.rr -->
 					<div class="emspace h1 floatc"></div>
