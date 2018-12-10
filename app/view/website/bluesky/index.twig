@@ -27,7 +27,6 @@
 {% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}
 <meta property="og:image" content="/app/website/bluesky/img/iso/beacons.svg" />
 {% elseif item.featured_image %}
-{{ imgUrl(item.featured_image.reference,800) }}
 <meta property="og:image" content="{{ item.featured_image.reference }}" />
 {% else %}
 <meta property="og:image" content="app/website/bluesky/img/BlueSkyDigitalLabs-Perth.jpg" />

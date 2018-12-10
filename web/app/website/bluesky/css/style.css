@@ -186,14 +186,14 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #bluesky #hed .ui.container, #hed #hiw, #con #viw { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
 #bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; display: none; }
-#bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 640px; right: -460px; }
+#bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 740px; right: -460px; }
 #bluesky #hed .ui.container.nav .cloud.three { width: 320px; height: 129px; top: 940px; left: -320px; }
 #bluesky #hed .ui.container.nav .cloud.four { width: 320px; height: 129px; top: 1030px; left: -410px; }
 
 #hed .ui.secondary.inverted.menu a.item, #hed .ui.secondary.inverted.menu a.tel.item:hover { color: #fff !important; }
 #hed .ui.secondary.inverted.menu a.item:hover, #hed .ui.secondary.inverted.menu a.item.active { color: #333 !important; }
 
-.sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; }
+.sub #bluesky #hed .ui.container.nav .cloud.two { top: 500px; }
 .sub #bluesky #hed .ui.container.nav .cloud.three { top: 700px; }
 .sub #bluesky #hed .ui.container.nav .cloud.four { top: 790px; }
 
@@ -217,8 +217,8 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
 
 #hiw { width: 1124px; margin: 0 auto; }
-#hiw .ll { width: 40%; }
-#hiw .rr { width: 56%; }
+#hiw .ll { width: 46%; }
+#hiw .rr { width: 50%; }
 .hom #hiw .ll, .hom #hiw .rr { width: 100%; float: none; display: block; }
 .hom #hiw .rr { padding-top: 34px; }
 .sub #hiw .rr .svg { margin: 0 auto; }
@@ -477,7 +477,7 @@ small.small60 { font-size: 60%; }
 
 .ui.five.doubling.cards > .card, .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: 20px; }
-#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 420px; }
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 520px; }
 
 #mnav .item, #xnav .item { display: none; }
 #mnav .header.item { display: block; }
@@ -508,7 +508,7 @@ small.small60 { font-size: 60%; }
 
 .w740 { width: 100%; }
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: 0; }
-#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 440px; }
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 540px; }
 
 }
 @media only screen and (max-width: 768px) {
@@ -526,7 +526,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .fontsize48 { font-size: 38px; }
 #bluesky #hed .ui.container.nav .cloud.one, .sub #bluesky #hed .ui.container.nav .cloud.one { top: -114px; left: -700px; }
 .sub #bluesky #hed .ui.container.nav .cloud.one { top: -120px; }
-#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 400px; right: -480px; }
+#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { top: 500px; right: -480px; }
 #csview .ui.card .description, #csview .ui.card .extra.content { font-size: 12px; }
 
 }
