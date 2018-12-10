@@ -40,7 +40,7 @@
 	<div class="emspace h80 floatc"></div>
 	<h4 class="ui horizontal divider header nomargin"><i class="briefcase icon"></i></h4>
 
-	<div class="ui four doubling centered cards">
+	<div class="ui four doubling centered link cards notransform">
 
 {% set list = getDirectoryCategoryData() %}
 {% for ditm in list.items %}
@@ -48,7 +48,7 @@
 
 		<a class="card tiny" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 			<div class="image">
-				<img src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference,300) }}{% else %}/_image/media/8/_logo.png{% endif %}" alt="{{ ditm.name }} | {{ ditm._tag }} | BlueSky Perth">
+				<img class="resp" src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference,300) }}{% else %}/_image/media/8/_logo.png{% endif %}" alt="{{ ditm.name }} | {{ ditm._tag }} | BlueSky Perth">
 			</div>
 			<div class="content">
 				<div class="header">{{ ditm.name }}</div>

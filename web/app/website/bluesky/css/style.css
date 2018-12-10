@@ -147,7 +147,6 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-.serv.resp { width: auto!important; margin: 0 auto; }
 .fontsize32 .sub.header { font-size: .7em; }
 
 
@@ -280,6 +279,13 @@ small.small60 { font-size: 60%; }
 .ui.cards.noborder > .card > .content { padding: 1em 0; }
 .ui.cards.noborder.centered * { text-align: center; }
 
+.ui.cards.notransform .card:hover { transform: none; }
+.ui.cards.notransform .card .image { overflow: hidden; }
+.ui.cards.notransform .card:hover .image img.resp { -ms-transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1.1); transform: scale(1.1,1.1); }
+.ui.cards.notransform .card .image img.serv.resp { width: auto!important; margin: 0 auto; -ms-transform: scale(0.7,0.7); -webkit-transform: scale(0.7,0.7); transform: scale(0.7,0.7); }
+.ui.cards.notransform .card:hover .image img.serv.resp { -ms-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); }
+
+
 
 
 #sitemap .ui.list { font-size: .9em; }
@@ -322,7 +328,7 @@ small.small60 { font-size: 60%; }
 
 .timeline-me-smallitem .timeline-me-shortcontent .tmwrp { padding: 3% 4%; position: relative; overflow: hidden; }
 .timeline-me-smallitem .timeline-me-shortcontent .tmwrp p { }
-.timeline-me-smallitem .timeline-me-shortcontent .tmwrp.tright p {  }
+.timeline-me-smallitem .timeline-me-shortcontent .tmwrp.tright p {	}
 .timeline-me-smallitem.timeline-me-right .timeline-me-shortcontent .tmwrp.hasimg { padding: 2% 34% 2% 4%; }
 .timeline-me-smallitem.timeline-me-left .timeline-me-shortcontent .tmwrp.hasimg { padding: 2% 4% 2% 34%; }
 .timeline-me-smallitem .timeline-me-shortcontent .tmimg { position: absolute; top: 0; width: 30%; height: 100%; background: center top no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
@@ -667,7 +673,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 a, a:visited { text-decoration: underline; }
 /*a[href]:after { content: " (" attr(href) ")"; }*/
 /*abbr[title]:after { content: " (" attr(title) ")"; }*/
-/*.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }*/  /* Don't show links for images, or javascript/internal links */
+/*.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }*/	/* Don't show links for images, or javascript/internal links */
 pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
 thead { display: table-header-group; } /* h5bp.com/t */
 tr, img { page-break-inside: avoid; }

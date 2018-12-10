@@ -38,14 +38,14 @@
 
 {% if item.id == 4 %}
 
-<div class="ui four doubling centered cards noborder">
+<div class="ui four doubling centered link cards notransform noborder">
 
 {% for i in subnav %}
 {% if i.is_navigation %}
 
 	<a class="card" href="{{ i._url }}" title="{{ i.title }}">
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth">
+			<img class="resp" src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
@@ -65,7 +65,7 @@
 <div class="emspace h80 floatc"></div>
 <h4 class="ui horizontal divider header nomargin"><i class="file alternate icon"></i></h4>
 <section id="subnav">
-<div class="ui four doubling centered cards{% if item.parent_id == 2 %} noborder{% endif %}">
+<div class="ui four doubling centered link cards{% if item.parent_id == 2 %} notransform noborder{% endif %}">
 {% endif %}
 {% for i in subnav %}
 {% if i.is_navigation %}
@@ -74,7 +74,7 @@
 
 {% if item.parent_id == 2 %}
 		<div class="image">
-			<img src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,300) }}{% else %}{{ img }}iso/{% if i.id == 7 %}hero-sub_startup.png{% elseif i.id == 8 %}hero-sub_system.png{% elseif i.id == 9 %}hero-sub_app.png{% elseif i.id == 10 %}hero-sub_data.png{% elseif i.id == 11 %}hero-sub_custom.png{% elseif i.id == 12 %}hero-sub_ideas.png{% elseif i.id == 13 %}hero-sub_digital.png{% elseif i.id == 21 %}hero-sub_beacons.png{% else %}hero.svg{% endif %}{% endif %}" alt="{{ i.title }} | BlueSky Perth">
+			<img class="serv resp" src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference) }}{% else %}/app/website/bluesky/img/iso/hero.svg{% endif %}" alt="{{ i.title }} | BlueSky Perth">
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
