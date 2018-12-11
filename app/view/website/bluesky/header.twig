@@ -4,7 +4,7 @@
 				<div class="ui container nav">
 
 <div class="cloud one my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
-<div class="cloud two my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
+<!--{#<div class="cloud two my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>#}-->
 <div class="cloud three my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
 <div class="cloud four my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
 
@@ -29,7 +29,7 @@
 
 				<div class="emspace h80 mtop"></div>
 
-				<div id="hiw"{% if not (_route._handler._app == "page" and item.parent_id == 2) and not (_route._handler._app == "directory" and _route._method == "itemView") %} class="center"{% endif %}>
+				<div id="hiw" class="{% if (_route._handler._app == "page" and item.parent_id == 2) or (_route._handler._app == "directory" and _route._method == "itemView") %}iso{% else %}center{% endif %}">
 {% if (_route._handler._app == "page" and item.parent_id == 2) or (_route._handler._app == "directory" and _route._method == "itemView") %}
 					<div class="ll">
 {% endif %}
@@ -72,10 +72,6 @@ Simplify, scale and grow your business
 
 {% endif %}
 
-{% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" and (_route._handler._app != "page" and item.parent_id != 2) ) %}
-{{ imgUrl(item.featured_image.reference,800) }}
-{% endif %}
-
 {% if (_route._handler._app == "page" and item.parent_id == 2) or (_route._handler._app == "directory" and _route._method == "itemView") %}
 
 					</div><!-- /.ll -->
@@ -105,6 +101,20 @@ Simplify, scale and grow your business
 {% endif %}
 
 				</div><!-- /#hiw -->
+
+{% if not (_route._handler._app == "page" and item.parent_id == 2) and not (_route._handler._app == "directory" and _route._method == "itemView") %}
+{#{% if item.featured_image and (_route._handler._app != "directory" and _route._handler._app != "staff" and _route._handler._app != "blog" and (_route._handler._app != "page" and item.parent_id != 2) ) %}#}
+				<section id="fimg">
+					<div class="emspace h40"></div>
+
+<img src="{{ img }}page/{{ item.id }}.svg" width="100%" alt="{{ item.name }}" />
+<!--{#
+{{ imgUrl(item.featured_image.reference,800) }}
+#}-->
+
+				</section><!-- /#fimg -->
+{#{% endif %}#}
+{% endif %}
 
 			</div><!-- /.masthead.segment -->
 		</section><!-- /#hed -->

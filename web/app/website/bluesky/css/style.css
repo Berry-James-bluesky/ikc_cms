@@ -179,19 +179,21 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#bluesky #hed .ui.container, #hed #hiw, #con #viw { position: relative; z-index: 1; }
+#bluesky #hed .ui.container, #hed #hiw, #con #viw/*, #fimg*/ { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
-#bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; }
-#bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 500px; right: -460px; }
+#bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: -20px; left: -654px; }
+#bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 500px; right: -460px; display: none; }
 #bluesky #hed .ui.container.nav .cloud.three { width: 320px; height: 129px; top: 940px; left: -320px; }
 #bluesky #hed .ui.container.nav .cloud.four { width: 320px; height: 129px; top: 1030px; left: -410px; }
-
-#hed .ui.secondary.inverted.menu a.item, #hed .ui.secondary.inverted.menu a.tel.item:hover { color: #fff !important; }
-#hed .ui.secondary.inverted.menu a.item:hover, #hed .ui.secondary.inverted.menu a.item.active { color: #333 !important; }
-
+/*
 .sub #bluesky #hed .ui.container.nav .cloud.two { top: 500px; }
 .sub #bluesky #hed .ui.container.nav .cloud.three { top: 700px; }
 .sub #bluesky #hed .ui.container.nav .cloud.four { top: 790px; }
+*/
+
+
+#hed .ui.secondary.inverted.menu a.item, #hed .ui.secondary.inverted.menu a.tel.item:hover { color: #fff !important; }
+#hed .ui.secondary.inverted.menu a.item:hover, #hed .ui.secondary.inverted.menu a.item.active { color: #333 !important; }
 
 
 
@@ -215,9 +217,14 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #mnav .tel.item .icon, #xnav.ui.menu .item > i.icon { margin-right: 0; }
 #snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
 
-#hiw { width: 1124px; margin: 0 auto; min-height: 340px; height: auto !important; height: 340px; }
+
+
+#hiw { width: 1124px; margin: 0 auto; }
+#hiw.iso { min-height: 340px; height: auto !important; height: 340px; }
 #hiw .ll { width: 46%; }
 #hiw .rr { width: 50%; }
+
+#fimg { width: 80%; margin: 0 auto; text-align: center; }
 
 .masthead .ui.container .ll { position: relative; }
 /*.hom .masthead h1.ui.header { font-size: 3.2em; }*/
@@ -419,11 +426,13 @@ small.small60 { font-size: 60%; }
 @media only screen and (max-width: 1097px) {
 
 #xnav .ui.container.nav .menu .item { font-size: 16px; }
+#fimg { width: 90%; }
 
 }
 @media only screen and (max-width: 1024px) { /*google+material*/
 
 #hiw { width: 88%; }
+#fimg { width: 96%; }
 
 }
 @media only screen and (max-width: 1023px) {
