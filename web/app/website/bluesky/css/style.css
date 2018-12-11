@@ -86,7 +86,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 
 
 /*** colour schemes ***/
-#hed, .masthead h1.ui.header .sub.header, #fot a.addrlnk, #socnav .ui.icon.button:hover, #mnav .tel.item:hover, .timeline-me-shortcontent { color: #fff !important; }
+/*#hed, .masthead h1.ui.header .sub.header,*/ #fot a.addrlnk, #socnav .ui.icon.button:hover, #mnav .tel.item:hover, .timeline-me-shortcontent { color: #fff !important; }
 #snav .header.item.logo, #socnav .ui.icon.button { background-color: #fff; }
 
 a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.ui.secondary.pointing.menu .item.active { color: #4563cc; }
@@ -173,18 +173,15 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#hed { background: transparent url(../img/_ui/bg_hed.png) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
+#hed { /*background: transparent url(../img/_ui/bg_hed.png) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;*/ }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
 #fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
-
-.hom #hed { min-height: 420px; height: auto !important; height: 420px; }
-.sub #hed { min-height: 500px; height: auto !important; height: 500px; }
 
 
 
 #bluesky #hed .ui.container, #hed #hiw, #con #viw { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
-#bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; display: none; }
+#bluesky #hed .ui.container.nav .cloud.one { width: 800px; height: 323px; top: 40px; left: -654px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 500px; right: -460px; }
 #bluesky #hed .ui.container.nav .cloud.three { width: 320px; height: 129px; top: 940px; left: -320px; }
 #bluesky #hed .ui.container.nav .cloud.four { width: 320px; height: 129px; top: 1030px; left: -410px; }
@@ -209,7 +206,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #xnav.ui.menu .item > img:not(.ui) { width: 6em; }
 #mnav.ui.menu .item > img:not(.ui) { width: 8em; }
 #mnav.ui.secondary.pointing.menu .item.logo { padding: 0; position: relative; top: -9px; }
-#mnav.ui.secondary.pointing.menu .item.logo.active { border: none; }
+#mnav.ui.secondary.pointing.menu .item.logo.active { border-color: transparent; }
 
 .hom #mnav .item.logo:hover { cursor: default; }
 .sub #mnav .item.logo:hover img { -ms-transform: scale(1.05,1.05); -webkit-transform: scale(1.05,1.05); transform: scale(1.05,1.05); }
@@ -218,20 +215,15 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #mnav .tel.item .icon, #xnav.ui.menu .item > i.icon { margin-right: 0; }
 #snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
 
-#hiw { width: 1124px; margin: 0 auto; }
+#hiw { width: 1124px; margin: 0 auto; min-height: 340px; height: auto !important; height: 340px; }
 #hiw .ll { width: 46%; }
 #hiw .rr { width: 50%; }
-.hom #hiw .ll, .hom #hiw .rr { width: 100%; float: none; display: block; }
-.hom #hiw .rr { padding-top: 34px; }
-.sub #hiw .rr .svg { margin: 0 auto; }
 
 .masthead .ui.container .ll { position: relative; }
-.hom .masthead h1.ui.header { font-size: 3.2em; }
-.hom .masthead h1.ui.header .sub.header { font-size: 1.4rem; padding-top: 4px; }
+/*.hom .masthead h1.ui.header { font-size: 3.2em; }*/
 
-.ui.masthead.segment { border: 0; min-height: 240px; height: auto !important; height: 240px; }
-.hom .ui.masthead.segment { min-height: 540px; height: auto !important; height: 540px; }
-.sub .masthead h1.ui.header { font-size: 2.2em; }
+.ui.masthead.segment { border: 0; }
+.ui.masthead h1.ui.header { font-size: 2.2em; }
 
 
 
@@ -416,7 +408,7 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1280px) { /*google+material*/
 
-#hed { min-height: 400px; height: auto !important; height: 400px; }
+
 
 }
 @media only screen and (max-width: 1200px) {
@@ -431,7 +423,6 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 1024px) { /*google+material*/
 
-#hed { min-height: 300px; height: auto !important; height: 300px; }
 #hiw { width: 88%; }
 
 }
@@ -447,10 +438,6 @@ small.small60 { font-size: 60%; }
 #viw.ui.container, .ui.container.nav { width: 92%; }
 .ui.five.doubling.cards > .card, .ui.four.doubling.cards > .card { width: calc(25% - 2em); }
 #xnav .ui.container.nav .menu .item { font-size: 15px; }
-.sub .masthead .ui.container > .ui.stackable.grid > .column { padding-left: 10px !important; padding-right: 10px !important; }
-.sub .masthead .ui.container > .ui.stackable.grid > .one.column { display: none; }
-.sub .masthead .ui.grid > .column:not(.row) { position: relative; display: inline-block; width: 100% !important; margin: 0 0 !important; }
-.sub .masthead .ui.grid, .sub .masthead .ui.grid .tright { text-align: center; }
 #testimonials .card { width: 48%; }
 #csview .ui.medium.right.floated.image { width: 30%; }
 #subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
@@ -469,17 +456,8 @@ small.small60 { font-size: 60%; }
 
 .w840 { width: 100%; }
 #xnav .ui.container.nav .menu .item { padding: .92857143em 11px; font-size: 14px; }
-#hed { min-height: 200px; height: auto !important; height: 200px; }
-.ui.masthead.segment { min-height: 420px; height: auto !important; height: 420px; }
-.sub .masthead h1.ui.header { font-size: 2em; }
-.sub .masthead h1.ui.header .sub.header { line-height: 100%; }
+.masthead h1.ui.header { font-size: 2em; }
 #con .emspace.h80.ctop { height: 40px; }
-
-
-/*
-#con { background-image: url(../img/_ui/bg_conm.png); }
-#fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fotm.png); }
-*/
 
 }
 @media only screen and (max-width: 840px) { /*google+material*/
@@ -571,7 +549,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 720px) { /*google+material*/
 
-#hed { min-height: 540px; height: auto !important; height: 540px; }
+
 
 }
 @media only screen and (max-width: 667px) {
@@ -585,7 +563,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 640px) { /*640x360androids*/
 
 .w540 { width: 100%; }
-#hed { min-height: 500px; height: auto !important; height: 500px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -520px; }
 
 }
@@ -606,7 +583,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 480px) { /*google+material*/
 
-#hed { min-height: 460px; height: auto !important; height: 460px; }
 #csview .ui.medium.right.floated.image { width: 40%; }
 #stlist .ui.three.doubling.cards > .card, #stlist .ui.two.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
@@ -624,7 +600,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 414px) {
 
 .ui.icon.message > .content { font-size: .9em; }
-#hed { min-height: 430px; height: auto !important; height: 430px; }
 #subnav .ui.four.doubling.cards > .card, .ui.three.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(90% - 2em); }
 
@@ -634,7 +609,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ui.four.doubling.cards, .ui.five.doubling.cards { max-width: 100%; margin-left: auto; margin-right: auto; }
 .ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 100%; }
 .ui.masthead.segment .homhero { padding: 20px 20px 0 20px; }
-#hed { min-height: 420px; height: auto !important; height: 420px; }
 #csview .ui.five.doubling.cards > .card { width: calc(50% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(100% - 2em); }
 
@@ -647,7 +621,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 360px) { /*google+material*/
 
 #viw.ui.container { width: 90% !important; }
-#hed { min-height: 400px; height: auto !important; height: 400px; }
 .masthead h1.ui.header .ui.image.medium { width: 80%; }
 #csview .ui.medium.right.floated.image { display: none; }
 
