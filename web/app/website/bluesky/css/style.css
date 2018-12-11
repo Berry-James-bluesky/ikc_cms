@@ -211,6 +211,9 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #mnav.ui.secondary.pointing.menu .item.logo { padding: 0; position: relative; top: -9px; }
 #mnav.ui.secondary.pointing.menu .item.logo.active { border: none; }
 
+.hom #mnav .item.logo:hover { cursor: default; }
+.sub #mnav .item.logo:hover img { -ms-transform: scale(1.05,1.05); -webkit-transform: scale(1.05,1.05); transform: scale(1.05,1.05); }
+
 #mnav .tel.item { font-weight: 400; }
 #mnav .tel.item .icon, #xnav.ui.menu .item > i.icon { margin-right: 0; }
 #snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
@@ -358,7 +361,7 @@ small.small60 { font-size: 60%; }
 
 
 /*** anim ***/
-.resp, .wrp, .ll, .rr, #backtotop, .ui.masthead.segment {
+.resp, .wrp, .ll, .rr, #backtotop, .ui.masthead.segment, .sub #mnav .item.logo img {
 	-webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s; transition: all 0.3s;
 }
 .cycle-slideshow .resp {
