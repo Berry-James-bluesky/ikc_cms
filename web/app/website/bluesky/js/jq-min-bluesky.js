@@ -7,6 +7,13 @@
 
 
 
+
+
+
+
+
+
+
 $(function(){
 
 	/* semanticsUI general */
@@ -33,6 +40,10 @@ $(function(){
 		}
 	});
 	$('.casestudies.ui.button').on('click',function(){ $('.ui.dropdown').dropdown('restore defaults') });
+
+	$('.ui.steps.brief .step').tab();
+
+
 
 
 

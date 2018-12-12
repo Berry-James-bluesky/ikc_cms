@@ -145,9 +145,15 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .ui.header.hwsicon .icon:only-child { margin-top: -4px; margin-right: 4px; }
 .ui.horizontal.divider.header.nomargin .icon { margin-right: 0; }
 
+.ui.steps.brief .step { cursor: pointer; }
+
+
+
 
 
 .fontsize32 .sub.header { font-size: .7em; }
+
+
 
 
 
