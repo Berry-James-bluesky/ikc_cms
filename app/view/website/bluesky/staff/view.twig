@@ -7,7 +7,7 @@
 		<div class="ui special centered card">
 			<div class="blurring dimmable image">
 				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop">View image</span></div></div></div>
-				<img src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference,300) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
+				<img src="{% if item.featured_image_secondary %}{{ imgUrl(item.featured_image_secondary.reference,300) }}{% else %}{{ imgUrl(item.featured_image.reference,300) }}{% endif %}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
 			</div><!-- /.blurring.dimmable.image -->
 			<div class="content">
 				<div class="header">{{ item.name }}</div>
@@ -25,7 +25,7 @@
 			<div class="content">
 				<div class="center">
 					<div class="ui image">
-						<img src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference) }}{% else %}/_image/media/1/_image.png{% endif %}" class="resp" alt="{{ item.name }}" />
+						<img src="{% if item.featured_image_secondary %}{{ imgUrl(item.featured_image_secondary.reference) }}{% else %}{{ imgUrl(item.featured_image.reference) }}{% endif %}" class="resp" alt="{{ item.name }}" />
 					</div><!-- /.ui.image -->
 				</div><!-- /.center -->
 			</div><!-- /.content -->
@@ -35,7 +35,7 @@
 	<div class="eleven wide column">
 
 <h2 class="ui header">
-	<img class="ui big circular image dopop" src="{% if item.featured_image %}{{ imgUrl(item.featured_image.reference,60) }}{% else %}/_image/media/1/_image.png{% endif %}">
+	<img class="ui big circular image dopop" src="/_image/media/{% if item.id == 1 %}44/amel-holic{% elseif item.id == 2 %}43/rizal-farok{% elseif item.id == 3 %}43/tim-robinson{% elseif item.id == 4 %}43/jose{% elseif item.id == 5 %}43/ben-hewitt{% elseif item.id == 6 %}43/parham-bakhtiari{% endif %}_smsq.jpg">
 	<div class="content">
 		{{ item.name }}
 		<div class="sub header">{{ item.title }}</div>
