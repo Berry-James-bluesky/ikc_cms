@@ -6,8 +6,8 @@
 
 		<div class="ui special centered card">
 			<div class="blurring dimmable image">
-				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop">View image</span></div></div></div>
-				<img src="{% if item.featured_image_secondary %}{{ imgUrl(item.featured_image_secondary.reference,300) }}{% else %}{{ imgUrl(item.featured_image.reference,300) }}{% endif %}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
+				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop">more</span></div></div></div>
+				<img src="{{ imgUrl(item.featured_image.reference,300) }}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
 			</div><!-- /.blurring.dimmable.image -->
 			<div class="content">
 				<div class="header">{{ item.name }}</div>
@@ -35,7 +35,7 @@
 	<div class="eleven wide column">
 
 <h2 class="ui header">
-	<img class="ui big circular image dopop" src="/_image/media/{% if item.id == 1 %}44/amel-holic{% elseif item.id == 2 %}43/rizal-farok{% elseif item.id == 3 %}45/tim-robinson{% elseif item.id == 4 %}43/jose{% elseif item.id == 5 %}43/ben-hewitt{% elseif item.id == 6 %}43/parham-bakhtiari{% endif %}_smsq.jpg">
+	<img class="ui big circular image dopop" src="/_image/media/{% if item.id == 1 %}44/amel-holic{% elseif item.id == 2 %}43/rizal-farok{% elseif item.id == 3 %}45/tim-robinson{% elseif item.id == 4 %}51/jose-charango{% elseif item.id == 5 %}47/ben-hewitt{% elseif item.id == 6 %}48/parham-bakhtiari{% endif %}_smsq.jpg">
 	<div class="content">
 		{{ item.name }}
 		<div class="sub header">{{ item.title }}</div>
