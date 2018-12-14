@@ -21,7 +21,7 @@
 			</div><!-- /.description -->
 			<div class="extra">
 				{% for tag in i.tags %}
-				<a class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
+				<span class="ui tag label mini" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</span>
 				{% if loop.last %}<div class="emspace h5 floatc"></div>{% endif %}
 				{% endfor %}
 				<a class="ui right floated primary button" href="{{ _url.base|trim('/') }}{% if i._url %}{{ i._url }}{% else %}blog/post/{{ i.id }}{% endif %}" title="click to read full article">Read article <i class="right chevron icon"></i></a>

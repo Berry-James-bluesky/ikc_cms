@@ -7,10 +7,10 @@
 </h2>
 <div class="ui divider"></div>
 
-<div id="postreadcount" class="ui mini labeled active button">
+<!--{#<div id="postreadcount" class="ui mini labeled active button">
 	<div class="ui icon button"><i class="tasks icon"></i></div>
 	<div class="ui basic left pointing label">34</div>
-</div><!-- /#postreadcount -->
+</div>#}--><!-- /#postreadcount -->
 <a class="ui mini linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i> LinkedIn</a>
 <a class="ui mini twitter button" href="https://twitter.com/share?url={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
 <a class="ui mini facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
@@ -70,7 +70,7 @@
 
 {% if item.tags|length > 0 %}
 {% for tag in item.tags %}
-<a class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</a>
+<span class="ui tag label tiny" href="{{ _url.base }}blog/category/{{ tag.value|replace({' ':'-','/':'-'}) }}">{% if tag.display_value %}{{ tag.display_value }}{% else %}{{ tag.value }}{% endif %}</span>
 {% endfor %}
 {% endif %}
 
