@@ -135,7 +135,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .ui.modal { width: 80%; }
 .ui.piled.segment, .ui.piled.segments { padding: 1.8em; }
 .ui.bulleted.list, .ui.list, .ui.ordered.list, .ui.ordered.list .list, ol.ui.list, ol.ui.list ol { margin-left: 2rem; }
-.ui.form .field > label { font-weight: 400; }
+.ui.form .field > label, .ui.form .ui.label { font-weight: 400; }
 .fotwrp .ui.list, #sitemap .ui.list { margin-left: 0; }
 
 .ui.card .description, .ui.cards .description { line-height: 140%; }
