@@ -10,26 +10,17 @@
 <meta property="og:description" content="{% if item.seo_description %}{{ item.seo_description }}{% else %}{% if item.summary %}{{ item.summary }}{% elseif item.description %}{{ item.description|raw|striptags|length > 256 ? item.description|raw|striptags|slice(0,254) ~ '..' : item.discription|raw|striptags }}{% else %}{% if item.name %}{{ item.name }}{% elseif _route.tag %}{{ _route.tag }}{% elseif _route._route %}{{ _route._route }}{% else %}404{% endif %} {{ site }}, Customised Online Solutions Perth, Melbourne, Sydney{% endif %}{% endif %}" />
 <meta property="og:url" content="{{ _route.url|trim('/') }}" />
 <meta property="og:site_name" content="{{ site }}, Customised Online Solutions Perth, Melbourne, Sydney" />
-{% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/startup.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 8) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "system integration" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/systems.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 9) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "app development" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/apps.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 10) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "data science" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/data.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 11) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "custom web development" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/custom.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 12) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "exploring ideas" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/ideas.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 13) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "digital marketing" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/digital.svg" />
-{% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}
-<meta property="og:image" content="/app/website/bluesky/img/iso/beacons.svg" />
-{% elseif item.featured_image %}
-<meta property="og:image" content="{{ item.featured_image.reference }}" />
-{% else %}
-<meta property="og:image" content="app/website/bluesky/img/BlueSkyDigitalLabs-Perth.jpg" />
+{% if (_route._handler._app == "page" and item.id == 7) or (_route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "start-up development") %}<meta property="og:image" content="/app/website/bluesky/img/iso/startup.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 8) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "system integration" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/systems.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 9) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "app development" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/apps.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 10) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "data science" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/data.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 11) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "custom web development" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/custom.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 12) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "exploring ideas" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/ideas.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 13) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "digital marketing" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/digital.svg" />
+{% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/beacons.svg" />
+{% elseif _route._handler._app == "page" and (item.id == 2 or item.id == 3 or item.id == 4 or item.id == 5 or item.id == 6 or item.id == 14 or item.id == 15 or item.id == 16 or item.id == 19 or item.id == 20 or item.id == 22 or item.id == 23 or item.id == 24 or item.id == 25 or item.id == 26 ) %}<meta property="og:image" content="/app/website/bluesky/img/page/{{ item.id }}.svg" />
+{% elseif item.featured_image %}<meta property="og:image" content="{{ item.featured_image.reference }}" />
+{% else %}<meta property="og:image" content="app/website/bluesky/img/BlueSkyDigitalLabs-Perth.jpg" />
 {% endif %}
 
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -50,7 +41,6 @@
 <link rel="icon" type="image/png" sizes="96x96" href="{{ img }}_ico/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ img }}_ico/favicon-16x16.png">
 
-<!--{#<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">#}-->
 <link rel="stylesheet" href="/app/website/bluesky/_sui/semantic.min.custom.css">
 <link rel="stylesheet" href="/app/website/bluesky/css/style.css">
 
