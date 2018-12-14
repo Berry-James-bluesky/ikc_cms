@@ -66,9 +66,17 @@ Simplify, scale and grow your business
 
 {% if _route._handler._app == "directory" and _route._method == "itemView" %}
 <span class="ui tag label mini">{{ item._tags[0].display_value }}</span>
+<div class="emspace floatc"></div>
 {% elseif _route._handler._app == "staff" and _route._method == "itemView" %}
 <span class="ui tag label mini">{% if item.id == 1 or item.id == 2 %}Directors{% else %}Leadership team{% endif %}</span>
+<div class="emspace floatc"></div>
 {% endif %}
+
+<!--{#
+<div class="ui mini breadcrumb">
+{% include 'crumb.twig' %}
+</div>
+#}-->
 
 {% endif %}
 

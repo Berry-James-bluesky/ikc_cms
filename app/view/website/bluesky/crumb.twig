@@ -3,16 +3,26 @@
 {% include custom_crumb_file~'.twig' %}
 
 {% else %}
-<a href="{{ _url.base }}">Home</a>
+<a class="section" href="{{ _url.base }}">Home</a>
 
 {% if _route._handler._app == "blog" and (_route._method == "view" or _route._method == "getPostByTag") %}
-<span class="pipe">//</span>
-<a href="{{ _url.base }}insight">Insight</a>
+<i class="right chevron icon divider"></i>
+<a class="section" href="{{ _url.base }}thoughts">Thoughts</a>
 {% if _route._method == "getPostByTag" %}
-<span class="pipe">//</span>
-<span><b>{{ _route.tag }}</b></span>
+<i class="right chevron icon divider"></i>
+<div class="active section">{{ _route.tag }}</div>
 {% endif %}
+<i class="right chevron icon divider"></i>
+<div class="active section">{{ item.name }}</div>
 {% endif %}
+
+{% if _route._handler._app == "directory" %}
+<i class="right chevron icon divider"></i>
+<a class="section" href="{{ _url.base }}work">Work</a>
+<i class="right chevron icon divider"></i>
+<div class="active section">{{ item.name }}</div>
+
+{% else %}
 
 {% set handler = _route._handler %}
 {% set systemData = getAppData(handler.app) %}
@@ -34,22 +44,24 @@
 			{% endfor %}
 		{% endif %}
 
-		<span class="pipe">//</span>
+		<i class="right chevron icon divider"></i>
 
 		{% for key,value in breadcrumb %}
 			{% if loop.last %}
-				<b>{{ value }}</b>
+				<div class="active section">{{ value }}</div>
 			{% else %}
 				{% if key == "javascript:;" %}
-				<span>{{ value }}</span>
+				<span class="section">{{ value }}</span>
 				{% else %}
-				<a href="{{ _url.base }}{{ key }}{{ href_args_str }}">{{ value }}</a>
+				<a class="section" href="{{ _url.base }}{{ key }}{{ href_args_str }}">{{ value }}</a>
 				{% endif %}
-				<span class="pipe">//</span>
+				<i class="right chevron icon divider"></i>
 			{% endif %}
 		{% endfor %}
 
 	{% endif %}
+
+{% endif %}
 
 {% endif %}
 
