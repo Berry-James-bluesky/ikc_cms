@@ -179,7 +179,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#hed { /*background: transparent url(../img/_ui/bg_hed.png) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;*/ }
+#hed {  }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
 #fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
 
@@ -191,11 +191,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 800px; right: -460px; }
 #bluesky #hed .ui.container.nav .cloud.three { width: 320px; height: 129px; top: 940px; left: -320px; }
 #bluesky #hed .ui.container.nav .cloud.four { width: 320px; height: 129px; top: 1030px; left: -410px; }
-/*
-.sub #bluesky #hed .ui.container.nav .cloud.two { top: 500px; }
-.sub #bluesky #hed .ui.container.nav .cloud.three { top: 700px; }
-.sub #bluesky #hed .ui.container.nav .cloud.four { top: 790px; }
-*/
+
 
 
 #hed .ui.secondary.inverted.menu a.item, #hed .ui.secondary.inverted.menu a.tel.item:hover { color: #fff !important; }
@@ -238,7 +234,6 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-/*.fotwrp .w740 .column .column * { text-align: center; }*/
 #fnav .pipe { padding: 0 7px; }
 #socnav .item { margin: 0 2px; }
 
@@ -585,7 +580,10 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 640px) { /*640x360androids*/
 
 .w540 { width: 100%; }
-#bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -520px; }
+#bluesky #hed .ui.container.nav .cloud.two, #bluesky #hed .ui.container.nav .cloud.three, #bluesky #hed .ui.container.nav .cloud.four, .emspace.conspc { display: none; }
+#con { background: none; }
+#fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fot_640.png); }
+.emspace.fotspc { height: 160px; }
 
 }
 @media only screen and (max-width: 600px) { /*google+material*/
@@ -601,7 +599,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .w480 { width: 100%; }
 #testimonials .card { width: 100%; }
 #csview .ui.card .description, #csview .ui.card .extra.content { display: none; }
-
 #hwwk .hwwkimg, #hwwk .hwwkhed { width: 100%; text-align: center; }
 #hwwk .hwwkimg { padding: 7px 0 14px 0; }
 #hwwk .hwwkhed { padding-top: 0; }
@@ -619,7 +616,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #fot .ui.grid .ui.list > .item, #fot .ui.grid .ui.list > .nodisp { display: inline-block; }
 #fot .ui.grid .ui.list > .nodisp { margin: 0 3px; }
 #fot .hideinmob { display: none; }
-
 .timeline-me-smallitem.timeline-me-left .timeline-me-shortcontent::before, .timeline-me-smallitem.timeline-me-right .timeline-me-shortcontent::before { left: 48.5%; }
 
 }
@@ -649,7 +645,6 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #viw.ui.container { width: 90% !important; }
 .masthead h1.ui.header .ui.image.medium { width: 80%; }
 #csview .ui.medium.right.floated.image { display: none; }
-
 .timeline-me-smallitem.timeline-me-left .timeline-me-shortcontent::before, .timeline-me-smallitem.timeline-me-right .timeline-me-shortcontent::before { left: 48%; }
 
 }
