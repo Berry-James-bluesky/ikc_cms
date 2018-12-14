@@ -18,7 +18,8 @@ $(function(){
 
 	/* semanticsUI general */
 	$('.ui.checkbox').checkbox();
-	$('.shape').shape();
+	$('.ui.dropdown').dropdown();
+	//$('.shape').shape();
 
 	$('.special .image, .special.card .image, .special.cards .image').dimmer({ on:'hover' });
 	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });

@@ -233,14 +233,12 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #fimg { width: 80%; margin: 0 auto; text-align: center; }
 
 .masthead .ui.container .ll { position: relative; }
-/*.hom .masthead h1.ui.header { font-size: 3.2em; }*/
-
 .ui.masthead.segment { border: 0; }
 .ui.masthead h1.ui.header { font-size: 2.2em; }
 
 
 
-.fotwrp .w740 .column .column * { text-align: center; }
+/*.fotwrp .w740 .column .column * { text-align: center; }*/
 #fnav .pipe { padding: 0 7px; }
 #socnav .item { margin: 0 2px; }
 
@@ -309,6 +307,9 @@ small.small60 { font-size: 60%; }
 /* content styles */
 .cloudoverimg { position: relative; }
 .dacloudoverimg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; background: transparent url(../img/_ui/cloudoverimg.png) center bottom no-repeat; -webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover; }
+
+#hwwk .hwwkimg { width: 40%; }
+#hwwk .hwwkhed { width: 56%; padding-top: 40px; }
 
 
 
@@ -520,6 +521,7 @@ small.small60 { font-size: 60%; }
 
 .w740 { width: 100%; }
 #bluesky #hed .ui.container.nav .cloud.two { top: 380px; }
+#hwwk .hwwkhed { padding-top: 30px; }
 
 }
 @media only screen and (max-width: 768px) {
@@ -544,11 +546,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #hed .ll, #hed .rr { width: 100%; float: none; display: block; text-align: center; }
 #hed .rr { margin-top: 40px; }
 .hom #hiw .rr { padding-top: 0; }
-
 .sub #hiw .rr .svg { float: none; display: block; max-height: 200px !important; margin: 0 auto; }
-
 #con .emspace.h80.ctop { height: 60px; }
-
 #viw.ui.container { width: 100% !important; }
 .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
 #xnav .ui.container.nav { width: 90% !important; margin: 0 auto !important; }
@@ -578,6 +577,9 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ll, .rr, .coltwo, .coltre, .coltre.mid, .coltre.dbl, .colfor, .colfor.dbl, .colfiv, .colsix { width: 100%; float: none; display: block; }
 .rr, .coltwo.floatr, .coltre.floatr, .colfor.floatr, .colfiv.floatr, .colsix.floatr { float: none; }
 .coltwo, .coltre, .coltre.mid, .coltre.dbl, .colfor, .colfor.dbl, .colfiv, .colsix, .rr.tright, .coltre.tright, .colfor.tright, .colfiv.tright { text-align: center; }
+#hwwk .ll { float: left; }
+#hwwk .rr { float: right; }
+#hwwk .hwwkhed { padding-top: 20px; }
 
 }
 @media only screen and (max-width: 640px) { /*640x360androids*/
@@ -599,6 +601,10 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .w480 { width: 100%; }
 #testimonials .card { width: 100%; }
 #csview .ui.card .description, #csview .ui.card .extra.content { display: none; }
+
+#hwwk .hwwkimg, #hwwk .hwwkhed { width: 100%; text-align: center; }
+#hwwk .hwwkimg { padding: 7px 0 14px 0; }
+#hwwk .hwwkhed { padding-top: 0; }
 
 }
 @media only screen and (max-width: 480px) { /*google+material*/

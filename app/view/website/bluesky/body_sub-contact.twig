@@ -1,30 +1,17 @@
 
 <div class="emspace h20 floatc"></div>
 
-<form id="webcontact" class="ui form"><!--{# add error or success here #}-->
+<form id="webcontact" class="ui form"><!--{# add .error if error, else redirect to /contact/thank-you #}-->
 
 	<div class="ui error message">
 		<div class="header">Action Forbidden</div>
 		<p>You can only sign up for an account once with a given e-mail address.</p>
 	</div>
 
-	<div class="ui success message">
-		<div class="header">Form Completed</div>
-		<p>You're all signed up for the newsletter.</p>
-	</div>
-
 	<div class="field">
-		<label>Your name</label>
-		<div class="three fields">
-			<div class="field">
-				<input type="text" name="firstname" placeholder="First name *">
-			</div>
-			<div class="field">
-				<input type="text" name="middlename" placeholder="Middle name">
-			</div>
-			<div class="field">
-				<input type="text" name="lastname" placeholder="Last name *">
-			</div>
+		<label>Your full name</label>
+		<div class="field">
+			<input type="text" name="lastname" placeholder="Your full name *">
 		</div>
 	</div>
 
@@ -41,10 +28,23 @@
 	</div>
 
 	<div class="field">
+		<label>Any of the following specific topics you wish to enquire about?</label>
+		<select id="" name="" class="ui search dropdown" multiple="multiple">
+			<option value="">You can select more than one</option>
+			<option value="Start-up Development">Start-up Development</option>
+			<option value="System Integration">System Integration</option>
+			<option value="App Development">App Development</option>
+			<option value="Data Science">Data Science</option>
+			<option value="Custom Web Development">Custom Web Development</option>
+			<option value="Exploring Ideas">Exploring Ideas</option>
+			<option value="Other">Other</option>
+		</select>
+	</div>
+
+	<div class="field">
 		<label>Your message or comments</label>
 		<textarea></textarea>
 	</div>
-
 
 	<div class="field">
 		<div class="ui toggle checkbox">
@@ -54,7 +54,7 @@
 	</div>
 
 	<div class="emspace h20 floatc"></div>
-	<div class="ui primary button">Contact BlueSky <i class="right chevron icon"></i></div>
+	<div class="ui primary large button">Contact BlueSky <i class="right chevron icon"></i></div>
 
 </form>
 
