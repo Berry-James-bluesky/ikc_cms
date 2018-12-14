@@ -94,7 +94,9 @@ a, #socnav .ui.icon.button, #mnav.ui.secondary.pointing.menu .item:hover, #mnav.
 #socnav .ui.icon.button:hover/*, #mnav .tel.item*/ { background-color: #4563cc; }
 .timeline-me-smallitem .timeline-me-label .timeline-me-picto { background: #4563cc !important; }
 
-body, .ui.form .field > label { color: #444; }
+.ui.card .meta, .ui.cards > .card .meta, .ui.card > .extra, .ui.cards > .card > .extra { color: #999; }
+
+body, .ui.form .field > label, .ui.card > .content > .description, .ui.cards > .card > .content > .description, .ui.list .list > .item .description, .ui.list > .item .description { color: #333; }
 #mnav .tel.item:hover { background-color: #333; }
 .timeline-me-shortcontent { background: #333 !important; }
 
@@ -119,7 +121,7 @@ a:hover { color: #ff9f40; }
 
 /*** semantic UI overwrites  ***/
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,600);
-h1, h2, h3, h4, h5, .ui.header, .ui.message .header, .ui.items > .item > .content > .header, .ui.card > .content > .header:not(.ui), .ui.cards > .card > .content > .header:not(.ui), .ui.steps .step .title { font-family:'Montserrat',sans-serif;font-weight:600!important; color: #333; }
+h1, h2, h3, h4, h5, .ui.header, .ui.message .header, .ui.items > .item > .content > .header, .ui.card > .content > .header:not(.ui), .ui.cards > .card > .content > .header:not(.ui), .ui.steps .step .title { font-family:'Montserrat',sans-serif;font-weight:600!important; }
 .ui.card > .content > .header:not(.ui), .ui.cards:not(.noborder) > .card > .content > .header:not(.ui), .ui.steps .step .title, .ui.link.items.recentposts .header { font-weight:400!important; }
 
 .sub.header { font-family:Raleway,'Helvetica Neue',Arial,Helvetica,sans-serif; }
@@ -180,7 +182,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#hed {  }
+#hed { overflow: hidden; }
 #con { min-height: 640px; height: auto !important; height: 640px; background: transparent url(../img/_ui/bg_con.png) center bottom no-repeat; }
 #fot.ui.inverted.segment { padding: 0; background: #333 url(../img/_ui/bg_fot.png) center top no-repeat; }
 
