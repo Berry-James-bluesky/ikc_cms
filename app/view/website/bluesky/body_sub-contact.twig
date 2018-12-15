@@ -19,14 +19,14 @@
 					}
 					else {
 						jQuery('#webcontact').addClass('error');
-						jQuery('.fermsg').html('');
-						jQuery('.mand').removeClass('fer');
+						//jQuery('.fermsg').html('');
+						jQuery('.mand').removeClass('error');
 						for (var f in json.errors) {
 							if (f == '_custom') {
 								setCfErrors(json.errors[f]);
 							}
 							else {
-								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('fer');
+								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('error');
 							}
 						}
 					}
@@ -60,15 +60,15 @@
 </script>
 <div class="emspace h20 floatc"></div>
 
-<form id="webcontact" class="ui form"><!--{# add .error if error, else redirect to /contact/thank-you #}-->
+<form id="webcontact" class="ui form">
 
 	<div class="ui error message">
-		<div class="header">Action Forbidden</div>
-		<p>You can only sign up for an account once with a given e-mail address.</p>
+		<div class="header">There are errors in the form</div>
+		<p>Please enter all details that are required, as marked by the *</p>
 	</div>
 
 	<div class="field">
-		<label>Your full name</label>
+		<label>Your full name *</label>
 		<div class="field mand">
 			<input type="text" name="lastname" id="lastname" placeholder="Your full name *">
 			<div class="fermsg" id="lastname_error"></div>
@@ -76,7 +76,7 @@
 	</div>
 
 	<div class="field">
-		<label>Your contact phone and email address</label>
+		<label>Your contact phone and email address *</label>
 		<div class="two fields">
 			<div class="field">
 				<input type="text" name="phone" id="phone" placeholder="Mobile or phone number">

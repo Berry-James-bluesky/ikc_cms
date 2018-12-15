@@ -25,14 +25,14 @@
 					}
 					else {
 						jQuery('#tab_first').trigger('click');
-						jQuery('.fermsg').html('');
-						jQuery('.mand').removeClass('fer');
+						//jQuery('.fermsg').html('');
+						jQuery('.mand').removeClass('error');
 						for (var f in json.errors) {
 							if (f == '_custom') {
 								setCfErrors(json.errors[f]);
 							}
 							else {
-								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('fer');
+								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('error');
 							}
 						}
 					}
@@ -59,14 +59,14 @@
 					if (json.success) {
 						jQuery("#file_id").val(json.file_id);
 					} else {
-						jQuery('.fermsg').html('');
-						jQuery('.mand').removeClass('fer');
+						//jQuery('.fermsg').html('');
+						jQuery('.mand').removeClass('error');
 						for (var f in json.errors) {
 							if (f == '_custom') {
 								setCFErrors(json.errors[f]);
 							}
 							else {
-								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('fer');
+								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('error');
 							}
 						}
 					}
@@ -129,9 +129,11 @@
 </div>
 
 <div class="ui attached active tab segment form" id="quote_form" data-tab="tab1">
-<input type="hidden" id="file_id" value="">
+
+	<input type="hidden" id="file_id" value="">
+
 		<div class="field">
-			<label>Your name</label>
+			<label>Your name *</label>
 			<div class="three fields">
 				<div class="field mand">
 					<input type="text" name="firstname" id="firstname" placeholder="First name *">
@@ -149,7 +151,7 @@
 		</div>
 
 		<div class="field">
-			<label>Your contact phone and email address</label>
+			<label>Your contact phone and email address *</label>
 			<div class="two fields">
 				<div class="field">
 					<input type="text" name="phone" id="phone" placeholder="Mobile or phone number">

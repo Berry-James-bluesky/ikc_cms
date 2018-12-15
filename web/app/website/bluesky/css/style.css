@@ -22,6 +22,8 @@ a.url, .url { -ms-word-break: break-all; word-break: break-all; word-break: brea
 @media all { .pagebreak { display: none; } }
 @media print { .pagebreak { display: block; page-break-before: always; } }
 
+.fermsg { display: none; }
+
 .noboxshadow, .fom .radiof input, .fom .radiof input:focus { -webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none; }
 .bottomshadow { -webkit-box-shadow: 0 15px 10px -15px rgba(204,204,204,1); -moz-box-shadow: 0 15px 10px -15px rgba(204,204,204,1); box-shadow: 0 15px 10px -15px rgba(204,204,204,1); }
 .fullshadow { -webkit-box-shadow: 0 0 7px 0 rgba(204,204,204,1); -moz-box-shadow: 0 0 7px 0 rgba(204,204,204,1); box-shadow: 0 0 7px 0 rgba(204,204,204,1); }
