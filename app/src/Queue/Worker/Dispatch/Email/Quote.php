@@ -58,7 +58,8 @@ class Quote extends Base
                 $data = (array)json_decode($emailData['data']);
                 $content = $this->getEmailContent($cli, $data);
 
-                $fileData = $data['file']['reference'];
+                $file = (array)$data['file'];
+                $fileData = $file['reference'];
                 $fileModel = new \SidraBlue\Lote\Model\File($cli);
                 $attachmentContent = $fileModel->getContentByReference($fileData);
                 $attachments = [
