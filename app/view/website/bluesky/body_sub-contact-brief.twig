@@ -1,9 +1,110 @@
+<script>
+	jQuery(function(){
+		jQuery('#btn_submit').click(function () {
+			jQuery('#quote_form').trigger('submit');
+		});
+		jQuery('#submit_tab').click(function () {
+			jQuery('#submit_email').html(jQuery('#email').val());
+			jQuery('#submit_fullname').html(jQuery('#firstname').val()+' '+jQuery('#middlename').val()+' '+jQuery('#lastname').val());
+			jQuery('#submit_phone').html(jQuery('#phone').val());
+			jQuery('#submit_summary').html(jQuery('#project_summary').val());
+		});
+		jQuery('#quote_form').off('submit').submit(function (e) {
+			e.preventDefault();
+			var formData = new FormData();
+			formData = getFormElements(formData);
+			jQuery.ajax({
+				url: '{{ _url.base }}quote/validate.json',
+				method: 'POST',
+				data: formData,
+				processData: false,
+				contentType: false,
+				success: function (json) {
+					if (json.success) {
+						window.location.href = ('{{ _url.base }}contact/thank-you');
+					}
+					else {
+						jQuery('#tab_first').trigger('click');
+						jQuery('.fermsg').html('');
+						jQuery('.mand').removeClass('fer');
+						for (var f in json.errors) {
+							if (f == '_custom') {
+								setCfErrors(json.errors[f]);
+							}
+							else {
+								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('fer');
+							}
+						}
+					}
+				},
+				error: function (request, status, error) {
+					if (request.status) {
+						alert('Error: ' + request.status + '\n' + request.statusText);
+					}
+				}
+			});
+			return false;
+		});
 
+		jQuery("#file_upload").change(function () {
+			var flag = '';
+			var value = getFileValues(flag);
+			jQuery.ajax({
+				url: '{{ _url.base }}quote/file-save.json',
+				method: 'POST',
+				data: value,
+				processData: false,
+				contentType: false,
+				success: function (json) {
+					if (json.success) {
+						jQuery("#file_id").val(json.file_id);
+					} else {
+						jQuery('.fermsg').html('');
+						jQuery('.mand').removeClass('fer');
+						for (var f in json.errors) {
+							if (f == '_custom') {
+								setCFErrors(json.errors[f]);
+							}
+							else {
+								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('fer');
+							}
+						}
+					}
+				},
+				error: function (request, status, error) {
+					if (request.status) {
+						alert('Error: ' + request.status + '\n' + request.statusText);
+					}
+				}
+			});
+		});
+	});
+	function getFormElements(formData) {
+		formData.append('firstname', jQuery("#firstname").val());
+		formData.append('middlename', jQuery("#middlename").val());
+		formData.append('lastname', jQuery("#lastname").val());
+		formData.append('phone', jQuery("#phone").val());
+		formData.append('email', jQuery("#email").val());
+		formData.append('project_summary', jQuery("#project_summary").val());
+		formData.append('file_id', jQuery("#file_id").val());
+		return formData;
+	}
+	function getFileValues(file) {
+		var formData = new FormData();
+		var mediaFile = jQuery('#file_upload');
+		if (file == '') {
+			formData.append('file', mediaFile[0].files[0]);
+		} else {
+			formData.append('file', file);
+		}
+		return formData;
+	}
+</script>
 <div class="emspace h20 floatc"></div>
 
 <div class="ui three top attached unstackable small steps brief">
 
-	<div class="active step" data-tab="tab1">
+	<div class="active step" data-tab="tab1" id="tab_first">
 		<i class="truck icon"></i>
 		<div class="content">
 			<div class="title">Contact</div>
@@ -17,7 +118,7 @@
 			<div class="description">Details of your idea or project</div>
 		</div>
 	</div>
-	<div class="step" data-tab="tab3">
+	<div class="step" data-tab="tab3" id="submit_tab">
 		<i class="info icon"></i>
 		<div class="content">
 			<div class="title">Confirm</div>
@@ -27,19 +128,22 @@
 
 </div>
 
-<div class="ui attached active tab segment form" data-tab="tab1">
-
+<div class="ui attached active tab segment form" id="quote_form" data-tab="tab1">
+<input type="hidden" id="file_id" value="">
 		<div class="field">
 			<label>Your name</label>
 			<div class="three fields">
-				<div class="field">
-					<input type="text" name="firstname" placeholder="First name *">
+				<div class="field mand">
+					<input type="text" name="firstname" id="firstname" placeholder="First name *">
+					<div class="fermsg" id="firstname_error"></div>
 				</div>
 				<div class="field">
-					<input type="text" name="middlename" placeholder="Middle name">
+					<input type="text" name="middlename" id="middlename" placeholder="Middle name">
+					<div class="fermsg" id="middlename_error"></div>
 				</div>
-				<div class="field">
-					<input type="text" name="lastname" placeholder="Last name *">
+				<div class="field mand">
+					<input type="text" name="lastname" id="lastname" placeholder="Last name *">
+					<div class="fermsg" id="lastname_error"></div>
 				</div>
 			</div>
 		</div>
@@ -48,10 +152,12 @@
 			<label>Your contact phone and email address</label>
 			<div class="two fields">
 				<div class="field">
-					<input type="text" name="phone" placeholder="Mobile or phone number">
+					<input type="text" name="phone" id="phone" placeholder="Mobile or phone number">
+					<div class="fermsg" id="phone_error"></div>
 				</div>
-				<div class="field">
-					<input type="text" name="email" placeholder="Email address *">
+				<div class="field mand">
+					<input type="text" name="email" id="email" placeholder="Email address *">
+					<div class="fermsg" id="email_error"></div>
 				</div>
 			</div>
 		</div>
@@ -61,19 +167,27 @@
 <div class="ui attached tab segment form" data-tab="tab2">
 
 	<div class="field">
-		<label>Project summary</label>
-		<textarea></textarea>
+		<label for="project_summary">Project summary</label>
+		<textarea id="project_summary" name="project_summary"></textarea>
+		<div class="fermsg" id="project_summary_error"></div>
 	</div>
 
 	<div class="field">
 		<label>Upload a file</label>
-		<input type="file" id="" name="" value="" />
+		<input type="file"  id="file_upload" name="file_upload" value="" class="jfilestyle" data-inputSize="201px" data-buttonText="<i class='fas fa-search'></i> Browse" />
 	</div>
 
 </div>
 <div class="ui attached tab segment" data-tab="tab3">
 
-	<p>3</p>
+	<div id="submit_data">
+		<p>YourName: <span id="submit_fullname"></span></p>
+		<p>Phone: <span id="submit_phone"></span></p>
+		<p>Email: <span id="submit_email"></span></p>
+		<p>Project Summary:<span id="submit_summary"></span></p>
+	</div>
+	<div class="emspace h20 floatc"></div>
+	<a href="javascript:;" class="ui primary large button btn" id="btn_submit">Confirm & Submit<i class=""></i></a>
 
 </div>
 

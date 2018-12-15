@@ -1,4 +1,63 @@
-
+<script>
+	jQuery(function(){
+		jQuery('#btn_submit').click(function () {
+			jQuery('#webcontact').trigger('submit');
+		});
+		jQuery('#webcontact').off('submit').submit(function (e) {
+			e.preventDefault();
+			var formData = new FormData();
+			formData = getFormElements(formData);
+			jQuery.ajax({
+				url: '{{ _url.base }}contact/validate.json',
+				method: 'POST',
+				data: formData,
+				processData: false,
+				contentType: false,
+				success: function (json) {
+					if (json.success) {
+						window.location.href = ('{{ _url.base }}contact/thank-you');
+					}
+					else {
+						jQuery('#webcontact').addClass('error');
+						jQuery('.fermsg').html('');
+						jQuery('.mand').removeClass('fer');
+						for (var f in json.errors) {
+							if (f == '_custom') {
+								setCfErrors(json.errors[f]);
+							}
+							else {
+								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('fer');
+							}
+						}
+					}
+				},
+				error: function (request, status, error) {
+					if (request.status) {
+						alert('Error: ' + request.status + '\n' + request.statusText);
+					}
+				}
+			});
+			return false;
+		});
+	});
+	function getFormElements(formData) {
+		formData.append('lastname', jQuery("#lastname").val());
+		formData.append('phone', jQuery("#phone").val());
+		formData.append('email', jQuery("#email").val());
+		formData.append('about', jQuery("#about").val() || []);
+		formData.append('comments', jQuery("#comments").val());
+		formData.append('is_mailing', getCheckboxBoolean('mailinglist'));
+		return formData;
+	}
+	function getCheckboxBoolean(checkboxFieldId) {
+		var result = '0';
+		var field = $('#'+checkboxFieldId);
+		if(field && $(field).is(":checked")) {
+			result = '1';
+		}
+		return result;
+	}
+</script>
 <div class="emspace h20 floatc"></div>
 
 <form id="webcontact" class="ui form"><!--{# add .error if error, else redirect to /contact/thank-you #}-->
@@ -10,8 +69,9 @@
 
 	<div class="field">
 		<label>Your full name</label>
-		<div class="field">
-			<input type="text" name="lastname" placeholder="Your full name *">
+		<div class="field mand">
+			<input type="text" name="lastname" id="lastname" placeholder="Your full name *">
+			<div class="fermsg" id="lastname_error"></div>
 		</div>
 	</div>
 
@@ -19,17 +79,19 @@
 		<label>Your contact phone and email address</label>
 		<div class="two fields">
 			<div class="field">
-				<input type="text" name="phone" placeholder="Mobile or phone number">
+				<input type="text" name="phone" id="phone" placeholder="Mobile or phone number">
+				<div class="fermsg" id="phone_error"></div>
 			</div>
-			<div class="field">
-				<input type="text" name="email" placeholder="Email address *">
+			<div class="field mand">
+				<input type="text" name="email" id="email" placeholder="Email address *">
+				<div class="fermsg" id="email_error"></div>
 			</div>
 		</div>
 	</div>
 
 	<div class="field">
-		<label>Any of the following specific topics you wish to enquire about?</label>
-		<select id="" name="" class="ui search dropdown" multiple="multiple">
+		<label for="about">Any of the following specific topics you wish to enquire about?</label>
+		<select id="about" name="about" class="ui search dropdown" multiple="multiple">
 			<option value="">You can select more than one</option>
 			<option value="Start-up Development">Start-up Development</option>
 			<option value="System Integration">System Integration</option>
@@ -39,22 +101,25 @@
 			<option value="Exploring Ideas">Exploring Ideas</option>
 			<option value="Other">Other</option>
 		</select>
+		<div class="fermsg" id="about_error"></div>
 	</div>
 
 	<div class="field">
-		<label>Your message or comments</label>
-		<textarea></textarea>
+		<label for="comments">Your message or comments</label>
+		<textarea id="comments" name=""></textarea>
+		<div class="fermsg" id="comments_error"></div>
 	</div>
 
 	<div class="field">
 		<div class="ui toggle checkbox">
-			<input type="checkbox" name="mailinglist" class="hidden">
-			<label>Be included in our mailing list</label>
+			<input type="checkbox" name="mailinglist" id="mailinglist" class="hidden">
+			<label for="mailinglist">Be included in our mailing list</label>
+			<div class="fermsg" id="mailinglist_error"></div>
 		</div>
 	</div>
 
 	<div class="emspace h20 floatc"></div>
-	<div class="ui primary large button">Contact BlueSky <i class="right chevron icon"></i></div>
+	<a href="javascript:;" class="ui primary large button btn" id="btn_submit">Contact BlueSky <i class="right chevron icon"></i></a>
 
 </form>
 

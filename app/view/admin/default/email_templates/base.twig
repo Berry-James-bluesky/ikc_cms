@@ -1,0 +1,74 @@
+
+<table border="0" cellspacing="0" cellpadding="10" align="center" style="background-color:#ffffff;width:600px;border-collapse:collapse;">
+<tr valign="top">
+<td>
+
+
+
+<img src="{{ _url.base }}app/website/bluesky/img/bluesky_sys.jpg" width="120" height="73" alt="" />
+
+
+
+</td>
+<td style="text-align:right;font-family:arial,tahoma;font-size:14px;line-height:18px;color:#999999;">
+<em><b>Automated Notification</b></em>
+</td>
+</tr>
+<tr>
+<td colspan="2" style="font-family:arial,tahoma;font-size:21px;line-height:24px;color:#000000;">
+
+
+
+<b>{{ email_title }}</b>
+
+
+
+</td>
+</tr>
+</table>
+
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#ffffff;width:580px;border-collapse:collapse;">
+<tbody>
+<tr><td style="border-top:1px solid #999999;">&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td style="padding:0pt;width:580px;font-family:arial;font-size:14px;line-height:21px;color:#333333;">
+
+
+
+{% include "email_templates/"~email_reference~'.twig' %}
+
+
+
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td style="padding:0pt;width:580px;font-family:arial;font-size:14px;line-height:21px;color:#333333;">
+
+
+        Kind regards<br />
+                BlueSky Team<br />
+
+<br />_____________________________<br />
+<br />
+<br />
+        BlueSky<br />
+        PO Box 5547<br />
+        Kalgoorlie WA 6433
+
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+</tbody></table>
+
+<table border="0" cellspacing="0" cellpadding="0" align="center" style="background-color:#ffffff;width:580px;border-collapse:collapse;">
+<tbody>
+<tr><td style="border-top:1px solid #999999;">&nbsp;</td></tr>
+<tr><td style="padding:0pt;width:580px;font-family:arial;font-size:11px;line-height:12px;color:#666666;">
+
+Visit us at <a href="http://www.bluesky.com/" target="_blank" rel="noopener noreferrer">www.bluesky.global</a><br />
+This email may be confidential. Any distribution, use or copying of this email or the information it contains
+                by other than an intended recipient is unauthorized. If you received this email in error, please advise me (by return email or otherwise) immediately.
+
+</td></tr>
+<tr><td>&nbsp;</td></tr>
+</tbody></table>
+
