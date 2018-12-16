@@ -110,7 +110,7 @@ Simplify, scale and grow your business
 
 				</div><!-- /#hiw -->
 
-{% if not (_route._handler._app == "page" and item.parent_id == 2) and not (_route._handler._app == "directory" and _route._method == "itemView") and _route._handler._app != "blog" and _route._handler._app != "staff" %}
+{% if not (_route._handler._app == "page" and item.parent_id == 2) and not (_route._handler._app == "page" and item.id == 23) and not (_route._handler._app == "directory" and _route._method == "itemView") and _route._handler._app != "blog" and _route._handler._app != "staff" %}
 				<section id="fimg">
 					<div class="emspace h40"></div>
 					<img src="{{ img }}page/{% if _route._handler._app == "staff" %}16{% else %}{{ item.id }}{% endif %}.svg" width="100%" alt="{% if _route._handler._app == "staff" %}Our Team{% else %}{{ item.name }}{% endif %}" />

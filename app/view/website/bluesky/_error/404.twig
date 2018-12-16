@@ -5,13 +5,11 @@
 
 {% set err = getContent(1) %}
 <div class="header">{{ err.title }}</div>
-<p>Sorry but the page you requested for cannot be found on our server. The page may have been moved, or URL may have been mistyped. You can return back to the <a href="/">homepage</a> if the issue persists.</p>
-<!--{#
 {{ renderContent(err.content)|raw }}
 {% if err.description %}
 {{ renderContent(err.description)|raw }}
 {% endif %}
-#}-->
+
 	</div><!-- /.content -->
 </div><!-- /.ui.icon.warning.message -->
 
