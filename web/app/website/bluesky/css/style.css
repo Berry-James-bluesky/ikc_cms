@@ -192,7 +192,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 
-#bluesky #hed .ui.container, #hed #hiw, #con #viw/*, #fimg*/ { position: relative; z-index: 1; }
+#bluesky #hed .ui.container, #hed #hiw, #con #viw { position: relative; z-index: 1; }
 #bluesky .cloud { position: absolute; z-index: 0; display: block; background: url(../img/_ui/cloud.svg) center no-repeat; background-size: 100%; }
 #bluesky #hed .ui.container.nav .cloud.one { width: 540px; height: 218px; top: -110px; left: -254px; }
 #bluesky #hed .ui.container.nav .cloud.two { width: 540px; height: 218px; top: 800px; right: -460px; }
@@ -233,7 +233,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 #hiw .ll { width: 46%; }
 #hiw .rr { width: 50%; }
 
-#fimg { width: 80%; margin: 0 auto; text-align: center; }
+#fimg { width: 80%; margin: 0 auto; text-align: center; min-height: 760px; height: auto !important; height: 760px; }
 
 .masthead .ui.container .ll { position: relative; }
 .ui.masthead.segment { border: 0; }
@@ -405,47 +405,53 @@ small.small60 { font-size: 60%; }
 
 #con, #fot.ui.inverted.segment { background-size: auto; }
 #bluesky #hed .ui.container.nav .cloud.two { top: 640px; }
+#fimg { min-height: 590px; height: auto !important; height: 590px; }
 
 }
 @media only screen and (max-width: 1680px) {
 
 #bluesky #hed .ui.container.nav .cloud.two { top: 540px; }
+#fimg { min-height: 520px; height: auto !important; height: 520px; }
 
 }
 @media only screen and (max-width: 1600px) { /*google+material*/
 
 #hiw { width: 1080px; }
+#fimg { min-height: 490px; height: auto !important; height: 490px; }
 
 }
 @media only screen and (max-width: 1440px) { /*google+material*/
 
 #hiw { width: 991px; }
+#fimg { min-height: 440px; height: auto !important; height: 440px; }
 
 }
 @media only screen and (max-width: 1400px) {
 
-
+#fimg { min-height: 430px; height: auto !important; height: 430px; }
 
 }
 @media only screen and (max-width: 1366px) {
 
 #hiw { width: 960px; }
+#fimg { min-height: 420px; height: auto !important; height: 420px; }
 
 }
 @media only screen and (max-width: 1280px) { /*google+material*/
 
-
+#fimg { min-height: 400px; height: auto !important; height: 400px; }
 
 }
 @media only screen and (max-width: 1200px) {
 
 .ui.secondary.pointing.menu .item { padding: .85714286em 11px; }
+#fimg { min-height: 370px; height: auto !important; height: 370px; }
 
 }
 @media only screen and (max-width: 1097px) {
 
 #xnav .ui.container.nav .menu .item { font-size: 16px; }
-#fimg { width: 90%; }
+#fimg { width: 90%; min-height: 380px; height: auto !important; height: 380px; }
 #bluesky #hed .ui.container.nav .cloud.two { top: 460px; }
 
 }
@@ -465,6 +471,7 @@ small.small60 { font-size: 60%; }
 
 #hiw { width: 86%; }
 #viw.ui.container, .ui.container.nav { width: 92%; }
+#fimg { min-height: 370px; height: auto !important; height: 370px; }
 .ui.five.doubling.cards > .card, .ui.four.doubling.cards > .card { width: calc(25% - 2em); }
 #xnav .ui.container.nav .menu .item { font-size: 15px; }
 #testimonials .card { width: 48%; }
@@ -479,6 +486,7 @@ small.small60 { font-size: 60%; }
 
 .emspace.conspc { height: 200px; }
 .emspace.fotspc { height: 140px; }
+#fimg { min-height: 360px; height: auto !important; height: 360px; }
 
 }
 @media only screen and (max-width: 900px) {
@@ -487,6 +495,7 @@ small.small60 { font-size: 60%; }
 #xnav .ui.container.nav .menu .item { padding: .92857143em 11px; font-size: 14px; }
 .masthead h1.ui.header { font-size: 2em; }
 #con .emspace.h80.ctop { height: 40px; }
+#fimg { min-height: 330px; height: auto !important; height: 330px; }
 
 }
 @media only screen and (max-width: 840px) { /*google+material*/
@@ -504,6 +513,7 @@ small.small60 { font-size: 60%; }
 .masthead h1.ui.header { font-size: 2em; }
 .masthead h2 { font-size: 1.5em; }
 #hed .emspace.h80.mtop { height: 40px; }
+#fimg { min-height: 310px; height: auto !important; height: 310px; }
 #stview .ui.header .ui.image, #stview .ui.header .sub.header, #stview .ui.header .sub.header, #stview .ui.divider.afterheader { display: block; }
 #stview .ui.header .ui.image, #stview .ui.header .content { float: left; }
 #stview .ui.header .ui.image { cursor: pointer; }
@@ -519,6 +529,7 @@ small.small60 { font-size: 60%; }
 
 .w740 { width: 100%; }
 #bluesky #hed .ui.container.nav .cloud.two { top: 380px; }
+#fimg { min-height: 300px; height: auto !important; height: 300px; }
 #hwwk .hwwkhed { padding-top: 30px; }
 
 }
@@ -536,6 +547,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .fontsize32 { font-size: 28px; }
 .fontsize48 { font-size: 38px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -480px; }
+#fimg { min-height: 290px; height: auto !important; height: 290px; }
 #csview .ui.card .description, #csview .ui.card .extra.content { font-size: 12px; }
 
 }
@@ -558,6 +570,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 736px) {
 
+#fimg { min-height: 280px; height: auto !important; height: 280px; }
 .timeline-me-smallitem.timeline-me-right .timeline-me-content-container, .timeline-me-smallitem.timeline-me-left .timeline-me-content-container, .timeline-me-smallitem:not(.timeline-me-top):not(.timeline-me-right):not(.timeline-me-bottom) .timeline-me-content-container { width: 100%; margin: 0; padding: 0; }
 .timeline-me-vertical .timeline-me-item { padding-bottom: 40px; }
 .timeline-me-content { top: 42px; }
@@ -567,6 +580,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 @media only screen and (max-width: 720px) { /*google+material*/
 
 .emspace.conspc { height: 100px; }
+#fimg { min-height: 270px; height: auto !important; height: 270px; }
 
 }
 @media only screen and (max-width: 667px) {
@@ -575,6 +589,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .ll, .rr, .coltwo, .coltre, .coltre.mid, .coltre.dbl, .colfor, .colfor.dbl, .colfiv, .colsix { width: 100%; float: none; display: block; }
 .rr, .coltwo.floatr, .coltre.floatr, .colfor.floatr, .colfiv.floatr, .colsix.floatr { float: none; }
 .coltwo, .coltre, .coltre.mid, .coltre.dbl, .colfor, .colfor.dbl, .colfiv, .colsix, .rr.tright, .coltre.tright, .colfor.tright, .colfiv.tright { text-align: center; }
+#fimg { min-height: 250px; height: auto !important; height: 250px; }
 #hwwk .ll { float: left; }
 #hwwk .rr { float: right; }
 #hwwk .hwwkhed { padding-top: 20px; }
@@ -584,6 +599,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .w540 { width: 100%; }
 #bluesky #hed .ui.container.nav .cloud.two, #bluesky #hed .ui.container.nav .cloud.three, #bluesky #hed .ui.container.nav .cloud.four, .emspace.conspc { display: none; }
+#fimg { min-height: 240px; height: auto !important; height: 240px; }
 #con { background: none; }
 #fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fot_640.png); }
 .emspace.fotspc { height: 160px; }
@@ -593,6 +609,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .ui.masthead.segment .homhero { padding: 20px 40px 0 40px; }
 #con .emspace.h80.ctop { height: 40px; }
+#fimg { min-height: 230px; height: auto !important; height: 230px; }
 .ui.five.doubling.cards > .card, .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(40% - 2em); }
 
@@ -609,6 +626,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 480px) { /*google+material*/
 
+#fimg { min-height: 180px; height: auto !important; height: 180px; }
 #csview .ui.medium.right.floated.image { width: 40%; }
 #stlist .ui.three.doubling.cards > .card, #stlist .ui.two.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
@@ -624,6 +642,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 414px) {
 
+#fimg { min-height: 160px; height: auto !important; height: 160px; }
 .ui.icon.message > .content { font-size: .9em; }
 #subnav .ui.four.doubling.cards > .card, .ui.three.doubling.cards > .card { width: calc(100% - 2em); }
 #stlist .ui.four.doubling.cards > .card { width: calc(90% - 2em); }
@@ -631,6 +650,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 375px) {
 
+#fimg { min-height: 140px; height: auto !important; height: 140px; }
 .ui.four.doubling.cards, .ui.five.doubling.cards { max-width: 100%; margin-left: auto; margin-right: auto; }
 .ui.four.doubling.cards .card, .ui.five.doubling.cards .card { width: 100%; }
 .ui.masthead.segment .homhero { padding: 20px 20px 0 20px; }
@@ -653,7 +673,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 }
 @media only screen and (max-width: 320px) {
 
-
+#fimg { min-height: 120px; height: auto !important; height: 120px; }
 
 }
 
