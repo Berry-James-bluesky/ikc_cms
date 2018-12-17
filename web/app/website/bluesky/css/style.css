@@ -151,8 +151,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .ui.horizontal.divider.header.nomargin .icon { margin-right: 0; }
 
 .ui.steps.brief .step { cursor: pointer; }
-
-
+.ui.icon.message .ui.image.ico { margin-right: 1em; }
 
 
 
