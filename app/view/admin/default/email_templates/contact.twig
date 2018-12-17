@@ -1,10 +1,13 @@
 
-<p>Hi {{ email_to_name }},</p>
+<p>Yo Team BlueSky</p>
+<p>A contact form has been submitted.</p>
+<p>
+Name: {{ name }}
+<br />Phone: {{ phone }}
+<br />Email: {{ email }}
+<br />About: {{ about }}
+<br />Comments:
+<br />{{ comments|raw }}
+</p>
+<p>Mailing List: {{ mailinglist }}</p>
 
-<p>A new contact request is received. Details are below:</p>
-<p>Name : {{ name }}</p>
-<p>Phone : {{ phone }}</p>
-<p>Email : {{ email }}</p>
-<p>About : {{ about }}</p>
-<p>Comments : {{ comments |raw}}</p>
-<p>Mailinglist : {{ mailinglist }}</p>
