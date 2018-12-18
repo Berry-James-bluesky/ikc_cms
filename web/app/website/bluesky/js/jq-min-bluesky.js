@@ -36,7 +36,7 @@ $(function(){
 			else if (val == "System Integration"){ $("#casecon .card.f_systemintegration").show(); }
 			else if (val == "App Development"){ $("#casecon .card.f_appdevelopment").show(); }
 			else if (val == "Data Science"){ $("#casecon .card.f_datascience").show(); }
-			else if (val == "Custom Web Applications"){ $("#casecon .card.f_customwebapplications").show(); }
+			else if (val == "Custom Web Development"){ $("#casecon .card.f_customwebdevelopment").show(); }
 			else if (val == "Exploring Ideas"){ $("#casecon .card.f_exploringideas").show(); }
 			else { $("#casecon .card").show(); }
 
