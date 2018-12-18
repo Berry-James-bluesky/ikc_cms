@@ -34,19 +34,20 @@
 {% endfor %}
 						</div><!-- /.list -->
 
-{% elseif i.id == 3 %}
+{% if i.id == 3 %}
 {% set list = getDirectoryCategoryData() %}
 						<div class="list">
 {% for ditm in list.items %}
 							<div class="item">
 								<i class="large file code outline icon"></i>
 								<div class="content">
-									<a class="header" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="{{ ditm.name }}">{{ ditm.name }} <small>- {{ ditm._tag }}</small></a>
+									<a class="header" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="{{ ditm.name }}">{{ ditm.name }}</a>
 									<div class="description">{{ ditm.summary }}</div>
 								</div><!-- /.content -->
 							</div><!-- /.item -->
 {% endfor %}
 						</div><!-- /.list -->
+{% endif %}
 
 {% elseif i.id == 5 %}
 {% set postList = getLatestBlogItem(14) %}
@@ -82,7 +83,6 @@
 					<div class="content">
 						<a class="header" href="{{ f._url }}" title="{{ f.title }}">{{ f.title }}</a>
 						<div class="description">{{ f.summary }}</div>
-
 					</div><!-- /.content -->
 				</div><!-- /.item -->
 
