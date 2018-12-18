@@ -34,7 +34,7 @@
 {% endfor %}
 						</div><!-- /.list -->
 
-{% if i.id == 3 %}
+{% elseif i.id == 3 %}
 {% set list = getDirectoryCategoryData() %}
 						<div class="list">
 {% for ditm in list.items %}
@@ -47,7 +47,6 @@
 							</div><!-- /.item -->
 {% endfor %}
 						</div><!-- /.list -->
-{% endif %}
 
 {% elseif i.id == 5 %}
 {% set postList = getLatestBlogItem(14) %}
