@@ -11,7 +11,7 @@
 
 	<div class="item">
 		<div class="ui small image">
-			<img src="{% if i.featured_image %}/_image/{{ i.featured_image.reference }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth" />
+			<img src="/_image/media/1/_image.png" data-src="{% if i.featured_image %}/_image/{{ i.featured_image.reference }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth" />
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>

@@ -7,7 +7,7 @@
 		<div class="ui special centered card">
 			<div class="blurring dimmable image">
 				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop">more</span></div></div></div>
-				<img src="{{ imgUrl(item.featured_image.reference,300) }}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
+				<img src="/_image/media/1/_image.png" data-src="{{ imgUrl(item.featured_image.reference,300) }}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
 			</div><!-- /.blurring.dimmable.image -->
 			<div class="content">
 				<div class="header">{{ item.name }}</div>
@@ -59,7 +59,7 @@
 
 	<a class="card tiny" href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="View {{ staff.name }}'s profile">
 		<div class="image">
-			<img class="resp" src="{% if staff.featured_image %}{{ imgUrl(staff.featured_image.reference,400) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ staff.name }} | BlueSky Perth">
+			<img class="resp" src="/_image/media/1/_image.png" data-src="{% if staff.featured_image %}{{ imgUrl(staff.featured_image.reference,400) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ staff.name }} | BlueSky Perth">
 		</div>
 		<div class="content">
 			<div class="header">{{ staff.name }}</div>
@@ -72,11 +72,6 @@
 
 </div><!-- /.ui.five.doubling.centered.cards -->
 
-<!--{#
-<p><img src="{{ imgUrl(item.featured_image_secondary.reference, 564) }}" class="resp" alt="{{ item.name }}" /></p>
-#}-->
-
-
 <div class="emspace h80 floatc"></div>
 <h4 class="ui horizontal divider header nomargin"><i class="file alternate icon"></i></h4>
 <section id="subnav">
@@ -86,7 +81,7 @@
 {% if i.is_navigation %}
 	<a class="card tiny" href="{{ i._url }}" title="{{ i.title }}">
 		<div class="content">
-			<img class="left floated mini ui image" src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,60) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth">
+			<img class="left floated mini ui image" src="/_image/media/1/_image.png" data-src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,60) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth">
 			<div class="header spnav">{{ i.title }}</div>
 			<div class="description">{% if i.summary %}{{ i.summary|striptags|truncate(54,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(54,true,' ..') }}{% endif %}</div>
 		</div>

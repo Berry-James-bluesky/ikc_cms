@@ -7,7 +7,7 @@
 
 	<a class="card blue" href="{{ _url.base }}directory/folder/view/{{ dcat.id }}" title="view">
 		<div class="image">
-			<img src="{% if dcat.featured_image_id %}{{ imgUrl(dcat.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<img src="/_image/media/1/_image.png" data-src="{% if dcat.featured_image_id %}{{ imgUrl(dcat.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ dcat.name }}</div>
@@ -24,7 +24,7 @@
 
 	<a class="card green" href="{{ _url.base }}directory/item/view/{{ ditm.id }}" title="view">
 		<div class="image">
-			<img src="{% if ditm.featured_image_id %}{{ imgUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
+			<img src="/_image/media/1/_image.png" data-src="{% if ditm.featured_image_id %}{{ imgUrl(ditm.featured_image_id, 300) }}{% else %}/app/website/bluesky/img/_sui/image.png{% endif %}">
 		</div>
 		<div class="content">
 			<div class="header">{{ ditm.name }}</div>
