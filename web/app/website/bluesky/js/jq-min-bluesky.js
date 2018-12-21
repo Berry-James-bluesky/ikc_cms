@@ -18,6 +18,7 @@ $(function(){
 
 	/* semanticsUI general */
 	$('.ui.checkbox').checkbox();
+	$('.ui.embed').embed();
 	//$('.shape').shape();
 
 	$('.special .image, .special.card .image, .special.cards .image').dimmer({ on:'hover' });
