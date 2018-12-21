@@ -605,11 +605,11 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #fot.ui.inverted.segment { background-image: url(../img/_ui/bg_fot_640.png); }
 .emspace.fotspc { height: 160px; }
 
-.ui.icon.message .ui.large.image.ico {
-(-bracket-:hack;
-	width: 96px !important;
-);
 }
+@media screen and (max-width: 640px) and (-webkit-min-device-pixel-ratio:0) {
+
+.ui.icon.message .ui.large.image.ico { width: 96px; }
+@-moz-document url-prefix() { .ui.icon.message .ui.large.image.ico { width: 100%; } }
 
 }
 @media only screen and (max-width: 600px) { /*google+material*/
