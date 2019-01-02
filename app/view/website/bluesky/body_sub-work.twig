@@ -29,7 +29,7 @@
 
 	<a class="card f_{{ ditm._tag|replace({' ':''})|lower }}" href="{% if ditm._url %}{{ ditm._url }}{% else %}directory/item/view/{{ ditm.id }}{% endif %}" title="Find out more about {{ ditm.name }}">
 		<div class="image">
-			<img src="/_image/media/1/_image.png" data-src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference,300) }}{% else %}/_image/media/8/_logo.png{% endif %}" alt="{{ ditm.name }} | {{ ditm._tag }} | BlueSky Perth">
+			<img src="{% if ditm.featured_image %}{{ imgUrl(ditm.featured_image.reference,300) }}{% else %}/_image/media/8/_logo.png{% endif %}" alt="{{ ditm.name }} | {{ ditm._tag }} | BlueSky Perth">
 		</div>
 		<div class="content">
 			<div class="header">{{ ditm.name }}</div>
