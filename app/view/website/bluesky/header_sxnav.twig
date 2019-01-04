@@ -1,7 +1,7 @@
 
 	<nav id="xnav" class="ui medium top fixed hidden pointing menu borderless">
 		<div class="ui container nav">
-			<a class="header item logo" href="/" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.svg" alt="BlueSky Perth Customised Online Solutions" /></a>
+			<a class="header item logo" href="/" onclick="gtag('event','Logo header sticky');" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.svg" alt="BlueSky Perth Customised Online Solutions" /></a>
 			<div class="right menu">
 
 {% set nav = buildNav(1) %}
@@ -12,7 +12,7 @@
 {% endif %}
 {% endif %}
 {% endfor %}
-<a class="item" href="tel:+1300001815" title="Ring a BlueSky representative"><i class="phone volume icon"></i></a>
+<a class="item" href="tel:+1300001815" onclick="gtag('event','Ring header sticky');" title="Ring a BlueSky representative"><i class="phone volume icon"></i></a>
 <a class="toc item"><i class="sidebar icon"></i></a>
 
 			</div><!-- /.right.menu -->
@@ -21,7 +21,7 @@
 
 	<nav id="snav" class="ui small vertical right sidebar menu">
 
-<a class="header item logo" href="/" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.svg" alt="BlueSky Perth Customised Online Solutions" /></div>
+<a class="header item logo" href="/" onclick="gtag('event','Logo sidenav');" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.svg" alt="BlueSky Perth Customised Online Solutions" /></div>
 {% set nav = buildNav(1) %}
 {% for i in nav %}
 {% if i.id != 1 %}
@@ -31,7 +31,7 @@
 {% endif %}
 {% endfor %}
 <a class="item" href="/sitemap" title="Sitemap">Sitemap</a>
-<a class="item" href="tel:+1300001815" title="Ring a BlueSky representative"><i class="phone volume icon"></i> 1300 001 815</a>
+<a class="item" href="tel:+1300001815" onclick="gtag('event','Ring sidenav');" title="Ring a BlueSky representative"><i class="phone volume icon"></i> 1300 001 815</a>
 
 	</nav><!-- /sidebarmenu -->
 

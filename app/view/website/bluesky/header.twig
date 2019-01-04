@@ -9,7 +9,7 @@
 <div class="cloud four my-paroller" data-paroller-factor="0.3" data-paroller-type="foreground" data-paroller-direction="vertical"></div>
 
 					<nav id="mnav" class="ui medium secondary pointing menu">
-						<a class="header item logo" href="/" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.svg" alt="BlueSky Perth Customised Online Solutions" /></a>
+						<a class="header item logo" onclick="gtag('event','Logo header nav');" href="/" title="BlueSky Digital Labs home"><img src="{{ img }}BlueSky.svg" alt="BlueSky Perth Customised Online Solutions" /></a>
 						<div class="right menu">
 
 {% set nav = buildNav(1) %}
@@ -20,7 +20,7 @@
 {% endif %}
 {% endif %}
 {% endfor %}
-<a class="tel item" href="tel:+1300001815" title="Ring a BlueSky representative"><i class="phone volume icon"></i>1300 001 815</a>
+<a class="tel item" href="tel:+1300001815" onclick="gtag('event','Ring header nav');" title="Ring a BlueSky representative"><i class="phone volume icon"></i>1300 001 815</a>
 <a class="toc item"><i class="sidebar icon"></i></a>
 
 						</div><!-- /.right.menu -->
