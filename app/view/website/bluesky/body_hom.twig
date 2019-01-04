@@ -1,7 +1,7 @@
 
 {{ renderContent(item.description)|raw }}
 <div class="ui divider hidden"></div>
-<p class="center"><a class="ui positive button large" href="/contact" title="">Discuss your next project <i class="right chevron icon"></i></a></p>
+<p class="center"><a class="ui positive button large" href="/contact" onclick="gtag('event','home Discuss btn clicked');" title="discuss yoxt project">Discuss your next project <i class="right chevron icon"></i></a></p>
 
 <div class="emspace h80 floatc"></div>
 
@@ -10,7 +10,7 @@
 {{ renderContent(cb.content)|raw }}
 {% include 'body_sub-services.twig' %}
 <div class="ui divider hidden"></div>
-<p class="center"><a class="ui primary button large" href="/contact" title="">Contact us to request a quote <i class="right chevron icon"></i></a></p>
+<p class="center"><a class="ui primary button large" href="/contact" onclick="gtag('event','home Quote btn clicked');" title="Contacct us to request a quote">Contact us to request a quote <i class="right chevron icon"></i></a></p>
 
 <div class="emspace h80 floatc"></div>
 
@@ -19,7 +19,7 @@
 {{ renderContent(cb.content)|raw }}
 {{ renderContent(cb.description)|raw }}
 <div class="ui divider hidden"></div>
-<p class="center"><a class="ui positive button large" href="/work" title="">Read about some of our work <i class="right chevron icon"></i></a></p>
+<p class="center"><a class="ui positive button large" href="/work" onclick="gtag('event','home Work btn clicked');" title="Read about some of our work">Read about some of our work <i class="right chevron icon"></i></a></p>
 
 <div class="emspace h80 floatc"></div>
 
@@ -28,5 +28,5 @@
 {{ renderContent(cb.content)|raw }}
 {{ renderContent(cb.description)|raw }}
 <div class="ui divider hidden"></div>
-<p class="center"><a class="ui orange button large" href="/about" title="">Learn more about BlueSky <i class="right chevron icon"></i></a></p>
+<p class="center"><a class="ui orange button large" href="/about" onclick="gtag('event','home About btn clicked');" title="Learn more about BlueSky Perth">Learn more about BlueSky <i class="right chevron icon"></i></a></p>
 
