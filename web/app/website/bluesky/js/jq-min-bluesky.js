@@ -79,6 +79,7 @@ $(function(){
 
 
 	$('.cloud').paroller();
+	$('#nwsfom #cf_field_edit_1').attr("placeholder","Your email address");
 
 
 

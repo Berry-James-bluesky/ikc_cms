@@ -5,6 +5,7 @@
 
 				<div class="ui container">
 					<div class="emspace h40"></div>
+
 					<section class="w740">
 						<div class="ui inverted divided equal height grid">
 							<div class="three column row">
@@ -83,16 +84,18 @@
 				<div class="ui hidden divider hideinmob"></div>
 
 				<div class="ui container center">
-					<div class="emspace h40 hideinmob"></div>
+					<div class="emspace h20 hideinmob"></div>
+
+					<section id="nwsfom" class="w480 ui form">
+						<p>Enter you email address below to be included in our mailing list.</p>
+						<script src="//spaceframe.epicuest.com/form-embed/1.embed?jquery=0"></script>
+						<div class="emspace h60 floatc"></div>
+					</section>
 
 					<p><img class="ui centered medium image" src="{{ img }}BlueSkyDigitalLabs.svg" alt="BlueSky Digital Labs Perth Customised Online Solutions"></p>
 					<p><a class="addrlnk" href="https://goo.gl/maps/boRQVaRFVb52" onclick="gtag('event','Google Map footer');" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps">Suite 4, 163 Wright Street, Kewdale 6105<br />Perth, Western Australia</a></p>
 					<p><a class="addrlnk" href="tel:+1300001815" onclick="gtag('event','Ring footer');" title="Ring a BlueSky representative"><i class="phone volume icon"></i>1300 001 815</a></p>
 
-<!--{#
-					<div class="emspace h20 floatc"></div>
-					<p>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</p>
-#}-->
 					<div class="emspace h20 floatc"></div>
 
 					<nav id="socnav">
@@ -104,6 +107,9 @@
 <a class="circular ui icon button" href="https://goo.gl/maps/boRQVaRFVb52" onclick="gtag('event','soc Google Map');" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps"><i class="map marker alternate icon big"></i></a>
 
 					</nav><!-- /#socnav -->
+
+					<div class="emspace h20 floatc"></div>
+					<p class="white">&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</p>
 
 					<div class="emspace h40 floatc"></div>
 				</div><!-- /.ui.container -->
