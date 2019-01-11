@@ -172,11 +172,11 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 /* site */
-#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 14px; z-index: 99; margin: 0; padding: 7px; font-size: 21px; line-height: 100%; cursor: pointer;
+#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 84px; z-index: 99; margin: 0; padding: 20px; font-size: 21px; line-height: 100%; cursor: pointer;
 
 	overflow: hidden;
 }
-#backtotop.tada { bottom: 14px; }
+#backtotop.tada { bottom: 20px; }
 
 .emspace.conspc { height: 240px; }
 .emspace.fotspc { height: 180px; }
