@@ -16,6 +16,7 @@
 				success: function (json) {
 					if (json.success) {
 						window.location.href = ('{{ _url.base }}contact/thank-you');
+						gtag('event','contact form submission');
 					}
 					else {
 						jQuery('#webcontact').addClass('error');
@@ -76,15 +77,31 @@
 	</div>
 
 	<div class="field">
-		<label>Your contact phone and email address *</label>
+		<label>Your contact phone and/or email address *</label>
 		<div class="two fields">
 			<div class="field">
 				<input type="text" name="phone" id="phone" placeholder="Mobile or phone number">
 				<div class="fermsg" id="phone_error"></div>
 			</div>
-			<div class="field mand">
-				<input type="text" name="email" id="email" placeholder="Email address *">
+			<div class="field">
+				<input type="text" name="email" id="email" placeholder="Email address">
 				<div class="fermsg" id="email_error"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="contactpreference" class="inline fields" style="display:none;">
+		<label for="contactpref">Contact preference:</label>
+		<div class="field">
+			<div class="ui radio checkbox">
+				<input type="radio" name="contactpref" id="pref_phone" class="hidden">
+				<label>Phone</label>
+			</div>
+		</div>
+		<div class="field">
+			<div class="ui radio checkbox">
+				<input type="radio" name="contactpref" id="pref_email" class="hidden">
+				<label>Email address</label>
 			</div>
 		</div>
 	</div>

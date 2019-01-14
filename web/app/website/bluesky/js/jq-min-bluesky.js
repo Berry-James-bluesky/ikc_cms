@@ -17,7 +17,7 @@
 $(function(){
 
 	/* semanticsUI general */
-	$('.ui.checkbox').checkbox();
+	$('.ui.checkbox,.ui.radio.checkbox').checkbox();
 	$('.ui.embed').embed();
 	//$('.shape').shape();
 
