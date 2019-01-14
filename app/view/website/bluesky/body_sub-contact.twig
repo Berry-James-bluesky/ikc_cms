@@ -3,6 +3,16 @@
 		jQuery('#btn_submit').click(function () {
 			jQuery('#webcontact').trigger('submit');
 		});
+		jQuery('#phone,#email').keyup(function () {
+			jQuery('#email_error').html('');
+			var phone = jQuery('#phone').val();
+			var email = jQuery('#email').val();
+			if(phone && email){
+				jQuery('#contactpreference').show();
+			}else{
+				jQuery('#contactpreference').hide();
+			}
+		});
 		jQuery('#webcontact').off('submit').submit(function (e) {
 			e.preventDefault();
 			var formData = new FormData();
@@ -20,13 +30,15 @@
 					}
 					else {
 						jQuery('#webcontact').addClass('error');
-						//jQuery('.fermsg').html('');
+						jQuery('.custom_err').hide();
+						//jQuery('.fermsg').addClass('error');
 						jQuery('.mand').removeClass('error');
 						for (var f in json.errors) {
 							if (f == '_custom') {
 								setCfErrors(json.errors[f]);
 							}
 							else {
+								jQuery('.cust_'+f).show();
 								jQuery('#' + f + '_error').html(json.errors[f][0]).parent().addClass('error');
 							}
 						}
@@ -43,11 +55,24 @@
 	});
 	function getFormElements(formData) {
 		formData.append('lastname', jQuery("#lastname").val());
-		formData.append('phone', jQuery("#phone").val());
-		formData.append('email', jQuery("#email").val());
+		var phone = jQuery('#phone').val();
+		var email = jQuery('#email').val();
+		formData.append('phone', phone);
+		formData.append('email', email);
 		formData.append('about', jQuery("#about").val() || []);
 		formData.append('comments', jQuery("#comments").val());
 		formData.append('is_mailing', getCheckboxBoolean('mailinglist'));
+		if(phone && email){
+			var radioValue = jQuery("input[name='contactpref']:checked"). val();
+			if(radioValue){
+				formData.append('contact_preference', radioValue);
+			}else{
+				formData.append('contact_preference', '');
+			}
+		}else{
+			formData.append('contact_preference', '');
+		}
+
 		return formData;
 	}
 	function getCheckboxBoolean(checkboxFieldId) {
@@ -65,7 +90,9 @@
 
 	<div class="ui error message">
 		<div class="header">There are errors in the form</div>
-		<p>Please enter all details that are required, as marked by the *</p>
+		<p style="display: none;" class="custom_err cust_lastname">Please enter all details that are required, as marked by the *</p>
+		<p style="display: none;" class="custom_err cust_email">You need to include either a phone number or email address</p>
+		<p style="display: none;" class="custom_err cust_contact_preference">Please choose your preferred means of contact</p>
 	</div>
 
 	<div class="field">
@@ -85,25 +112,26 @@
 			</div>
 			<div class="field">
 				<input type="text" name="email" id="email" placeholder="Email address">
-				<div class="fermsg" id="email_error"></div>
 			</div>
 		</div>
+		<div class="fermsg" id="email_error"></div>
 	</div>
 
 	<div id="contactpreference" class="inline fields" style="display:none;">
 		<label for="contactpref">Contact preference:</label>
 		<div class="field">
 			<div class="ui radio checkbox">
-				<input type="radio" name="contactpref" id="pref_phone" class="hidden">
+				<input type="radio" name="contactpref" id="pref_phone" class="hidden" value="phone">
 				<label>Phone</label>
 			</div>
 		</div>
 		<div class="field">
 			<div class="ui radio checkbox">
-				<input type="radio" name="contactpref" id="pref_email" class="hidden">
+				<input type="radio" name="contactpref" id="pref_email" class="hidden" value="email">
 				<label>Email address</label>
 			</div>
 		</div>
+		<div class="fermsg" id="contact_preference_error"></div>
 	</div>
 
 	<div class="field">

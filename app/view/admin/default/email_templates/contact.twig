@@ -5,6 +5,7 @@
 Name: {{ name }}
 <br />Phone: {{ phone }}
 <br />Email: {{ email }}
+{% if phone and email %}<br />Contact Preference: {{ preference }}{% endif %}
 <br />About: {{ about }}
 <br />Comments:
 <br />{{ comments|raw }}

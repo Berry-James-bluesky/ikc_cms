@@ -23,7 +23,9 @@ class Edit extends FormBase
      */
     protected $formFields = [
         'lastname',
-        'email'
+        'email',
+        'phone',
+        'contact_preference'
     ];
 
     /**
@@ -61,16 +63,26 @@ class Edit extends FormBase
         );
         $filter->setRule(
             'email',
-            'Please enter email',
-            function ($value) {
-                return !empty($value);
+            'You need to include either a phone number or email address',
+            function ($value, $fields) {
+                $result = true;
+                if (empty($fields->phone) && empty($value)) {
+                    $result = false;
+                }
+                return $result;
             }
         );
         $filter->setRule(
-            'email',
-            'Please enter a valid email',
-            function ($value) {
-                return filter_var($value, FILTER_VALIDATE_EMAIL);
+            'contact_preference',
+            'Please select a preference',
+            function ($value, $fields) {
+                $result = true;
+                if (!empty($fields->phone) && !empty($fields->email)) {
+                    if (empty($value)) {
+                        $result = false;
+                    }
+                }
+                return $result;
             }
         );
     }
@@ -85,6 +97,7 @@ class Edit extends FormBase
         $emailArr['phone'] = $values['phone'];
         $emailArr['about'] = $values['about'];
         $emailArr['comments'] = $values['comments'];
+        $emailArr['preference'] = $values['contact_preference'];
         if ($values['is_mailing'] == 1) {
             $mailing = "Yes";
         } else {

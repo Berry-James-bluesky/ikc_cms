@@ -65,4 +65,12 @@ class Contact extends Base
      */
     public $is_mailing;
 
+    /**
+     * @dbColumn contact_preference
+     * @dbType string
+     * @dbOptions length=255, notnull = false
+     * @var string $contact_preference - contact preference
+     */
+    public $contact_preference;
+
 }
