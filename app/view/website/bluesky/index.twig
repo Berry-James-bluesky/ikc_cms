@@ -67,7 +67,12 @@
 
 
 <script src="https://wchat.freshchat.com/js/widget.js"></script>
-<script>window.fcWidget.init({token:"f367c1b1-3650-4c9d-a87f-cd06c255fac9",host:"https://wchat.freshchat.com"});</script>
+<script>
+
+if (matchMedia('only screen and (min-width: 768px)').matches){ window.fcWidget.init({token:"f367c1b1-3650-4c9d-a87f-cd06c255fac9",host:"https://wchat.freshchat.com"}); }
+
+
+</script>
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
 <script>
