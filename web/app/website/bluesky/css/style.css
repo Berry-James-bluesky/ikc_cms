@@ -154,6 +154,9 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .ui.steps.brief .step { cursor: pointer; }
 .ui.icon.message .ui.image.ico { margin-right: 1em; }
 
+.ui.form.error .ui.error.message .header { margin-bottom: 10px; }
+.ui.form.error .ui.message .header + p, .ui.form.error .ui.message p { margin: .25em 0; }
+
 
 
 .fontsize32 .sub.header { font-size: .7em; }
