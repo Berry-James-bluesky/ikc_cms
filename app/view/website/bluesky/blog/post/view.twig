@@ -11,11 +11,11 @@
 	<div class="ui icon button"><i class="tasks icon"></i></div>
 	<div class="ui basic left pointing label">34</div>
 </div>#}--><!-- /#postreadcount -->
-<a class="ui mini linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" onclick="gtag('event','blog LinkedIn id-{{ item.id }}');" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i> LinkedIn</a>
-<a class="ui mini twitter button" href="https://twitter.com/share?url={{ _route.url }}" onclick="gtag('event','blog Twitter id-{{ item.id }}');" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
-<a class="ui mini facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" onclick="gtag('event','blog Facebook id-{{ item.id }}');" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
-<a class="ui mini pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" onclick="gtag('event','blog Pinterest id-{{ item.id }}');" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
-<a class="ui mini google plus button" href="https://plus.google.com/share?url={{ _route.url }}" onclick="gtag('event','blog Google id-{{ item.id }}');" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
+<a class="ui mini linkedin button" href="https://www.linkedin.com/shareArticle?url={{ _route.url }}" onclick="gtag('event','LinkedIn',{'event_category':'Article Share','event_label':'{{ item.title }}'});" target="_blank" rel="noopener noreferrer" title="Share on LinkedIn"><i class="linkedin icon"></i>LinkedIn</a>
+<a class="ui mini twitter button" href="https://twitter.com/share?url={{ _route.url }}" onclick="gtag('event','Twitter',{'event_category':'Article Share','event_label':'{{ item.title }}'});" target="_blank" rel="noopener noreferrer" title="Share on Twitter"><i class="twitter icon"></i>Twitter</a>
+<a class="ui mini facebook button" href="https://www.facebook.com/sharer.php?u={{ _route.url }}" onclick="gtag('event','Facebook',{'event_category':'Article Share','event_label':'{{ item.title }}'});" target="_blank" rel="noopener noreferrer" title="Share on FaceBook"><i class="facebook icon"></i>Facebook</a>
+<a class="ui mini pinterest button" href="https://pinterest.com/pin/create/button/?url={{ _route.url }}" onclick="gtag('event','Pinterest',{'event_category':'Article Share','event_label':'{{ item.title }}'});" target="_blank" rel="noopener noreferrer" title="Share on Pinterest"><i class="pinterest icon"></i>Pinterest</a>
+<a class="ui mini google plus button" href="https://plus.google.com/share?url={{ _route.url }}" onclick="gtag('event','Google+',{'event_category':'Article Share','event_label':'{{ item.title }}'});" target="_blank" rel="noopener noreferrer" title="Share on Google+"><i class="google plus icon"></i>Google+</a>
 
 <div class="ui hidden divider"></div>
 
@@ -60,9 +60,9 @@
 			<div class="summary">
 
 {% if item.id == 2 %}
-<a href="/about/team/rizal-farok" onclick="gtag('event','blog author id-{{ item.id }}');" class="user">Rizal Farok</a>
+<a href="/about/team/rizal-farok" onclick="gtag('event','Rizal Farok',{'event_category':'Article Author','event_label':'{{ item.name }}'});" class="user">Rizal Farok</a>
 {% else %}
-<a href="/about/team" onclick="gtag('event','blog author id-{{ item.id }}');" class="user">Team BlueSky</a>
+<a href="/about/team" onclick="gtag('event','Team BlueSky',{'event_category':'Article Author','event_label':'{{ item.name }}'});" class="user">Team BlueSky</a>
 {% endif %}
 
 				<div class="date">{{ getHumanTiming(item.date|date('Y-m-d')) }}</div>
