@@ -6,7 +6,7 @@
 
 		<div class="ui special centered card">
 			<div class="blurring dimmable image">
-				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop" onclick="gtag('event','{{ item.name }}',{'event_category':'Staff page','event_label':'Secondary Image'});">more</span></div></div></div>
+				<div class="ui dimmer"><div class="content"><div class="center"><span class="ui inverted button dopop" onclick="gtag('event','Secondary Image',{'event_category':'Staff page','event_label':'{{ item.name }}'});">more</span></div></div></div>
 				<img src="{{ imgUrl(item.featured_image.reference,300) }}" alt="{{ item.name }}, {{ item.title }} | BlueSky Perth">
 			</div><!-- /.blurring.dimmable.image -->
 			<div class="content">
@@ -15,7 +15,7 @@
 			</div><!-- /.content -->
 {% if item.social %}
 			<div class="extra content">
-				<a href="{{ item.social }}" onclick="gtag('event','{{ item.name }}',{'event_category':'Staff page','event_label':'View LinkedIn'});" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> Connect with {{ item.name|split(' ')|slice(0,1)|join }} on LinkedIn</a>
+				<a href="{{ item.social }}" onclick="gtag('event','LinkedIn',{'event_category':'Staff page','event_label':'{{ item.name }}'});" target="_blank" rel="noopener noreferrer"><i class="linkedin icon"></i> Connect with {{ item.name|split(' ')|slice(0,1)|join }} on LinkedIn</a>
 			</div><!-- /.extra.content -->
 {% endif %}
 		</div><!-- /.card -->
