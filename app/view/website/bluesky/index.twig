@@ -19,7 +19,7 @@
 {% elseif (_route._handler._app == "page" and item.id == 13) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "digital marketing" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/digital.svg" />
 {% elseif (_route._handler._app == "page" and item.id == 21) or ( _route._handler._app == "directory" and _route._method == "itemView" and item._tags[0].value == "beacons" ) %}<meta property="og:image" content="/app/website/bluesky/img/iso/beacons.svg" />
 {% elseif _route._handler._app == "page" and (item.id == 2 or item.id == 3 or item.id == 4 or item.id == 5 or item.id == 6 or item.id == 14 or item.id == 15 or item.id == 16 or item.id == 19 or item.id == 20 or item.id == 22 or item.id == 23 or item.id == 24 or item.id == 25 or item.id == 26 ) %}<meta property="og:image" content="/app/website/bluesky/img/page/{{ item.id }}.svg" />
-{% elseif item.featured_image %}<meta property="og:image" content="{{ item.featured_image.reference }}" />
+{% elseif item.featured_image %}<meta property="og:image" content="{{ imgUrl(item.featured_image.reference) }}" />
 {% else %}<meta property="og:image" content="/app/website/bluesky/img/BlueSkyDigitalLabs-Perth.jpg" />
 {% endif %}
 
