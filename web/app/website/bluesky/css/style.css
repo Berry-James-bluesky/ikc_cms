@@ -175,7 +175,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 /* site */
-#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 84px; z-index: 99; margin: 0; padding: 20px; font-size: 21px; line-height: 100%; cursor: pointer;
+#backtotop { /*display: none;*/ position: fixed; bottom: -64px; right: 18px;/*84*/ z-index: 99; margin: 0; padding: 20px; font-size: 21px; line-height: 100%; cursor: pointer;
 
 	overflow: hidden;
 }
@@ -185,6 +185,10 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 .emspace.fotspc { height: 180px; }
 .ui.image.center { margin: 0 auto; }
 
+figure { text-align: center; }
+figcaption { font-size: .8em; font-style: italic; }
+.image_left { float: left; margin: 0 20px 20px 0; }
+.image_right { float: right; margin: 0 20px 20px; }
 
 
 #hed {  }
@@ -617,6 +621,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #hwwk .ll { float: left; }
 #hwwk .rr { float: right; }
 #hwwk .hwwkhed { padding-top: 20px; }
+.image_right { float: none; display: block; margin: 0; }
 
 }
 @media only screen and (max-width: 640px) { /*640x360androids*/
