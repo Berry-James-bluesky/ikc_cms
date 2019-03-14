@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /_admin/
+Disallow: /lib/
+Disallow: /contact/thank-you
+
+Sitemap: https://www.blueskylabs.com.au/sitemap.xml
