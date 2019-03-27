@@ -76,11 +76,6 @@
 	<priority>0.80</priority>
 </url>
 <url>
-	<loc>https://www.blueskylabs.com.au/services/digital-marketing</loc>
-	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
-	<priority>0.80</priority>
-</url>
-<url>
 	<loc>https://www.blueskylabs.com.au/work/start-up-development/epicuest</loc>
 	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
 	<priority>0.80</priority>
@@ -92,6 +87,11 @@
 </url>
 <url>
 	<loc>https://www.blueskylabs.com.au/work/system-integration/dccm-radar</loc>
+	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
+	<priority>0.80</priority>
+</url>
+<url>
+	<loc>https://www.blueskylabs.com.au/work/system-integration/osh-club</loc>
 	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
 	<priority>0.80</priority>
 </url>
@@ -156,6 +156,21 @@
 	<priority>0.80</priority>
 </url>
 <url>
+	<loc>https://www.blueskylabs.com.au/thoughts/discover-beacon-technology-its-a-game-changer</loc>
+	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
+	<priority>0.64</priority>
+</url>
+<url>
+	<loc>https://www.blueskylabs.com.au/thoughts/what-is-the-best-front-end-framework-to-use</loc>
+	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
+	<priority>0.64</priority>
+</url>
+<url>
+	<loc>https://www.blueskylabs.com.au/thoughts/to-the-bluesky-and-beyond</loc>
+	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
+	<priority>0.64</priority>
+</url>
+<url>
 	<loc>https://www.blueskylabs.com.au/about/team/amel-holic</loc>
 	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
 	<priority>0.64</priority>
@@ -185,42 +200,6 @@
 	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
 	<priority>0.64</priority>
 </url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/to-the-bluesky-and-beyond</loc>
-	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/what-is-the-best-front-end-framework-to-use</loc>
-	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/discover-beacon-technology-its-a-game-changer</loc>
-	<lastmod>2018-12-17T13:20:05+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/here-is-how-custom-development-breaks-new-ground</loc>
-	<lastmod>2019-02-27T12:34:56+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/bluesky-proud-to-be-a-subiaco-afc-club-sponsor</loc>
-	<lastmod>2019-02-28T12:34:56+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/mind-melting-calculations-to-solve-a-shape-sorting-conundrum</loc>
-	<lastmod>2019-03-05T12:34:56+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/beacon-technology-tamborine-rainforest-skywalk</loc>
-	<lastmod>2019-03-11T12:34:56+00:00</lastmod>
-	<priority>0.64</priority>
-</url>
-
 
 
 </urlset>
