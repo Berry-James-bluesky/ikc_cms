@@ -547,7 +547,9 @@ small.small60 { font-size: 60%; }
 #stview h2.ui.header .sub.header { padding-top: 0; }
 #stview .ui.grid > [class*="five wide"].column { display: none; }
 #stview .ui.grid > [class*="eleven wide"].column { width: 100% !important; }
-#psview .ui.medium.image { display: none; }
+#psview .ui.medium.image { float: none; display: block; clear: both; margin-left: auto; margin-right: auto; }
+#psview .ui.medium.image .image { text-align: center; }
+#psview .ui.medium.image .image img.resp { margin: 0 auto; }
 
 }
 @media only screen and (max-width: 800px) {
