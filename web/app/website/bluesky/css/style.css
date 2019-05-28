@@ -501,7 +501,7 @@ small.small60 { font-size: 60%; }
 #xnav .ui.container.nav .menu .item { font-size: 15px; }
 #testimonials .card { width: 48%; }
 #csview .ui.medium.right.floated.image { width: 30%; }
-#subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
+#subnav .ui.four.doubling.cards > .card, #stlist .ui.four.doubling.cards > .card, #stlist .ui.three.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 #stlist .ui.two.doubling.cards > .card { width: calc(50% - 2em); margin-left: 1em; margin-right: 1em; }
 #stlist .w740 { width: 100%; }
 .emspace.h240 { height: 100px; }
@@ -611,6 +611,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 .emspace.conspc { height: 100px; }
 #fimg { min-height: 270px; height: auto !important; height: 270px; }
+#stlist .ui.three.doubling.cards > .card { width: calc(46% - 2em); }
 
 }
 @media only screen and (max-width: 667px) {
@@ -667,8 +668,8 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 
 #fimg { min-height: 180px; height: auto !important; height: 180px; }
 #csview .ui.medium.right.floated.image { width: 40%; }
-#stlist .ui.three.doubling.cards > .card, #stlist .ui.two.doubling.cards > .card { width: calc(100% - 2em); }
-#stlist .ui.four.doubling.cards > .card { width: calc(50% - 2em); }
+#stlist .ui.two.doubling.cards > .card { width: calc(100% - 2em); }
+#stlist .ui.four.doubling.cards > .card, #stlist .ui.three.doubling.cards > .card { width: calc(50% - 2em); }
 #stview .ui.header .ui.image, #stview .ui.header .content { float: none; display: block; text-align: center; }
 #stview .ui.header .ui.image { margin: 0 auto; }
 #stview .ui.header > .image + .content, .ui.header > img + .content { padding-left: 0; }
@@ -690,7 +691,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 #fimg { min-height: 160px; height: auto !important; height: 160px; }
 .ui.icon.message > .content { font-size: .9em; }
 #subnav .ui.four.doubling.cards > .card, .ui.three.doubling.cards > .card { width: calc(100% - 2em); }
-#stlist .ui.four.doubling.cards > .card { width: calc(90% - 2em); }
+#stlist .ui.four.doubling.cards > .card, #stlist .ui.three.doubling.cards > .card { width: calc(90% - 2em); }
 #nwsfom .fwrp.pp_2 { width: 70%; }
 
 }
