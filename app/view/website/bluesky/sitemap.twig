@@ -27,7 +27,21 @@
 								<i class="large file alternate outline icon"></i>
 								<div class="content">
 									<a class="header" href="{{ c._url }}" title="{{ c.title }}">{{ c.title }}</a>
-									<div class="description">{{ c.summary }}</div>
+									<div class="description">{% if c.id == 16 %}{{ c.summary|replace({'Meet':'Meet some of'}) }}{% else %}{{ c.summary }}{% endif %}</div>
+{% if c.id == 16 %}
+									<div class="list">
+{% set staffsList = getAllStaff() %}
+{% for staff in staffsList %}
+										<div class="item">
+											<i class="large user circle{% if staff.id > 2 %} outline{% endif %} icon"></i>
+											<div class="content">
+												<a class="header" href="{{ staff._url }}" title="{{ staff.name }}">{{ staff.name }}</a>
+												<div class="description">{{ staff.title }}</div>
+											</div><!-- /.content -->
+										</div><!-- /.item -->
+{% endfor %}
+									</div><!-- /.list -->
+{% endif %}
 								</div><!-- /.content -->
 							</div><!-- /.item -->
 {% endif %}
@@ -92,10 +106,5 @@
 	</div><!-- /.item -->
 
 </div><!-- /.ui.relaxedlist -->
-
-
-
-
-
 </section><!-- /#sitemap -->
 
