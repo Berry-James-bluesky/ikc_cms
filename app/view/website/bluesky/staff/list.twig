@@ -14,7 +14,7 @@
 
 	<a class="card" href="{% if boss._url %}{{ boss._url }}{% else %}/staff/view/{{ boss.id }}{% endif %}" title="View {{ boss.name }}'s profile">
 		<div class="image">
-			<img class="resp" src="/_image/media/1/_image.png" data-src="{% if boss.featured_image %}{{ imgUrl(boss.featured_image.reference,400) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ boss.name }} | BlueSky Perth">
+			<img class="resp" src="/_image/media/1/_image.png" data-src="{% if boss.featured_image %}{{ imgUrl(boss.featured_image.reference,400) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ boss.name }} | BlueSky Perth Custom Web + App Development">
 		</div>
 		<div class="content">
 			<div class="header">{{ boss.name }}</div>
@@ -48,7 +48,7 @@
 
 	<a class="card" href="{% if staff._url %}{{ staff._url }}{% else %}/staff/view/{{ staff.id }}{% endif %}" title="View {{ staff.name }}'s profile">
 		<div class="image">
-			<img class="resp" src="/_image/media/1/_image.png" data-src="{% if staff.featured_image %}{{ imgUrl(staff.featured_image.reference,400) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ staff.name }} | BlueSky Perth">
+			<img class="resp" src="/_image/media/1/_image.png" data-src="{% if staff.featured_image %}{{ imgUrl(staff.featured_image.reference,400) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ staff.name }} | BlueSky Perth Custom Web + App Development">
 		</div>
 		<div class="content">
 			<div class="header">{{ staff.name }}</div>
