@@ -233,6 +233,7 @@ figcaption { font-size: .8em; font-style: italic; }
 #mnav .tel.item { font-weight: 400; }
 #mnav .tel.item .icon, #xnav.ui.menu .item > i.icon { margin-right: 0; }
 #snav.ui.vertical.menu .item > i.icon { float: none; margin: 0; }
+#snav { font-size: 18px; }
 
 
 
