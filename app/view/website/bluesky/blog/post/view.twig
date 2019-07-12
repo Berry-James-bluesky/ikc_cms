@@ -53,6 +53,9 @@
 {% elseif item.id == 4 or item.id == 6 %}
 <img src="/_image/media/47/ben-hewitt_smsq.jpg" alt="Ben Hewitt | BlueSky Perth Custom Web + App Development">
 
+{% elseif item.id == 13 %}
+<img src="/_image/media/48/parham-bakhtiari_smsq.jpg" alt="Parham Bakhtiari | BlueSky Perth Custom Web + App Development">
+
 {% else %}
 <img src="/app/website/bluesky/img/BlueSky_s4.png" alt="Team BlueSky | BlueSky Perth Custom Web + App Development">
 {% endif %}
@@ -65,6 +68,8 @@
 <a href="/about/team/rizal-farok" onclick="gtag('event','Rizal Farok',{'event_category':'Article Author','event_label':'{{ item.name }}'});" class="user">Rizal Farok</a>
 {% elseif item.id == 4 or item.id == 6 %}
 <a href="/about/team/ben-hewitt" onclick="gtag('event','Ben Hewitt',{'event_category':'Article Author','event_label':'{{ item.name }}'});" class="user">Ben Hewitt</a>
+{% elseif item.id == 13 %}
+<a href="/about/team/parham-bakhtiari" onclick="gtag('event','Parham Bakhtiari',{'event_category':'Article Author','event_label':'{{ item.name }}'});" class="user">Parham Bakhtiari</a>
 {% else %}
 <a href="/about/team" onclick="gtag('event','Team BlueSky',{'event_category':'Article Author','event_label':'{{ item.name }}'});" class="user">Team BlueSky</a>
 {% endif %}
