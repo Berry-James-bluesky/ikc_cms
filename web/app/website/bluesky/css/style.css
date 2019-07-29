@@ -526,6 +526,7 @@ small.small60 { font-size: 60%; }
 }
 @media only screen and (max-width: 840px) { /*google+material*/
 
+.ui.visible.right.sidebar ~ .pusher { transform: none !important; }
 .ui.five.doubling.cards > .card, .ui.four.doubling.cards > .card { width: calc(33.33333333% - 2em); }
 #bluesky #hed .ui.container.nav .cloud.two { top: 400px; }
 #mnav .item, #xnav .item { display: none; }
