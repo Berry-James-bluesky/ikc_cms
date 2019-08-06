@@ -8,7 +8,7 @@ namespace BlueSky\Controller\Contact\Form;
 
 use BlueSky\Entity\Contact as ContactEntity;
 use BlueSky\Entity\ProcessEmails as ProcessEmailsEntity;
-use SidraBlue\Lote\Controller\Form\Standard as FormBase;
+use BlueSky\Framework\Controller\Form\Standard as FormBase;
 use SidraBlue\Util\Input\Filter;
 
 /**

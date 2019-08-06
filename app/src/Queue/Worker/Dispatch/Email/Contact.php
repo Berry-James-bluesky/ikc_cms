@@ -6,8 +6,8 @@
 
 namespace BlueSky\Queue\Worker\Dispatch\Email;
 
-use SidraBlue\Lote\Service\Email;
-use SidraBlue\Lote\State\Cli;
+use BlueSky\Framework\Service\Email;
+use BlueSky\Framework\State\Cli;
 use BlueSky\Model\ProcessEmails as ProcessEmailsModel;
 
 /**

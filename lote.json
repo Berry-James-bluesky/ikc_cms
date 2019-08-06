@@ -8,79 +8,79 @@
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/admin.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Website": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/website.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Page": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/page.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Content": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/content.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Media": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/media.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Task": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/task.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Directory": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/directory.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Cms": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/cms.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Staff": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/staff.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Cron": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/cron.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Gallery": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/gallery.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "Blog": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/blog.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     },
     "OpenApi": {
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/open-api.git",
-      "source-branch": "master"
+      "source-branch": "1.0"
     }
   }
 }

@@ -1,7 +1,7 @@
 <?php
 namespace BlueSky\Entity;
 
-use SidraBlue\Lote\Object\Entity\Base;
+use BlueSky\Framework\Object\Entity\Base;
 
 /**
  * Base class for Quote
@@ -16,10 +16,11 @@ class Quote extends Base
      * The name of the table to override the class name if required
      * */
     protected $tableName = 'sb_bluesky_quote';
+    public const TABLE_NAME = 'sb_bluesky_quote';
 
     /**
      * @dbColumn firstname
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $firstname - firstname
      */
@@ -27,7 +28,7 @@ class Quote extends Base
 
     /**
      * @dbColumn lastname
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $lastname - lastname
      */
@@ -35,7 +36,7 @@ class Quote extends Base
 
     /**
      * @dbColumn middlename
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $middlename - middlename
      */
@@ -43,7 +44,7 @@ class Quote extends Base
 
     /**
      * @dbColumn email
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $email - email
      */
@@ -51,7 +52,7 @@ class Quote extends Base
 
     /**
      * @dbColumn phone
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $phone - phone
      */

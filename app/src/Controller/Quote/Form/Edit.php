@@ -8,9 +8,9 @@ namespace BlueSky\Controller\Quote\Form;
 
 use BlueSky\Entity\ProcessEmails as ProcessEmailsEntity;
 use BlueSky\Entity\Quote as QuoteEntity;
-use SidraBlue\Lote\Controller\Form\Standard as FormBase;
-use SidraBlue\Lote\Entity\File as FileEntity;
-use SidraBlue\Lote\Model\File as FileModel;
+use BlueSky\Framework\Controller\Form\Standard as FormBase;
+use BlueSky\Framework\Entity\File as FileEntity;
+use BlueSky\Framework\Model\File as FileModel;
 use SidraBlue\Util\Input\Filter;
 
 /**

@@ -5,7 +5,7 @@
  */
 namespace BlueSky\Entity;
 
-use SidraBlue\Lote\Object\Entity\Base;
+use BlueSky\Framework\Object\Entity\Base;
 
 /**
  * Base class for ProcessEmails
@@ -20,10 +20,11 @@ class ProcessEmails extends Base
      * The name of the table to override the class name if required
      * */
     protected $tableName = 'sb_bluesky_process_emails';
+    public const TABLE_NAME = 'sb_bluesky_process_emails';
 
     /**
      * @dbColumn email_type
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $email_type
      */
@@ -31,7 +32,7 @@ class ProcessEmails extends Base
 
     /**
      * @dbColumn object_ref
-     * @dbType string
+     * @fieldType string
      * @dbOptions length=255, notnull = false
      * @var string $object_ref
      */

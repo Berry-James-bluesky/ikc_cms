@@ -5,7 +5,7 @@
  */
 namespace BlueSky\Model;
 
-use SidraBlue\Lote\Object\Model\Base;
+use BlueSky\Framework\Object\Model\Base;
 
 class ProcessEmails extends Base
 {

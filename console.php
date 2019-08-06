@@ -12,7 +12,7 @@ use Symfony\Component\Console\Output\ConsoleOutput;
 
 $input = new ArgvInput();
 
-$s = new \SidraBlue\Lote\State\Cli();
+$s = new \BlueSky\Framework\State\Cli();
 try {
     $s->getConsoleApplication()->run($input);
 }

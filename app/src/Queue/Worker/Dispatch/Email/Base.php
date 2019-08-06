@@ -7,12 +7,12 @@
 
 namespace BlueSky\Queue\Worker\Dispatch\Email;
 
-use SidraBlue\Lote\Controller\Queue\Master as MasterController;
-use SidraBlue\Lote\Service\Email;
-use SidraBlue\Lote\State\Cli;
-use SidraBlue\Lote\View\Transform\Html\Service;
+use BlueSky\Framework\Controller\Queue\Master as MasterController;
+use BlueSky\Framework\Service\Email;
+use BlueSky\Framework\State\Cli;
+use BlueSky\Framework\View\Transform\Html\Service;
 use SidraBlue\Util\Time;
-use SidraBlue\Lote\View\Transform\Html\Service as ContentService;
+use BlueSky\Framework\View\Transform\Html\Service as ContentService;
 
 /**
  * Class Base

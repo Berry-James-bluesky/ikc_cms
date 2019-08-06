@@ -6,30 +6,30 @@
 
 namespace BlueSky;
 
-use SidraBlue\Lote\Application\App\Bootstrap as BaseBootstrap;
-use SidraBlue\Lote\Auth\Acl\Context;
-use SidraBlue\Lote\Routing\Route;
-use SidraBlue\Lote\Event\Data;
+use BlueSky\Framework\Application\App\Bootstrap as BaseBootstrap;
+use BlueSky\Framework\Auth\Acl\Context;
+use BlueSky\Framework\Routing\Route;
+use BlueSky\Framework\Event\Data;
 
 class Bootstrap extends BaseBootstrap
 {
 
     /**
-     * @param \SidraBlue\Lote\View\Base $view
+     * @param \BlueSky\Framework\View\Base $view
      * @param string $reference
      */
     public function setupView($view, $reference)
     {
         if ($reference == 'twig') {
             /**
-             * @var \SidraBlue\Lote\View\Transform\Html\Base $view
+             * @var \BlueSky\Framework\View\Transform\Html\Base $view
              * */
         }
     }
 
     /**
      * Setup the routes for this app.
-     * @param \SidraBlue\Lote\Routing\RouteCollection $router
+     * @param \BlueSky\Framework\Routing\RouteCollection $router
      * @internal Route $route
      */
     public function setupRoutes($router)

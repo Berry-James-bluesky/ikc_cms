@@ -8,8 +8,8 @@
 namespace BlueSky\Command\Email;
 
 use BlueSky\Queue\Worker\Dispatch\Email\Contact as ContactDispatch;
-use SidraBlue\Lote\Console\Command;
-use SidraBlue\Lote\Console\Command\LockableTrait;
+use BlueSky\Framework\Console\Command;
+use BlueSky\Framework\Console\Command\LockableTrait;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;

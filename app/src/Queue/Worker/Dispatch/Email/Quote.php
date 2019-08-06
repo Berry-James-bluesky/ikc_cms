@@ -6,8 +6,8 @@
 
 namespace BlueSky\Queue\Worker\Dispatch\Email;
 
-use SidraBlue\Lote\Service\Email;
-use SidraBlue\Lote\State\Cli;
+use BlueSky\Framework\Service\Email;
+use BlueSky\Framework\State\Cli;
 use BlueSky\Model\ProcessEmails as ProcessEmailsModel;
 
 /**
@@ -60,7 +60,7 @@ class Quote extends Base
 
                 $file = (array)$data['file'];
                 $fileData = $file['reference'];
-                $fileModel = new \SidraBlue\Lote\Model\File($cli);
+                $fileModel = new \BlueSky\Framework\Model\File($cli);
                 $attachmentContent = $fileModel->getContentByReference($fileData);
                 $attachments = [
                     [
