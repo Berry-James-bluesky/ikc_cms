@@ -16,6 +16,10 @@
 <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 <link rel="canonical" href="{{ _route.url|trim('/')|replace({".com.au//":".com.au/"}) }}">
 
+<link rel="dns-prefetch" href="//www.googletagmanager.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+
 {% set img = '/app/website/bluesky/img/' %}
 <link rel="apple-touch-icon" sizes="57x57" href="{{ img }}_ico/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="{{ img }}_ico/apple-icon-60x60.png">
@@ -52,6 +56,7 @@
 
 		<div id="backtotop" onclick="gtag('event','Back To Top',{'event_category':'Navigation','event_label':'Back To Top'});" class="circular ui icon button" title="back to top"><i class="angle double up icon"></i></div>
 	</div><!-- /#bluesky.pusher -->
+
 
 
 <!--{#
