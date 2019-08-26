@@ -1,159 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-			http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-<url>
-	<loc>https://www.blueskylabs.com.au/</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/contact</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/start-up-development</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/system-integration</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/app-development</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/data-science</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/custom-web-development</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/beacons</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/services/exploring-ideas</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/start-up-development/epicuest</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/system-integration/schoolzine</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/system-integration/dccm-radar</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/system-integration/osh-club</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/app-development/business-key</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/app-development/busbee</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/data-science/international-goverment-agency</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/data-science/international-logistics-provider</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/data-science/australian-resources-company</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/custom-web-development/time-conti-sheffield</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/exploring-ideas/norup-wilson</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/work/start-up-development/mediscriptz</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/story</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/principles</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/process</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team/amel-holic</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team/rizal-farok</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team/tim-robinson</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team/jose-fernando-saavedra-rosas</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team/ben-hewitt</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/about/team/parham-bakhtiari</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/testimonials</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/sitemap</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/to-the-bluesky-and-beyond</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/what-is-the-best-front-end-framework-to-use</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/discover-beacon-technology-its-a-game-changer</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/here-is-how-custom-development-breaks-new-ground</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/bluesky-proud-to-be-a-subiaco-afc-club-sponsor</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/mind-melting-calculations-to-solve-a-shape-sorting-conundrum</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/beacon-technology-tamborine-rainforest-skywalk</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/exploring-ideas-with-mixed-reality</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/new-company-shirts-and-team-bluesky-additions</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/getting-around-shinjuku-tokyo-with-augmented-reality-in-google-maps</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/tour-of-the-crest-in-burswood</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/custom-url-for-your-business-google-my-business-listing</loc>
-</url>
-<url>
-	<loc>https://www.blueskylabs.com.au/thoughts/bluesky-is-upgrading-to-react-v16-8</loc>
-</url>
+<url><loc>https://www.blueskylabs.com.au/</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts</loc></url>
+<url><loc>https://www.blueskylabs.com.au/contact</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/start-up-development</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/system-integration</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/app-development</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/data-science</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/custom-web-development</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/beacons</loc></url>
+<url><loc>https://www.blueskylabs.com.au/services/exploring-ideas</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/start-up-development/epicuest</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/system-integration/schoolzine</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/system-integration/dccm-radar</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/system-integration/osh-club</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/app-development/business-key</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/app-development/busbee</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/data-science/international-goverment-agency</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/data-science/international-logistics-provider</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/data-science/australian-resources-company</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/custom-web-development/time-conti-sheffield</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/exploring-ideas/norup-wilson</loc></url>
+<url><loc>https://www.blueskylabs.com.au/work/start-up-development/mediscriptz</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/story</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/principles</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/process</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/amel-holic</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/rizal-farok</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/tim-robinson</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/brady-clements</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/jose-fernando-saavedra-rosas</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/ben-hewitt</loc></url>
+<url><loc>https://www.blueskylabs.com.au/about/team/parham-bakhtiari</loc></url>
+<url><loc>https://www.blueskylabs.com.au/testimonials</loc></url>
+<url><loc>https://www.blueskylabs.com.au/sitemap</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/to-the-bluesky-and-beyond</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/what-is-the-best-front-end-framework-to-use</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/discover-beacon-technology-its-a-game-changer</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/here-is-how-custom-development-breaks-new-ground</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/bluesky-proud-to-be-a-subiaco-afc-club-sponsor</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/mind-melting-calculations-to-solve-a-shape-sorting-conundrum</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/beacon-technology-tamborine-rainforest-skywalk</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/exploring-ideas-with-mixed-reality</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/new-company-shirts-and-team-bluesky-additions</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/getting-around-shinjuku-tokyo-with-augmented-reality-in-google-maps</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/tour-of-the-crest-in-burswood</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/custom-url-for-your-business-google-my-business-listing</loc></url>
+<url><loc>https://www.blueskylabs.com.au/thoughts/bluesky-is-upgrading-to-react-v16-8</loc></url>
 
 </urlset>
