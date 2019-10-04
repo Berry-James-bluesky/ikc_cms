@@ -61,6 +61,7 @@ a[href="javascript:;"].activate { cursor: pointer; }
 .fontsize28 { font-size: 28px; }
 .fontsize32 { font-size: 32px; }
 .fontsize48 { font-size: 48px; }
+.fontsize72 { font-size: 72px; }
 
 .fontweight300 { font-weight: 300; }
 .fontweight400 { font-weight: 400; }
@@ -160,6 +161,7 @@ h2.ui.header .sub.header { font-size: 1rem; padding-top: 7px; }
 
 
 .fontsize32 .sub.header { font-size: .7em; }
+p.nopad { margin-bottom: 0; }
 
 
 
@@ -338,6 +340,10 @@ small.small60 { font-size: 60%; }
 
 #hwwk .hwwkimg { width: 40%; }
 #hwwk .hwwkhed { width: 56%; padding-top: 40px; }
+
+
+
+#viewport span { display: inline-block; vertical-align: middle; }
 
 
 
@@ -575,6 +581,7 @@ html, .bod, #con, .ui.form .field > label { font-size: 16px; }
 .fontsize28 { font-size: 24px; }
 .fontsize32 { font-size: 28px; }
 .fontsize48 { font-size: 38px; }
+.fontsize72 { font-size: 60px; }
 #bluesky #hed .ui.container.nav .cloud.two, .sub #bluesky #hed .ui.container.nav .cloud.two { right: -480px; }
 #fimg { min-height: 290px; height: auto !important; height: 290px; }
 #csview .ui.card .description, #csview .ui.card .extra.content { font-size: 12px; }

@@ -1,0 +1,26 @@
+
+<section id="viewport" class="center">
+	<div class="emspace h40"></div>
+
+<p class="fontsize72 nopad">
+<span id="iw"></span>
+<span class="fontsize32">x</span>
+<span id="ih"></span>
+</p>
+<p>values are in pixels (px)</p>
+
+	<div class="emspace h80 floatc"></div>
+</section>
+
+
+<script>$(function(){
+
+	$("#iw").html( window.innerWidth );
+	$("#ih").html( window.innerHeight );
+	$(window).resize(function(){
+		$("#iw").html( window.innerWidth );
+		$("#ih").html( window.innerHeight );
+	});
+
+});</script>
+
