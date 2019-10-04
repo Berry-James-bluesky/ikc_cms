@@ -81,6 +81,14 @@ $(function(){
 	$('.cloud').paroller();
 	$('#nwsfom #cf_field_edit_2').attr("placeholder","Your email address");
 
+	/* viewport */
+	$("#iw").html( window.innerWidth );
+	$("#ih").html( window.innerHeight );
+	$(window).resize(function(){
+		$("#iw").html( window.innerWidth );
+		$("#ih").html( window.innerHeight );
+	});
+
 
 
 });
