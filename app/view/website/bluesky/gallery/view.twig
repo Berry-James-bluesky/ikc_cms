@@ -1,0 +1,25 @@
+
+<section id="gallview" class="center">
+
+	<h3 class="ui header">
+		{{ data.title }}
+		<span class="sub header">Click on an image to view in full.</span>
+	</h3>
+	<div class="ui divider"></div>
+
+	<section class="w840">
+		<div class="ui four cards link noborder notransform nospacing" data-featherlight-gallery data-featherlight-filter="a">
+
+{% for image in data.images %}
+
+			<a class="card" href="/_image/{{ image.reference }}">
+				<div class="image imgwrp"><img class="resp" src="/_image/{{ image.reference }}" alt="{{ image.title }}"><em></em></div>
+			</a><!-- /.card -->
+
+{% endfor %}
+
+		</div><!-- /.cards -->
+	</section><!-- /.w840 -->
+
+</section><!-- /#gallview -->
+

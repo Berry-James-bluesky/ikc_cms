@@ -1,0 +1,39 @@
+
+<section id="galllist">
+
+{% if album_list.rows %}
+
+	<div class="ui cards four link doubling notransform fontsize14 centered">
+
+{% for item in album_list.rows %}
+{% if item.is_active and item.is_visible %}
+
+		<a class="card" href="{% if item._url %}{{ item._url }}{% else %}{{ _url.base }}gallery/view/{{ item.id }}{% endif %}">
+			<div class="image imgwrp"><img class="resp" src="{% if item.featured_image.reference %}{{ imgTsUrl(item.featured_image.reference, 300) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Digital Labs"><em></em></div>
+			<div class="content">
+				<div class="header">{{ item.title|raw }}</div>
+				<div class="description"><p>{% if item.summary %}{{ item.summary|nl2br|truncate(140,true,' ..')|raw }}{% else %}{{ item.description|raw|striptags|truncate(140,true,' ..') }}{% endif %}</p></div>
+			</div><!-- /.content -->
+			<div class="extra content"><span><i class="images icon"></i> {{ item.total_images }} images</span></div>
+		</a><!-- /.card -->
+
+{% endif %}
+{% endfor %}
+
+	</div><!-- /.cards.doubling -->
+
+{% else %}
+<section class="w480">
+	<div class="ui icon warning message">
+		<i class="exclamation triangle icon"></i>
+		<div class="content">
+
+<p>Currently no galleries available.</p>
+
+		</div><!-- /.content -->
+	</div><!-- /.ui.icon.warning.message -->
+</section>
+{% endif %}
+
+</section><!-- /#galllist -->
+
