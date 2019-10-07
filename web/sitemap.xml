@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
 <url><loc>https://www.blueskylabs.com.au/</loc></url>
 <url><loc>https://www.blueskylabs.com.au/services</loc></url>
 <url><loc>https://www.blueskylabs.com.au/work</loc></url>
 <url><loc>https://www.blueskylabs.com.au/about</loc></url>
 <url><loc>https://www.blueskylabs.com.au/thoughts</loc></url>
 <url><loc>https://www.blueskylabs.com.au/contact</loc></url>
+
 <url><loc>https://www.blueskylabs.com.au/services/start-up-development</loc></url>
 <url><loc>https://www.blueskylabs.com.au/services/system-integration</loc></url>
 <url><loc>https://www.blueskylabs.com.au/services/app-development</loc></url>
@@ -13,6 +15,7 @@
 <url><loc>https://www.blueskylabs.com.au/services/custom-web-development</loc></url>
 <url><loc>https://www.blueskylabs.com.au/services/beacons</loc></url>
 <url><loc>https://www.blueskylabs.com.au/services/exploring-ideas</loc></url>
+
 <url><loc>https://www.blueskylabs.com.au/work/start-up-development/epicuest</loc></url>
 <url><loc>https://www.blueskylabs.com.au/work/system-integration/schoolzine</loc></url>
 <url><loc>https://www.blueskylabs.com.au/work/system-integration/dccm-radar</loc></url>
@@ -25,6 +28,7 @@
 <url><loc>https://www.blueskylabs.com.au/work/custom-web-development/time-conti-sheffield</loc></url>
 <url><loc>https://www.blueskylabs.com.au/work/exploring-ideas/norup-wilson</loc></url>
 <url><loc>https://www.blueskylabs.com.au/work/start-up-development/mediscriptz</loc></url>
+
 <url><loc>https://www.blueskylabs.com.au/about/story</loc></url>
 <url><loc>https://www.blueskylabs.com.au/about/principles</loc></url>
 <url><loc>https://www.blueskylabs.com.au/about/process</loc></url>
@@ -36,10 +40,12 @@
 <url><loc>https://www.blueskylabs.com.au/about/team/jose-fernando-saavedra-rosas</loc></url>
 <url><loc>https://www.blueskylabs.com.au/about/team/ben-hewitt</loc></url>
 <url><loc>https://www.blueskylabs.com.au/about/team/parham-bakhtiari</loc></url>
+
 <url><loc>https://www.blueskylabs.com.au/testimonials</loc></url>
 <url><loc>https://www.blueskylabs.com.au/sitemap</loc></url>
 <url><loc>https://www.blueskylabs.com.au/viewport</loc></url>
-<url><loc>https://www.blueskylabs.com.au/lorem-ipsum</loc></url>
+<url><loc>https://www.blueskylabs.com.au/loremipsum</loc></url>
+
 <url><loc>https://www.blueskylabs.com.au/thoughts/to-the-bluesky-and-beyond</loc></url>
 <url><loc>https://www.blueskylabs.com.au/thoughts/what-is-the-best-front-end-framework-to-use</loc></url>
 <url><loc>https://www.blueskylabs.com.au/thoughts/discover-beacon-technology-its-a-game-changer</loc></url>
@@ -54,4 +60,5 @@
 <url><loc>https://www.blueskylabs.com.au/thoughts/custom-url-for-your-business-google-my-business-listing</loc></url>
 <url><loc>https://www.blueskylabs.com.au/thoughts/bluesky-is-upgrading-to-react-v16-8</loc></url>
 <url><loc>https://www.blueskylabs.com.au/thoughts/browser-viewport-assistance</loc></url>
+
 </urlset>
