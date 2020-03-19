@@ -29,7 +29,7 @@
 
 				<div class="emspace h80 mtop"></div>
 
-				<div id="hiw" class="{% if (_route._handler._app == "page" and item.parent_id == 2) or (_route._handler._app == "directory" and _route._method == "itemView") %}iso{% else %}center{% endif %}">
+				<div id="hiw" class="{% if (_route._handler._app == "page" and item.parent_id == 2) or (_route._handler._app == "directory" and _route._method == "itemView") %}iso{% else %}center{% endif %}{% if _route._handler._app == "blog" and item.id == 18 %} nodisp{% endif %}">
 {% if (_route._handler._app == "page" and item.parent_id == 2) or (_route._handler._app == "directory" and _route._method == "itemView") %}
 					<div class="ll">
 {% endif %}
