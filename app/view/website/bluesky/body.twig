@@ -1,6 +1,6 @@
 
 		<section id="con">
-			<div class="emspace h80 ctop"></div>
+			<div class="emspace h80 ctop{% if _route._handler._app == "blog" and _route._method == "view" %} nodisp{% endif %}"></div>
 			<div class="ui page grid">
 				<div id="viw" class="ui container">
 
