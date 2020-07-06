@@ -19,12 +19,9 @@ $(function(){
 	/* semanticsUI general */
 	$('.ui.checkbox,.ui.radio.checkbox').checkbox();
 	$('.ui.embed').embed();
-	//$('.shape').shape();
 
 	$('.special .image, .special.card .image, .special.cards .image').dimmer({ on:'hover' });
 	$('.dopop').click(function(){ $('.ui.modal.dapop').modal('show'); });
-	//$('.shapefr').on('click',function(){ $('.shape').shape('flip right'); });
-
 	$('img.ui.image, .ui.image img, .card .image img').visibility({ type: 'image'/*, transition: 'fade in', duration: 2000*/ });
 
 	$('.ui.dropdown:not(#casefil)').dropdown();
@@ -78,7 +75,6 @@ $(function(){
 
 
 
-	$('.cloud').paroller();
 	$('#nwsfom #cf_field_edit_2').attr("placeholder","Your email address");
 
 	/* viewport */
