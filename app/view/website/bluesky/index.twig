@@ -34,6 +34,9 @@
 </head>
 <body class="bod {% if item.is_home_page %}hom{% else %}sub{% endif %}">
 
+{% if _route._handler._app == "page" and item.id == 30 %}
+<iframe width="100%" height="100%" style="width:100%;height:100vh;margin:0;padding:0;overflow:hidden;" src="https://miro.com/app/embed/o9J_kl5krMo=/?&pres=1&animate=1" frameborder="0" scrolling="no" allowfullscreen></iframe>
+{% else %}
 {% include 'header_sxnav.twig' %}
 
 	<div id="bluesky" class="pusher">
@@ -45,7 +48,7 @@
 		<div id="backtotop" onclick="gtag('event','Back To Top',{'event_category':'Navigation','event_label':'Back To Top'});" class="circular ui icon button" title="back to top"><i class="angle double up icon"></i></div>
 	</div><!-- /#bluesky.pusher -->
 
-
+{% endif %}
 
 <script async src="//www.googletagmanager.com/gtag/js?id=UA-127973425-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','UA-127973425-1');gtag('config','AW-782088284');</script>
