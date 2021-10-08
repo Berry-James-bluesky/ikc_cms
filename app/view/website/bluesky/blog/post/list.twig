@@ -13,9 +13,9 @@
 			<div class="description">
 				<p>
 				{% if i.summary %}
-				{{ i.summary|nl2br|truncate(540,true,' ..')|raw }}
+				{{ i.summary|nl2br|u.truncate(540,true,' ..')|raw }}
 				{% else %}
-				{{ i.description|raw|striptags|truncate(540,true,' ..') }}
+				{{ i.description|raw|striptags|u.truncate(540,true,' ..') }}
 				{% endif %}
 				</p>
 			</div><!-- /.description -->

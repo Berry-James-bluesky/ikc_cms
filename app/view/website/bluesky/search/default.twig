@@ -8,7 +8,7 @@
 <section class="newswrp srcwrp">
     <section class="newslcon">
         <h1>{{ item.name }}</h1>
-        <p>{{ item.summary|raw|striptags|replace({'&nbsp;':' '})|truncate(300,true,' ..') }}</p>
+        <p>{{ item.summary|raw|striptags|replace({'&nbsp;':' '})|u.truncate(300,true,' ..') }}</p>
         <p><em>{{ reference[item.result_type] }}</em></p>
         <p><a href="{{ item.url }}" title="" class="btn">Click to view or read more</a></p>
     </section><!-- /newslcon -->

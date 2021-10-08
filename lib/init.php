@@ -23,7 +23,8 @@ if($config['namespace']) {
 
 require LOTE_LIB_PATH . 'autoload.php';
 
-define('LOTE_ACCOUNT_REF', getLoteAccountRef('dev'));
+define('LOTE_ACCOUNT_REF', getLoteAccountRef('bluesky'));
 define('LOTE_TEMP_PATH', LOTE_ASSET_PATH . 'temp/' . LOTE_ACCOUNT_REF . '/');
 define('LOTE_CACHE_PATH', LOTE_ASSET_PATH . 'cache/' . LOTE_ACCOUNT_REF . '/');
 define('LOTE_LOG_PATH', LOTE_ASSET_PATH . 'log/' . LOTE_ACCOUNT_REF . '/');
+define('LOTE_LOG_MASTER', LOTE_ASSET_PATH . 'log/_master/');

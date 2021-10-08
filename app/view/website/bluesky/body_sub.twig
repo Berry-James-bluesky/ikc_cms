@@ -53,7 +53,7 @@
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
-			<div class="description">{{ i.summary|striptags|truncate(60,true,' ..') }}</div>
+			<div class="description">{{ i.summary|striptags|u.truncate(60,true,' ..') }}</div>
 		</div>
 	</a><!-- /.card -->
 
@@ -82,13 +82,13 @@
 		</div>
 		<div class="content">
 			<div class="header">{{ i.title }}</div>
-			<div class="description">{{ i.summary|striptags|truncate(60,true,' ..') }}</div>
+			<div class="description">{{ i.summary|striptags|u.truncate(60,true,' ..') }}</div>
 		</div>
 {% else %}
 		<div class="content">
 			<img class="left floated mini ui image" src="/_image/media/1/_image.png" data-src="{% if i.featured_image %}{{ imgUrl(i.featured_image.reference,60) }}{% else %}/_image/media/1/_image.png{% endif %}" alt="{{ i.title }} | BlueSky Perth ">
 			<div class="header spnav">{{ i.title }}</div>
-			<div class="description">{% if i.summary %}{{ i.summary|striptags|truncate(60,true,' ..') }}{% else %}{{ i.description|raw|striptags|truncate(60,true,' ..') }}{% endif %}</div>
+			<div class="description">{% if i.summary %}{{ i.summary|striptags|u.truncate(60,true,' ..') }}{% else %}{{ i.description|raw|striptags|u.truncate(60,true,' ..') }}{% endif %}</div>
 		</div>
 {% endif %}
 

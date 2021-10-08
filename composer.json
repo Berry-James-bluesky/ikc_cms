@@ -1,5 +1,5 @@
 {
-  "name": "Blue Sky Digital Labs",
+  "name": "bluesky/bluesky",
   "description": "Copyright Sidra Blue Pty Ltd",
   "license": "proprietary",
   "version": "0.1",
@@ -14,8 +14,9 @@
     }
   ],
   "require": {
-    "php": ">=5.6",
-    "bluesky/framework": "dev-release/0.1",
+    "php": ">=7.4.2",
+    "bluesky/framework": "dev-composer2",
+    "doctrine/dbal": "^2.5",
     "composer/installers": "*",
     "aura/installer-default": "1.0.0",
     "facebook/graph-sdk": "*",
@@ -27,11 +28,8 @@
     "mtdowling/cron-expression": ">=1.1.0",
     "mrclay/minify": "~3.0.0",
     "sabre/vobject": ">=3.0.0",
-    "symfony/config": "3.0.0",
-    "symfony/translation": "3.0.0",
-    "symfony/validator": "3.0.0",
-    "symfony/var-dumper": "^3.3.0",
-    "wikimedia/composer-merge-plugin": ">=1.4.1"
+    "wikimedia/composer-merge-plugin": ">=1.4.1",
+    "ext-json": "*"
   },
   "extra": {
     "merge-plugin": {
