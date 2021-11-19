@@ -1,122 +1,12 @@
+<footer id="fot" class="ui inverted tiny vertical footer segment">
+    <section class="fotwrp">
 
-		<footer id="fot" class="ui inverted tiny vertical footer segment">
-			<section class="fotwrp">
-				<div class="emspace fotspc"></div>
+        <div class="ui container">
 
-				<div class="ui container">
-					<div class="emspace h40"></div>
+            <div class="emspace h20 floatc"></div>
+        </div><!-- /.ui.container -->
 
-					<section class="w740">
-						<div class="ui inverted divided equal height grid">
-							<div class="three column row">
-								<div class="column">
-
-<h4 class="ui inverted header">What we do</h4>
-<div class="ui inverted link list">
-{% set f1nav = buildNav(1,2) %}
-{% for i in f1nav %}
-{% if i.is_navigation %}
-
-	<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.name }}</a>
-	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
-
-{% endif %}
-{% endfor %}
-</div><!-- /.ui.inverted.link.list -->
-
-								</div><!-- /.column -->
-								<div class="column">
-
-<h4 class="ui inverted header">What we've built</h4>
-<div class="ui inverted link list">
-{% set f2nav = getDirectoryCategoryData() %}
-{% for i in f2nav.items %}
-
-	<a class="item" href="{{ i._url }}" title="{{ i.name }}">{{ i.name }}</a>
-	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
-
-{% endfor %}
-</div><!-- /.ui.inverted.link.list -->
-
-								</div><!-- /.column -->
-								<div class="column lst">
-
-<h4 class="ui inverted header">About BlueSky</h4>
-<div class="ui inverted link list">
-{% set f3nav = buildNav(1,4) %}
-{% for i in f3nav %}
-{% if i.is_navigation %}
-
-	<a class="item" href="{{ i._url }}" title="{{ i.title }}">{{ i.name }}</a>
-	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
-
-{% endif %}
-{% endfor %}
-
-		<div class="emspace"></div>
-
-		<a class="item" href="/thoughts" title="BlueSky Thoughts">BlueSky Thoughts</a>
-		<span class="nodisp">&middot;</span>
-		<a class="item" href="/contact" title="Contact BlueSky">Contact BlueSky</a>
-		<span class="nodisp">&middot;</span>
-
-		<div class="emspace"></div>
-
-{% set copy = buildNav(2) %}
-{% for c in copy %}
-{% if c.is_navigation %}
-
-	<a class="item" href="{{ c._url }}" title="{{ c.title }}">{{ c.name }}</a>
-	{% if not loop.last %}<span class="nodisp">&middot;</span>{% endif %}
-
-{% endif %}
-{% endfor %}
-
-</div><!-- /.ui.inverted.link.list -->
-
-								</div><!-- /.column -->
-							</div><!-- /.three.column.row -->
-
-						</div><!-- /.ui.inverted.divided.equal.height.grid -->
-					</section><!-- /.w540 -->
-					<div class="emspace h20 floatc"></div>
-				</div><!-- /.ui.container -->
-
-				<div class="ui hidden divider hideinmob"></div>
-
-				<div class="ui container center">
-					<div class="emspace h20 hideinmob"></div>
-<!--{#
-					<section id="nwsfom" class="w480 ui form">
-						<p>Join our monthly mailing list by entering your email below</p>
-						<script src="//bluesky.epicuest.com/form-embed/1.embed?jquery=0"></script>
-						<div class="emspace h60 floatc"></div>
-					</section>
-#}-->
-					<p><img class="ui centered medium image" src="{{ img }}BlueSkyDigitalLabs.svg" alt="BlueSky Digital Labs Perth Customised Online Solutions"></p>
-					<p><a class="addrlnk" href="https://goo.gl/maps/boRQVaRFVb52" onclick="gtag('event','Google Map',{'event_category':'Footer','event_label':'Address'});" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps">Suite 3, 163 Wright Street, Kewdale 6105<br />Perth, Western Australia</a></p>
-					<p><a class="addrlnk" href="tel:+1300001815" onclick="gtag('event','Call',{'event_category':'Footer','event_label':'Phone Number'});" title="Ring a BlueSky representative"><i class="phone volume icon"></i>1300 001 815</a></p>
-
-					<div class="emspace h20 floatc"></div>
-
-					<nav id="socnav" itemscope itemtype="https://schema.org/Organization">
-
-<link itemprop="url" href="https://www.blueskylabs.com.au">
-<a class="circular ui icon button" itemprop="sameAs" href="https://www.linkedin.com/company/blueskylabs" onclick="gtag('event','LinkedIn',{'event_category':'Footer','event_label':'Social'});" target="_blank" rel="noopener noreferrer" title="BlueSky on LinkedIn"><i class="linkedin icon big" aria-label="LinkedIn"></i></a>
-<a class="circular ui icon button" itemprop="sameAs" href="https://www.instagram.com/blueskylabs" onclick="gtag('event','Instagram',{'event_category':'Footer','event_label':'Social'});" target="_blank" rel="noopener noreferrer" title="BlueSky on Instagram"><i class="instagram icon big" aria-label="Instagram"></i></a>
-<a class="circular ui icon button" itemprop="sameAs" href="https://www.facebook.com/blueskylabs" onclick="gtag('event','Facebook',{'event_category':'Footer','event_label':'Social'});" target="_blank" rel="noopener noreferrer" title="BlueSky on FaceBook"><i class="facebook icon big" aria-label="Facebook"></i></a>
-<a class="circular ui icon button" itemprop="sameAs" href="https://twitter.com/blueskylabs_" onclick="gtag('event','Twitter',{'event_category':'Footer','event_label':'Social'});" target="_blank" rel="noopener noreferrer" title="BlueSky on Twitter"><i class="twitter icon big" aria-label="Twitter"></i></a>
-<a class="circular ui icon button" itemprop="sameAs" href="https://g.page/blueskylabs/" onclick="gtag('event','Google Map',{'event_category':'Footer','event_label':'Social'});" target="_blank" rel="noopener noreferrer" title="BlueSky on Google Maps"><i class="map marker alternate icon big"></i></a>
-
-					</nav><!-- /#socnav -->
-
-					<div class="emspace h20 floatc"></div>
-					<p class="white"><small>&copy; 2018{% if "now"|date('Y') != 2018 %} - {{ "now"|date('Y') }}{% endif %} BlueSky Digital Labs</small></p>
-
-					<div class="emspace h40 floatc"></div>
-				</div><!-- /.ui.container -->
-
-			</section><!-- /.fotwrp -->
-		</footer><!-- /#fot -->
+    </section><!-- /.fotwrp -->
+</footer><!-- /#fot -->
 
 
