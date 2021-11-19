@@ -80,8 +80,13 @@
       "dev": true,
       "version": ">=0.1",
       "source-url": "https://bitbucket.org/sidrablue/open-api.git",
-      "source-branch": "master"
       "source-branch": "1.0"
+    },
+    "InternalCms": {
+      "dev": true,
+      "version": ">=0.1",
+      "source-url": "https://github.com/BlueSky-Digital-Labs/internal-cms.git",
+      "source-branch": "namespace-change"
     }
   }
 }
